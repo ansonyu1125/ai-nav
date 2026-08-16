@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { Tool } from "@/lib/types";
-import { formatScore } from "@/lib/utils";
+import { formatScore, formatPercent, cn } from "@/lib/utils";
 import { summarizePricing } from "@/lib/pricing-summary";
 import { useLanguage } from "./LanguageProvider";
 import { localize, localizeArray } from "@/lib/i18n";
@@ -87,10 +87,24 @@ export default function ToolCard({ tool }: { tool: Tool }) {
             </span>
           ))}
         </div>
-        <span className="flex shrink-0 items-center gap-1 text-sm font-semibold text-amber-500">
-          <span aria-hidden>★</span>
-          {formatScore(tool.score)}
-        </span>
+        <div className="flex shrink-0 items-center gap-2">
+          {tool.traffic?.trend != null && (
+            <span
+              title={localize(lang, "上月环比增长", "Month-over-month growth")}
+              className={cn(
+                "inline-flex items-center gap-0.5 text-xs font-semibold",
+                tool.traffic.trend >= 0 ? "text-emerald-600" : "text-rose-600",
+              )}
+            >
+              {tool.traffic.trend >= 0 ? "▲" : "▼"}
+              {formatPercent(tool.traffic.trend)}
+            </span>
+          )}
+          <span className="flex items-center gap-1 text-sm font-semibold text-amber-500">
+            <span aria-hidden>★</span>
+            {formatScore(tool.score)}
+          </span>
+        </div>
       </div>
     </Link>
   );

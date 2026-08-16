@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { tools } from "@/lib/tools";
 import { categories } from "@/data/categories";
 import ToolsExplorer from "@/components/ToolsExplorer";
@@ -35,6 +36,23 @@ export default async function ToolsPage({
           />
         </p>
       </div>
+
+      <Link
+        href="/ranking"
+        className="mb-6 flex items-center justify-between gap-3 rounded-xl border border-violet-200 bg-violet-50 px-4 py-3 transition hover:border-violet-300 hover:bg-violet-100"
+      >
+        <span className="text-sm font-medium text-violet-700">
+          📈 <BilingualText zh="AI 月度增长榜" en="AI Monthly Growth Ranking" />
+          <span className="ml-2 hidden font-normal text-violet-500 sm:inline">
+            <BilingualText
+              zh="上月流量增长最快的 AI 工具"
+              en="Fastest-growing AI tools last month"
+            />
+          </span>
+        </span>
+        <span className="text-violet-400">→</span>
+      </Link>
+
       <ToolsExplorer tools={tools} categories={categories} initial={initial} />
     </div>
   );

@@ -16,6 +16,10 @@ export default function HomePage() {
   const featured = getFeaturedTools();
   const hot = topTools("popularity", 8);
   const trending = tools.filter((t) => t.trending).slice(0, 8);
+  const growing = tools
+    .filter((t) => t.traffic?.growth != null)
+    .sort((a, b) => (b.traffic?.growth ?? 0) - (a.traffic?.growth ?? 0))
+    .slice(0, 8);
   const stats = [
     { label: "收录工具", labelEn: "Tools", value: tools.length, emoji: "🧰" },
     { label: "工具分类", labelEn: "Categories", value: categories.length, emoji: "🗂️" },
@@ -65,6 +69,24 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* AI 月度增长榜 */}
+      {growing.length > 0 && (
+        <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <SectionHeading
+            title="AI 月度增长榜"
+            titleEn="Fastest growing"
+            subtitle="上月流量增长最快的 AI 工具，数据来自 SimilarWeb"
+            subtitleEn="AI tools with the fastest month-over-month traffic growth (SimilarWeb)"
+            href="/ranking"
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {growing.map((t) => (
+              <ToolCard key={t.id} tool={t} />
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* 正在爆火 */}
       {trending.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
@@ -73,7 +95,7 @@ export default function HomePage() {
             titleEn="Hot right now"
             subtitle="编辑甄选，近期最值得关注的 AI 工具"
             subtitleEn="Editor-curated AI tools everyone is talking about"
-            href="/ranking?metric=popularity"
+            href="/ranking"
           />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {trending.map((t) => (
