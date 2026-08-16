@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllBestPages } from "@/lib/best-pages";
 import { site } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
+import { BilingualText } from "@/components/Bilingual";
 
 export const metadata: Metadata = {
   title: "Best AI Tools Guides 2026",
@@ -29,11 +30,13 @@ export default function BestIndexPage() {
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          Best AI tools guides
+          <BilingualText zh="最佳 AI 工具指南" en="Best AI tools guides" />
         </h1>
         <p className="mt-2 text-slate-600">
-          In-depth comparisons to help you pick the right AI tool, with pricing,
-          free tiers and honest trade-offs.
+          <BilingualText
+            zh="深度对比帮你挑选合适的 AI 工具，含价格、免费额度与真实取舍。"
+            en="In-depth comparisons to help you pick the right AI tool, with pricing, free tiers and honest trade-offs."
+          />
         </p>
       </div>
 
@@ -45,11 +48,10 @@ export default function BestIndexPage() {
             className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-md"
           >
             <span className="text-lg font-semibold text-slate-900 group-hover:text-indigo-600">
-              {p.titleEn}
+              <BilingualText zh={p.title} en={p.titleEn} />
             </span>
-            <span className="mt-1 text-sm text-slate-500">{p.title}</span>
             <span className="mt-3 line-clamp-2 text-sm text-slate-600">
-              {p.descriptionEn}
+              <BilingualText zh={p.description} en={p.descriptionEn} />
             </span>
           </Link>
         ))}

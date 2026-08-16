@@ -6,6 +6,7 @@ import { site } from "@/lib/site";
 import CompareTable from "@/components/CompareTable";
 import ToolCard from "@/components/ToolCard";
 import JsonLd from "@/components/JsonLd";
+import { BilingualText } from "@/components/Bilingual";
 
 export function generateStaticParams() {
   return getAllBestPages().map((p) => ({ slug: p.slug }));
@@ -92,14 +93,16 @@ export default async function BestPage({
       {/* 面包屑 */}
       <nav className="mb-6 text-sm text-slate-500">
         <Link href="/" className="hover:text-indigo-600">
-          Home
+          <BilingualText zh="首页" en="Home" />
         </Link>
         <span className="mx-2">/</span>
         <Link href="/best" className="hover:text-indigo-600">
-          Guides
+          <BilingualText zh="指南" en="Guides" />
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-slate-900">{page.titleEn}</span>
+        <span className="text-slate-900">
+          <BilingualText zh={page.title} en={page.titleEn} />
+        </span>
       </nav>
 
       {/* 头部 */}
@@ -109,20 +112,20 @@ export default async function BestPage({
             href={`/scenarios/${scenario.id}`}
             className="mb-3 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:underline"
           >
-            <span aria-hidden>{scenario.emoji}</span> 中文版
+            <span aria-hidden>{scenario.emoji}</span>{" "}
+            <BilingualText zh="查看场景页" en="View use case page" />
           </Link>
         )}
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          {page.titleEn}
+          <BilingualText zh={page.title} en={page.titleEn} />
         </h1>
-        <p className="mt-1 text-slate-500">{page.title}</p>
       </header>
 
       {/* 长文引言 */}
       <section className="mt-8 max-w-3xl space-y-4">
-        {page.introEn.map((p, i) => (
+        {page.intro.map((p, i) => (
           <p key={i} className="leading-relaxed text-slate-700">
-            {p}
+            <BilingualText zh={p} en={page.introEn[i]} />
           </p>
         ))}
       </section>
@@ -130,7 +133,7 @@ export default async function BestPage({
       {/* 对比表 */}
       <section className="mt-10">
         <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">
-          At-a-glance comparison
+          <BilingualText zh="工具对比一览" en="At-a-glance comparison" />
         </h2>
         <CompareTable tools={tools} />
       </section>
@@ -138,7 +141,7 @@ export default async function BestPage({
       {/* 工具卡片 */}
       <section className="mt-10">
         <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">
-          The top picks
+          <BilingualText zh="推荐工具" en="The top picks" />
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {tools.map((t) => (
@@ -150,14 +153,16 @@ export default async function BestPage({
       {/* 选购指南 */}
       <section className="mt-12 max-w-3xl space-y-6">
         <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-          How to choose
+          <BilingualText zh="如何挑选" en="How to choose" />
         </h2>
         {page.sections.map((s) => (
           <div key={s.headingEn}>
             <h3 className="text-lg font-semibold text-slate-900">
-              {s.headingEn}
+              <BilingualText zh={s.heading} en={s.headingEn} />
             </h3>
-            <p className="mt-2 leading-relaxed text-slate-700">{s.bodyEn}</p>
+            <p className="mt-2 leading-relaxed text-slate-700">
+              <BilingualText zh={s.body} en={s.bodyEn} />
+            </p>
           </div>
         ))}
       </section>
@@ -166,7 +171,7 @@ export default async function BestPage({
       {scenario && scenario.faqs.length > 0 && (
         <section className="mt-12">
           <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900">
-            Frequently asked questions
+            <BilingualText zh="常见问题" en="Frequently asked questions" />
           </h2>
           <div className="space-y-4">
             {scenario.faqs.map((f) => (
@@ -174,9 +179,11 @@ export default async function BestPage({
                 key={f.qEn}
                 className="rounded-2xl border border-slate-200 bg-white p-5"
               >
-                <h3 className="font-semibold text-slate-900">{f.qEn}</h3>
+                <h3 className="font-semibold text-slate-900">
+                  <BilingualText zh={f.q} en={f.qEn} />
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  {f.aEn}
+                  <BilingualText zh={f.a} en={f.aEn} />
                 </p>
               </div>
             ))}
@@ -188,7 +195,7 @@ export default async function BestPage({
       {others.length > 0 && (
         <section className="mt-12">
           <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900">
-            More guides
+            <BilingualText zh="更多指南" en="More guides" />
           </h2>
           <div className="flex flex-wrap gap-2">
             {others.map((p) => (
@@ -197,7 +204,7 @@ export default async function BestPage({
                 href={`/best/${p.slug}`}
                 className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600 transition hover:border-indigo-300 hover:text-indigo-600"
               >
-                {p.titleEn}
+                <BilingualText zh={p.title} en={p.titleEn} />
               </Link>
             ))}
           </div>
