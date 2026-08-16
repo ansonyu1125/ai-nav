@@ -24,6 +24,11 @@ export const categories: Category[] = [
   { id: "3d", name: "3D 生成", nameEn: "3D Generation", emoji: "🧊", description: "文生 3D 模型与材质生成", descriptionEn: "Text-to-3D models & material generation" },
   { id: "marketing", name: "营销增长", nameEn: "Marketing", emoji: "📈", description: "AI 广告创意、社媒内容与增长", descriptionEn: "AI ad creative, social content & growth" },
   { id: "data", name: "数据分析", nameEn: "Data Analysis", emoji: "🧮", description: "用自然语言做数据分析与可视化", descriptionEn: "Natural-language data analysis & visualization" },
+  { id: "audio", name: "音频处理", nameEn: "Audio", emoji: "🎧", description: "AI 降噪、增强、人声分离与播客", descriptionEn: "AI noise removal, enhancement, stem separation & podcasting" },
+  { id: "customer", name: "客服机器人", nameEn: "Customer Support", emoji: "🛎️", description: "AI 客服、对话机器人与服务自动化", descriptionEn: "AI support, chatbots & service automation" },
+  { id: "legal", name: "法律", nameEn: "Legal", emoji: "⚖️", description: "合同审查、法律检索与合规 AI", descriptionEn: "Contract review, legal research & compliance AI" },
+  { id: "browser", name: "浏览器", nameEn: "Browsers", emoji: "🧭", description: "内置 AI 的浏览器与智能浏览体验", descriptionEn: "AI-native browsers & smarter browsing" },
+  { id: "prompt", name: "提示词", nameEn: "Prompts", emoji: "💡", description: "提示词市场、社区与模板库", descriptionEn: "Prompt marketplaces, communities & templates" },
 ];
 
 export const categoryMap: Record<string, Category> = Object.fromEntries(
