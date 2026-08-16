@@ -11,6 +11,42 @@ export interface Category {
   descriptionEn?: string;
 }
 
+// 使用环境（平台）固定词表，便于统一展示图标与双语标签
+export const PLATFORM_KEYS = [
+  "web",
+  "macos",
+  "windows",
+  "linux",
+  "ios",
+  "android",
+  "api",
+  "extension",
+  "desktop",
+  "wechat",
+] as const;
+
+export type PlatformKey = (typeof PLATFORM_KEYS)[number];
+
+export const PLATFORM_LABEL: Record<PlatformKey, { zh: string; en: string; icon: string }> = {
+  web: { zh: "网页版", en: "Web", icon: "🌐" },
+  macos: { zh: "macOS", en: "macOS", icon: "🍎" },
+  windows: { zh: "Windows", en: "Windows", icon: "🪟" },
+  linux: { zh: "Linux", en: "Linux", icon: "🐧" },
+  ios: { zh: "iOS", en: "iOS", icon: "📱" },
+  android: { zh: "Android", en: "Android", icon: "🤖" },
+  api: { zh: "API 接口", en: "API", icon: "🔌" },
+  extension: { zh: "浏览器插件", en: "Browser extension", icon: "🧩" },
+  desktop: { zh: "桌面客户端", en: "Desktop app", icon: "🖥️" },
+  wechat: { zh: "微信小程序", en: "WeChat Mini Program", icon: "💬" },
+};
+
+// 费用档位（pricingTiers 为中文数组，pricingTiersEn 为英文数组，逐项对应）
+export interface PricingTier {
+  name: string;
+  price: string;
+  note?: string;
+}
+
 export interface Tool {
   id: string;
   name: string;
@@ -31,6 +67,19 @@ export interface Tool {
   emoji: string;
   logo?: string;
   releaseYear?: number;
+
+  // 详情页扩展内容（AI 生成，可编辑）
+  features?: string[];
+  featuresEn?: string[];
+  howToUse?: string[];
+  howToUseEn?: string[];
+  advantages?: string[];
+  advantagesEn?: string[];
+  platforms?: PlatformKey[];
+  apiName?: string;
+  apiNameEn?: string;
+  pricingTiers?: PricingTier[];
+  pricingTiersEn?: PricingTier[];
 }
 
 export interface Tutorial {

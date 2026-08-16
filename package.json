@@ -10,7 +10,8 @@
     "gen:descriptions": "node scripts/generate-descriptions.mjs",
     "fetch:logos": "node scripts/fetch-logos.mjs",
     "fetch:news": "node scripts/fetch-news.mjs",
-    "translate": "node scripts/translate.mjs"
+    "translate": "node scripts/translate.mjs",
+    "enrich": "node scripts/enrich.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.38.2",

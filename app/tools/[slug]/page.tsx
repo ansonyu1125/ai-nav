@@ -9,8 +9,10 @@ import PricingBadge from "@/components/PricingBadge";
 import RegionBadge from "@/components/RegionBadge";
 import ToolCard from "@/components/ToolCard";
 import ToolLogo from "@/components/ToolLogo";
+import ToolDetail from "@/components/ToolDetail";
 import { BilingualText, ZhOnlyText } from "@/components/Bilingual";
 import TagList from "@/components/TagList";
+import { getPricingScreenshot } from "@/lib/pricing";
 
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.id }));
@@ -41,6 +43,7 @@ export default async function ToolPage({
 
   const category = categoryMap[tool.category];
   const related = getRelatedTools(tool);
+  const screenshot = getPricingScreenshot(tool.id);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -174,6 +177,9 @@ export default async function ToolPage({
           </div>
         </div>
       </div>
+
+      {/* 详情扩展：主要功能 / 如何使用 / 核心优势 / 使用环境 / 费用详情 / 收费标准截图 */}
+      <ToolDetail tool={tool} screenshot={screenshot} />
 
       {/* 相关工具 */}
       {related.length > 0 && (
