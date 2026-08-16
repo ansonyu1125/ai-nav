@@ -11,7 +11,9 @@
     "fetch:logos": "node scripts/fetch-logos.mjs",
     "fetch:news": "node scripts/fetch-news.mjs",
     "translate": "node scripts/translate.mjs",
-    "enrich": "node scripts/enrich.mjs"
+    "enrich": "node scripts/enrich.mjs",
+    "add:tools": "node scripts/add-tools.mjs",
+    "fetch:new-logos": "node scripts/fetch-new-logos.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.38.2",

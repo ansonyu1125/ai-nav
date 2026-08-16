@@ -10287,5 +10287,3732 @@
         "note": "Charged by token usage, suitable for developers"
       }
     ]
+  },
+  {
+    "id": "meta-ai",
+    "name": "Meta AI",
+    "nameZh": "Meta AI",
+    "category": "chat",
+    "region": "overseas",
+    "officialUrl": "https://www.meta.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费使用",
+    "tags": [
+      "对话",
+      "多模态",
+      "Llama"
+    ],
+    "emoji": "🤖",
+    "releaseYear": 2023,
+    "score": 9,
+    "popularity": 88,
+    "description": "Meta AI是Meta推出的免费AI助手，支持对话、图像生成与理解，基于Llama模型，覆盖多平台。",
+    "descriptionEn": "Meta AI is a free AI assistant by Meta, offering conversational, image generation and understanding capabilities powered by Llama models, available across platforms.",
+    "tagsEn": [
+      "conversation",
+      "multimodal",
+      "Llama"
+    ],
+    "pricingNoteEn": "Free to use",
+    "features": [
+      "自然语言对话",
+      "图像生成与编辑",
+      "图像理解与分析",
+      "基于Llama模型",
+      "多平台支持"
+    ],
+    "featuresEn": [
+      "Natural language conversation",
+      "Image generation and editing",
+      "Image understanding and analysis",
+      "Based on Llama models",
+      "Multi-platform support"
+    ],
+    "howToUse": [
+      "访问Meta AI官网或下载应用",
+      "登录或创建Meta账户",
+      "在对话框输入问题或指令",
+      "上传图片进行识别或编辑",
+      "获取AI回复并继续交互"
+    ],
+    "howToUseEn": [
+      "Visit Meta AI website or download the app",
+      "Log in or create a Meta account",
+      "Type your question or command in the chat box",
+      "Upload images for recognition or editing",
+      "Receive AI responses and continue interaction"
+    ],
+    "advantages": [
+      "完全免费",
+      "强大的Llama模型支持",
+      "多模态能力",
+      "与Meta生态整合"
+    ],
+    "advantagesEn": [
+      "Completely free",
+      "Powered by powerful Llama models",
+      "Multimodal capabilities",
+      "Integration with Meta ecosystem"
+    ],
+    "platforms": [
+      "web",
+      "ios",
+      "android",
+      "desktop",
+      "api"
+    ],
+    "apiName": "Meta AI API",
+    "apiNameEn": "Meta AI API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "基本功能免费使用"
+      },
+      {
+        "name": "付费版",
+        "price": "以官网为准",
+        "note": "可能提供高级功能"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic features free"
+      },
+      {
+        "name": "Paid",
+        "price": "See official website",
+        "note": "May offer advanced features"
+      }
+    ],
+    "logo": "/logos/meta-ai.ico"
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "nameZh": "Cohere",
+    "category": "chat",
+    "region": "overseas",
+    "officialUrl": "https://cohere.com",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + API 按量付费",
+    "tags": [
+      "对话",
+      "API",
+      "企业"
+    ],
+    "emoji": "🔮",
+    "releaseYear": 2019,
+    "score": 8.5,
+    "popularity": 70,
+    "description": "Cohere 是企业级 AI 平台，提供先进的大语言模型和自然语言处理 API，专注于安全、隐私和定制化，助力企业构建智能应用。",
+    "descriptionEn": "Cohere is an enterprise AI platform offering advanced large language models and NLP APIs, focused on security, privacy, and customization to help businesses build intelligent applications.",
+    "tagsEn": [
+      "conversation",
+      "API",
+      "enterprise"
+    ],
+    "pricingNoteEn": "Free tier available, API usage-based pricing.",
+    "features": [
+      "生成式大语言模型",
+      "语义搜索与检索增强生成",
+      "文本分类与情感分析",
+      "多语言支持",
+      "企业级安全与隐私保护",
+      "模型定制与微调"
+    ],
+    "featuresEn": [
+      "Generative large language models",
+      "Semantic search and RAG",
+      "Text classification and sentiment analysis",
+      "Multilingual support",
+      "Enterprise-grade security and privacy",
+      "Model customization and fine-tuning"
+    ],
+    "howToUse": [
+      "注册 Cohere 账号并获取 API 密钥",
+      "选择适合的模型（如 Command、Embed）",
+      "调用 API 进行文本生成、分析等操作",
+      "根据需求调整参数和进行微调",
+      "集成到应用或工作流中"
+    ],
+    "howToUseEn": [
+      "Sign up for a Cohere account and get an API key",
+      "Choose a suitable model (e.g., Command, Embed)",
+      "Call the API for text generation, analysis, etc.",
+      "Adjust parameters and fine-tune as needed",
+      "Integrate into your application or workflow"
+    ],
+    "advantages": [
+      "专注企业级安全与合规",
+      "模型可定制，支持私有部署",
+      "性能卓越，支持多语言",
+      "提供全面的 NLP 工具集",
+      "灵活的定价模式"
+    ],
+    "advantagesEn": [
+      "Focus on enterprise-grade security and compliance",
+      "Customizable models with private deployment support",
+      "High performance with multilingual support",
+      "Comprehensive NLP toolkit",
+      "Flexible pricing models"
+    ],
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "apiName": "Cohere API",
+    "apiNameEn": "Cohere API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "提供有限免费调用额度"
+      },
+      {
+        "name": "生产版",
+        "price": "按量付费",
+        "note": "根据使用量计费，以官网为准"
+      },
+      {
+        "name": "企业版",
+        "price": "定制",
+        "note": "提供专属支持、私有部署等，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Limited free usage quota"
+      },
+      {
+        "name": "Production",
+        "price": "Usage-based",
+        "note": "Billed by usage, subject to official website"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Dedicated support, private deployment, etc., subject to official website"
+      }
+    ],
+    "logo": "/logos/cohere.svg"
+  },
+  {
+    "id": "baichuan",
+    "name": "百川智能",
+    "nameZh": "百川智能",
+    "category": "chat",
+    "region": "domestic",
+    "officialUrl": "https://www.baichuan-ai.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + API 按量付费",
+    "tags": [
+      "对话",
+      "大模型",
+      "API"
+    ],
+    "emoji": "🧠",
+    "releaseYear": 2023,
+    "score": 8,
+    "popularity": 62,
+    "description": "百川智能是一家中国AI公司，提供大语言模型和对话服务，支持API调用，适用于多种应用场景。",
+    "descriptionEn": "Baichuan Intelligent is a Chinese AI company offering large language models and conversational services with API support for various applications.",
+    "tagsEn": [
+      "Dialogue",
+      "Large Model",
+      "API"
+    ],
+    "pricingNoteEn": "Free tier available, API usage-based pricing.",
+    "features": [
+      "高质量中文对话生成",
+      "支持多轮对话理解",
+      "提供API接口集成",
+      "适用于多种行业场景",
+      "持续更新模型版本"
+    ],
+    "featuresEn": [
+      "High-quality Chinese dialogue generation",
+      "Multi-turn conversation understanding",
+      "API integration support",
+      "Suitable for various industry scenarios",
+      "Continuous model updates"
+    ],
+    "howToUse": [
+      "访问百川智能官网注册账号",
+      "选择免费版或申请API密钥",
+      "通过API调用或使用在线对话界面",
+      "根据文档集成到应用中"
+    ],
+    "howToUseEn": [
+      "Visit Baichuan Intelligent official website and register",
+      "Choose free tier or apply for API key",
+      "Use API or online chat interface",
+      "Integrate into applications following documentation"
+    ],
+    "advantages": [
+      "中文优化，理解精准",
+      "灵活的API计费",
+      "企业级安全与稳定性",
+      "快速迭代，技术领先"
+    ],
+    "advantagesEn": [
+      "Optimized for Chinese, accurate understanding",
+      "Flexible API pricing",
+      "Enterprise-grade security and stability",
+      "Rapid iteration, leading technology"
+    ],
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "apiName": "Baichuan API",
+    "apiNameEn": "Baichuan API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "0元",
+        "note": "有限次数，适合体验"
+      },
+      {
+        "name": "API按量付费",
+        "price": "按量计费",
+        "note": "根据使用量收费，具体以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Limited usage, for trial"
+      },
+      {
+        "name": "API Pay-as-you-go",
+        "price": "Usage-based",
+        "note": "Charged by usage, refer to official website"
+      }
+    ]
+  },
+  {
+    "id": "hunyuan",
+    "name": "腾讯混元",
+    "nameZh": "腾讯混元",
+    "category": "chat",
+    "region": "domestic",
+    "officialUrl": "https://hunyuan.tencent.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + API 付费",
+    "tags": [
+      "对话",
+      "多模态",
+      "腾讯"
+    ],
+    "emoji": "🧩",
+    "releaseYear": 2023,
+    "score": 8.4,
+    "popularity": 78,
+    "description": "腾讯混元是腾讯推出的多模态大模型，支持文本对话、图像生成与理解，深度整合腾讯生态，提供API服务，覆盖内容创作、智能客服等场景。",
+    "descriptionEn": "Tencent Hunyuan is Tencent's multimodal large model, supporting text dialogue, image generation and understanding, deeply integrated with Tencent ecosystem, offering API services for content creation, intelligent customer service and more.",
+    "tagsEn": [
+      "Dialogue",
+      "Multimodal",
+      "Tencent"
+    ],
+    "pricingNoteEn": "Free tier available, API usage is paid.",
+    "features": [
+      "多模态理解与生成",
+      "文本对话与创作",
+      "图像生成与编辑",
+      "API接口服务",
+      "腾讯生态整合"
+    ],
+    "featuresEn": [
+      "Multimodal understanding and generation",
+      "Text dialogue and creation",
+      "Image generation and editing",
+      "API interface service",
+      "Tencent ecosystem integration"
+    ],
+    "howToUse": [
+      "访问腾讯混元官网并注册账号",
+      "选择免费体验或开通API服务",
+      "在网页端直接输入问题或上传图片",
+      "开发者可获取API密钥进行集成"
+    ],
+    "howToUseEn": [
+      "Visit Tencent Hunyuan official website and register an account",
+      "Choose free trial or activate API service",
+      "Input questions or upload images directly on the web",
+      "Developers can obtain API keys for integration"
+    ],
+    "advantages": [
+      "背靠腾讯，技术实力雄厚",
+      "多模态能力全面",
+      "与腾讯生态深度整合",
+      "提供灵活API服务"
+    ],
+    "advantagesEn": [
+      "Backed by Tencent, strong technical strength",
+      "Comprehensive multimodal capabilities",
+      "Deep integration with Tencent ecosystem",
+      "Flexible API services"
+    ],
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "apiName": "腾讯混元API",
+    "apiNameEn": "Tencent Hunyuan API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "0元",
+        "note": "基础功能免费使用"
+      },
+      {
+        "name": "API按量付费",
+        "price": "按量计费",
+        "note": "根据调用量收费，具体以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "¥0",
+        "note": "Basic features free"
+      },
+      {
+        "name": "API Pay-as-you-go",
+        "price": "Usage-based",
+        "note": "Charged by usage, see official website for details"
+      }
+    ],
+    "logo": "/logos/hunyuan.png"
+  },
+  {
+    "id": "sensenova",
+    "name": "商汤日日新",
+    "nameZh": "商汤日日新",
+    "category": "chat",
+    "region": "domestic",
+    "officialUrl": "https://platform.sensenova.cn",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 企业定制",
+    "tags": [
+      "对话",
+      "多模态",
+      "商汤"
+    ],
+    "emoji": "🌟",
+    "releaseYear": 2023,
+    "score": 7.8,
+    "popularity": 55,
+    "description": "商汤日日新是商汤科技推出的大语言模型，支持多模态交互，提供对话、创作、分析等能力，并开放API供开发者集成。",
+    "descriptionEn": "SenseNova is a large language model by SenseTime, supporting multimodal interaction, offering dialogue, creation, analysis, and open APIs for developers.",
+    "tagsEn": [
+      "Dialogue",
+      "Multimodal",
+      "SenseTime"
+    ],
+    "pricingNoteEn": "Free tier available, enterprise customization on request.",
+    "features": [
+      "多模态理解与生成",
+      "自然语言对话",
+      "内容创作辅助",
+      "数据分析与推理",
+      "API接口开放",
+      "企业级定制服务"
+    ],
+    "featuresEn": [
+      "Multimodal understanding and generation",
+      "Natural language dialogue",
+      "Content creation assistance",
+      "Data analysis and reasoning",
+      "Open API access",
+      "Enterprise-level customization"
+    ],
+    "howToUse": [
+      "访问商汤日日新官网注册账号",
+      "选择免费版或申请企业试用",
+      "在平台界面直接使用对话功能",
+      "开发者可获取API密钥进行集成"
+    ],
+    "howToUseEn": [
+      "Visit SenseNova official website and register",
+      "Choose free tier or apply for enterprise trial",
+      "Use dialogue features directly on the platform",
+      "Developers can obtain API keys for integration"
+    ],
+    "advantages": [
+      "强大的多模态能力",
+      "商汤AI技术积累",
+      "灵活的API接入",
+      "企业级安全与定制"
+    ],
+    "advantagesEn": [
+      "Strong multimodal capabilities",
+      "SenseTime's AI expertise",
+      "Flexible API integration",
+      "Enterprise-grade security and customization"
+    ],
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "apiName": "SenseNova API",
+    "apiNameEn": "SenseNova API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "免费",
+        "note": "基础功能，有限调用次数"
+      },
+      {
+        "name": "企业版",
+        "price": "定制报价",
+        "note": "高级功能，专属支持，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "note": "Basic features with limited usage"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom quote",
+        "note": "Advanced features, dedicated support, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "ai360",
+    "name": "360 智脑",
+    "nameZh": "360 智脑",
+    "category": "chat",
+    "region": "domestic",
+    "officialUrl": "https://ai.360.cn",
+    "pricing": "freemium",
+    "pricingNote": "免费使用",
+    "tags": [
+      "对话",
+      "搜索",
+      "360"
+    ],
+    "emoji": "🔵",
+    "releaseYear": 2023,
+    "score": 7.5,
+    "popularity": 60,
+    "description": "360智脑是360公司推出的AI对话助手，融合搜索与对话能力，提供智能问答、信息检索等服务，免费使用。",
+    "descriptionEn": "360 Zhinao is an AI dialogue assistant launched by 360, integrating search and conversation capabilities to provide intelligent Q&A and information retrieval services, free to use.",
+    "tagsEn": [
+      "Dialogue",
+      "Search",
+      "360"
+    ],
+    "pricingNoteEn": "Free to use",
+    "features": [
+      "智能对话问答",
+      "联网搜索信息",
+      "多轮对话理解",
+      "文本创作辅助",
+      "知识百科查询"
+    ],
+    "featuresEn": [
+      "Intelligent dialogue Q&A",
+      "Online information search",
+      "Multi-turn conversation understanding",
+      "Text creation assistance",
+      "Knowledge encyclopedia lookup"
+    ],
+    "howToUse": [
+      "访问360智脑官网或相关入口",
+      "输入问题或指令",
+      "获取回答并可根据需要追问",
+      "利用搜索功能获取最新信息"
+    ],
+    "howToUseEn": [
+      "Visit the official website or entry point of 360 Zhinao",
+      "Type your question or command",
+      "Get the answer and follow up as needed",
+      "Use the search function to get the latest information"
+    ],
+    "advantages": [
+      "免费使用",
+      "结合360搜索优势",
+      "中文理解能力强",
+      "界面简洁易用"
+    ],
+    "advantagesEn": [
+      "Free to use",
+      "Leverages 360 search advantages",
+      "Strong Chinese comprehension",
+      "Simple and easy-to-use interface"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "免费",
+        "note": "基础功能免费使用"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "note": "Basic features free to use"
+      }
+    ]
+  },
+  {
+    "id": "civitai",
+    "name": "Civitai",
+    "nameZh": "Civitai",
+    "category": "image",
+    "region": "overseas",
+    "officialUrl": "https://civitai.com",
+    "pricing": "freemium",
+    "pricingNote": "免费使用 + 会员订阅",
+    "tags": [
+      "模型社区",
+      "图像",
+      "Stable Diffusion"
+    ],
+    "emoji": "🎨",
+    "releaseYear": 2022,
+    "score": 8.8,
+    "popularity": 82,
+    "description": "Civitai 是面向 Stable Diffusion 等 AI 图像生成模型的社区平台，提供海量模型下载、分享与在线生成功能，支持用户上传作品、浏览提示词，并可通过订阅支持创作者。",
+    "descriptionEn": "Civitai is a community platform for AI image generation models like Stable Diffusion, offering a vast library of models for download, sharing, and online generation. Users can upload creations, browse prompts, and support creators via subscriptions.",
+    "tagsEn": [
+      "Model Community",
+      "Image",
+      "Stable Diffusion"
+    ],
+    "pricingNoteEn": "Free to use with optional membership subscription",
+    "features": [
+      "海量模型资源下载",
+      "在线图像生成",
+      "社区作品分享与浏览",
+      "提示词与参数查看",
+      "模型分类与搜索",
+      "创作者订阅支持"
+    ],
+    "featuresEn": [
+      "Extensive model library for download",
+      "Online image generation",
+      "Community sharing and browsing of creations",
+      "View prompts and parameters",
+      "Model categorization and search",
+      "Support creators via subscription"
+    ],
+    "howToUse": [
+      "注册或登录 Civitai 账号",
+      "浏览或搜索所需模型",
+      "下载模型并导入到本地 Stable Diffusion 等工具",
+      "或使用在线生成功能，输入提示词生成图像",
+      "分享作品并查看他人提示词"
+    ],
+    "howToUseEn": [
+      "Sign up or log in to your Civitai account",
+      "Browse or search for desired models",
+      "Download models and import into local tools like Stable Diffusion",
+      "Or use online generation by entering prompts to create images",
+      "Share your creations and view others' prompts"
+    ],
+    "advantages": [
+      "模型资源丰富且更新快",
+      "社区活跃，交流氛围好",
+      "支持在线生成，无需本地配置",
+      "提供详细模型信息与示例图",
+      "免费使用，基础功能齐全"
+    ],
+    "advantagesEn": [
+      "Rich and frequently updated model resources",
+      "Active community with good communication",
+      "Supports online generation without local setup",
+      "Provides detailed model info and example images",
+      "Free to use with comprehensive basic features"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "基本功能免费，可下载模型、在线生成，有每日限额"
+      },
+      {
+        "name": "会员订阅",
+        "price": "约 $5/月起",
+        "note": "额外功能如更高限额、专属徽章等，具体以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic features free, including model downloads and online generation with daily limits"
+      },
+      {
+        "name": "Membership",
+        "price": "From ~$5/month",
+        "note": "Additional features like higher limits, exclusive badges, etc. See official website for details"
+      }
+    ],
+    "logo": "/logos/civitai.svg"
+  },
+  {
+    "id": "magnific",
+    "name": "Magnific AI",
+    "nameZh": "Magnific AI",
+    "category": "image-edit",
+    "region": "overseas",
+    "officialUrl": "https://magnific.ai",
+    "pricing": "paid",
+    "pricingNote": "订阅付费",
+    "tags": [
+      "图像放大",
+      "增强",
+      "修图"
+    ],
+    "emoji": "🔍",
+    "releaseYear": 2023,
+    "score": 8.2,
+    "popularity": 58,
+    "description": "Magnific AI 是一款基于生成式 AI 的图像放大与增强工具，可将低分辨率图像放大至极高分辨率，并智能增强细节、纹理和光影，适用于摄影、设计等领域。",
+    "descriptionEn": "Magnific AI is a generative AI-powered image upscaling and enhancement tool that can upscale low-resolution images to extremely high resolution while intelligently enhancing details, textures, and lighting, suitable for photography, design, and more.",
+    "tagsEn": [
+      "Image Upscaling",
+      "Enhancement",
+      "Photo Editing"
+    ],
+    "pricingNoteEn": "Subscription-based paid service",
+    "features": [
+      "高倍率图像放大，最高可达 16 倍",
+      "智能增强细节、纹理和光影",
+      "支持自定义放大倍数和增强强度",
+      "提供多种预设风格和滤镜",
+      "批量处理多张图片",
+      "支持导出高分辨率 TIFF 格式"
+    ],
+    "featuresEn": [
+      "Upscale images up to 16x",
+      "Intelligent enhancement of details, textures, and lighting",
+      "Customizable upscale factor and enhancement strength",
+      "Various preset styles and filters",
+      "Batch processing of multiple images",
+      "Export high-resolution TIFF format"
+    ],
+    "howToUse": [
+      "访问 Magnific AI 官网并注册账号",
+      "上传需要放大的图片",
+      "选择放大倍数和增强参数",
+      "点击生成并预览效果",
+      "下载处理后的高清图片"
+    ],
+    "howToUseEn": [
+      "Visit Magnific AI official website and sign up",
+      "Upload the image you want to upscale",
+      "Choose upscale factor and enhancement parameters",
+      "Click generate and preview the result",
+      "Download the processed high-resolution image"
+    ],
+    "advantages": [
+      "放大效果自然，细节丰富",
+      "操作简单，无需专业修图技能",
+      "支持批量处理，提高效率",
+      "提供多种风格预设，适用性强"
+    ],
+    "advantagesEn": [
+      "Natural upscaling with rich details",
+      "Easy to use, no professional editing skills required",
+      "Batch processing for efficiency",
+      "Various style presets for versatility"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费试用",
+        "price": "免费",
+        "note": "提供有限次数的试用，具体以官网为准"
+      },
+      {
+        "name": "专业版",
+        "price": "约 $39/月",
+        "note": "包含更多功能与更高分辨率输出，以官网为准"
+      },
+      {
+        "name": "企业版",
+        "price": "定制",
+        "note": "针对团队需求提供定制方案，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free Trial",
+        "price": "Free",
+        "note": "Limited number of trials, subject to official website"
+      },
+      {
+        "name": "Pro",
+        "price": "Approx. $39/month",
+        "note": "Includes more features and higher resolution output, subject to official website"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Customized solutions for teams, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "topaz-photo",
+    "name": "Topaz Photo AI",
+    "nameZh": "Topaz Photo AI",
+    "category": "image-edit",
+    "region": "overseas",
+    "officialUrl": "https://www.topazlabs.com",
+    "pricing": "paid",
+    "pricingNote": "一次性买断 / 订阅",
+    "tags": [
+      "图像增强",
+      "降噪",
+      "修图"
+    ],
+    "emoji": "📷",
+    "releaseYear": 2022,
+    "score": 8.4,
+    "popularity": 66,
+    "description": "Topaz Photo AI 是一款基于人工智能的图像增强软件，集降噪、锐化、放大与修复于一体，自动检测图像问题并优化，适用于摄影后期与图像修复。",
+    "descriptionEn": "Topaz Photo AI is an AI-powered image enhancement software that combines denoising, sharpening, upscaling, and restoration. It automatically detects image issues and optimizes them, suitable for photography post-processing and image restoration.",
+    "tagsEn": [
+      "Image Enhancement",
+      "Denoising",
+      "Photo Editing"
+    ],
+    "pricingNoteEn": "One-time purchase / Subscription",
+    "features": [
+      "自动检测图像噪点、模糊等问题",
+      "AI 降噪，保留细节",
+      "AI 锐化，提升清晰度",
+      "AI 放大，最高 8 倍",
+      "人脸修复与增强",
+      "批量处理多张图片"
+    ],
+    "featuresEn": [
+      "Automatically detect noise, blur, and other issues",
+      "AI denoising with detail preservation",
+      "AI sharpening for clarity",
+      "AI upscaling up to 8x",
+      "Face recovery and enhancement",
+      "Batch processing multiple images"
+    ],
+    "howToUse": [
+      "下载并安装 Topaz Photo AI",
+      "导入需要处理的图片",
+      "软件自动分析并推荐优化方案",
+      "手动调整参数或直接应用",
+      "导出处理后的图片"
+    ],
+    "howToUseEn": [
+      "Download and install Topaz Photo AI",
+      "Import the image to be processed",
+      "The software automatically analyzes and recommends optimizations",
+      "Manually adjust parameters or apply directly",
+      "Export the processed image"
+    ],
+    "advantages": [
+      "一站式解决多种图像问题",
+      "AI 自动检测，操作简单",
+      "高质量输出，细节保留好",
+      "支持批量处理，提高效率"
+    ],
+    "advantagesEn": [
+      "One-stop solution for various image issues",
+      "AI auto-detection, easy to use",
+      "High-quality output with good detail preservation",
+      "Batch processing for efficiency"
+    ],
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "Photo AI 单次购买",
+        "price": "199 美元起",
+        "note": "一次性买断，含一年更新，以官网为准"
+      },
+      {
+        "name": "Photo AI 订阅",
+        "price": "约 19 美元/月",
+        "note": "按月订阅，含全部功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Photo AI One-time Purchase",
+        "price": "From $199",
+        "note": "One-time purchase, includes 1 year of updates, subject to official website"
+      },
+      {
+        "name": "Photo AI Subscription",
+        "price": "About $19/month",
+        "note": "Monthly subscription, includes all features, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "lets-enhance",
+    "name": "Let's Enhance",
+    "nameZh": "Let's Enhance",
+    "category": "image-edit",
+    "region": "overseas",
+    "officialUrl": "https://letsenhance.io",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "图像放大",
+      "增强"
+    ],
+    "emoji": "🖼️",
+    "releaseYear": 2019,
+    "score": 7.6,
+    "popularity": 48,
+    "description": "Let's Enhance是一款AI图像增强与放大工具，利用深度学习技术提升图片分辨率、修复细节，适用于电商、摄影等场景。",
+    "descriptionEn": "Let's Enhance is an AI-powered image enhancement and upscaling tool that uses deep learning to improve resolution and restore details, ideal for e-commerce and photography.",
+    "tagsEn": [
+      "Image Upscaling",
+      "Enhancement"
+    ],
+    "pricingNoteEn": "Free tier with limited credits, plus subscription plans.",
+    "features": [
+      "AI智能放大图片分辨率",
+      "自动修复模糊与噪点",
+      "支持批量处理图片",
+      "多种增强模式可选",
+      "保留原始色彩与细节"
+    ],
+    "featuresEn": [
+      "AI-powered image upscaling",
+      "Automatic blur and noise reduction",
+      "Batch processing support",
+      "Multiple enhancement modes",
+      "Preserves original colors and details"
+    ],
+    "howToUse": [
+      "访问官网并注册账号",
+      "上传需要增强的图片",
+      "选择放大倍数和增强模式",
+      "点击处理并下载结果"
+    ],
+    "howToUseEn": [
+      "Visit the official website and sign up",
+      "Upload images to enhance",
+      "Choose upscaling factor and enhancement mode",
+      "Process and download the result"
+    ],
+    "advantages": [
+      "高倍数放大保持清晰",
+      "操作简单，无需专业技巧",
+      "支持批量处理提高效率",
+      "适用于多种行业场景"
+    ],
+    "advantagesEn": [
+      "High upscaling factor with clarity",
+      "Easy to use, no professional skills needed",
+      "Batch processing improves efficiency",
+      "Suitable for various industry scenarios"
+    ],
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "apiName": "Let's Enhance API",
+    "apiNameEn": "Let's Enhance API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "每月10次免费增强"
+      },
+      {
+        "name": "付费版",
+        "price": "$9/月起",
+        "note": "更多次数与功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "10 free enhancements per month"
+      },
+      {
+        "name": "Paid",
+        "price": "From $9/month",
+        "note": "More credits and features, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "pixverse",
+    "name": "PixVerse",
+    "nameZh": "PixVerse",
+    "category": "video",
+    "region": "domestic",
+    "officialUrl": "https://pixverse.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "文生视频",
+      "图生视频"
+    ],
+    "emoji": "🎬",
+    "releaseYear": 2023,
+    "score": 8.3,
+    "popularity": 74,
+    "description": "PixVerse是一款AI视频生成工具，支持文生视频和图生视频，提供免费额度与订阅服务，让用户轻松创作高质量视频。",
+    "descriptionEn": "PixVerse is an AI video generation tool that supports text-to-video and image-to-video, offering free credits and subscription plans for effortless high-quality video creation.",
+    "tagsEn": [
+      "text-to-video",
+      "image-to-video"
+    ],
+    "pricingNoteEn": "Free credits + subscription",
+    "features": [
+      "文本生成视频",
+      "图片生成视频",
+      "多种风格模板",
+      "高清视频输出",
+      "快速生成速度"
+    ],
+    "featuresEn": [
+      "Text-to-video generation",
+      "Image-to-video generation",
+      "Various style templates",
+      "HD video output",
+      "Fast generation speed"
+    ],
+    "howToUse": [
+      "访问PixVerse官网并注册账号",
+      "选择文生视频或图生视频模式",
+      "输入文本描述或上传图片",
+      "调整参数并点击生成",
+      "预览并下载视频"
+    ],
+    "howToUseEn": [
+      "Visit PixVerse official website and sign up",
+      "Choose text-to-video or image-to-video mode",
+      "Enter text description or upload image",
+      "Adjust parameters and click generate",
+      "Preview and download video"
+    ],
+    "advantages": [
+      "免费额度易获取",
+      "生成速度快",
+      "视频质量高",
+      "操作简单易上手"
+    ],
+    "advantagesEn": [
+      "Easy access to free credits",
+      "Fast generation speed",
+      "High video quality",
+      "Simple and user-friendly"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "免费",
+        "note": "提供有限免费额度，以官网为准"
+      },
+      {
+        "name": "订阅版",
+        "price": "约$10/月起",
+        "note": "更多额度与高级功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "note": "Limited free credits, subject to official website"
+      },
+      {
+        "name": "Subscription",
+        "price": "From ~$10/month",
+        "note": "More credits and premium features, subject to official website"
+      }
+    ],
+    "logo": "/logos/pixverse.svg"
+  },
+  {
+    "id": "genmo",
+    "name": "Genmo",
+    "nameZh": "Genmo",
+    "category": "video",
+    "region": "overseas",
+    "officialUrl": "https://www.genmo.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "文生视频",
+      "图像"
+    ],
+    "emoji": "🎥",
+    "releaseYear": 2023,
+    "score": 7.7,
+    "popularity": 50,
+    "description": "Genmo是一款AI视频生成工具，支持文本和图像生成视频，提供免费额度与订阅服务，适合创意内容制作。",
+    "descriptionEn": "Genmo is an AI video generation tool that supports text-to-video and image-to-video, offering free credits and subscription plans for creative content production.",
+    "tagsEn": [
+      "text-to-video",
+      "image"
+    ],
+    "pricingNoteEn": "Free credits + subscription",
+    "features": [
+      "文本生成视频",
+      "图像生成视频",
+      "多种风格模板",
+      "高清输出",
+      "快速渲染"
+    ],
+    "featuresEn": [
+      "Text-to-video generation",
+      "Image-to-video generation",
+      "Various style templates",
+      "HD output",
+      "Fast rendering"
+    ],
+    "howToUse": [
+      "访问Genmo官网并注册账号",
+      "选择文本或图像输入方式",
+      "输入描述或上传图像，调整参数",
+      "生成视频并预览",
+      "下载或分享视频"
+    ],
+    "howToUseEn": [
+      "Visit Genmo's official website and sign up",
+      "Choose text or image input mode",
+      "Enter description or upload image, adjust parameters",
+      "Generate video and preview",
+      "Download or share video"
+    ],
+    "advantages": [
+      "支持多种输入方式",
+      "生成速度快",
+      "免费额度友好",
+      "适合创意内容"
+    ],
+    "advantagesEn": [
+      "Supports multiple input modes",
+      "Fast generation speed",
+      "Generous free tier",
+      "Ideal for creative content"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "每月提供有限免费额度"
+      },
+      {
+        "name": "订阅版",
+        "price": "约$10/月起",
+        "note": "更多生成次数和高级功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Limited free credits per month"
+      },
+      {
+        "name": "Subscription",
+        "price": "From ~$10/month",
+        "note": "More generations and premium features, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "filmora",
+    "name": "万兴喵影",
+    "nameZh": "Filmora",
+    "category": "video",
+    "region": "domestic",
+    "officialUrl": "https://filmora.wondershare.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 订阅/买断",
+    "tags": [
+      "视频剪辑",
+      "AI",
+      "万兴"
+    ],
+    "emoji": "🎞️",
+    "releaseYear": 2019,
+    "score": 8.2,
+    "popularity": 80,
+    "description": "万兴喵影（Filmora）是一款面向大众用户的视频剪辑软件，集成AI功能，支持多平台，提供从入门到专业的剪辑体验。",
+    "descriptionEn": "Filmora is a user-friendly video editing software with integrated AI features, supporting multiple platforms, offering editing experience from beginner to professional.",
+    "tagsEn": [
+      "Video Editing",
+      "AI",
+      "Wondershare"
+    ],
+    "pricingNoteEn": "Free version + subscription/perpetual license",
+    "features": [
+      "AI智能剪辑，自动识别高光片段",
+      "丰富的特效库和转场效果",
+      "支持4K高清视频编辑",
+      "多轨道时间线编辑",
+      "内置音乐库和音效",
+      "一键导出至社交平台"
+    ],
+    "featuresEn": [
+      "AI-powered editing, auto-detect highlights",
+      "Rich effects library and transitions",
+      "Support 4K HD video editing",
+      "Multi-track timeline editing",
+      "Built-in music library and sound effects",
+      "One-click export to social platforms"
+    ],
+    "howToUse": [
+      "下载并安装万兴喵影",
+      "导入视频素材到媒体库",
+      "拖拽素材到时间线进行剪辑",
+      "应用特效、转场和文字",
+      "导出视频并分享"
+    ],
+    "howToUseEn": [
+      "Download and install Filmora",
+      "Import video clips to media library",
+      "Drag clips to timeline for editing",
+      "Apply effects, transitions, and text",
+      "Export video and share"
+    ],
+    "advantages": [
+      "操作简单，适合新手",
+      "AI功能提升剪辑效率",
+      "跨平台支持，同步项目",
+      "持续更新，功能丰富"
+    ],
+    "advantagesEn": [
+      "Easy to use, suitable for beginners",
+      "AI features improve editing efficiency",
+      "Cross-platform support, sync projects",
+      "Continuous updates, feature-rich"
+    ],
+    "platforms": [
+      "web",
+      "macos",
+      "windows",
+      "ios",
+      "android"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "0",
+        "note": "基础功能，带水印"
+      },
+      {
+        "name": "订阅版",
+        "price": "约¥198/年",
+        "note": "解锁全部功能，无广告"
+      },
+      {
+        "name": "买断版",
+        "price": "约¥498",
+        "note": "永久使用，含更新"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic features with watermark"
+      },
+      {
+        "name": "Subscription",
+        "price": "~$29/year",
+        "note": "Unlock all features, no ads"
+      },
+      {
+        "name": "Perpetual",
+        "price": "~$69",
+        "note": "Lifetime use, includes updates"
+      }
+    ]
+  },
+  {
+    "id": "did",
+    "name": "D-ID",
+    "nameZh": "D-ID",
+    "category": "avatar",
+    "region": "overseas",
+    "officialUrl": "https://www.d-id.com",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "数字人",
+      "口播",
+      "视频"
+    ],
+    "emoji": "🧑‍💼",
+    "releaseYear": 2017,
+    "score": 8,
+    "popularity": 60,
+    "description": "D-ID是一款AI数字人视频生成工具，能将文本或图片转化为逼真的数字人播报视频，支持多语言，广泛应用于营销、教育等领域。",
+    "descriptionEn": "D-ID is an AI-powered digital human video generation tool that converts text or images into realistic avatar videos, supporting multiple languages, widely used in marketing, education, and more.",
+    "tagsEn": [
+      "digital human",
+      "talking head",
+      "video"
+    ],
+    "pricingNoteEn": "Free trial credits + subscription plans",
+    "features": [
+      "文本转数字人视频",
+      "照片说话",
+      "多语言支持",
+      "自定义数字人形象",
+      "API集成",
+      "实时视频生成"
+    ],
+    "featuresEn": [
+      "Text-to-avatar video",
+      "Talking photo",
+      "Multi-language support",
+      "Custom avatar creation",
+      "API integration",
+      "Real-time video generation"
+    ],
+    "howToUse": [
+      "注册并登录D-ID账号",
+      "选择创建视频，上传或选择数字人形象",
+      "输入文本或上传音频，调整语音和背景",
+      "预览并生成视频，下载或分享"
+    ],
+    "howToUseEn": [
+      "Sign up and log in to D-ID account",
+      "Choose create video, upload or select avatar",
+      "Enter text or upload audio, adjust voice and background",
+      "Preview and generate video, download or share"
+    ],
+    "advantages": [
+      "数字人逼真度高",
+      "操作简单易上手",
+      "支持多种语言",
+      "提供API便于集成",
+      "生成速度快"
+    ],
+    "advantagesEn": [
+      "High realism of digital humans",
+      "Easy to use",
+      "Supports multiple languages",
+      "API for integration",
+      "Fast generation speed"
+    ],
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "apiName": "D-ID API",
+    "apiNameEn": "D-ID API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "提供有限免费额度，以官网为准"
+      },
+      {
+        "name": "专业版",
+        "price": "$59/月起",
+        "note": "适合个人创作者，包含更多功能"
+      },
+      {
+        "name": "企业版",
+        "price": "定制",
+        "note": "提供定制化解决方案和专属支持"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Limited free credits, subject to official website"
+      },
+      {
+        "name": "Pro",
+        "price": "$59/month starting",
+        "note": "For individual creators, includes more features"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Customized solutions and dedicated support"
+      }
+    ]
+  },
+  {
+    "id": "boomy",
+    "name": "Boomy",
+    "nameZh": "Boomy",
+    "category": "music",
+    "region": "overseas",
+    "officialUrl": "https://boomy.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 订阅",
+    "tags": [
+      "AI 音乐",
+      "作曲"
+    ],
+    "emoji": "🎵",
+    "releaseYear": 2018,
+    "score": 7.4,
+    "popularity": 45,
+    "description": "Boomy 是一个 AI 音乐创作平台，让任何人都能在几秒钟内生成原创歌曲，并支持发布到主流流媒体平台，实现音乐变现。",
+    "descriptionEn": "Boomy is an AI music creation platform that lets anyone generate original songs in seconds and release them to major streaming platforms to monetize their music.",
+    "tagsEn": [
+      "AI Music",
+      "Composition"
+    ],
+    "pricingNoteEn": "Free tier + subscription",
+    "features": [
+      "AI 快速生成原创歌曲",
+      "多种音乐风格可选",
+      "支持人声与歌词生成",
+      "一键发布到流媒体平台",
+      "音乐创作社区分享",
+      "版权归创作者所有"
+    ],
+    "featuresEn": [
+      "AI quickly generates original songs",
+      "Multiple music styles to choose from",
+      "Supports vocals and lyrics generation",
+      "One-click release to streaming platforms",
+      "Music creation community sharing",
+      "Copyright belongs to the creator"
+    ],
+    "howToUse": [
+      "注册并登录 Boomy 账号",
+      "选择音乐风格并点击生成",
+      "编辑歌曲细节（如标题、封面）",
+      "发布到流媒体平台或下载"
+    ],
+    "howToUseEn": [
+      "Sign up and log in to your Boomy account",
+      "Choose a music style and click generate",
+      "Edit song details (e.g., title, cover)",
+      "Release to streaming platforms or download"
+    ],
+    "advantages": [
+      "零门槛创作，无需音乐基础",
+      "生成速度快，效率高",
+      "支持音乐变现，收益归创作者",
+      "社区活跃，可交流分享"
+    ],
+    "advantagesEn": [
+      "Zero-barrier creation, no music background needed",
+      "Fast generation, high efficiency",
+      "Supports music monetization, revenue goes to creators",
+      "Active community for sharing and communication"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "每月可创建一定数量的歌曲，功能受限"
+      },
+      {
+        "name": "订阅版",
+        "price": "约 $9.99/月",
+        "note": "无限创建，更多高级功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Create a limited number of songs per month, features restricted"
+      },
+      {
+        "name": "Subscription",
+        "price": "Approx. $9.99/month",
+        "note": "Unlimited creation, more advanced features, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "tianyin",
+    "name": "网易天音",
+    "nameZh": "网易天音",
+    "category": "music",
+    "region": "domestic",
+    "officialUrl": "https://tianyin.163.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 会员",
+    "tags": [
+      "AI 音乐",
+      "编曲",
+      "网易"
+    ],
+    "emoji": "🎼",
+    "releaseYear": 2021,
+    "score": 7.5,
+    "popularity": 42,
+    "description": "网易天音是网易推出的AI音乐创作平台，提供智能作词、作曲、编曲及演唱功能，让用户轻松创作个性化音乐作品。",
+    "descriptionEn": "NetEase Tianyin is an AI music creation platform by NetEase, offering intelligent lyrics writing, composition, arrangement, and singing, enabling users to easily create personalized music.",
+    "tagsEn": [
+      "AI Music",
+      "Arrangement",
+      "NetEase"
+    ],
+    "pricingNoteEn": "Free version + membership",
+    "features": [
+      "智能作词：输入主题自动生成歌词",
+      "AI作曲：选择风格自动生成旋律",
+      "智能编曲：自动搭配和弦与配器",
+      "AI演唱：多种虚拟歌手音色可选",
+      "一键生成：快速产出完整歌曲"
+    ],
+    "featuresEn": [
+      "Smart lyrics: generate lyrics from a theme",
+      "AI composition: auto-generate melodies by style",
+      "Smart arrangement: auto-match chords and instruments",
+      "AI singing: multiple virtual singer voices",
+      "One-click generation: quickly produce complete songs"
+    ],
+    "howToUse": [
+      "访问网易天音官网并登录账号",
+      "选择创作模式（作词、作曲或完整歌曲）",
+      "输入主题或选择风格参数",
+      "点击生成并试听，可调整参数重新生成",
+      "满意后下载或分享作品"
+    ],
+    "howToUseEn": [
+      "Visit NetEase Tianyin official website and log in",
+      "Choose creation mode (lyrics, composition, or full song)",
+      "Enter theme or select style parameters",
+      "Click generate and preview, adjust parameters to regenerate",
+      "Download or share your work when satisfied"
+    ],
+    "advantages": [
+      "背靠网易，技术实力强",
+      "操作简单，适合音乐小白",
+      "生成速度快，效率高",
+      "支持多种音乐风格",
+      "与网易云音乐生态整合"
+    ],
+    "advantagesEn": [
+      "Backed by NetEase, strong technical strength",
+      "Easy to use, suitable for beginners",
+      "Fast generation and high efficiency",
+      "Supports multiple music styles",
+      "Integrated with NetEase Cloud Music ecosystem"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "0元",
+        "note": "基础功能，生成次数有限"
+      },
+      {
+        "name": "会员",
+        "price": "约15元/月",
+        "note": "更多生成次数和高级功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "¥0",
+        "note": "Basic features with limited generations"
+      },
+      {
+        "name": "Membership",
+        "price": "About ¥15/month",
+        "note": "More generations and advanced features, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "murf",
+    "name": "Murf AI",
+    "nameZh": "Murf AI",
+    "category": "voice",
+    "region": "overseas",
+    "officialUrl": "https://murf.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "语音合成",
+      "配音"
+    ],
+    "emoji": "🎙️",
+    "releaseYear": 2020,
+    "score": 8.1,
+    "popularity": 62,
+    "description": "Murf AI 是一款海外领先的AI语音合成工具，支持多语言、多音色，快速生成自然逼真的配音，适用于视频、广告、有声书等场景。",
+    "descriptionEn": "Murf AI is a leading AI voice synthesis tool that generates natural-sounding voiceovers in multiple languages and voices, ideal for videos, ads, audiobooks, and more.",
+    "tagsEn": [
+      "Text-to-Speech",
+      "Voiceover"
+    ],
+    "pricingNoteEn": "Free tier available with subscription plans",
+    "features": [
+      "支持120+种音色和20+种语言",
+      "语音克隆功能，定制专属音色",
+      "精细调整语速、音调和停顿",
+      "内置视频编辑器，同步配音与画面",
+      "提供商用授权，版权无忧"
+    ],
+    "featuresEn": [
+      "120+ voices and 20+ languages",
+      "Voice cloning for custom voices",
+      "Fine-tune speed, pitch, and pauses",
+      "Built-in video editor for syncing",
+      "Commercial license included"
+    ],
+    "howToUse": [
+      "注册并登录Murf AI账号",
+      "选择音色和语言，输入文本",
+      "调整语速、音调等参数",
+      "预览并导出音频或视频"
+    ],
+    "howToUseEn": [
+      "Sign up and log in to Murf AI",
+      "Choose voice and language, enter text",
+      "Adjust speed, pitch, and other settings",
+      "Preview and export audio or video"
+    ],
+    "advantages": [
+      "音质自然，接近真人",
+      "操作简单，上手快",
+      "支持多语言，适合全球化",
+      "提供API，便于集成"
+    ],
+    "advantagesEn": [
+      "Natural, human-like voice quality",
+      "Easy to use and quick to learn",
+      "Multilingual support for global use",
+      "API available for integration"
+    ],
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "apiName": "Murf API",
+    "apiNameEn": "Murf API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "提供有限字符和音色，带水印"
+      },
+      {
+        "name": "基础版",
+        "price": "约$19/月起",
+        "note": "更多字符和音色，去除水印"
+      },
+      {
+        "name": "专业版",
+        "price": "约$26/月起",
+        "note": "更多功能，商用授权"
+      },
+      {
+        "name": "企业版",
+        "price": "定制",
+        "note": "高级功能，专属支持"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Limited characters and voices, watermark"
+      },
+      {
+        "name": "Basic",
+        "price": "From ~$19/month",
+        "note": "More characters and voices, no watermark"
+      },
+      {
+        "name": "Pro",
+        "price": "From ~$26/month",
+        "note": "More features, commercial license"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Advanced features, dedicated support"
+      }
+    ]
+  },
+  {
+    "id": "playht",
+    "name": "PlayHT",
+    "nameZh": "PlayHT",
+    "category": "voice",
+    "region": "overseas",
+    "officialUrl": "https://play.ht",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "语音合成",
+      "声音克隆"
+    ],
+    "emoji": "🗣️",
+    "releaseYear": 2020,
+    "score": 8,
+    "popularity": 58,
+    "description": "PlayHT是一款AI语音合成平台，提供高质量文本转语音和声音克隆服务，支持多种语言和声音，适用于内容创作、教育、娱乐等领域。",
+    "descriptionEn": "PlayHT is an AI voice synthesis platform offering high-quality text-to-speech and voice cloning services, supporting multiple languages and voices for content creation, education, and entertainment.",
+    "tagsEn": [
+      "Text-to-Speech",
+      "Voice Cloning"
+    ],
+    "pricingNoteEn": "Free tier with limited credits, plus subscription plans.",
+    "features": [
+      "高质量AI语音合成",
+      "声音克隆与自定义",
+      "多语言多声音支持",
+      "实时语音生成",
+      "API集成",
+      "音频编辑工具"
+    ],
+    "featuresEn": [
+      "High-quality AI voice synthesis",
+      "Voice cloning and customization",
+      "Multi-language and multi-voice support",
+      "Real-time voice generation",
+      "API integration",
+      "Audio editing tools"
+    ],
+    "howToUse": [
+      "注册并登录PlayHT账号",
+      "选择或创建声音模型",
+      "输入文本并调整参数",
+      "生成并下载音频"
+    ],
+    "howToUseEn": [
+      "Sign up and log in to PlayHT account",
+      "Choose or create a voice model",
+      "Enter text and adjust parameters",
+      "Generate and download audio"
+    ],
+    "advantages": [
+      "声音自然逼真",
+      "支持多种语言",
+      "灵活的声音定制",
+      "易于集成和扩展"
+    ],
+    "advantagesEn": [
+      "Natural and realistic voices",
+      "Supports multiple languages",
+      "Flexible voice customization",
+      "Easy integration and scalability"
+    ],
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "apiName": "PlayHT API",
+    "apiNameEn": "PlayHT API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "每月有限字符，适合试用"
+      },
+      {
+        "name": "创作者版",
+        "price": "$31.2/月起",
+        "note": "更多字符，商用授权"
+      },
+      {
+        "name": "专业版",
+        "price": "$99/月起",
+        "note": "高用量，优先支持"
+      },
+      {
+        "name": "企业版",
+        "price": "定制",
+        "note": "定制方案，SLA保障"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Limited characters per month, for trial"
+      },
+      {
+        "name": "Creator",
+        "price": "$31.2/month onwards",
+        "note": "More characters, commercial license"
+      },
+      {
+        "name": "Pro",
+        "price": "$99/month onwards",
+        "note": "High usage, priority support"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Custom plan, SLA guarantee"
+      }
+    ]
+  },
+  {
+    "id": "speechify",
+    "name": "Speechify",
+    "nameZh": "Speechify",
+    "category": "voice",
+    "region": "overseas",
+    "officialUrl": "https://speechify.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 订阅",
+    "tags": [
+      "文字转语音",
+      "朗读"
+    ],
+    "emoji": "📖",
+    "releaseYear": 2017,
+    "score": 8.3,
+    "popularity": 70,
+    "description": "Speechify是一款领先的文字转语音应用，利用AI技术将文本转换为自然语音，支持多平台，适用于学习、工作和无障碍阅读。",
+    "descriptionEn": "Speechify is a leading text-to-speech app that uses AI to convert text into natural speech, supporting multiple platforms for learning, work, and accessibility.",
+    "tagsEn": [
+      "text-to-speech",
+      "read-aloud"
+    ],
+    "pricingNoteEn": "Free version + subscription",
+    "features": [
+      "高质量AI语音，自然流畅",
+      "支持多平台同步",
+      "可调节语速和音色",
+      "OCR识别图片文字",
+      "支持多种文档格式",
+      "离线收听功能"
+    ],
+    "featuresEn": [
+      "High-quality AI voices, natural and fluent",
+      "Multi-platform sync",
+      "Adjustable speed and voice",
+      "OCR for images",
+      "Supports multiple document formats",
+      "Offline listening"
+    ],
+    "howToUse": [
+      "下载并安装Speechify应用",
+      "导入或粘贴文本内容",
+      "选择语音和语速",
+      "点击播放开始朗读",
+      "根据需要调整设置"
+    ],
+    "howToUseEn": [
+      "Download and install the Speechify app",
+      "Import or paste text content",
+      "Choose voice and speed",
+      "Press play to start reading",
+      "Adjust settings as needed"
+    ],
+    "advantages": [
+      "语音自然度高，接近真人",
+      "支持多平台，使用便捷",
+      "功能丰富，满足多种需求",
+      "适合无障碍阅读",
+      "免费版可用"
+    ],
+    "advantagesEn": [
+      "High naturalness of voices, close to human",
+      "Multi-platform support, convenient",
+      "Rich features for various needs",
+      "Suitable for accessibility",
+      "Free version available"
+    ],
+    "platforms": [
+      "web",
+      "ios",
+      "android",
+      "extension",
+      "desktop"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "基础功能，有限语音和时长"
+      },
+      {
+        "name": "高级版",
+        "price": "约$139/年",
+        "note": "更多语音、无限时长、高级功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic features, limited voices and duration"
+      },
+      {
+        "name": "Premium",
+        "price": "approx. $139/year",
+        "note": "More voices, unlimited duration, advanced features, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "moyin",
+    "name": "魔音工坊",
+    "nameZh": "魔音工坊",
+    "category": "voice",
+    "region": "domestic",
+    "officialUrl": "https://www.moyin.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 付费",
+    "tags": [
+      "配音",
+      "语音合成",
+      "出门问问"
+    ],
+    "emoji": "🎧",
+    "releaseYear": 2019,
+    "score": 7.6,
+    "popularity": 46,
+    "description": "魔音工坊是出门问问推出的AI配音工具，提供海量音色、情感丰富的语音合成服务，支持多场景应用，操作简单，适合短视频、有声书等创作。",
+    "descriptionEn": "Moyin Workshop is an AI dubbing tool by Mobvoi, offering a vast library of voices and emotion-rich speech synthesis for various scenarios, easy to use for short videos, audiobooks, and more.",
+    "tagsEn": [
+      "dubbing",
+      "speech synthesis",
+      "Mobvoi"
+    ],
+    "pricingNoteEn": "Free tier with paid plans",
+    "features": [
+      "海量音色选择，覆盖多语种",
+      "情感合成，支持喜怒哀乐",
+      "支持多场景模板，如短视频、有声书",
+      "在线编辑，实时试听",
+      "支持导出多种音频格式"
+    ],
+    "featuresEn": [
+      "Vast voice library, multi-language",
+      "Emotional synthesis with various emotions",
+      "Templates for short videos, audiobooks, etc.",
+      "Online editing with real-time preview",
+      "Export in multiple audio formats"
+    ],
+    "howToUse": [
+      "注册并登录魔音工坊官网",
+      "选择模板或新建项目",
+      "输入文本，选择音色和参数",
+      "试听并调整，满意后导出"
+    ],
+    "howToUseEn": [
+      "Register and log in to Moyin Workshop website",
+      "Choose a template or create a new project",
+      "Enter text, select voice and parameters",
+      "Preview and adjust, then export"
+    ],
+    "advantages": [
+      "音色丰富，自然度高",
+      "操作简单，上手快",
+      "支持多场景，适用性强",
+      "持续更新，音色不断扩充"
+    ],
+    "advantagesEn": [
+      "Rich and natural voices",
+      "Easy to use, quick start",
+      "Versatile for multiple scenarios",
+      "Continuously updated voice library"
+    ],
+    "platforms": [
+      "web",
+      "wechat"
+    ],
+    "apiName": "魔音工坊开放平台API",
+    "apiNameEn": "Moyin Workshop Open Platform API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "0元",
+        "note": "每日有限字符，基础音色"
+      },
+      {
+        "name": "会员版",
+        "price": "约30元/月起",
+        "note": "更多音色和功能，以官网为准"
+      },
+      {
+        "name": "企业版",
+        "price": "定制",
+        "note": "API调用、专属服务，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "¥0",
+        "note": "Daily limited characters, basic voices"
+      },
+      {
+        "name": "Membership",
+        "price": "From ~¥30/month",
+        "note": "More voices and features, subject to official website"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "API access, dedicated support, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "codeium",
+    "name": "Codeium",
+    "nameZh": "Codeium",
+    "category": "code",
+    "region": "overseas",
+    "officialUrl": "https://codeium.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 团队/企业版",
+    "tags": [
+      "代码补全",
+      "AI 编程"
+    ],
+    "emoji": "💻",
+    "releaseYear": 2021,
+    "score": 8.5,
+    "popularity": 74,
+    "description": "Codeium是一款AI编程助手，提供代码补全、聊天和搜索功能，支持多种IDE，免费版功能强大，适合开发者提升编码效率。",
+    "descriptionEn": "Codeium is an AI coding assistant offering code completion, chat, and search, supporting multiple IDEs, with a powerful free tier for developers to boost coding efficiency.",
+    "tagsEn": [
+      "Code Completion",
+      "AI Coding"
+    ],
+    "pricingNoteEn": "Free tier + Team/Enterprise plans",
+    "features": [
+      "智能代码补全，支持多种语言",
+      "AI聊天助手，解答编程问题",
+      "代码搜索，快速定位函数",
+      "支持主流IDE，如VS Code、JetBrains",
+      "免费版功能强大，无限制使用"
+    ],
+    "featuresEn": [
+      "Intelligent code completion supporting multiple languages",
+      "AI chat assistant for programming questions",
+      "Code search to quickly locate functions",
+      "Supports major IDEs like VS Code, JetBrains",
+      "Powerful free tier with no restrictions"
+    ],
+    "howToUse": [
+      "安装Codeium插件到你的IDE",
+      "注册账号并登录",
+      "在代码编辑时自动获得补全建议",
+      "使用聊天功能提问，或使用搜索功能查找代码"
+    ],
+    "howToUseEn": [
+      "Install the Codeium extension in your IDE",
+      "Sign up and log in",
+      "Get completion suggestions automatically while coding",
+      "Use chat to ask questions or search to find code"
+    ],
+    "advantages": [
+      "免费版功能丰富，性价比高",
+      "支持多种IDE和语言",
+      "代码补全准确度高",
+      "聊天和搜索功能提升开发效率"
+    ],
+    "advantagesEn": [
+      "Feature-rich free tier with high cost-effectiveness",
+      "Supports multiple IDEs and languages",
+      "High accuracy in code completion",
+      "Chat and search features enhance development efficiency"
+    ],
+    "platforms": [
+      "web",
+      "extension",
+      "desktop"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "个人使用，功能完整"
+      },
+      {
+        "name": "团队版",
+        "price": "约$12/用户/月",
+        "note": "团队协作，管理功能，以官网为准"
+      },
+      {
+        "name": "企业版",
+        "price": "定制",
+        "note": "高级安全、支持，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "For individuals, full features"
+      },
+      {
+        "name": "Team",
+        "price": "Approx. $12/user/month",
+        "note": "Team collaboration, admin features, subject to official website"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Advanced security, support, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "tabnine",
+    "name": "Tabnine",
+    "nameZh": "Tabnine",
+    "category": "code",
+    "region": "overseas",
+    "officialUrl": "https://www.tabnine.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + Pro 订阅",
+    "tags": [
+      "代码补全",
+      "IDE 插件"
+    ],
+    "emoji": "⌨️",
+    "releaseYear": 2019,
+    "score": 8,
+    "popularity": 62,
+    "description": "Tabnine 是一款 AI 代码补全工具，支持多种 IDE，提供基于深度学习的代码建议，帮助开发者提高编码效率。",
+    "descriptionEn": "Tabnine is an AI code completion tool that supports multiple IDEs, providing deep learning-based code suggestions to help developers improve coding efficiency.",
+    "tagsEn": [
+      "Code Completion",
+      "IDE Plugin"
+    ],
+    "pricingNoteEn": "Free version + Pro subscription",
+    "features": [
+      "基于深度学习的代码补全",
+      "支持多种主流 IDE",
+      "支持多种编程语言",
+      "提供代码质量分析",
+      "支持团队协作功能"
+    ],
+    "featuresEn": [
+      "Deep learning-based code completion",
+      "Supports multiple popular IDEs",
+      "Supports multiple programming languages",
+      "Provides code quality analysis",
+      "Supports team collaboration features"
+    ],
+    "howToUse": [
+      "在官网注册账号并下载插件",
+      "在支持的 IDE 中安装 Tabnine 插件",
+      "登录账号并启用插件",
+      "开始编码，Tabnine 会自动提供代码建议"
+    ],
+    "howToUseEn": [
+      "Register an account on the official website and download the plugin",
+      "Install the Tabnine plugin in your supported IDE",
+      "Log in and enable the plugin",
+      "Start coding, Tabnine will automatically provide code suggestions"
+    ],
+    "advantages": [
+      "本地优先，保护代码隐私",
+      "支持多种编程语言",
+      "与主流 IDE 无缝集成",
+      "提供个性化代码建议"
+    ],
+    "advantagesEn": [
+      "Local-first, protecting code privacy",
+      "Supports multiple programming languages",
+      "Seamless integration with popular IDEs",
+      "Provides personalized code suggestions"
+    ],
+    "platforms": [
+      "web",
+      "macos",
+      "windows",
+      "linux",
+      "extension"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "0",
+        "note": "基础代码补全功能"
+      },
+      {
+        "name": "Pro",
+        "price": "约 $12/月",
+        "note": "高级功能，如团队协作、代码质量分析等，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic code completion features"
+      },
+      {
+        "name": "Pro",
+        "price": "Approx. $12/month",
+        "note": "Advanced features like team collaboration, code quality analysis, etc. Please refer to official website."
+      }
+    ]
+  },
+  {
+    "id": "cody",
+    "name": "Sourcegraph Cody",
+    "nameZh": "Cody",
+    "category": "code",
+    "region": "overseas",
+    "officialUrl": "https://sourcegraph.com/cody",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + Pro 订阅",
+    "tags": [
+      "代码助手",
+      "AI 编程"
+    ],
+    "emoji": "🔍",
+    "releaseYear": 2023,
+    "score": 8.2,
+    "popularity": 55,
+    "description": "Cody 是 Sourcegraph 推出的 AI 编程助手，利用代码库上下文提供智能代码补全、解释和生成，支持多语言，帮助开发者高效编码。",
+    "descriptionEn": "Cody is an AI coding assistant by Sourcegraph that leverages codebase context for intelligent code completion, explanation, and generation, supporting multiple languages to help developers code efficiently.",
+    "tagsEn": [
+      "Code Assistant",
+      "AI Programming"
+    ],
+    "pricingNoteEn": "Free tier + Pro subscription",
+    "features": [
+      "智能代码补全",
+      "代码解释与生成",
+      "基于代码库的上下文理解",
+      "支持多种编程语言",
+      "与 IDE 集成",
+      "自然语言交互"
+    ],
+    "featuresEn": [
+      "Intelligent code completion",
+      "Code explanation and generation",
+      "Codebase-aware context understanding",
+      "Supports multiple programming languages",
+      "IDE integration",
+      "Natural language interaction"
+    ],
+    "howToUse": [
+      "安装 Cody 扩展或插件到支持的 IDE",
+      "连接你的代码仓库",
+      "使用快捷键触发代码补全或提问",
+      "根据建议进行编辑或采纳"
+    ],
+    "howToUseEn": [
+      "Install the Cody extension or plugin in your supported IDE",
+      "Connect your code repository",
+      "Trigger code completion or ask questions with shortcuts",
+      "Edit or accept suggestions"
+    ],
+    "advantages": [
+      "深度理解代码库",
+      "多语言支持",
+      "免费版可用",
+      "与 Sourcegraph 生态集成"
+    ],
+    "advantagesEn": [
+      "Deep codebase understanding",
+      "Multi-language support",
+      "Free tier available",
+      "Integration with Sourcegraph ecosystem"
+    ],
+    "platforms": [
+      "web",
+      "macos",
+      "windows",
+      "linux",
+      "extension"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "基础功能，有限使用"
+      },
+      {
+        "name": "Pro",
+        "price": "$9/月（约）",
+        "note": "更多功能和更高限额，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic features with limited usage"
+      },
+      {
+        "name": "Pro",
+        "price": "$9/month (approx.)",
+        "note": "More features and higher limits, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "otter",
+    "name": "Otter.ai",
+    "nameZh": "Otter.ai",
+    "category": "office",
+    "region": "overseas",
+    "officialUrl": "https://otter.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + Pro 订阅",
+    "tags": [
+      "会议转写",
+      "纪要",
+      "实时"
+    ],
+    "emoji": "📝",
+    "releaseYear": 2016,
+    "score": 8.3,
+    "popularity": 70,
+    "description": "Otter.ai 是一款 AI 驱动的会议转写与协作工具，支持实时语音转文字、自动生成会议纪要，帮助团队高效记录和分享会议内容。",
+    "descriptionEn": "Otter.ai is an AI-powered meeting transcription and collaboration tool that provides real-time speech-to-text, automatic meeting notes, and helps teams efficiently record and share meeting content.",
+    "tagsEn": [
+      "meeting transcription",
+      "meeting notes",
+      "real-time"
+    ],
+    "pricingNoteEn": "Free plan + Pro subscription",
+    "features": [
+      "实时语音转文字，支持多语言",
+      "自动生成会议摘要和行动项",
+      "识别不同说话人，标注发言者",
+      "与 Zoom、Google Meet 等集成",
+      "支持搜索、编辑和分享转写文本",
+      "移动端和网页端同步"
+    ],
+    "featuresEn": [
+      "Real-time speech-to-text with multi-language support",
+      "Automatic meeting summaries and action items",
+      "Speaker identification and labeling",
+      "Integration with Zoom, Google Meet, etc.",
+      "Search, edit, and share transcripts",
+      "Sync across mobile and web"
+    ],
+    "howToUse": [
+      "注册 Otter.ai 账号并登录",
+      "在会议中开启实时转写，或上传录音文件",
+      "会议结束后，查看自动生成的摘要和转写文本",
+      "编辑、分享或导出会议记录",
+      "在日历中关联会议，自动加入转写"
+    ],
+    "howToUseEn": [
+      "Sign up and log in to Otter.ai",
+      "Start live transcription during meetings or upload audio files",
+      "After the meeting, review auto-generated summaries and transcripts",
+      "Edit, share, or export meeting notes",
+      "Connect calendar to automatically add transcription"
+    ],
+    "advantages": [
+      "转写准确率高，支持多种口音",
+      "实时协作，团队成员可同步查看",
+      "与主流会议工具无缝集成",
+      "免费版提供每月 300 分钟转写时长",
+      "自动生成摘要，节省整理时间"
+    ],
+    "advantagesEn": [
+      "High transcription accuracy with multiple accents",
+      "Real-time collaboration for team viewing",
+      "Seamless integration with major meeting tools",
+      "Free plan includes 300 transcription minutes per month",
+      "Auto-generated summaries save time"
+    ],
+    "platforms": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "每月 300 分钟转写时长，单次最长 30 分钟"
+      },
+      {
+        "name": "Pro",
+        "price": "$8.33/月（按年计费）",
+        "note": "每月 1200 分钟转写时长，单次最长 90 分钟，高级搜索和导出功能"
+      },
+      {
+        "name": "Business",
+        "price": "$20/月（按年计费）",
+        "note": "每月 6000 分钟转写时长，单次最长 4 小时，集中管理功能"
+      },
+      {
+        "name": "Enterprise",
+        "price": "定制",
+        "note": "无限转写时长，高级安全和管理功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Basic",
+        "price": "$0",
+        "note": "300 transcription minutes per month, max 30 minutes per conversation"
+      },
+      {
+        "name": "Pro",
+        "price": "$8.33/month (billed annually)",
+        "note": "1200 minutes per month, max 90 minutes per conversation, advanced search and export"
+      },
+      {
+        "name": "Business",
+        "price": "$20/month (billed annually)",
+        "note": "6000 minutes per month, max 4 hours per conversation, centralized administration"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Unlimited transcription, advanced security and admin features, see official website"
+      }
+    ]
+  },
+  {
+    "id": "fireflies",
+    "name": "Fireflies.ai",
+    "nameZh": "Fireflies.ai",
+    "category": "office",
+    "region": "overseas",
+    "officialUrl": "https://fireflies.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + Pro 订阅",
+    "tags": [
+      "会议纪要",
+      "转写"
+    ],
+    "emoji": "🐝",
+    "releaseYear": 2019,
+    "score": 8,
+    "popularity": 60,
+    "description": "Fireflies.ai 是一款 AI 会议助手，可自动记录、转录和分析会议，支持多种视频会议平台，帮助团队高效协作。",
+    "descriptionEn": "Fireflies.ai is an AI meeting assistant that automatically records, transcribes, and analyzes meetings, supporting various video conferencing platforms to enhance team collaboration.",
+    "tagsEn": [
+      "Meeting Notes",
+      "Transcription"
+    ],
+    "pricingNoteEn": "Free plan + Pro subscription",
+    "features": [
+      "自动记录会议音频",
+      "高精度语音转文字",
+      "自动生成会议摘要",
+      "支持多平台集成",
+      "关键词与话题分析",
+      "协作评论与分享"
+    ],
+    "featuresEn": [
+      "Automatically record meeting audio",
+      "High-accuracy speech-to-text",
+      "Auto-generate meeting summaries",
+      "Integrate with multiple platforms",
+      "Keyword and topic analysis",
+      "Collaborative comments and sharing"
+    ],
+    "howToUse": [
+      "注册 Fireflies.ai 账号",
+      "连接日历或视频会议应用",
+      "会议自动加入并记录",
+      "在仪表板查看转录和摘要",
+      "分享或导出会议记录"
+    ],
+    "howToUseEn": [
+      "Sign up for Fireflies.ai account",
+      "Connect calendar or video conferencing apps",
+      "Automatically join and record meetings",
+      "View transcriptions and summaries in dashboard",
+      "Share or export meeting notes"
+    ],
+    "advantages": [
+      "支持多种会议平台",
+      "AI 自动摘要节省时间",
+      "搜索功能强大",
+      "安全可靠的数据加密",
+      "与团队协作工具集成"
+    ],
+    "advantagesEn": [
+      "Supports multiple meeting platforms",
+      "AI auto-summarization saves time",
+      "Powerful search functionality",
+      "Secure and reliable data encryption",
+      "Integrates with team collaboration tools"
+    ],
+    "platforms": [
+      "web",
+      "extension",
+      "api"
+    ],
+    "apiName": "Fireflies.ai API",
+    "apiNameEn": "Fireflies.ai API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "每月 800 分钟转录，支持 1 个用户"
+      },
+      {
+        "name": "Pro",
+        "price": "$18/用户/月起",
+        "note": "每月 8,000 分钟转录，更多功能"
+      },
+      {
+        "name": "Business",
+        "price": "$29/用户/月起",
+        "note": "每月 8,000 分钟转录，高级管理功能"
+      },
+      {
+        "name": "Enterprise",
+        "price": "定制",
+        "note": "无限转录，专属支持，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "800 transcription minutes/month, 1 user"
+      },
+      {
+        "name": "Pro",
+        "price": "$18/user/month (starting)",
+        "note": "8,000 transcription minutes/month, more features"
+      },
+      {
+        "name": "Business",
+        "price": "$29/user/month (starting)",
+        "note": "8,000 transcription minutes/month, advanced admin features"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Unlimited transcription, dedicated support, see official website"
+      }
+    ]
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "nameZh": "Descript",
+    "category": "office",
+    "region": "overseas",
+    "officialUrl": "https://www.descript.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 订阅",
+    "tags": [
+      "音视频剪辑",
+      "转写"
+    ],
+    "emoji": "✂️",
+    "releaseYear": 2017,
+    "score": 8.5,
+    "popularity": 72,
+    "description": "Descript是一款基于AI的音视频编辑工具，提供转录、编辑、屏幕录制等功能，让用户像编辑文档一样编辑视频。",
+    "descriptionEn": "Descript is an AI-powered audio/video editing tool that offers transcription, editing, screen recording, and more, allowing users to edit videos like editing a document.",
+    "tagsEn": [
+      "Audio/Video Editing",
+      "Transcription"
+    ],
+    "pricingNoteEn": "Free tier + subscription plans",
+    "features": [
+      "AI语音转写，自动生成字幕",
+      "文本编辑视频，删除文字即删除片段",
+      "多轨时间线，支持精细剪辑",
+      "屏幕录制与摄像头录制",
+      "AI配音与语音克隆",
+      "协作功能，支持实时评论"
+    ],
+    "featuresEn": [
+      "AI transcription with automatic subtitles",
+      "Edit video by editing text, delete text to remove clips",
+      "Multi-track timeline for precise editing",
+      "Screen and webcam recording",
+      "AI voiceover and voice cloning",
+      "Collaboration with real-time comments"
+    ],
+    "howToUse": [
+      "上传或录制音视频文件",
+      "等待AI自动转写生成文本",
+      "编辑文本，对应视频片段自动调整",
+      "添加字幕、音乐或特效",
+      "导出视频或直接分享"
+    ],
+    "howToUseEn": [
+      "Upload or record audio/video files",
+      "Wait for AI to transcribe automatically",
+      "Edit text, corresponding video clips adjust automatically",
+      "Add subtitles, music, or effects",
+      "Export video or share directly"
+    ],
+    "advantages": [
+      "操作简单，上手快",
+      "AI转写准确率高",
+      "支持协作，适合团队",
+      "功能全面，集成多种工具"
+    ],
+    "advantagesEn": [
+      "Simple and easy to use",
+      "High accuracy AI transcription",
+      "Supports collaboration, ideal for teams",
+      "Comprehensive features, integrated tools"
+    ],
+    "platforms": [
+      "web",
+      "macos",
+      "windows"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "每月1小时转录，720p导出"
+      },
+      {
+        "name": "创作者版",
+        "price": "$12/月（年付）",
+        "note": "每月10小时转录，4K导出"
+      },
+      {
+        "name": "专业版",
+        "price": "$24/月（年付）",
+        "note": "每月30小时转录，高级功能"
+      },
+      {
+        "name": "企业版",
+        "price": "定制",
+        "note": "无限转录，SSO等"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "1 hour transcription per month, 720p export"
+      },
+      {
+        "name": "Creator",
+        "price": "$12/month (annual)",
+        "note": "10 hours transcription per month, 4K export"
+      },
+      {
+        "name": "Pro",
+        "price": "$24/month (annual)",
+        "note": "30 hours transcription per month, advanced features"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Unlimited transcription, SSO, etc."
+      }
+    ]
+  },
+  {
+    "id": "iflyrec",
+    "name": "讯飞听见",
+    "nameZh": "讯飞听见",
+    "category": "office",
+    "region": "domestic",
+    "officialUrl": "https://www.iflyrec.com",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 付费",
+    "tags": [
+      "录音转文字",
+      "会议",
+      "讯飞"
+    ],
+    "emoji": "🎙️",
+    "releaseYear": 2016,
+    "score": 8,
+    "popularity": 55,
+    "description": "讯飞听见是科大讯飞推出的语音转文字工具，支持录音转写、实时转写、视频字幕制作，适用于会议、采访、学习等场景，准确率高，支持多语种。",
+    "descriptionEn": "iFlyRec is a speech-to-text tool by iFlytek, supporting audio transcription, real-time transcription, and video subtitles. It is suitable for meetings, interviews, and learning, with high accuracy and multi-language support.",
+    "tagsEn": [
+      "audio-to-text",
+      "meeting",
+      "iFlytek"
+    ],
+    "pricingNoteEn": "Free quota + paid plans",
+    "features": [
+      "录音转文字，支持多种音频格式",
+      "实时转写，边录边转",
+      "视频字幕制作，自动生成字幕",
+      "多语种识别，支持中英日韩等",
+      "智能标点，自动分段",
+      "云端存储，多端同步"
+    ],
+    "featuresEn": [
+      "Audio-to-text, supports multiple audio formats",
+      "Real-time transcription, transcribe while recording",
+      "Video subtitle generation, auto-create subtitles",
+      "Multi-language recognition, supports Chinese, English, Japanese, Korean, etc.",
+      "Smart punctuation, auto paragraphing",
+      "Cloud storage, multi-device sync"
+    ],
+    "howToUse": [
+      "注册并登录讯飞听见账号",
+      "上传音频或视频文件，或选择实时转写",
+      "选择语言和转写模式，等待转写完成",
+      "在线编辑和导出文本或字幕文件"
+    ],
+    "howToUseEn": [
+      "Register and log in to iFlyRec account",
+      "Upload audio or video files, or choose real-time transcription",
+      "Select language and transcription mode, wait for completion",
+      "Edit online and export text or subtitle files"
+    ],
+    "advantages": [
+      "识别准确率高，基于讯飞核心语音技术",
+      "支持多种转写方式，灵活便捷",
+      "多语种支持，满足国际化需求",
+      "提供API接口，便于集成"
+    ],
+    "advantagesEn": [
+      "High recognition accuracy, based on iFlytek's core speech technology",
+      "Supports multiple transcription modes, flexible and convenient",
+      "Multi-language support, meeting international needs",
+      "Provides API for easy integration"
+    ],
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "api",
+      "wechat"
+    ],
+    "apiName": "讯飞听见开放平台API",
+    "apiNameEn": "iFlyRec Open Platform API",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "0元",
+        "note": "每月赠送一定时长转写额度"
+      },
+      {
+        "name": "标准版",
+        "price": "约0.33元/分钟",
+        "note": "按量付费，适合个人用户"
+      },
+      {
+        "name": "专业版",
+        "price": "约0.66元/分钟",
+        "note": "更高转写精度，支持更多功能"
+      },
+      {
+        "name": "企业版",
+        "price": "定制",
+        "note": "提供专属服务，API调用，私有化部署"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Free transcription quota per month"
+      },
+      {
+        "name": "Standard",
+        "price": "~$0.05/min",
+        "note": "Pay-as-you-go, for individuals"
+      },
+      {
+        "name": "Professional",
+        "price": "~$0.10/min",
+        "note": "Higher accuracy, more features"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "note": "Dedicated services, API access, private deployment"
+      }
+    ]
+  },
+  {
+    "id": "wordtune",
+    "name": "Wordtune",
+    "nameZh": "Wordtune",
+    "category": "writing",
+    "region": "overseas",
+    "officialUrl": "https://www.wordtune.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + Premium 订阅",
+    "tags": [
+      "改写",
+      "润色"
+    ],
+    "emoji": "✍️",
+    "releaseYear": 2019,
+    "score": 8.2,
+    "popularity": 66,
+    "description": "Wordtune 是一款 AI 驱动的写作助手，提供改写、润色、语气调整等功能，帮助用户提升文本质量，支持多种平台。",
+    "descriptionEn": "Wordtune is an AI-powered writing assistant that offers rewriting, polishing, and tone adjustment to help users improve text quality, supporting multiple platforms.",
+    "tagsEn": [
+      "Rewriting",
+      "Polishing"
+    ],
+    "pricingNoteEn": "Free version + Premium subscription",
+    "features": [
+      "智能改写句子",
+      "调整语气和风格",
+      "扩展或缩短文本",
+      "语法和拼写检查",
+      "支持多语言",
+      "浏览器插件集成"
+    ],
+    "featuresEn": [
+      "Smart sentence rewriting",
+      "Adjust tone and style",
+      "Expand or shorten text",
+      "Grammar and spell check",
+      "Multi-language support",
+      "Browser extension integration"
+    ],
+    "howToUse": [
+      "访问 Wordtune 官网并注册账号",
+      "选择免费版或订阅 Premium",
+      "在编辑器或浏览器插件中输入文本",
+      "选中需要改写的句子，点击改写按钮",
+      "选择满意的改写结果并应用"
+    ],
+    "howToUseEn": [
+      "Visit the Wordtune website and sign up for an account",
+      "Choose the free version or subscribe to Premium",
+      "Enter text in the editor or browser extension",
+      "Select the sentence to rewrite and click the rewrite button",
+      "Choose a satisfactory result and apply it"
+    ],
+    "advantages": [
+      "AI 改写自然流畅",
+      "支持多种写作场景",
+      "实时反馈，提升效率",
+      "跨平台使用方便"
+    ],
+    "advantagesEn": [
+      "Natural and fluent AI rewriting",
+      "Supports various writing scenarios",
+      "Real-time feedback for efficiency",
+      "Convenient cross-platform use"
+    ],
+    "platforms": [
+      "web",
+      "extension",
+      "desktop",
+      "ios",
+      "android"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "基础改写功能，每日有限次数"
+      },
+      {
+        "name": "Premium",
+        "price": "约 $9.99/月",
+        "note": "无限改写、高级功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic rewriting features with daily limits"
+      },
+      {
+        "name": "Premium",
+        "price": "Approx. $9.99/month",
+        "note": "Unlimited rewriting and advanced features, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "rytr",
+    "name": "Rytr",
+    "nameZh": "Rytr",
+    "category": "writing",
+    "region": "overseas",
+    "officialUrl": "https://rytr.me",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 订阅",
+    "tags": [
+      "AI 写作",
+      "文案"
+    ],
+    "emoji": "📝",
+    "releaseYear": 2021,
+    "score": 7.5,
+    "popularity": 50,
+    "description": "Rytr是一款AI写作助手，提供快速生成高质量文案的服务，支持多种语言和用例，适合营销、博客等场景。",
+    "descriptionEn": "Rytr is an AI writing assistant that provides fast generation of high-quality copy, supporting multiple languages and use cases, ideal for marketing, blogs, and more.",
+    "tagsEn": [
+      "AI writing",
+      "copywriting"
+    ],
+    "pricingNoteEn": "Free plan + subscription",
+    "features": [
+      "生成营销文案、博客、邮件等",
+      "支持30多种语言",
+      "多种语气和风格选择",
+      "内置SEO关键词优化",
+      "提供浏览器扩展",
+      "支持团队协作"
+    ],
+    "featuresEn": [
+      "Generate marketing copy, blogs, emails, etc.",
+      "Support 30+ languages",
+      "Multiple tones and styles",
+      "Built-in SEO keyword optimization",
+      "Browser extension available",
+      "Team collaboration support"
+    ],
+    "howToUse": [
+      "注册Rytr账号",
+      "选择用例和语言",
+      "输入关键词或描述",
+      "生成并编辑文案"
+    ],
+    "howToUseEn": [
+      "Sign up for a Rytr account",
+      "Choose use case and language",
+      "Input keywords or description",
+      "Generate and edit copy"
+    ],
+    "advantages": [
+      "生成速度快",
+      "价格实惠",
+      "界面简洁易用",
+      "支持多种用例",
+      "提供免费额度"
+    ],
+    "advantagesEn": [
+      "Fast generation speed",
+      "Affordable pricing",
+      "Clean and easy-to-use interface",
+      "Supports many use cases",
+      "Free tier available"
+    ],
+    "platforms": [
+      "web",
+      "extension"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0/月",
+        "note": "每月5,000字符"
+      },
+      {
+        "name": "无限版",
+        "price": "$9/月起",
+        "note": "无限字符，更多功能"
+      },
+      {
+        "name": "经济版",
+        "price": "$29/月起",
+        "note": "适合团队，优先支持"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0/month",
+        "note": "5,000 characters per month"
+      },
+      {
+        "name": "Unlimited",
+        "price": "from $9/month",
+        "note": "Unlimited characters, more features"
+      },
+      {
+        "name": "Economy",
+        "price": "from $29/month",
+        "note": "For teams, priority support"
+      }
+    ]
+  },
+  {
+    "id": "you",
+    "name": "You.com",
+    "nameZh": "You.com",
+    "category": "search",
+    "region": "overseas",
+    "officialUrl": "https://you.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + Pro 订阅",
+    "tags": [
+      "AI 搜索",
+      "问答"
+    ],
+    "emoji": "🔍",
+    "releaseYear": 2021,
+    "score": 7.8,
+    "popularity": 55,
+    "description": "You.com 是一款 AI 驱动的搜索引擎，提供无广告、隐私保护的搜索体验，并集成多种 AI 工具，支持智能问答与内容生成。",
+    "descriptionEn": "You.com is an AI-powered search engine that offers an ad-free, privacy-focused search experience, integrating various AI tools for intelligent Q&A and content generation.",
+    "tagsEn": [
+      "AI search",
+      "Q&A"
+    ],
+    "pricingNoteEn": "Free tier + Pro subscription",
+    "features": [
+      "AI 驱动的搜索结果",
+      "无广告、隐私保护",
+      "多模型集成（GPT、Claude 等）",
+      "智能问答与对话",
+      "内容生成与总结",
+      "自定义搜索模式"
+    ],
+    "featuresEn": [
+      "AI-powered search results",
+      "Ad-free and privacy-focused",
+      "Integration with multiple models (GPT, Claude, etc.)",
+      "Intelligent Q&A and conversation",
+      "Content generation and summarization",
+      "Customizable search modes"
+    ],
+    "howToUse": [
+      "访问 You.com 官网并注册账号",
+      "在搜索框输入问题或关键词",
+      "选择搜索模式（如聊天、搜索、应用）",
+      "查看 AI 生成的回答或结果",
+      "根据需要进一步提问或调整"
+    ],
+    "howToUseEn": [
+      "Visit You.com and sign up for an account",
+      "Enter a question or keyword in the search box",
+      "Choose a search mode (e.g., chat, search, apps)",
+      "View AI-generated answers or results",
+      "Ask follow-up questions or adjust as needed"
+    ],
+    "advantages": [
+      "整合多种 AI 模型，提供多样化回答",
+      "注重用户隐私，无广告干扰",
+      "界面简洁，易于使用",
+      "支持多种搜索模式，灵活高效"
+    ],
+    "advantagesEn": [
+      "Integrates multiple AI models for diverse answers",
+      "Privacy-focused with no ads",
+      "Clean interface and easy to use",
+      "Supports multiple search modes for flexibility"
+    ],
+    "platforms": [
+      "web",
+      "extension"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "基础搜索功能，有限次数"
+      },
+      {
+        "name": "Pro 订阅",
+        "price": "约 $14.99/月",
+        "note": "更多 AI 功能与优先访问，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic search features with limited usage"
+      },
+      {
+        "name": "Pro Subscription",
+        "price": "Approx. $14.99/month",
+        "note": "More AI features and priority access, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "phind",
+    "name": "Phind",
+    "nameZh": "Phind",
+    "category": "search",
+    "region": "overseas",
+    "officialUrl": "https://www.phind.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + Pro 订阅",
+    "tags": [
+      "开发者搜索",
+      "问答"
+    ],
+    "emoji": "👨‍💻",
+    "releaseYear": 2022,
+    "score": 8,
+    "popularity": 58,
+    "description": "Phind 是一款面向开发者的 AI 搜索引擎，提供技术问答与代码解决方案，支持实时网页信息检索，帮助开发者快速定位问题并获取答案。",
+    "descriptionEn": "Phind is an AI-powered search engine for developers, offering technical Q&A and code solutions with real-time web retrieval to help developers quickly find answers.",
+    "tagsEn": [
+      "developer search",
+      "Q&A"
+    ],
+    "pricingNoteEn": "Free tier + Pro subscription",
+    "features": [
+      "实时网页信息检索",
+      "技术问答与代码生成",
+      "支持多轮对话",
+      "提供代码解释与调试建议",
+      "支持自然语言查询"
+    ],
+    "featuresEn": [
+      "Real-time web search",
+      "Technical Q&A and code generation",
+      "Multi-turn conversation support",
+      "Code explanation and debugging suggestions",
+      "Natural language query support"
+    ],
+    "howToUse": [
+      "访问 Phind 官网并注册账号",
+      "在搜索框输入技术问题或代码片段",
+      "查看 AI 生成的答案与相关网页链接",
+      "可进行多轮对话以深入探讨问题"
+    ],
+    "howToUseEn": [
+      "Visit Phind's website and sign up",
+      "Enter a technical question or code snippet in the search box",
+      "Review AI-generated answers and relevant web links",
+      "Engage in multi-turn conversations for deeper insights"
+    ],
+    "advantages": [
+      "专为开发者设计，答案更精准",
+      "结合实时网页信息，时效性强",
+      "支持代码生成与解释，提升效率",
+      "界面简洁，易于使用"
+    ],
+    "advantagesEn": [
+      "Designed for developers, more accurate answers",
+      "Integrates real-time web info, highly up-to-date",
+      "Supports code generation and explanation, boosts productivity",
+      "Clean interface, easy to use"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "提供基础搜索与问答功能"
+      },
+      {
+        "name": "Pro",
+        "price": "$15/月（约）",
+        "note": "提供更快的响应速度与高级功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic search and Q&A features"
+      },
+      {
+        "name": "Pro",
+        "price": "$15/month (approx.)",
+        "note": "Faster response and advanced features, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "caiyun",
+    "name": "彩云小译",
+    "nameZh": "彩云小译",
+    "category": "translate",
+    "region": "domestic",
+    "officialUrl": "https://caiyunapp.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 会员",
+    "tags": [
+      "翻译",
+      "双语对照"
+    ],
+    "emoji": "🌐",
+    "releaseYear": 2018,
+    "score": 7.6,
+    "popularity": 48,
+    "description": "彩云小译是一款基于AI的翻译工具，提供中英日等多语言互译，支持双语对照阅读，适用于网页、文档和视频翻译。",
+    "descriptionEn": "Caiyun Xiaoyi is an AI-powered translation tool offering multilingual translation between Chinese, English, Japanese, etc., with bilingual comparison reading, suitable for web, documents, and video translation.",
+    "tagsEn": [
+      "Translation",
+      "Bilingual Comparison"
+    ],
+    "pricingNoteEn": "Free version + membership",
+    "features": [
+      "支持中英日等多语言互译",
+      "双语对照阅读，提升理解效率",
+      "网页、文档、视频实时翻译",
+      "浏览器插件，一键翻译网页",
+      "语音翻译，支持对话场景"
+    ],
+    "featuresEn": [
+      "Supports multilingual translation between Chinese, English, Japanese, etc.",
+      "Bilingual comparison reading for better comprehension",
+      "Real-time translation for web, documents, and videos",
+      "Browser extension for one-click webpage translation",
+      "Voice translation for conversation scenarios"
+    ],
+    "howToUse": [
+      "访问官网或下载应用",
+      "注册并登录账号",
+      "选择翻译模式（文本、网页、语音等）",
+      "输入或粘贴内容，或上传文件",
+      "查看双语对照结果"
+    ],
+    "howToUseEn": [
+      "Visit the official website or download the app",
+      "Register and log in to your account",
+      "Choose translation mode (text, web, voice, etc.)",
+      "Input or paste content, or upload files",
+      "View bilingual comparison results"
+    ],
+    "advantages": [
+      "翻译准确度高，尤其擅长中英互译",
+      "双语对照阅读体验佳",
+      "支持多种输入方式，使用便捷",
+      "浏览器插件集成，提升浏览效率"
+    ],
+    "advantagesEn": [
+      "High translation accuracy, especially for Chinese-English",
+      "Excellent bilingual comparison reading experience",
+      "Supports multiple input methods for convenience",
+      "Browser extension integration for efficient browsing"
+    ],
+    "platforms": [
+      "web",
+      "macos",
+      "windows",
+      "ios",
+      "android",
+      "extension"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "0元",
+        "note": "基础翻译功能，每日有次数限制"
+      },
+      {
+        "name": "会员",
+        "price": "约20元/月",
+        "note": "无限翻译次数，高级功能，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "¥0",
+        "note": "Basic translation features with daily limits"
+      },
+      {
+        "name": "Membership",
+        "price": "About ¥20/month",
+        "note": "Unlimited translations and advanced features, subject to official website"
+      }
+    ]
+  },
+  {
+    "id": "reverso",
+    "name": "Reverso",
+    "nameZh": "Reverso",
+    "category": "translate",
+    "region": "overseas",
+    "officialUrl": "https://www.reverso.net",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + Premium 订阅",
+    "tags": [
+      "翻译",
+      "例句",
+      "词典"
+    ],
+    "emoji": "🌐",
+    "releaseYear": 1998,
+    "score": 8,
+    "popularity": 62,
+    "description": "Reverso 是一款集翻译、词典和例句于一体的在线语言工具，支持多语种互译，提供语境化翻译和发音，帮助用户准确理解和使用外语。",
+    "descriptionEn": "Reverso is an online language tool integrating translation, dictionary, and example sentences, supporting multilingual translation with contextualized translations and pronunciation to help users accurately understand and use foreign languages.",
+    "tagsEn": [
+      "translation",
+      "examples",
+      "dictionary"
+    ],
+    "pricingNoteEn": "Free version + Premium subscription",
+    "features": [
+      "多语种文本翻译",
+      "语境化例句搜索",
+      "词典与同义词查询",
+      "发音与语音朗读",
+      "文档翻译功能",
+      "学习卡片与复习工具"
+    ],
+    "featuresEn": [
+      "Multilingual text translation",
+      "Contextual example search",
+      "Dictionary and synonyms lookup",
+      "Pronunciation and audio playback",
+      "Document translation feature",
+      "Learning cards and review tools"
+    ],
+    "howToUse": [
+      "访问 Reverso 官网或打开应用",
+      "选择源语言和目标语言",
+      "输入或粘贴要翻译的文本",
+      "点击翻译按钮查看结果",
+      "查看例句、词典释义或使用学习工具"
+    ],
+    "howToUseEn": [
+      "Visit Reverso website or open the app",
+      "Select source and target languages",
+      "Enter or paste the text to translate",
+      "Click the translate button to see results",
+      "View examples, dictionary definitions, or use learning tools"
+    ],
+    "advantages": [
+      "语境化翻译更准确",
+      "丰富的例句库",
+      "多平台支持",
+      "免费版功能强大",
+      "学习辅助功能实用"
+    ],
+    "advantagesEn": [
+      "Contextual translation for accuracy",
+      "Rich example database",
+      "Multi-platform support",
+      "Powerful free version",
+      "Practical learning aids"
+    ],
+    "platforms": [
+      "web",
+      "ios",
+      "android",
+      "extension",
+      "desktop"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "0",
+        "note": "基本翻译和例句功能"
+      },
+      {
+        "name": "Premium",
+        "price": "约 $6.99/月",
+        "note": "无广告、无限翻译、高级学习工具，以官网为准"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic translation and examples"
+      },
+      {
+        "name": "Premium",
+        "price": "Approx. $6.99/month",
+        "note": "Ad-free, unlimited translation, advanced learning tools; see official website"
+      }
+    ]
+  },
+  {
+    "id": "framer",
+    "name": "Framer",
+    "nameZh": "Framer",
+    "category": "design",
+    "region": "overseas",
+    "officialUrl": "https://www.framer.com",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 订阅",
+    "tags": [
+      "网站设计",
+      "AI 建站"
+    ],
+    "emoji": "🖌️",
+    "releaseYear": 2015,
+    "score": 8.6,
+    "popularity": 78,
+    "description": "Framer 是一款集设计、原型和发布于一体的 AI 建站工具，支持可视化编辑与智能布局，帮助用户快速创建响应式网站。",
+    "descriptionEn": "Framer is an AI-powered website builder that integrates design, prototyping, and publishing, enabling users to create responsive sites quickly with visual editing and smart layouts.",
+    "tagsEn": [
+      "Website Design",
+      "AI Website Builder"
+    ],
+    "pricingNoteEn": "Free plan available, with paid subscriptions for advanced features.",
+    "features": [
+      "可视化拖拽式编辑，无需编码",
+      "AI 智能布局与内容生成",
+      "内置响应式设计，适配多端",
+      "实时协作与版本管理",
+      "一键发布到全球 CDN",
+      "丰富的模板与组件库"
+    ],
+    "featuresEn": [
+      "Visual drag-and-drop editing, no coding required",
+      "AI-powered layout and content generation",
+      "Built-in responsive design for multiple devices",
+      "Real-time collaboration and version control",
+      "One-click publishing to global CDN",
+      "Rich templates and component library"
+    ],
+    "howToUse": [
+      "注册并登录 Framer 账号",
+      "选择模板或从空白画布开始",
+      "使用 AI 生成或手动编辑内容",
+      "预览并调整响应式效果",
+      "发布网站并绑定自定义域名"
+    ],
+    "howToUseEn": [
+      "Sign up and log in to your Framer account",
+      "Choose a template or start from a blank canvas",
+      "Use AI to generate or manually edit content",
+      "Preview and adjust responsive behavior",
+      "Publish the site and connect a custom domain"
+    ],
+    "advantages": [
+      "设计工具与建站平台一体化",
+      "AI 辅助大幅提升效率",
+      "高质量模板与设计资源",
+      "无需维护服务器，安全可靠",
+      "适合设计师与开发者协作"
+    ],
+    "advantagesEn": [
+      "All-in-one design tool and website builder",
+      "AI assistance significantly boosts efficiency",
+      "High-quality templates and design resources",
+      "No server maintenance, secure and reliable",
+      "Ideal for collaboration between designers and developers"
+    ],
+    "platforms": [
+      "web",
+      "macos",
+      "windows",
+      "linux",
+      "ios",
+      "android"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "基础功能，带 Framer 品牌标识"
+      },
+      {
+        "name": "Mini",
+        "price": "约 $5/月",
+        "note": "个人项目，去除品牌标识"
+      },
+      {
+        "name": "Basic",
+        "price": "约 $15/月",
+        "note": "自定义域名，更多页面"
+      },
+      {
+        "name": "Pro",
+        "price": "约 $30/月",
+        "note": "高级功能，团队协作"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic features with Framer branding"
+      },
+      {
+        "name": "Mini",
+        "price": "~$5/month",
+        "note": "For personal projects, removes branding"
+      },
+      {
+        "name": "Basic",
+        "price": "~$15/month",
+        "note": "Custom domain, more pages"
+      },
+      {
+        "name": "Pro",
+        "price": "~$30/month",
+        "note": "Advanced features, team collaboration"
+      }
+    ]
+  },
+  {
+    "id": "spline",
+    "name": "Spline",
+    "nameZh": "Spline",
+    "category": "design",
+    "region": "overseas",
+    "officialUrl": "https://spline.design",
+    "pricing": "freemium",
+    "pricingNote": "免费版 + 订阅",
+    "tags": [
+      "3D 设计",
+      "AI"
+    ],
+    "emoji": "🧊",
+    "releaseYear": 2020,
+    "score": 8.1,
+    "popularity": 60,
+    "description": "Spline是一款基于浏览器的3D设计工具，结合AI技术，让设计师轻松创建交互式3D场景和动画，无需复杂软件。",
+    "descriptionEn": "Spline is a browser-based 3D design tool that integrates AI, enabling designers to easily create interactive 3D scenes and animations without complex software.",
+    "tagsEn": [
+      "3D Design",
+      "AI"
+    ],
+    "pricingNoteEn": "Free tier available, with subscription plans for advanced features.",
+    "features": [
+      "实时协作，多人同时编辑",
+      "AI生成3D模型和材质",
+      "交互式动画和事件触发",
+      "跨平台导出，支持Web和移动端",
+      "内置资产库和模板"
+    ],
+    "featuresEn": [
+      "Real-time collaboration for multi-user editing",
+      "AI-generated 3D models and materials",
+      "Interactive animations and event triggers",
+      "Cross-platform export for web and mobile",
+      "Built-in asset library and templates"
+    ],
+    "howToUse": [
+      "访问Spline官网并注册账号",
+      "选择模板或从空白场景开始",
+      "使用AI工具生成模型或导入素材",
+      "添加动画和交互效果",
+      "导出为Web、图片或视频格式"
+    ],
+    "howToUseEn": [
+      "Visit the Spline website and create an account",
+      "Choose a template or start from a blank scene",
+      "Use AI tools to generate models or import assets",
+      "Add animations and interactions",
+      "Export to web, image, or video formats"
+    ],
+    "advantages": [
+      "无需安装，浏览器即可使用",
+      "AI辅助创作，降低3D设计门槛",
+      "实时协作，提升团队效率",
+      "丰富的交互组件，适合产品原型"
+    ],
+    "advantagesEn": [
+      "No installation required, works in the browser",
+      "AI-assisted creation lowers the barrier to 3D design",
+      "Real-time collaboration improves team efficiency",
+      "Rich interactive components suitable for product prototyping"
+    ],
+    "platforms": [
+      "web",
+      "macos",
+      "windows",
+      "linux"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "$0",
+        "note": "基础功能，有限项目数"
+      },
+      {
+        "name": "专业版",
+        "price": "$20/月（约）",
+        "note": "更多功能，无限项目，优先支持"
+      },
+      {
+        "name": "团队版",
+        "price": "$40/月（约）",
+        "note": "团队协作，高级管理功能"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "note": "Basic features, limited projects"
+      },
+      {
+        "name": "Pro",
+        "price": "$20/month (approx.)",
+        "note": "More features, unlimited projects, priority support"
+      },
+      {
+        "name": "Team",
+        "price": "$40/month (approx.)",
+        "note": "Team collaboration, advanced management"
+      }
+    ]
+  },
+  {
+    "id": "xingye",
+    "name": "星野",
+    "nameZh": "星野",
+    "category": "companion",
+    "region": "domestic",
+    "officialUrl": "https://www.xingye.app",
+    "pricing": "freemium",
+    "pricingNote": "免费使用 + 内购",
+    "tags": [
+      "角色陪伴",
+      "互动",
+      "MiniMax"
+    ],
+    "emoji": "💫",
+    "releaseYear": 2023,
+    "score": 7.8,
+    "popularity": 55,
+    "description": "星野是一款由MiniMax推出的角色陪伴互动应用，提供沉浸式虚拟角色对话体验，支持个性化角色创建与互动。",
+    "descriptionEn": "Xingye is a character companion interactive app launched by MiniMax, offering immersive virtual character conversations and personalized character creation.",
+    "tagsEn": [
+      "Character Companion",
+      "Interactive",
+      "MiniMax"
+    ],
+    "pricingNoteEn": "Free to use with in-app purchases",
+    "features": [
+      "沉浸式角色对话体验",
+      "个性化角色创建与定制",
+      "丰富的剧情互动场景",
+      "AI驱动的智能回复",
+      "多角色管理功能"
+    ],
+    "featuresEn": [
+      "Immersive character dialogue experience",
+      "Personalized character creation and customization",
+      "Rich story-driven interactive scenarios",
+      "AI-powered intelligent responses",
+      "Multi-character management"
+    ],
+    "howToUse": [
+      "下载并安装星野应用",
+      "注册或登录账号",
+      "选择或创建喜欢的角色",
+      "开始与角色进行对话互动",
+      "根据喜好调整角色设定"
+    ],
+    "howToUseEn": [
+      "Download and install the Xingye app",
+      "Register or log in to your account",
+      "Choose or create a favorite character",
+      "Start chatting and interacting with the character",
+      "Adjust character settings as desired"
+    ],
+    "advantages": [
+      "背靠MiniMax强大AI技术",
+      "角色互动真实自然",
+      "支持个性化定制",
+      "持续更新内容与角色"
+    ],
+    "advantagesEn": [
+      "Backed by MiniMax's powerful AI technology",
+      "Realistic and natural character interactions",
+      "Supports personalized customization",
+      "Continuously updated content and characters"
+    ],
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "apiName": "",
+    "apiNameEn": "",
+    "pricingTiers": [
+      {
+        "name": "免费版",
+        "price": "免费",
+        "note": "基础功能可用"
+      },
+      {
+        "name": "内购项目",
+        "price": "以官网为准",
+        "note": "提供额外功能或内容"
+      }
+    ],
+    "pricingTiersEn": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "note": "Basic features available"
+      },
+      {
+        "name": "In-app purchases",
+        "price": "See official website",
+        "note": "Additional features or content"
+      }
+    ]
   }
 ]
