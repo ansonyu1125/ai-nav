@@ -14,7 +14,8 @@
     "enrich": "node scripts/enrich.mjs",
     "add:tools": "node scripts/add-tools.mjs",
     "bulk:import": "node scripts/bulk-import.mjs",
-    "fetch:new-logos": "node scripts/fetch-new-logos.mjs"
+    "fetch:new-logos": "node scripts/fetch-new-logos.mjs",
+    "vision": "node scripts/vision.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.38.2",

@@ -44,3 +44,7 @@ next-env.d.ts
 # bulk import working files
 scripts/import-list.txt
 scripts/import-review.json
+
+# traffic fetch intermediates (raw Apify output, run id)
+traffic-raw.json
+.traffic-run-id
