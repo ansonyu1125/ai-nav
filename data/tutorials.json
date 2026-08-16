@@ -174,5 +174,71 @@
       "PPT",
       "Efficiency"
     ]
+  },
+  {
+    "id": "ai-agent-guide",
+    "title": "AI Agent 智能体入门：让 AI 帮你干活",
+    "summary": "搞懂智能体到底是什么、和普通 AI 聊天的区别，并亲手搭一个能自动干活的 AI 助手。",
+    "category": "智能体",
+    "emoji": "🤖",
+    "date": "2026-08-17",
+    "readMinutes": 9,
+    "tags": [
+      "智能体",
+      "Agent",
+      "扣子",
+      "自动化"
+    ],
+    "titleEn": "Getting Started with AI Agents: Make AI Work for You",
+    "summaryEn": "Understand what AI agents are, how they differ from regular chatbots, and build your own agent that gets work done automatically.",
+    "categoryEn": "Agents",
+    "tagsEn": [
+      "Agent",
+      "Coze",
+      "Automation"
+    ]
+  },
+  {
+    "id": "deepseek-guide",
+    "title": "DeepSeek 使用指南：免费好用的国产 AI",
+    "summary": "从注册到进阶，讲清 DeepSeek 的两种模式、和 ChatGPT 的区别，以及能直接抄的实用玩法。",
+    "category": "对话助手",
+    "emoji": "🐋",
+    "date": "2026-08-17",
+    "readMinutes": 8,
+    "tags": [
+      "DeepSeek",
+      "国产 AI",
+      "对话助手"
+    ],
+    "titleEn": "DeepSeek Guide: A Free and Powerful AI Assistant",
+    "summaryEn": "From registration to advanced use, learn DeepSeek's two modes, how it differs from ChatGPT, and practical prompts you can copy.",
+    "categoryEn": "Chat Assistant",
+    "tagsEn": [
+      "DeepSeek",
+      "AI Assistant"
+    ]
+  },
+  {
+    "id": "ai-side-hustle",
+    "title": "用 AI 做副业：5 个真实赚钱方向",
+    "summary": "别信躺赚神话。这篇给你 5 个用 AI 放大技能、真实可落地的副业方向，附带门槛、玩法和避坑。",
+    "category": "变现",
+    "emoji": "💰",
+    "date": "2026-08-17",
+    "readMinutes": 10,
+    "tags": [
+      "副业",
+      "赚钱",
+      "变现"
+    ],
+    "titleEn": "Make Money with AI: 5 Real Side-Hustle Directions",
+    "summaryEn": "Skip the hype. Five realistic AI side-hustle directions that amplify your existing skills, with entry barriers, methods, and pitfalls.",
+    "categoryEn": "Monetization",
+    "tagsEn": [
+      "Side Hustle",
+      "Make Money",
+      "Monetization"
+    ]
   }
 ]
