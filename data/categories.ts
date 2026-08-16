@@ -35,6 +35,11 @@ export const categories: Category[] = [
   { id: "ecommerce", name: "电商运营", nameEn: "E-commerce", emoji: "🛒", description: "AI 产品图、商品文案与电商客服", descriptionEn: "AI product photos, listing copy & e-commerce support" },
   { id: "gaming", name: "游戏娱乐", nameEn: "Gaming", emoji: "🎮", description: "AI 游戏开发、NPC 与互动叙事", descriptionEn: "AI game dev, NPCs & interactive storytelling" },
   { id: "travel", name: "旅行出行", nameEn: "Travel", emoji: "✈️", description: "AI 行程规划与旅行助手", descriptionEn: "AI itinerary planning & travel assistants" },
+  { id: "seo", name: "营销 SEO", nameEn: "SEO & Content", emoji: "🎯", description: "AI 关键词、内容优化与竞品分析", descriptionEn: "AI keywords, content optimization & competitor analysis" },
+  { id: "social", name: "社媒运营", nameEn: "Social Media", emoji: "📱", description: "AI 贴文生成、排期与社媒管理", descriptionEn: "AI post generation, scheduling & social management" },
+  { id: "email", name: "邮件工具", nameEn: "Email", emoji: "📧", description: "AI 邮件客户端、营销与自动回复", descriptionEn: "AI email clients, marketing & auto-replies" },
+  { id: "security", name: "网络安全", nameEn: "Cybersecurity", emoji: "🔐", description: "AI 威胁检测、端点防护与邮件安全", descriptionEn: "AI threat detection, endpoint protection & email security" },
+  { id: "crypto", name: "加密 Web3", nameEn: "Crypto & Web3", emoji: "🪙", description: "AI 链上分析、Web3 工具与加密研究", descriptionEn: "AI on-chain analysis, Web3 tools & crypto research" },
 ];
 
 export const categoryMap: Record<string, Category> = Object.fromEntries(
