@@ -110,6 +110,27 @@ export interface GlossaryTerm {
   related?: string[];
 }
 
+// 场景（用户意图）："我想做视频 / 写代码 / 做 PPT…" 对应到工具分类，用于场景导航与对比榜单页
+export interface ScenarioFAQ {
+  q: string;
+  qEn: string;
+  a: string;
+  aEn: string;
+}
+
+export interface Scenario {
+  id: string;
+  name: string;
+  nameEn: string;
+  intent: string;
+  intentEn: string;
+  emoji: string;
+  category: string;
+  intro: string;
+  introEn: string;
+  faqs: ScenarioFAQ[];
+}
+
 export const PRICING_LABEL: Record<Pricing, { zh: string; en: string }> = {
   free: { zh: "免费", en: "Free" },
   freemium: { zh: "免费增值", en: "Freemium" },

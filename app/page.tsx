@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { categories } from "@/data/categories";
-import { tools, getFeaturedTools, topTools } from "@/lib/tools";
+import { tools, getFeaturedTools, topTools, countByCategory } from "@/lib/tools";
+import { scenarios } from "@/data/scenarios";
 import { tutorials } from "@/lib/tutorials";
 import { glossary } from "@/lib/glossary";
 import SearchBar from "@/components/SearchBar";
@@ -47,6 +48,37 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 场景导航 */}
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <SectionHeading
+          title="我想……"
+          titleEn="I want to…"
+          subtitle="从需求出发，快速找到对应工具"
+          subtitleEn="Start from your goal and find the right tool"
+          href="/scenarios"
+        />
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          {scenarios.map((s) => {
+            const count = countByCategory(s.category);
+            return (
+              <Link
+                key={s.id}
+                href={`/scenarios/${s.id}`}
+                className="group flex flex-col items-start gap-2 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-sm"
+              >
+                <span className="text-2xl">{s.emoji}</span>
+                <span className="font-medium text-slate-900 group-hover:text-indigo-600">
+                  <BilingualText zh={s.name} en={s.nameEn} />
+                </span>
+                <span className="text-xs text-slate-400">
+                  <BilingualText zh={`${count} 款工具`} en={`${count} tools`} />
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
