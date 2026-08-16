@@ -4556,7 +4556,7 @@
     "id": "gamma",
     "name": "Gamma",
     "nameZh": "Gamma",
-    "category": "office",
+    "category": "slides",
     "description": "AI 驱动的演示文稿与网页生成工具，输入主题即可生成精美的 PPT 与网页。",
     "officialUrl": "https://gamma.app",
     "pricing": "freemium",
@@ -4670,7 +4670,7 @@
     "id": "xinghuo",
     "name": "讯飞星火",
     "nameZh": "讯飞星火",
-    "category": "office",
+    "category": "chat",
     "description": "科大讯飞推出的认知大模型，覆盖办公、教育、语音等场景，中文语音能力突出。",
     "officialUrl": "https://xinghuo.xfyun.cn",
     "pricing": "freemium",
@@ -4781,7 +4781,6 @@
       }
     ],
     "categories": [
-      "office",
       "chat"
     ],
     "model": "星火大模型",
@@ -7884,7 +7883,7 @@
     "id": "notebooklm",
     "name": "NotebookLM",
     "nameZh": "NotebookLM",
-    "category": "office",
+    "category": "research",
     "description": "Google 的 AI 笔记与深度研究工具，上传资料即可生成摘要、问答与音频概览。",
     "officialUrl": "https://notebooklm.google.com",
     "pricing": "free",
@@ -9186,7 +9185,7 @@
     "id": "aippt",
     "name": "AiPPT",
     "nameZh": "AiPPT",
-    "category": "office",
+    "category": "slides",
     "description": "AI 一键生成 PPT 大纲与演示文稿，输入主题即可产出完整可编辑的 PPT。",
     "officialUrl": "https://www.aippt.cn",
     "pricing": "freemium",
@@ -11449,108 +11448,6 @@
     "modelEn": "Proprietary"
   },
   {
-    "id": "topaz-photo",
-    "name": "Topaz Photo AI",
-    "nameZh": "Topaz Photo AI",
-    "category": "image-edit",
-    "region": "overseas",
-    "officialUrl": "https://www.topazlabs.com",
-    "pricing": "paid",
-    "pricingNote": "一次性买断 / 订阅",
-    "tags": [
-      "图像增强",
-      "降噪",
-      "修图"
-    ],
-    "emoji": "📷",
-    "releaseYear": 2022,
-    "score": 8.4,
-    "popularity": 66,
-    "description": "Topaz Photo AI 是一款基于人工智能的图像增强软件，集降噪、锐化、放大与修复于一体，自动检测图像问题并优化，适用于摄影后期与图像修复。",
-    "descriptionEn": "Topaz Photo AI is an AI-powered image enhancement software that combines denoising, sharpening, upscaling, and restoration. It automatically detects image issues and optimizes them, suitable for photography post-processing and image restoration.",
-    "tagsEn": [
-      "Image Enhancement",
-      "Denoising",
-      "Photo Editing"
-    ],
-    "pricingNoteEn": "One-time purchase / Subscription",
-    "features": [
-      "自动检测图像噪点、模糊等问题",
-      "AI 降噪，保留细节",
-      "AI 锐化，提升清晰度",
-      "AI 放大，最高 8 倍",
-      "人脸修复与增强",
-      "批量处理多张图片"
-    ],
-    "featuresEn": [
-      "Automatically detect noise, blur, and other issues",
-      "AI denoising with detail preservation",
-      "AI sharpening for clarity",
-      "AI upscaling up to 8x",
-      "Face recovery and enhancement",
-      "Batch processing multiple images"
-    ],
-    "howToUse": [
-      "下载并安装 Topaz Photo AI",
-      "导入需要处理的图片",
-      "软件自动分析并推荐优化方案",
-      "手动调整参数或直接应用",
-      "导出处理后的图片"
-    ],
-    "howToUseEn": [
-      "Download and install Topaz Photo AI",
-      "Import the image to be processed",
-      "The software automatically analyzes and recommends optimizations",
-      "Manually adjust parameters or apply directly",
-      "Export the processed image"
-    ],
-    "advantages": [
-      "一站式解决多种图像问题",
-      "AI 自动检测，操作简单",
-      "高质量输出，细节保留好",
-      "支持批量处理，提高效率"
-    ],
-    "advantagesEn": [
-      "One-stop solution for various image issues",
-      "AI auto-detection, easy to use",
-      "High-quality output with good detail preservation",
-      "Batch processing for efficiency"
-    ],
-    "platforms": [
-      "macos",
-      "windows"
-    ],
-    "apiName": "",
-    "apiNameEn": "",
-    "pricingTiers": [
-      {
-        "name": "Photo AI 单次购买",
-        "price": "199 美元起",
-        "note": "一次性买断，含一年更新，以官网为准"
-      },
-      {
-        "name": "Photo AI 订阅",
-        "price": "约 19 美元/月",
-        "note": "按月订阅，含全部功能，以官网为准"
-      }
-    ],
-    "pricingTiersEn": [
-      {
-        "name": "Photo AI One-time Purchase",
-        "price": "From $199",
-        "note": "One-time purchase, includes 1 year of updates, subject to official website"
-      },
-      {
-        "name": "Photo AI Subscription",
-        "price": "About $19/month",
-        "note": "Monthly subscription, includes all features, subject to official website"
-      }
-    ],
-    "logo": "/logos/topaz-photo.png",
-    "model": "Topaz 自研",
-    "modelEn": "Proprietary"
-  },
-  {
     "id": "lets-enhance",
     "name": "Let's Enhance",
     "nameZh": "Let's Enhance",
@@ -13022,7 +12919,7 @@
     "id": "otter",
     "name": "Otter.ai",
     "nameZh": "Otter.ai",
-    "category": "office",
+    "category": "meeting",
     "region": "overseas",
     "officialUrl": "https://otter.ai",
     "pricing": "freemium",
@@ -13147,7 +13044,7 @@
     "id": "fireflies",
     "name": "Fireflies.ai",
     "nameZh": "Fireflies.ai",
-    "category": "office",
+    "category": "meeting",
     "region": "overseas",
     "officialUrl": "https://fireflies.ai",
     "pricing": "freemium",
@@ -13270,7 +13167,7 @@
     "id": "descript",
     "name": "Descript",
     "nameZh": "Descript",
-    "category": "office",
+    "category": "video-edit",
     "region": "overseas",
     "officialUrl": "https://www.descript.com",
     "pricing": "freemium",
@@ -13385,7 +13282,7 @@
     ],
     "logo": "/logos/descript.ico",
     "categories": [
-      "office",
+      "video-edit",
       "video",
       "voice"
     ],
@@ -13396,7 +13293,7 @@
     "id": "iflyrec",
     "name": "讯飞听见",
     "nameZh": "讯飞听见",
-    "category": "office",
+    "category": "meeting",
     "region": "domestic",
     "officialUrl": "https://www.iflyrec.com",
     "pricing": "freemium",
@@ -13513,7 +13410,7 @@
     ],
     "logo": "/logos/iflyrec.ico",
     "categories": [
-      "office",
+      "meeting",
       "voice"
     ],
     "model": "讯飞语音识别",
@@ -15422,38 +15319,6 @@
     "verified": true
   },
   {
-    "id": "duolingo-max",
-    "name": "Duolingo Max",
-    "nameZh": "Duolingo Max",
-    "category": "education",
-    "region": "overseas",
-    "description": "多邻国的高级 AI 功能，用 GPT 提供个性化语言练习与讲解。",
-    "descriptionEn": "Duolingo's premium AI tier with GPT-powered personalized practice and explanations.",
-    "officialUrl": "https://www.duolingo.com",
-    "pricing": "freemium",
-    "pricingNote": "免费 + Max 订阅",
-    "tags": [
-      "语言学习",
-      "AI 辅导"
-    ],
-    "tagsEn": [
-      "Language",
-      "Tutor"
-    ],
-    "score": 8.5,
-    "popularity": 76,
-    "emoji": "🦉",
-    "releaseYear": 2023,
-    "model": "GPT",
-    "modelEn": "GPT",
-    "platforms": [
-      "web",
-      "ios",
-      "android"
-    ],
-    "verified": true
-  },
-  {
     "id": "photomath",
     "name": "Photomath",
     "nameZh": "Photomath",
@@ -15742,35 +15607,6 @@
     "popularity": 38,
     "emoji": "🐝",
     "releaseYear": 2022,
-    "model": "GPT",
-    "modelEn": "GPT",
-    "platforms": [
-      "web"
-    ]
-  },
-  {
-    "id": "julius-ai",
-    "name": "Julius AI",
-    "nameZh": "Julius AI",
-    "category": "data",
-    "region": "overseas",
-    "description": "用自然语言做数据分析，上传表格即可提问、绘图与建模。",
-    "descriptionEn": "Natural-language data analysis — upload a table to ask questions, plot and model.",
-    "officialUrl": "https://julius.ai",
-    "pricing": "freemium",
-    "pricingNote": "免费额度 + 订阅",
-    "tags": [
-      "数据分析",
-      "可视化"
-    ],
-    "tagsEn": [
-      "Data",
-      "Visualization"
-    ],
-    "score": 8.3,
-    "popularity": 63,
-    "emoji": "📊",
-    "releaseYear": 2023,
     "model": "GPT",
     "modelEn": "GPT",
     "platforms": [
@@ -17120,7 +16956,7 @@
     "id": "fathom",
     "name": "Fathom",
     "nameZh": "Fathom",
-    "category": "office",
+    "category": "meeting",
     "region": "overseas",
     "description": "免费 AI 会议记录，自动转录、总结并同步 CRM。",
     "descriptionEn": "Free AI meeting recorder that transcribes, summarizes and syncs to CRM.",
@@ -17151,7 +16987,7 @@
     "id": "read-ai",
     "name": "Read.ai",
     "nameZh": "Read.ai",
-    "category": "office",
+    "category": "meeting",
     "region": "overseas",
     "description": "AI 会议摘要与协作，自动生成行动项与周报。",
     "descriptionEn": "AI meeting summaries and collaboration with auto action items and recaps.",
@@ -17181,7 +17017,7 @@
     "id": "tldv",
     "name": "tl;dv",
     "nameZh": "tl;dv",
-    "category": "office",
+    "category": "meeting",
     "region": "overseas",
     "description": "会议录制与 AI 摘要，标注高光时刻便于回看。",
     "descriptionEn": "Meeting recording and AI summaries with highlights for easy review.",
@@ -17210,7 +17046,7 @@
     "id": "granola",
     "name": "Granola",
     "nameZh": "Granola",
-    "category": "office",
+    "category": "meeting",
     "region": "overseas",
     "description": "AI 会议笔记，把你的速记扩充成完整清晰的纪要。",
     "descriptionEn": "AI meeting notes that expand your quick notes into full, clear summaries.",
@@ -17233,36 +17069,6 @@
     "modelEn": "Proprietary",
     "platforms": [
       "macos"
-    ]
-  },
-  {
-    "id": "mem-ai",
-    "name": "Mem",
-    "nameZh": "Mem",
-    "category": "office",
-    "region": "overseas",
-    "description": "AI 笔记与第二大脑，自动整理并连接你的知识。",
-    "descriptionEn": "AI note-taking and second brain that auto-organizes and connects your knowledge.",
-    "officialUrl": "https://get.mem.ai",
-    "pricing": "freemium",
-    "pricingNote": "免费额度 + 订阅",
-    "tags": [
-      "笔记",
-      "第二大脑"
-    ],
-    "tagsEn": [
-      "Notes",
-      "Second brain"
-    ],
-    "score": 7.6,
-    "popularity": 48,
-    "emoji": "🧠",
-    "releaseYear": 2019,
-    "model": "自研",
-    "modelEn": "Proprietary",
-    "platforms": [
-      "web",
-      "ios"
     ]
   },
   {
