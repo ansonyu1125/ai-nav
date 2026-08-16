@@ -5,6 +5,7 @@ import { PLATFORM_LABEL } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { localize, localizeArray, toTraditional } from "@/lib/i18n";
 import { useLanguage } from "./LanguageProvider";
+import PricingSummary from "./PricingSummary";
 
 interface ToolDetailProps {
   tool: Tool;
@@ -45,6 +46,9 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
 
   return (
     <div>
+      {/* 费用速览 */}
+      <PricingSummary tool={tool} />
+
       {/* 主要功能 + 核心优势 */}
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
         {features.length > 0 && (

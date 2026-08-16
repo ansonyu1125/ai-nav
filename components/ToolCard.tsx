@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { Tool } from "@/lib/types";
 import { formatScore } from "@/lib/utils";
+import { summarizePricing } from "@/lib/pricing-summary";
 import { useLanguage } from "./LanguageProvider";
 import { localize, localizeArray } from "@/lib/i18n";
 import PricingBadge from "./PricingBadge";
@@ -13,6 +14,7 @@ export default function ToolCard({ tool }: { tool: Tool }) {
   const { lang } = useLanguage();
   const desc = localize(lang, tool.description, tool.descriptionEn);
   const tags = localizeArray(lang, tool.tags, tool.tagsEn);
+  const pricing = summarizePricing(tool);
 
   return (
     <Link
@@ -34,7 +36,27 @@ export default function ToolCard({ tool }: { tool: Tool }) {
         {desc}
       </p>
 
-      <div className="mt-4 flex items-center justify-between">
+      {/* 价格速览：免费 / 付费起点 */}
+      <div className="mt-3 flex flex-wrap items-center gap-x-1.5 text-xs font-medium">
+        {pricing.isFree ? (
+          <span className="text-emerald-600">
+            {localize(lang, "完全免费", "Free")}
+          </span>
+        ) : (
+          <>
+            {pricing.hasFree && (
+              <span className="text-emerald-600">
+                {localize(lang, "免费可用", "Free tier")}
+              </span>
+            )}
+            <span className="text-slate-700">
+              {pricing.startingPrice ?? localize(lang, "定制 / 联系官网", "Custom")}
+            </span>
+          </>
+        )}
+      </div>
+
+      <div className="mt-3 flex items-center justify-between">
         <div className="flex flex-wrap gap-1.5">
           {tags.slice(0, 2).map((tag) => (
             <span
