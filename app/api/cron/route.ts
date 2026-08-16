@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
 import { fetchFeedItems, generateArticles } from "@/lib/news-generate";
-import { getArticles, saveArticles, getRedis } from "@/lib/news";
+import { getArticles, saveArticles } from "@/lib/news";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -20,8 +20,6 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  const redis = getRedis();
-
   const existing = await getArticles();
   const seen = new Set(existing.map((a) => a.sourceUrl));
 
@@ -31,41 +29,12 @@ export async function GET(req: NextRequest) {
   const generated = fresh.length > 0 ? await generateArticles(fresh, apiKey) : [];
   const merged = [...generated, ...existing].slice(0, 200);
 
-  let saveError: string | null = null;
-  if (redis) {
-    try {
-      await saveArticles(merged);
-    } catch (e) {
-      saveError = e instanceof Error ? e.message : String(e);
-    }
-  }
-
-  // 存完立刻读回，验证「写→读」是否闭环
-  let readBackCount = -1;
-  let rawGet = "";
-  let rawGetError: string | null = null;
-  if (redis) {
-    readBackCount = (await getArticles()).length;
-    try {
-      const raw = await redis.get<string>("news:articles");
-      rawGet = typeof raw === "string" ? raw.slice(0, 120) : String(raw);
-    } catch (e) {
-      rawGetError = e instanceof Error ? e.message : String(e);
-    }
-  }
+  await saveArticles(merged);
 
   return Response.json({
     ok: true,
     added: generated.length,
     total: merged.length,
     skipped: items.length - fresh.length,
-    diag: {
-      version: "diag-2",
-      redisConnected: redis !== null,
-      saveError,
-      readBackCount,
-      rawGet,
-      rawGetError,
-    },
   });
 }

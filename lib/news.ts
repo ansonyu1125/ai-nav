@@ -23,7 +23,11 @@ export function getRedis(): Redis | null {
   return new Redis({ url, token });
 }
 
-function parse(raw: string): Article[] {
+function parse(raw: unknown): Article[] {
+  // @upstash/redis 读取时会自动把 JSON 反序列化成数组，此时直接返回即可，
+  // 不要再 JSON.parse（否则会把数组转成 "[object Object]" 导致解析失败）。
+  if (Array.isArray(raw)) return raw as Article[];
+  if (typeof raw !== "string") return [];
   try {
     const arr = JSON.parse(raw);
     return Array.isArray(arr) ? (arr as Article[]) : [];
@@ -36,7 +40,7 @@ export async function getArticles(): Promise<Article[]> {
   const redis = getRedis();
   if (redis) {
     try {
-      const raw = await redis.get<string>(KV_KEY);
+      const raw = await redis.get(KV_KEY);
       if (raw) return parse(raw);
     } catch (e) {
       console.error("[news] 读取 Redis 失败，回退本地数据", e);
