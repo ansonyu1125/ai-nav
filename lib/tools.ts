@@ -1,5 +1,5 @@
 import toolsData from "@/data/tools.json";
-import type { Tool } from "@/lib/types";
+import { getToolCategories, type Tool } from "@/lib/types";
 
 export const tools = toolsData as Tool[];
 
@@ -14,16 +14,21 @@ export function getFeaturedTools(): Tool[] {
 }
 
 export function getToolsByCategory(categoryId: string): Tool[] {
-  return tools.filter((t) => t.category === categoryId);
+  return tools.filter((t) => getToolCategories(t).includes(categoryId));
 }
 
 export function countByCategory(categoryId: string): number {
-  return tools.filter((t) => t.category === categoryId).length;
+  return tools.filter((t) => getToolCategories(t).includes(categoryId)).length;
 }
 
 export function getRelatedTools(tool: Tool, limit = 6): Tool[] {
+  const mine = getToolCategories(tool);
   return tools
-    .filter((t) => t.id !== tool.id && t.category === tool.category)
+    .filter(
+      (t) =>
+        t.id !== tool.id &&
+        getToolCategories(t).some((c) => mine.includes(c)),
+    )
     .sort((a, b) => b.popularity - a.popularity)
     .slice(0, limit);
 }

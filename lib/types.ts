@@ -51,7 +51,8 @@ export interface Tool {
   id: string;
   name: string;
   nameZh: string;
-  category: string;
+  category: string; // 主分类
+  categories?: string[]; // 所属全部分类（含主分类），多领域工具用
   region: Region;
   description: string;
   descriptionEn?: string;
@@ -67,6 +68,8 @@ export interface Tool {
   emoji: string;
   logo?: string;
   releaseYear?: number;
+  model?: string; // 核心模型（对比用）
+  modelEn?: string;
 
   // 详情页扩展内容（AI 生成，可编辑）
   features?: string[];
@@ -142,3 +145,11 @@ export const REGION_LABEL: Record<Region, { zh: string; en: string }> = {
   domestic: { zh: "国内", en: "China" },
   overseas: { zh: "海外", en: "Global" },
 };
+
+// 取工具所属的全部分类：多领域工具返回 categories，否则回退到主分类。
+// 纯函数（不依赖 data），可安全用于客户端组件。
+export function getToolCategories(tool: Tool): string[] {
+  return tool.categories && tool.categories.length > 0
+    ? tool.categories
+    : [tool.category];
+}

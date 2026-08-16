@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { tools, sortTools } from "@/lib/tools";
+import { getToolCategories } from "@/lib/types";
 import { categories } from "@/data/categories";
 import RankingList from "@/components/RankingList";
 import { cn } from "@/lib/utils";
@@ -23,7 +24,10 @@ export default async function RankingPage({
   const category = typeof sp.category === "string" ? sp.category : "all";
   const metric = sp.metric === "popularity" ? "popularity" : "score";
 
-  const pool = category === "all" ? tools : tools.filter((t) => t.category === category);
+  const pool =
+    category === "all"
+      ? tools
+      : tools.filter((t) => getToolCategories(t).includes(category));
   const ranked = sortTools(pool, metric).slice(0, 20);
 
   return (

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Category, Pricing, Region, Tool } from "@/lib/types";
-import { PRICING_LABEL, REGION_LABEL } from "@/lib/types";
+import { PRICING_LABEL, REGION_LABEL, getToolCategories } from "@/lib/types";
 import ToolCard from "./ToolCard";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "./LanguageProvider";
@@ -79,7 +79,8 @@ export default function ToolsExplorer({
           .includes(query),
       );
     }
-    if (category !== "all") list = list.filter((t) => t.category === category);
+    if (category !== "all")
+      list = list.filter((t) => getToolCategories(t).includes(category));
     if (region !== "all") list = list.filter((t) => t.region === region);
     if (pricing !== "all") list = list.filter((t) => t.pricing === pricing);
 

@@ -32,6 +32,11 @@ export default function ToolCard({ tool }: { tool: Tool }) {
       <h3 className="mt-4 font-semibold text-slate-900 group-hover:text-indigo-600">
         {tool.name}
       </h3>
+      {tool.model && (
+        <div className="mt-0.5 text-xs font-medium text-indigo-600">
+          {localize(lang, tool.model, tool.modelEn)}
+        </div>
+      )}
       <p className="mt-1 line-clamp-2 flex-1 text-sm leading-relaxed text-slate-500">
         {desc}
       </p>

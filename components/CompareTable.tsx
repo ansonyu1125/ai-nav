@@ -15,11 +15,14 @@ export default function CompareTable({ tools }: { tools: Tool[] }) {
 
   return (
     <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
-      <table className="w-full min-w-[560px] text-left text-sm">
+      <table className="w-full min-w-[760px] text-left text-sm">
         <thead>
           <tr className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
             <th className="px-4 py-3 font-medium">
               {localize(lang, "工具", "Tool")}
+            </th>
+            <th className="px-4 py-3 font-medium">
+              {localize(lang, "核心模型", "Model")}
             </th>
             <th className="px-4 py-3 font-medium">
               {localize(lang, "免费额度", "Free tier")}
@@ -52,6 +55,13 @@ export default function CompareTable({ tools }: { tools: Tool[] }) {
                     <ToolLogo tool={tool} size="sm" />
                     <span>{tool.name}</span>
                   </Link>
+                </td>
+                <td className="px-4 py-3 text-slate-700">
+                  {tool.model ? (
+                    localize(lang, tool.model, tool.modelEn)
+                  ) : (
+                    <span className="text-slate-400">—</span>
+                  )}
                 </td>
                 <td className="px-4 py-3">
                   {p.isFree ? (

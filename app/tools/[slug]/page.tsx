@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { tools, getTool, getRelatedTools } from "@/lib/tools";
 import { categoryMap } from "@/data/categories";
-import { PRICING_LABEL } from "@/lib/types";
+import { PRICING_LABEL, getToolCategories } from "@/lib/types";
 import { formatScore } from "@/lib/utils";
 import PricingBadge from "@/components/PricingBadge";
 import RegionBadge from "@/components/RegionBadge";
@@ -41,7 +41,9 @@ export default async function ToolPage({
   const tool = getTool(slug);
   if (!tool) notFound();
 
-  const category = categoryMap[tool.category];
+  const cats = getToolCategories(tool)
+    .map((id) => categoryMap[id])
+    .filter(Boolean);
   const related = getRelatedTools(tool);
   const screenshot = getPricingScreenshot(tool.id);
 
@@ -118,17 +120,34 @@ export default async function ToolPage({
       </div>
 
       {/* 详情信息 */}
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         <div className="rounded-2xl border border-slate-200 bg-white p-5">
           <div className="text-sm text-slate-500">
-            <BilingualText zh="分类" en="Category" />
+            <BilingualText zh="分类" en="Categories" />
+          </div>
+          <div className="mt-1 flex flex-wrap gap-1.5">
+            {cats.length > 0 ? (
+              cats.map((c) => (
+                <span
+                  key={c.id}
+                  className="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-700"
+                >
+                  {c.emoji}{" "}
+                  <BilingualText zh={c.name} en={c.nameEn} />
+                </span>
+              ))
+            ) : (
+              "—"
+            )}
+          </div>
+        </div>
+        <div className="rounded-2xl border border-slate-200 bg-white p-5">
+          <div className="text-sm text-slate-500">
+            <BilingualText zh="核心模型" en="Model" />
           </div>
           <div className="mt-1 font-medium text-slate-900">
-            {category ? (
-              <>
-                {category.emoji}{" "}
-                <BilingualText zh={category.name} en={category.nameEn} />
-              </>
+            {tool.model ? (
+              <BilingualText zh={tool.model} en={tool.modelEn} />
             ) : (
               "—"
             )}

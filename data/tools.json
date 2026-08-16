@@ -133,7 +133,9 @@
         "price": "Custom",
         "note": "Enterprise-grade security, admin, and advanced features"
       }
-    ]
+    ],
+    "model": "GPT 系列",
+    "modelEn": "GPT series"
   },
   {
     "id": "claude",
@@ -257,7 +259,9 @@
         "price": "Custom",
         "note": "Enterprise-grade security and support"
       }
-    ]
+    ],
+    "model": "Claude 系列",
+    "modelEn": "Claude series"
   },
   {
     "id": "gemini",
@@ -372,7 +376,9 @@
         "price": "$29.99/month",
         "note": "Highest performance model for complex tasks"
       }
-    ]
+    ],
+    "model": "Gemini 系列",
+    "modelEn": "Gemini series"
   },
   {
     "id": "deepseek",
@@ -477,7 +483,9 @@
         "price": "~$0.14 per million tokens (input)",
         "note": "Usage-based billing, extremely low cost for developers"
       }
-    ]
+    ],
+    "model": "DeepSeek V3 / R1",
+    "modelEn": "DeepSeek V3 / R1"
   },
   {
     "id": "kimi",
@@ -582,7 +590,9 @@
         "price": "Approx. $3/month",
         "note": "Priority response, more advanced features"
       }
-    ]
+    ],
+    "model": "Kimi K2",
+    "modelEn": "Kimi K2"
   },
   {
     "id": "doubao",
@@ -678,7 +688,9 @@
         "price": "Free",
         "note": "All features free with no restrictions"
       }
-    ]
+    ],
+    "model": "豆包 / Seed",
+    "modelEn": "Doubao / Seed"
   },
   {
     "id": "wenxin",
@@ -783,7 +795,9 @@
         "price": "About ¥49.9/month",
         "note": "Higher performance model, more benefits (subject to official website)"
       }
-    ]
+    ],
+    "model": "文心 ERNIE",
+    "modelEn": "ERNIE"
   },
   {
     "id": "tongyi",
@@ -898,7 +912,9 @@
         "price": "Custom",
         "note": "Dedicated model and private deployment"
       }
-    ]
+    ],
+    "model": "通义千问 Qwen",
+    "modelEn": "Qwen"
   },
   {
     "id": "chatglm",
@@ -1013,7 +1029,9 @@
         "price": "Per token",
         "note": "For developers, flexible billing"
       }
-    ]
+    ],
+    "model": "GLM 系列",
+    "modelEn": "GLM series"
   },
   {
     "id": "yuanbao",
@@ -1101,7 +1119,9 @@
         "price": "Free",
         "note": "Basic features, unlimited usage"
       }
-    ]
+    ],
+    "model": "混元 Hunyuan",
+    "modelEn": "Hunyuan"
   },
   {
     "id": "midjourney",
@@ -1223,7 +1243,9 @@
         "price": "$120/month",
         "note": "High usage, priority support"
       }
-    ]
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "dalle",
@@ -1334,7 +1356,9 @@
         "price": "Per image",
         "note": "From ~$0.04 per image, subject to official pricing"
       }
-    ]
+    ],
+    "model": "DALL·E 3",
+    "modelEn": "DALL·E 3"
   },
   {
     "id": "stable-diffusion",
@@ -1448,7 +1472,9 @@
         "price": "Free trial",
         "note": "Official app with free credits"
       }
-    ]
+    ],
+    "model": "Stable Diffusion 系列",
+    "modelEn": "SD series"
   },
   {
     "id": "flux",
@@ -1551,7 +1577,9 @@
         "price": "Usage-based",
         "note": "Billed by generation count or resolution, subject to official website"
       }
-    ]
+    ],
+    "model": "FLUX（Black Forest）",
+    "modelEn": "FLUX"
   },
   {
     "id": "jimeng",
@@ -1652,7 +1680,14 @@
         "price": "Approx. ¥30/month",
         "note": "More credits, HD export, and exclusive templates"
       }
-    ]
+    ],
+    "categories": [
+      "image",
+      "video",
+      "image-edit"
+    ],
+    "model": "Seedream（图）/ Seedance（视频）",
+    "modelEn": "Seedream / Seedance"
   },
   {
     "id": "leonardo",
@@ -1774,7 +1809,9 @@
         "price": "$60/month",
         "note": "60,000 tokens monthly, highest priority"
       }
-    ]
+    ],
+    "model": "多模型（SDXL/FLUX）",
+    "modelEn": "Multi-model"
   },
   {
     "id": "yige",
@@ -1884,7 +1921,9 @@
         "price": "Approx. ¥30/month",
         "note": "Unlimited generations, HD download, commercial license"
       }
-    ]
+    ],
+    "model": "文心一格",
+    "modelEn": "ERNIE ViLG"
   },
   {
     "id": "sora",
@@ -1986,7 +2025,9 @@
         "price": "$200/month",
         "note": "Includes more Sora credits and priority access"
       }
-    ]
+    ],
+    "model": "Sora",
+    "modelEn": "Sora"
   },
   {
     "id": "runway",
@@ -2109,7 +2150,14 @@
         "price": "Custom",
         "note": "Unlimited generations, dedicated support, custom deployment"
       }
-    ]
+    ],
+    "categories": [
+      "video",
+      "image",
+      "image-edit"
+    ],
+    "model": "Gen-4",
+    "modelEn": "Gen-4"
   },
   {
     "id": "pika",
@@ -2219,7 +2267,9 @@
         "price": "$30/month",
         "note": "High quota, no watermark, commercial use"
       }
-    ]
+    ],
+    "model": "Pika 自研",
+    "modelEn": "Pika"
   },
   {
     "id": "kling",
@@ -2327,7 +2377,13 @@
         "price": "Approx. ¥666/month",
         "note": "High volume generations, dedicated support, advanced features"
       }
-    ]
+    ],
+    "categories": [
+      "video",
+      "image"
+    ],
+    "model": "可灵 Kling",
+    "modelEn": "Kling"
   },
   {
     "id": "hailuo",
@@ -2435,7 +2491,9 @@
         "price": "Approx. ¥98/month",
         "note": "Unlimited generation, commercial license, dedicated support"
       }
-    ]
+    ],
+    "model": "MiniMax（video-01）",
+    "modelEn": "MiniMax"
   },
   {
     "id": "luma",
@@ -2555,7 +2613,13 @@
         "price": "Custom",
         "note": "Team collaboration, API access, dedicated support"
       }
-    ]
+    ],
+    "categories": [
+      "video",
+      "image"
+    ],
+    "model": "Dream Machine（Ray）",
+    "modelEn": "Dream Machine"
   },
   {
     "id": "heygen",
@@ -2678,7 +2742,13 @@
         "price": "Custom",
         "note": "Unlimited videos, dedicated support, API priority"
       }
-    ]
+    ],
+    "categories": [
+      "avatar",
+      "video"
+    ],
+    "model": "自研 + 集成",
+    "modelEn": "Proprietary"
   },
   {
     "id": "suno",
@@ -2790,7 +2860,9 @@
         "price": "$30/month",
         "note": "2000 generations per month, additional features"
       }
-    ]
+    ],
+    "model": "Suno 自研",
+    "modelEn": "Suno"
   },
   {
     "id": "udio",
@@ -2900,7 +2972,9 @@
         "price": "$30/month",
         "note": "Unlimited generations, priority processing, advanced features"
       }
-    ]
+    ],
+    "model": "Udio 自研",
+    "modelEn": "Udio"
   },
   {
     "id": "elevenlabs",
@@ -3018,7 +3092,9 @@
         "note": "500 minutes of synthesis per month, priority support"
       }
     ],
-    "logo": "/logos/elevenlabs.svg"
+    "logo": "/logos/elevenlabs.svg",
+    "model": "Eleven 自研",
+    "modelEn": "Proprietary"
   },
   {
     "id": "copilot",
@@ -3138,7 +3214,9 @@
         "price": "$39/month",
         "note": "Enterprise-grade security and support"
       }
-    ]
+    ],
+    "model": "GPT 系列",
+    "modelEn": "GPT series"
   },
   {
     "id": "cursor",
@@ -3262,7 +3340,9 @@
         "price": "Custom",
         "note": "Advanced security, compliance, and management"
       }
-    ]
+    ],
+    "model": "多模型（GPT/Claude）",
+    "modelEn": "Multi-model (GPT/Claude)"
   },
   {
     "id": "windsurf",
@@ -3376,7 +3456,9 @@
         "price": "$30/month",
         "note": "Team collaboration features, centralized management, and security controls"
       }
-    ]
+    ],
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "claude-code",
@@ -3501,7 +3583,9 @@
         "price": "Usage-based",
         "note": "Billed per token via API calls"
       }
-    ]
+    ],
+    "model": "Claude 系列",
+    "modelEn": "Claude"
   },
   {
     "id": "lingma",
@@ -3591,7 +3675,9 @@
         "price": "Free",
         "note": "All features free"
       }
-    ]
+    ],
+    "model": "通义 Qwen",
+    "modelEn": "Qwen"
   },
   {
     "id": "replit",
@@ -3715,7 +3801,9 @@
         "price": "Custom",
         "note": "Enterprise-grade security, SSO, and dedicated support"
       }
-    ]
+    ],
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "v0",
@@ -3823,7 +3911,9 @@
         "price": "Approx. $30/month/user",
         "note": "Team collaboration, shared workspace"
       }
-    ]
+    ],
+    "model": "Vercel 自研（LLM）",
+    "modelEn": "Proprietary (LLM)"
   },
   {
     "id": "bolt",
@@ -3935,7 +4025,9 @@
         "price": "~$30/user/month",
         "note": "Team collaboration, shared workspace, admin features"
       }
-    ]
+    ],
+    "model": "多模型（GPT/Claude）",
+    "modelEn": "Multi-model"
   },
   {
     "id": "notion-ai",
@@ -4058,7 +4150,13 @@
         "price": "Contact sales",
         "note": "Enterprise-grade security and support"
       }
-    ]
+    ],
+    "categories": [
+      "office",
+      "writing"
+    ],
+    "model": "GPT / Claude 集成",
+    "modelEn": "GPT / Claude"
   },
   {
     "id": "wps-ai",
@@ -4175,7 +4273,9 @@
         "price": "From ¥179/year",
         "note": "All AI features, dedicated support, and additional benefits"
       }
-    ]
+    ],
+    "model": "混元 / 多模型",
+    "modelEn": "Hunyuan / Multi"
   },
   {
     "id": "feishu",
@@ -4287,7 +4387,9 @@
         "price": "¥30/user/month",
         "note": "Advanced AI capabilities and controls"
       }
-    ]
+    ],
+    "model": "豆包 / 多模型",
+    "modelEn": "Doubao / Multi"
   },
   {
     "id": "dingtalk",
@@ -4398,7 +4500,9 @@
         "price": "Custom pricing",
         "note": "Dedicated deployment, advanced security, and customization"
       }
-    ]
+    ],
+    "model": "通义 / 多模型",
+    "modelEn": "Qwen / Multi"
   },
   {
     "id": "gamma",
@@ -4510,7 +4614,9 @@
         "price": "$20/month",
         "note": "Unlimited AI generation, 8000 credits, priority support and brand tools"
       }
-    ]
+    ],
+    "model": "GPT 集成",
+    "modelEn": "GPT"
   },
   {
     "id": "xinghuo",
@@ -4625,7 +4731,13 @@
         "price": "Custom",
         "note": "Dedicated services and private deployment"
       }
-    ]
+    ],
+    "categories": [
+      "office",
+      "chat"
+    ],
+    "model": "星火大模型",
+    "modelEn": "Spark"
   },
   {
     "id": "grammarly",
@@ -4743,7 +4855,9 @@
         "price": "$15/month (billed annually)",
         "note": "Team management, brand tones, centralized billing, etc."
       }
-    ]
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "xiezuocat",
@@ -4846,7 +4960,9 @@
         "price": "Approx. ¥30/month",
         "note": "Unlimited correction, polishing, translation, AI continuation and more"
       }
-    ]
+    ],
+    "model": "秘塔自研",
+    "modelEn": "Proprietary"
   },
   {
     "id": "jasper",
@@ -4960,7 +5076,9 @@
         "price": "$499/month",
         "note": "For teams, includes collaboration and brand tools"
       }
-    ]
+    ],
+    "model": "多模型（GPT 等）",
+    "modelEn": "Multi-model"
   },
   {
     "id": "copyai",
@@ -5080,7 +5198,9 @@
         "price": "Custom",
         "note": "Dedicated support, security compliance, customized needs"
       }
-    ]
+    ],
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "perplexity",
@@ -5196,7 +5316,13 @@
         "price": "Approx. $40/month",
         "note": "Team collaboration, shared quotas, admin features"
       }
-    ]
+    ],
+    "categories": [
+      "search",
+      "chat"
+    ],
+    "model": "多模型（GPT/Claude/Sonar）",
+    "modelEn": "Multi-model"
   },
   {
     "id": "metaso",
@@ -5296,7 +5422,9 @@
         "price": "Approx. ¥20/month",
         "note": "Advanced features like deep research mode"
       }
-    ]
+    ],
+    "model": "秘塔自研",
+    "modelEn": "Proprietary"
   },
   {
     "id": "copilot-microsoft",
@@ -5388,7 +5516,14 @@
         "price": "Free",
         "note": "Basic features, web search and image generation"
       }
-    ]
+    ],
+    "categories": [
+      "search",
+      "chat",
+      "office"
+    ],
+    "model": "GPT / DALL·E",
+    "modelEn": "GPT / DALL·E"
   },
   {
     "id": "tiangong",
@@ -5481,7 +5616,9 @@
         "price": "Free",
         "note": "Basic search features, unlimited use"
       }
-    ]
+    ],
+    "model": "天工自研",
+    "modelEn": "Proprietary"
   },
   {
     "id": "deepl",
@@ -5608,7 +5745,9 @@
         "price": "$57.49/month",
         "note": "20 million characters/month, billed annually"
       }
-    ]
+    ],
+    "model": "DeepL 自研",
+    "modelEn": "Proprietary"
   },
   {
     "id": "immersive",
@@ -5721,7 +5860,9 @@
         "price": "$60/year",
         "note": "About $5/month, all Pro features included"
       }
-    ]
+    ],
+    "model": "多引擎（DeepL/Google）",
+    "modelEn": "Multi-engine"
   },
   {
     "id": "youdao",
@@ -5838,7 +5979,9 @@
         "price": "Usage-based",
         "note": "For developers, charged by characters"
       }
-    ]
+    ],
+    "model": "有道自研",
+    "modelEn": "Youdao"
   },
   {
     "id": "google-translate",
@@ -5944,7 +6087,9 @@
         "price": "Usage-based",
         "note": "From $20 per million characters, advanced features"
       }
-    ]
+    ],
+    "model": "Google 翻译",
+    "modelEn": "Google"
   },
   {
     "id": "canva",
@@ -6061,7 +6206,14 @@
         "price": "$10/person/month (billed annually)",
         "note": "Team collaboration, brand control, advanced admin features"
       }
-    ]
+    ],
+    "categories": [
+      "design",
+      "image",
+      "image-edit"
+    ],
+    "model": "Magic Studio",
+    "modelEn": "Magic Studio"
   },
   {
     "id": "figma",
@@ -6184,7 +6336,9 @@
         "price": "$75/editor/month",
         "note": "Advanced security, compliance, and dedicated support"
       }
-    ]
+    ],
+    "model": "自研 + AI",
+    "modelEn": "Proprietary + AI"
   },
   {
     "id": "gaoding",
@@ -6294,7 +6448,13 @@
         "price": "Approx. $15/month",
         "note": "Team collaboration, brand management, more storage"
       }
-    ]
+    ],
+    "categories": [
+      "design",
+      "image-edit"
+    ],
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "recraft",
@@ -6402,7 +6562,13 @@
         "price": "$30/month",
         "note": "Unlimited generations and team collaboration"
       }
-    ]
+    ],
+    "categories": [
+      "design",
+      "image"
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "grok",
@@ -6516,7 +6682,9 @@
         "price": "$16/month",
         "note": "Highest usage limits, early access to new features"
       }
-    ]
+    ],
+    "model": "Grok 系列",
+    "modelEn": "Grok series"
   },
   {
     "id": "mistral",
@@ -6617,7 +6785,9 @@
         "price": "Approx. $15/month",
         "note": "Higher request limits, priority support"
       }
-    ]
+    ],
+    "model": "Mistral 系列",
+    "modelEn": "Mistral series"
   },
   {
     "id": "poe",
@@ -6721,7 +6891,9 @@
         "price": "$19.99/month",
         "note": "Unlimited access to all models, priority response, more features"
       }
-    ]
+    ],
+    "model": "多模型聚合",
+    "modelEn": "Multi-model"
   },
   {
     "id": "ideogram",
@@ -6831,7 +7003,9 @@
         "price": "$20/month",
         "note": "Unlimited generations, commercial usage, advanced features"
       }
-    ]
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "nano-banana",
@@ -6931,7 +7105,13 @@
         "price": "$19.99/month",
         "note": "More generation quota, early access to new features"
       }
-    ]
+    ],
+    "categories": [
+      "image-edit",
+      "image"
+    ],
+    "model": "Gemini（图像）",
+    "modelEn": "Gemini image"
   },
   {
     "id": "remove-bg",
@@ -7056,7 +7236,9 @@
         "price": "Custom",
         "note": "Unlimited, dedicated support, SLA"
       }
-    ]
+    ],
+    "model": "自研 AI",
+    "modelEn": "Proprietary"
   },
   {
     "id": "photoroom",
@@ -7165,7 +7347,9 @@
         "price": "Custom",
         "note": "API access, team collaboration, dedicated support"
       }
-    ]
+    ],
+    "model": "自研 AI",
+    "modelEn": "Proprietary"
   },
   {
     "id": "veo",
@@ -7278,7 +7462,9 @@
         "price": "Custom pricing",
         "note": "Dedicated support, higher quotas, and customized services"
       }
-    ]
+    ],
+    "model": "Veo 3",
+    "modelEn": "Veo 3"
   },
   {
     "id": "synthesia",
@@ -7391,7 +7577,9 @@
         "price": "Custom",
         "note": "Unlimited avatars, API access, advanced security and support"
       }
-    ]
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "fish-audio",
@@ -7510,7 +7698,9 @@
         "note": "Custom models, SLA, technical support"
       }
     ],
-    "logo": "/logos/fish-audio.svg"
+    "logo": "/logos/fish-audio.svg",
+    "model": "Fish 自研",
+    "modelEn": "Fish"
   },
   {
     "id": "lovable",
@@ -7622,7 +7812,9 @@
         "price": "$50/month",
         "note": "400 messages per month, team collaboration, advanced features"
       }
-    ]
+    ],
+    "model": "自研（LLM）",
+    "modelEn": "Proprietary (LLM)"
   },
   {
     "id": "notebooklm",
@@ -7710,7 +7902,9 @@
         "price": "Free",
         "note": "Basic features with limited source uploads"
       }
-    ]
+    ],
+    "model": "Gemini",
+    "modelEn": "Gemini"
   },
   {
     "id": "character-ai",
@@ -7814,7 +8008,13 @@
         "price": "$9.99/month",
         "note": "Priority access, faster responses, exclusive characters, etc."
       }
-    ]
+    ],
+    "categories": [
+      "companion",
+      "chat"
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "talkie",
@@ -7917,7 +8117,9 @@
         "price": "Approx. $5/month",
         "note": "Unlimited chats, more characters, exclusive features"
       }
-    ]
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "replika",
@@ -8042,7 +8244,9 @@
         "note": "One-time purchase, permanent Pro access"
       }
     ],
-    "logo": "/logos/replika.ico"
+    "logo": "/logos/replika.ico",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "zhipu-qingying",
@@ -8140,7 +8344,9 @@
         "price": "Approx. ¥30/month",
         "note": "More generations and advanced features"
       }
-    ]
+    ],
+    "model": "CogVideoX",
+    "modelEn": "CogVideoX"
   },
   {
     "id": "vidu",
@@ -8250,7 +8456,9 @@
         "note": "High generation quota, priority processing, commercial license"
       }
     ],
-    "logo": "/logos/vidu.svg"
+    "logo": "/logos/vidu.svg",
+    "model": "Vidu（生数科技）",
+    "modelEn": "Vidu"
   },
   {
     "id": "bcut",
@@ -8342,7 +8550,9 @@
         "note": "All features free, no watermark"
       }
     ],
-    "logo": "/logos/bcut.ico"
+    "logo": "/logos/bcut.ico",
+    "model": "剪映 AI",
+    "modelEn": "Jianying AI"
   },
   {
     "id": "krea",
@@ -8450,7 +8660,13 @@
         "price": "$50/month",
         "note": "Unlimited generations, advanced features"
       }
-    ]
+    ],
+    "categories": [
+      "video",
+      "image"
+    ],
+    "model": "多模型（FLUX/SD）",
+    "modelEn": "Multi-model (FLUX/SD)"
   },
   {
     "id": "wanxiang",
@@ -8573,7 +8789,9 @@
         "price": "Per call",
         "note": "Pay per usage, suitable for developers"
       }
-    ]
+    ],
+    "model": "通义万相",
+    "modelEn": "Tongyi Wanxiang"
   },
   {
     "id": "firefly",
@@ -8684,7 +8902,9 @@
         "price": "$59.99/month",
         "note": "Includes Firefly Premium and full Adobe suite"
       }
-    ]
+    ],
+    "model": "Firefly 系列",
+    "modelEn": "Firefly"
   },
   {
     "id": "playground",
@@ -8794,7 +9014,9 @@
         "price": "$20/month",
         "note": "Collaboration features, admin controls"
       }
-    ]
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "seaart",
@@ -8889,7 +9111,9 @@
         "price": "Approx. ¥30/month",
         "note": "More generations, priority queue, advanced features"
       }
-    ]
+    ],
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "aippt",
@@ -9001,7 +9225,9 @@
         "note": "Multi-user collaboration, admin console, priority support"
       }
     ],
-    "logo": "/logos/aippt.ico"
+    "logo": "/logos/aippt.ico",
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "wanzhi",
@@ -9091,7 +9317,13 @@
         "note": "Basic features, unlimited usage"
       }
     ],
-    "logo": "/logos/wanzhi.png"
+    "logo": "/logos/wanzhi.png",
+    "categories": [
+      "office",
+      "writing"
+    ],
+    "model": "讯飞 / 多模型",
+    "modelEn": "Spark / Multi"
   },
   {
     "id": "xunfei-zhiwen",
@@ -9191,7 +9423,13 @@
         "note": "Unlock more templates, advanced layout, and more generation credits"
       }
     ],
-    "logo": "/logos/xunfei-zhiwen.png"
+    "logo": "/logos/xunfei-zhiwen.png",
+    "categories": [
+      "office",
+      "writing"
+    ],
+    "model": "星火大模型",
+    "modelEn": "Spark"
   },
   {
     "id": "marscode",
@@ -9283,7 +9521,9 @@
         "note": "Includes core AI features and basic cloud IDE resources"
       }
     ],
-    "logo": "/logos/marscode.png"
+    "logo": "/logos/marscode.png",
+    "model": "豆包 / 多模型",
+    "modelEn": "Doubao / Multi"
   },
   {
     "id": "codegeex",
@@ -9372,7 +9612,9 @@
         "note": "All features available for free"
       }
     ],
-    "logo": "/logos/codegeex.svg"
+    "logo": "/logos/codegeex.svg",
+    "model": "CodeGeeX 自研",
+    "modelEn": "CodeGeeX"
   },
   {
     "id": "cline",
@@ -9484,7 +9726,9 @@
         "note": "Advanced features and support for teams, see official site"
       }
     ],
-    "logo": "/logos/cline.png"
+    "logo": "/logos/cline.png",
+    "model": "多模型（API）",
+    "modelEn": "Multi-model (API)"
   },
   {
     "id": "aider",
@@ -9577,7 +9821,9 @@
         "price": "Free",
         "note": "All core features free, only pay for API usage"
       }
-    ]
+    ],
+    "model": "多模型（本地/API）",
+    "modelEn": "Multi-model"
   },
   {
     "id": "paperpal",
@@ -9681,7 +9927,9 @@
         "note": "Unlimited polishing, advanced suggestions, journal formats, etc."
       }
     ],
-    "logo": "/logos/paperpal.png"
+    "logo": "/logos/paperpal.png",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "devv",
@@ -9779,7 +10027,9 @@
         "price": "$10/month",
         "note": "Unlimited search, priority support, advanced filters"
       }
-    ]
+    ],
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "quark",
@@ -9868,7 +10118,9 @@
         "note": "Basic search, Q&A, and file processing features"
       }
     ],
-    "logo": "/logos/quark.png"
+    "logo": "/logos/quark.png",
+    "model": "夸克自研",
+    "modelEn": "Proprietary"
   },
   {
     "id": "baidu-translate",
@@ -9973,7 +10225,9 @@
         "price": "Approx. ¥30/month",
         "note": "Ad-free, priority translation, more professional terminology databases"
       }
-    ]
+    ],
+    "model": "百度自研",
+    "modelEn": "Baidu"
   },
   {
     "id": "figjam",
@@ -10084,7 +10338,9 @@
         "price": "$45/month",
         "note": "Centralized management, advanced security"
       }
-    ]
+    ],
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "ms-designer",
@@ -10187,7 +10443,13 @@
         "price": "$20/month",
         "note": "Priority access to AI features, more generation credits, integration with Office apps"
       }
-    ]
+    ],
+    "categories": [
+      "design",
+      "image"
+    ],
+    "model": "DALL·E / GPT",
+    "modelEn": "DALL·E / GPT"
   },
   {
     "id": "stepfun",
@@ -10300,7 +10562,9 @@
         "note": "Charged by token usage, suitable for developers"
       }
     ],
-    "logo": "/logos/stepfun.svg"
+    "logo": "/logos/stepfun.svg",
+    "model": "Step 系列",
+    "modelEn": "Step series"
   },
   {
     "id": "meta-ai",
@@ -10401,7 +10665,9 @@
         "note": "May offer advanced features"
       }
     ],
-    "logo": "/logos/meta-ai.ico"
+    "logo": "/logos/meta-ai.ico",
+    "model": "Llama 系列",
+    "modelEn": "Llama series"
   },
   {
     "id": "cohere",
@@ -10513,7 +10779,9 @@
         "note": "Dedicated support, private deployment, etc., subject to official website"
       }
     ],
-    "logo": "/logos/cohere.svg"
+    "logo": "/logos/cohere.svg",
+    "model": "Command 系列",
+    "modelEn": "Command series"
   },
   {
     "id": "baichuan",
@@ -10609,7 +10877,9 @@
         "note": "Charged by usage, refer to official website"
       }
     ],
-    "logo": "/logos/baichuan.svg"
+    "logo": "/logos/baichuan.svg",
+    "model": "百川系列",
+    "modelEn": "Baichuan"
   },
   {
     "id": "hunyuan",
@@ -10705,7 +10975,9 @@
         "note": "Charged by usage, see official website for details"
       }
     ],
-    "logo": "/logos/hunyuan.png"
+    "logo": "/logos/hunyuan.png",
+    "model": "混元 Hunyuan",
+    "modelEn": "Hunyuan"
   },
   {
     "id": "sensenova",
@@ -10803,7 +11075,9 @@
         "note": "Advanced features, dedicated support, subject to official website"
       }
     ],
-    "logo": "/logos/sensenova.svg"
+    "logo": "/logos/sensenova.svg",
+    "model": "日日新 SenseNova",
+    "modelEn": "SenseNova"
   },
   {
     "id": "ai360",
@@ -10888,7 +11162,9 @@
         "note": "Basic features free to use"
       }
     ],
-    "logo": "/logos/ai360.svg"
+    "logo": "/logos/ai360.svg",
+    "model": "360 智脑",
+    "modelEn": "360 Brain"
   },
   {
     "id": "civitai",
@@ -10989,7 +11265,9 @@
         "note": "Additional features like higher limits, exclusive badges, etc. See official website for details"
       }
     ],
-    "logo": "/logos/civitai.svg"
+    "logo": "/logos/civitai.svg",
+    "model": "模型库平台（SD/LoRA）",
+    "modelEn": "Model hub (SD/LoRA)"
   },
   {
     "id": "magnific",
@@ -11098,7 +11376,9 @@
         "note": "Customized solutions for teams, subject to official website"
       }
     ],
-    "logo": "/logos/magnific.ico"
+    "logo": "/logos/magnific.ico",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "topaz-photo",
@@ -11198,7 +11478,9 @@
         "note": "Monthly subscription, includes all features, subject to official website"
       }
     ],
-    "logo": "/logos/topaz-photo.png"
+    "logo": "/logos/topaz-photo.png",
+    "model": "Topaz 自研",
+    "modelEn": "Proprietary"
   },
   {
     "id": "lets-enhance",
@@ -11292,7 +11574,9 @@
         "note": "More credits and features, subject to official website"
       }
     ],
-    "logo": "/logos/lets-enhance.png"
+    "logo": "/logos/lets-enhance.png",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "pixverse",
@@ -11387,7 +11671,9 @@
         "note": "More credits and premium features, subject to official website"
       }
     ],
-    "logo": "/logos/pixverse.svg"
+    "logo": "/logos/pixverse.svg",
+    "model": "PixVerse 自研",
+    "modelEn": "PixVerse"
   },
   {
     "id": "genmo",
@@ -11482,7 +11768,9 @@
         "note": "More generations and premium features, subject to official website"
       }
     ],
-    "logo": "/logos/genmo.ico"
+    "logo": "/logos/genmo.ico",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "filmora",
@@ -11595,7 +11883,9 @@
         "note": "Lifetime use, includes updates"
       }
     ],
-    "logo": "/logos/filmora.ico"
+    "logo": "/logos/filmora.ico",
+    "model": "自研 + AI 集成",
+    "modelEn": "Proprietary + AI"
   },
   {
     "id": "did",
@@ -11705,7 +11995,9 @@
         "note": "Customized solutions and dedicated support"
       }
     ],
-    "logo": "/logos/did.png"
+    "logo": "/logos/did.png",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "boomy",
@@ -11800,7 +12092,9 @@
         "note": "Unlimited creation, more advanced features, subject to official website"
       }
     ],
-    "logo": "/logos/boomy.ico"
+    "logo": "/logos/boomy.ico",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "tianyin",
@@ -11899,7 +12193,9 @@
         "note": "More generations and advanced features, subject to official website"
       }
     ],
-    "logo": "/logos/tianyin.ico"
+    "logo": "/logos/tianyin.ico",
+    "model": "网易天音",
+    "modelEn": "NetEase"
   },
   {
     "id": "murf",
@@ -12013,7 +12309,9 @@
         "note": "Advanced features, dedicated support"
       }
     ],
-    "logo": "/logos/murf.ico"
+    "logo": "/logos/murf.ico",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "playht",
@@ -12129,7 +12427,9 @@
         "note": "Custom plan, SLA guarantee"
       }
     ],
-    "logo": "/logos/playht.png"
+    "logo": "/logos/playht.png",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "speechify",
@@ -12231,7 +12531,9 @@
         "price": "approx. $139/year",
         "note": "More voices, unlimited duration, advanced features, subject to official website"
       }
-    ]
+    ],
+    "model": "多引擎",
+    "modelEn": "Multi-engine"
   },
   {
     "id": "moyin",
@@ -12337,7 +12639,9 @@
         "note": "API access, dedicated support, subject to official website"
       }
     ],
-    "logo": "/logos/moyin.ico"
+    "logo": "/logos/moyin.ico",
+    "model": "魔音自研",
+    "modelEn": "Proprietary"
   },
   {
     "id": "codeium",
@@ -12442,7 +12746,9 @@
         "note": "Advanced security, support, subject to official website"
       }
     ],
-    "logo": "/logos/codeium.ico"
+    "logo": "/logos/codeium.ico",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "tabnine",
@@ -12539,7 +12845,9 @@
         "note": "Advanced features like team collaboration, code quality analysis, etc. Please refer to official website."
       }
     ],
-    "logo": "/logos/tabnine.ico"
+    "logo": "/logos/tabnine.ico",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "cody",
@@ -12638,7 +12946,9 @@
         "note": "More features and higher limits, subject to official website"
       }
     ],
-    "logo": "/logos/cody.svg"
+    "logo": "/logos/cody.svg",
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "otter",
@@ -12761,7 +13071,9 @@
         "note": "Unlimited transcription, advanced security and admin features, see official website"
       }
     ],
-    "logo": "/logos/otter.png"
+    "logo": "/logos/otter.png",
+    "model": "自研（转录）",
+    "modelEn": "Proprietary"
   },
   {
     "id": "fireflies",
@@ -12882,7 +13194,9 @@
         "note": "Unlimited transcription, dedicated support, see official website"
       }
     ],
-    "logo": "/logos/fireflies.png"
+    "logo": "/logos/fireflies.png",
+    "model": "自研（转录）",
+    "modelEn": "Proprietary"
   },
   {
     "id": "descript",
@@ -13001,7 +13315,14 @@
         "note": "Unlimited transcription, SSO, etc."
       }
     ],
-    "logo": "/logos/descript.ico"
+    "logo": "/logos/descript.ico",
+    "categories": [
+      "office",
+      "video",
+      "voice"
+    ],
+    "model": "多模型（转录/编辑）",
+    "modelEn": "Multi-model"
   },
   {
     "id": "iflyrec",
@@ -13122,7 +13443,13 @@
         "note": "Dedicated services, API access, private deployment"
       }
     ],
-    "logo": "/logos/iflyrec.ico"
+    "logo": "/logos/iflyrec.ico",
+    "categories": [
+      "office",
+      "voice"
+    ],
+    "model": "讯飞语音识别",
+    "modelEn": "iFlytek ASR"
   },
   {
     "id": "wordtune",
@@ -13223,7 +13550,9 @@
         "note": "Unlimited rewriting and advanced features, subject to official website"
       }
     ],
-    "logo": "/logos/wordtune.png"
+    "logo": "/logos/wordtune.png",
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "rytr",
@@ -13331,7 +13660,9 @@
         "note": "For teams, priority support"
       }
     ],
-    "logo": "/logos/rytr.png"
+    "logo": "/logos/rytr.png",
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "you",
@@ -13429,7 +13760,9 @@
         "note": "More AI features and priority access, subject to official website"
       }
     ],
-    "logo": "/logos/you.jpg"
+    "logo": "/logos/you.jpg",
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "phind",
@@ -13522,7 +13855,9 @@
         "note": "Faster response and advanced features, subject to official website"
       }
     ],
-    "logo": "/logos/phind.svg"
+    "logo": "/logos/phind.svg",
+    "model": "多模型",
+    "modelEn": "Multi-model"
   },
   {
     "id": "caiyun",
@@ -13622,7 +13957,9 @@
         "note": "Unlimited translations and advanced features, subject to official website"
       }
     ],
-    "logo": "/logos/caiyun.png"
+    "logo": "/logos/caiyun.png",
+    "model": "彩云自研",
+    "modelEn": "Caiyun"
   },
   {
     "id": "reverso",
@@ -13726,7 +14063,9 @@
         "price": "Approx. $6.99/month",
         "note": "Ad-free, unlimited translation, advanced learning tools; see official website"
       }
-    ]
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   },
   {
     "id": "framer",
@@ -13850,7 +14189,9 @@
         "note": "Advanced features, team collaboration"
       }
     ],
-    "logo": "/logos/framer.png"
+    "logo": "/logos/framer.png",
+    "model": "自研（AI 生成）",
+    "modelEn": "Proprietary"
   },
   {
     "id": "spline",
@@ -13958,7 +14299,9 @@
         "note": "Team collaboration, advanced management"
       }
     ],
-    "logo": "/logos/spline.png"
+    "logo": "/logos/spline.png",
+    "model": "自研（AI 3D）",
+    "modelEn": "Proprietary"
   },
   {
     "id": "xingye",
@@ -14055,6 +14398,8 @@
         "price": "See official website",
         "note": "Additional features or content"
       }
-    ]
+    ],
+    "model": "自研模型",
+    "modelEn": "Proprietary"
   }
 ]
