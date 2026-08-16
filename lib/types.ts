@@ -85,6 +85,7 @@ export interface ToolTraffic {
   monthlyVisits?: number; // 月访问量（估算）
   visitsUnit?: string; // 单位，如 "M"、"万"
   trend?: number; // 环比变化百分比，正负
+  growth?: number; // 环比增长绝对值（本月 - 上月访问量）
   sources?: TrafficSource[]; // 流量来源
   regions?: TrafficRegion[]; // 地理分布
   keywords?: string[]; // 热门关键词

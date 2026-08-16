@@ -71,9 +71,9 @@ async function analyze(file, question) {
     question ||
     "请详细描述这张图片：包括其中的文字、界面元素、布局结构和关键信息。";
 
-  // 加超时，避免大图请求无限挂起
+  // 加超时，避免大图请求无限挂起（推理模型含 reasoning，需更长时间）
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 90000);
+  const timer = setTimeout(() => ctrl.abort(), 300000);
   const res = await fetch(`${BASE}/chat/completions`, {
     method: "POST",
     signal: ctrl.signal,

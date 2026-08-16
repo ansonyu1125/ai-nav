@@ -338,7 +338,9 @@
         "chat gtp"
       ],
       "rank": 7,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.3,
+      "growth": 68089871
     }
   },
   {
@@ -537,7 +539,9 @@
         "클로드"
       ],
       "rank": 40,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.4,
+      "growth": 22531669
     }
   },
   {
@@ -727,7 +731,9 @@
         "chatgpt"
       ],
       "rank": 17,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6,
+      "growth": -172418842
     }
   },
   {
@@ -908,7 +914,9 @@
         "deepseek ai"
       ],
       "rank": 148,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6,
+      "growth": -20202924
     }
   },
   {
@@ -1087,7 +1095,9 @@
         "kimi.com",
         "月之暗面kimi"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 42.4,
+      "growth": 34718
     }
   },
   {
@@ -1258,7 +1268,9 @@
         "豆包网页版"
       ],
       "rank": 331,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.5,
+      "growth": 2217771
     }
   },
   {
@@ -1432,7 +1444,9 @@
         "文心一格"
       ],
       "rank": 68282,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -53,
+      "growth": -1228170
     }
   },
   {
@@ -1621,7 +1635,9 @@
         "通义万相",
         "千问输入法"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -29.7,
+      "growth": -169916
     }
   },
   {
@@ -1811,7 +1827,9 @@
         "智谱ai"
       ],
       "rank": 11852,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 27.6,
+      "growth": 1287005
     }
   },
   {
@@ -1972,7 +1990,9 @@
         "yuanbao",
         "元宝ai"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.5,
+      "growth": 294465
     }
   },
   {
@@ -2170,7 +2190,9 @@
         "midjourney free"
       ],
       "rank": 2020,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.8,
+      "growth": -182412
     }
   },
   {
@@ -2355,7 +2377,9 @@
         "gpt"
       ],
       "rank": 212,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.6,
+      "growth": 6844643
     }
   },
   {
@@ -2543,7 +2567,9 @@
         "stable diffusion 3.5"
       ],
       "rank": 124212,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -17.4,
+      "growth": -85833
     }
   },
   {
@@ -2657,7 +2683,9 @@
       "regions": [],
       "keywords": [],
       "rank": 3959104,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.5,
+      "growth": -158
     }
   },
   {
@@ -2838,7 +2866,9 @@
         "jimeng",
         "既梦ai"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -5.3,
+      "growth": -550309
     }
   },
   {
@@ -3034,7 +3064,9 @@
         "ai photo editor"
       ],
       "rank": 4015,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -11.1,
+      "growth": -1102727
     }
   },
   {
@@ -3336,7 +3368,9 @@
         "gpt"
       ],
       "rank": 212,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.6,
+      "growth": 6844643
     }
   },
   {
@@ -3539,7 +3573,9 @@
         "runway gen-4"
       ],
       "rank": 6941,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.3,
+      "growth": -409561
     }
   },
   {
@@ -3722,7 +3758,9 @@
         "pi_ka"
       ],
       "rank": 23759,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -10.7,
+      "growth": -215908
     }
   },
   {
@@ -3910,7 +3948,9 @@
         "kling"
       ],
       "rank": 29522,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -24.3,
+      "growth": -636841
     }
   },
   {
@@ -4093,7 +4133,9 @@
         "hailuo ai video"
       ],
       "rank": 14077,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.4,
+      "growth": 172688
     }
   },
   {
@@ -4292,7 +4334,9 @@
         "lumalabs"
       ],
       "rank": 13997,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.1,
+      "growth": 58725
     }
   },
   {
@@ -4492,7 +4536,9 @@
         "hyperframes"
       ],
       "rank": 3689,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 10.8,
+      "growth": 1039539
     }
   },
   {
@@ -4679,7 +4725,9 @@
         "suno ia"
       ],
       "rank": 547,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1,
+      "growth": 722916
     }
   },
   {
@@ -4862,7 +4910,9 @@
         "udio ai music"
       ],
       "rank": 32579,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -12.5,
+      "growth": -193656
     }
   },
   {
@@ -5055,7 +5105,9 @@
         "elevenlabs ai"
       ],
       "rank": 1132,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.6,
+      "growth": 860148
     }
   },
   {
@@ -5249,7 +5301,9 @@
         "запрет"
       ],
       "rank": 49,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.7,
+      "growth": 22646106
     }
   },
   {
@@ -5448,7 +5502,9 @@
         "cursor cli"
       ],
       "rank": 2405,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -2.2,
+      "growth": -501973
     }
   },
   {
@@ -5635,7 +5691,9 @@
         "winsurf"
       ],
       "rank": 56426,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -24.6,
+      "growth": -302365
     }
   },
   {
@@ -5833,7 +5891,9 @@
         "claude status"
       ],
       "rank": 434,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.8,
+      "growth": -9030633
     }
   },
   {
@@ -5995,7 +6055,9 @@
         "灵码",
         "idea lingma插件"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -24.5,
+      "growth": -25459
     }
   },
   {
@@ -6192,7 +6254,9 @@
         "base44"
       ],
       "rank": 3961,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.1,
+      "growth": 267049
     }
   },
   {
@@ -6373,7 +6437,9 @@
         "debfuscateur lua"
       ],
       "rank": 296556,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6,
+      "growth": -11376
     }
   },
   {
@@ -6558,7 +6624,9 @@
         "bolt.new ai"
       ],
       "rank": 12895,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.6,
+      "growth": -63132
     }
   },
   {
@@ -6759,7 +6827,9 @@
         "notion ai"
       ],
       "rank": 3762,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -49.7,
+      "growth": -11779539
     }
   },
   {
@@ -6949,7 +7019,9 @@
         "wps网页版"
       ],
       "rank": 6321,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.6,
+      "growth": -1119811
     }
   },
   {
@@ -7134,7 +7206,9 @@
         "飞书cli"
       ],
       "rank": 592,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.5,
+      "growth": 4166231
     }
   },
   {
@@ -7318,7 +7392,9 @@
         "悟空"
       ],
       "rank": 2823,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.5,
+      "growth": 1302938
     }
   },
   {
@@ -7503,7 +7579,9 @@
         "hentai"
       ],
       "rank": 1516,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.5,
+      "growth": -2066135
     }
   },
   {
@@ -7694,7 +7772,9 @@
         "星火大模型",
         "讯飞星火官网"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 41.5,
+      "growth": 137067
     }
   },
   {
@@ -7886,7 +7966,9 @@
         "detector de ia"
       ],
       "rank": 688,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3,
+      "growth": -1354820
     }
   },
   {
@@ -8057,7 +8139,9 @@
         "xiezuo"
       ],
       "rank": 380199,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.8,
+      "growth": 6799
     }
   },
   {
@@ -8244,7 +8328,9 @@
         "jasperai"
       ],
       "rank": 73909,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.9,
+      "growth": 5602
     }
   },
   {
@@ -8437,7 +8523,9 @@
         "hook generator"
       ],
       "rank": 112631,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -2.3,
+      "growth": -10042
     }
   },
   {
@@ -8632,7 +8720,9 @@
         "퍼플렉시티"
       ],
       "rank": 446,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -10.4,
+      "growth": -12020645
     }
   },
   {
@@ -8806,7 +8896,9 @@
         "秘塔ai官网"
       ],
       "rank": 12582,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 23,
+      "growth": 967573
     }
   },
   {
@@ -8976,7 +9068,9 @@
         "コパイロット"
       ],
       "rank": 609,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -31.3,
+      "growth": -37374193
     }
   },
   {
@@ -9142,7 +9236,9 @@
         "昆仑天工"
       ],
       "rank": 226631,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -7.9,
+      "growth": -31168
     }
   },
   {
@@ -9343,7 +9439,9 @@
         "deepl translate"
       ],
       "rank": 548,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.3,
+      "growth": -3650460
     }
   },
   {
@@ -9529,7 +9627,9 @@
         "translate"
       ],
       "rank": 15959,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -36.2,
+      "growth": -1954140
     }
   },
   {
@@ -9718,7 +9818,9 @@
         "翻译在线",
         "有道"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3,
+      "growth": 125452
     }
   },
   {
@@ -9896,7 +9998,9 @@
         "google traduction",
         "переводчик"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1,
+      "growth": 5364169
     }
   },
   {
@@ -10092,7 +10196,9 @@
         "캔바"
       ],
       "rank": 35,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -5.5,
+      "growth": -47825607
     }
   },
   {
@@ -10289,7 +10395,9 @@
         "figma ai"
       ],
       "rank": 207,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.3,
+      "growth": 228888
     }
   },
   {
@@ -10476,7 +10584,9 @@
         "搞定"
       ],
       "rank": 24384,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.5,
+      "growth": -196864
     }
   },
   {
@@ -10661,7 +10771,9 @@
         "ai ad creatives"
       ],
       "rank": 31323,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.1,
+      "growth": 18682
     }
   },
   {
@@ -10849,7 +10961,9 @@
         "grock"
       ],
       "rank": 110,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -0.9,
+      "growth": -1906285
     }
   },
   {
@@ -11024,7 +11138,9 @@
         "mistral le chat"
       ],
       "rank": 11732,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -17,
+      "growth": -1299925
     }
   },
   {
@@ -11201,7 +11317,9 @@
         "freudx"
       ],
       "rank": 9378,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -10.3,
+      "growth": -613131
     }
   },
   {
@@ -11385,7 +11503,9 @@
         "idiogram"
       ],
       "rank": 12160,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -13.7,
+      "growth": -417441
     }
   },
   {
@@ -11563,7 +11683,9 @@
         "chatgpt"
       ],
       "rank": 17,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6,
+      "growth": -172418842
     }
   },
   {
@@ -11761,7 +11883,9 @@
         "bg remover"
       ],
       "rank": 872,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 7,
+      "growth": 4082288
     }
   },
   {
@@ -11943,7 +12067,9 @@
         "quitar fondo"
       ],
       "rank": 3056,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 7.3,
+      "growth": 1392272
     }
   },
   {
@@ -12131,7 +12257,9 @@
         "gemini 3.5 pro"
       ],
       "rank": 18508,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -13.3,
+      "growth": -683713
     }
   },
   {
@@ -12317,7 +12445,9 @@
         "ai video generator free"
       ],
       "rank": 18511,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.8,
+      "growth": -131628
     }
   },
   {
@@ -12509,7 +12639,9 @@
         "loquendo"
       ],
       "rank": 5767,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 11.4,
+      "growth": 734944
     }
   },
   {
@@ -12696,7 +12828,9 @@
         "base44"
       ],
       "rank": 1460,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.4,
+      "growth": -498313
     }
   },
   {
@@ -12858,7 +12992,9 @@
         "notebook llm",
         "notebook"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -26.8,
+      "growth": -58426434
     }
   },
   {
@@ -13039,7 +13175,9 @@
         "c.ai"
       ],
       "rank": 191,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.7,
+      "growth": -2919195
     }
   },
   {
@@ -13215,7 +13353,9 @@
         "takie"
       ],
       "rank": 5977,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.8,
+      "growth": 115207
     }
   },
   {
@@ -13413,7 +13553,9 @@
         "replika chat bot companions"
       ],
       "rank": 104017,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -28.5,
+      "growth": -202420
     }
   },
   {
@@ -13584,7 +13726,9 @@
         "智谱ai"
       ],
       "rank": 11852,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 27.6,
+      "growth": 1287005
     }
   },
   {
@@ -13767,7 +13911,9 @@
         "vido q2"
       ],
       "rank": 208688,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -37.5,
+      "growth": -111506
     }
   },
   {
@@ -13898,7 +14044,9 @@
         "必剪",
         "b站剪辑软件"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 19,
+      "growth": 3674
     }
   },
   {
@@ -14083,7 +14231,9 @@
         "image enhancer"
       ],
       "rank": 12417,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.7,
+      "growth": 70497
     }
   },
   {
@@ -14278,7 +14428,9 @@
         "通义万相",
         "千问输入法"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -29.7,
+      "growth": -169916
     }
   },
   {
@@ -14462,7 +14614,9 @@
         "firefly adobe",
         "ai video generator"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5.4,
+      "growth": 1061173
     }
   },
   {
@@ -14645,7 +14799,9 @@
         "playground.com"
       ],
       "rank": 137213,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -39.8,
+      "growth": -236101
     }
   },
   {
@@ -14813,7 +14969,9 @@
         "kling ai"
       ],
       "rank": 1877,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.6,
+      "growth": 446324
     }
   },
   {
@@ -14998,7 +15156,9 @@
         "chatppt"
       ],
       "rank": 301440,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -20,
+      "growth": -130476
     }
   },
   {
@@ -15145,7 +15305,9 @@
         "一面千识"
       ],
       "rank": 2145813,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -11.9,
+      "growth": -1597
     }
   },
   {
@@ -15321,7 +15483,9 @@
         "星火讯飞",
         "讯飞译制"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -24.2,
+      "growth": -11822
     }
   },
   {
@@ -15466,7 +15630,9 @@
         "豆包编辑器"
       ],
       "rank": 2006448,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 67.6,
+      "growth": 3934
     }
   },
   {
@@ -15628,7 +15794,9 @@
         "codegeex插件"
       ],
       "rank": 394381,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -12.4,
+      "growth": -10663
     }
   },
   {
@@ -15921,7 +16089,9 @@
         "llm leaderboard"
       ],
       "rank": 140509,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -14,
+      "growth": -61537
     }
   },
   {
@@ -16098,7 +16268,9 @@
         "ai detector free"
       ],
       "rank": 40738,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -17.3,
+      "growth": -255215
     }
   },
   {
@@ -16259,7 +16431,9 @@
         "ia para hacer aplicaciones"
       ],
       "rank": 670395,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.2,
+      "growth": -3616
     }
   },
   {
@@ -16421,7 +16595,9 @@
         "夸克网盘网页版入口"
       ],
       "rank": 490,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.2,
+      "growth": 2464655
     }
   },
   {
@@ -16598,7 +16774,9 @@
         "fanyi",
         "翻译器在线翻译"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.3,
+      "growth": 577417
     }
   },
   {
@@ -16782,7 +16960,9 @@
         "figma ai"
       ],
       "rank": 207,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.3,
+      "growth": 228888
     }
   },
   {
@@ -16961,7 +17141,9 @@
         "microsoft image creator",
         "microsoft designer ai"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.6,
+      "growth": -59718
     }
   },
   {
@@ -17147,7 +17329,9 @@
         "阶跃"
       ],
       "rank": 75612,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 42.4,
+      "growth": 170234
     }
   },
   {
@@ -17321,7 +17505,9 @@
         "metaai"
       ],
       "rank": 2030,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.5,
+      "growth": 119588
     }
   },
   {
@@ -17507,7 +17693,9 @@
         "ai"
       ],
       "rank": 72961,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -14.2,
+      "growth": -128137
     }
   },
   {
@@ -17671,7 +17859,9 @@
         "百川大模型"
       ],
       "rank": 500573,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 9.7,
+      "growth": 5885
     }
   },
   {
@@ -17839,7 +18029,9 @@
         "混元3",
         "腾讯混元"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -7.4,
+      "growth": -128027
     }
   },
   {
@@ -18009,7 +18201,9 @@
         "商汤coding plan",
         "token.sensenova.cn"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 20.6,
+      "growth": 104923
     }
   },
   {
@@ -18149,7 +18343,9 @@
         "360智脑4.0版",
         "三六零 人工智能logo"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 231.4,
+      "growth": 14937
     }
   },
   {
@@ -18323,7 +18519,9 @@
         "civitai.red"
       ],
       "rank": 6925,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.1,
+      "growth": 138323
     }
   },
   {
@@ -18505,7 +18703,9 @@
         "upscale image"
       ],
       "rank": 398922,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.2,
+      "growth": -10577
     }
   },
   {
@@ -18672,7 +18872,9 @@
         "enhance"
       ],
       "rank": 46094,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.4,
+      "growth": -37710
     }
   },
   {
@@ -18840,7 +19042,9 @@
         "free ai video generator"
       ],
       "rank": 5462,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.4,
+      "growth": -440339
     }
   },
   {
@@ -19008,7 +19212,9 @@
         "open source video generator ai"
       ],
       "rank": 227868,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 24.6,
+      "growth": 28842
     }
   },
   {
@@ -19193,7 +19399,9 @@
         "anime websites",
         "filmora ai"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -2.3,
+      "growth": -37719
     }
   },
   {
@@ -19376,7 +19584,9 @@
         "d ia"
       ],
       "rank": 82861,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -7.9,
+      "growth": -39305
     }
   },
   {
@@ -19544,7 +19754,9 @@
         "is phisnom song liberary ai generated"
       ],
       "rank": 493659,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -21.8,
+      "growth": -20745
     }
   },
   {
@@ -19696,7 +19908,9 @@
         "wangyiyun"
       ],
       "rank": 3399190,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -2.9,
+      "growth": -217
     }
   },
   {
@@ -19883,7 +20097,9 @@
         "ai voice changer"
       ],
       "rank": 71907,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.9,
+      "growth": -58574
     }
   },
   {
@@ -20072,7 +20288,9 @@
         "play.ht 3.0"
       ],
       "rank": 324037,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -32.7,
+      "growth": -65576
     }
   },
   {
@@ -20247,7 +20465,9 @@
         "elevenlabs"
       ],
       "rank": 8665,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -4.6,
+      "growth": -265187
     }
   },
   {
@@ -20421,7 +20641,9 @@
         "魔音morin官网"
       ],
       "rank": 552293,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -30.1,
+      "growth": -23651
     }
   },
   {
@@ -20568,7 +20790,9 @@
         "windsurf website"
       ],
       "rank": 1172623,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 7.8,
+      "growth": 2144
     }
   },
   {
@@ -20738,7 +20962,9 @@
         "best visual studio themse"
       ],
       "rank": 283229,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -11.3,
+      "growth": -21677
     }
   },
   {
@@ -20910,7 +21136,9 @@
         "source graph"
       ],
       "rank": 204583,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -12,
+      "growth": -28281
     }
   },
   {
@@ -21106,7 +21334,9 @@
         "otter ai login"
       ],
       "rank": 8187,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -2.1,
+      "growth": -134761
     }
   },
   {
@@ -21300,7 +21530,9 @@
         "otter ai"
       ],
       "rank": 13108,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.7,
+      "growth": -77802
     }
   },
   {
@@ -21497,7 +21729,9 @@
         "youtube to mp4"
       ],
       "rank": 15466,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -10.2,
+      "growth": -347940
     }
   },
   {
@@ -21695,7 +21929,9 @@
         "录音转文字"
       ],
       "rank": 98446,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.1,
+      "growth": 298
     }
   },
   {
@@ -21869,7 +22105,9 @@
         "wordtune ios"
       ],
       "rank": 113516,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.6,
+      "growth": -38525
     }
   },
   {
@@ -22050,7 +22288,9 @@
         "rytr.me"
       ],
       "rank": 271765,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5.9,
+      "growth": 8787
     }
   },
   {
@@ -22221,7 +22461,9 @@
         "ㅛㅐㅕ"
       ],
       "rank": 56627,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -7.3,
+      "growth": -79041
     }
   },
   {
@@ -22379,7 +22621,9 @@
         "jump server"
       ],
       "rank": 2321099,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -37.6,
+      "growth": -6596
     }
   },
   {
@@ -22552,7 +22796,9 @@
         "彩云"
       ],
       "rank": 59338,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 37.5,
+      "growth": 334081
     }
   },
   {
@@ -22729,7 +22975,9 @@
         "traduction"
       ],
       "rank": 1216,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8,
+      "growth": -2813373
     }
   },
   {
@@ -22926,7 +23174,9 @@
         "framer marketplace"
       ],
       "rank": 5933,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.1,
+      "growth": 3948
     }
   },
   {
@@ -23107,7 +23357,9 @@
         "3d ai"
       ],
       "rank": 55362,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.1,
+      "growth": -22312
     }
   },
   {
@@ -23323,7 +23575,9 @@
         "manus.ia"
       ],
       "rank": 2481,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -15.7,
+      "growth": -3650414
     }
   },
   {
@@ -23429,7 +23683,9 @@
         "devin cli"
       ],
       "rank": 15100,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6,
+      "growth": -173925
     }
   },
   {
@@ -23466,7 +23722,9 @@
       "sources": [],
       "regions": [],
       "keywords": [],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -58.8,
+      "growth": -7017
     }
   },
   {
@@ -23566,7 +23824,9 @@
         "agpt"
       ],
       "rank": 429980,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 16.4,
+      "growth": 11355
     }
   },
   {
@@ -23667,7 +23927,9 @@
         "google scholar"
       ],
       "rank": 9859,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 12.1,
+      "growth": 609772
     }
   },
   {
@@ -23767,7 +24029,9 @@
         "elicit:"
       ],
       "rank": 33972,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -10,
+      "growth": -173717
     }
   },
   {
@@ -23868,7 +24132,9 @@
         "scipace"
       ],
       "rank": 17447,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.9,
+      "growth": -416779
     }
   },
   {
@@ -23969,7 +24235,9 @@
         "citizens free press"
       ],
       "rank": 10569,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.7,
+      "growth": -638365
     }
   },
   {
@@ -24009,7 +24277,9 @@
         "researchrabbit"
       ],
       "rank": 7860434,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -100,
+      "growth": -2100
     }
   },
   {
@@ -24109,7 +24379,9 @@
         "sciteai"
       ],
       "rank": 75906,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.7,
+      "growth": -74154
     }
   },
   {
@@ -24209,7 +24481,9 @@
         "connected papers ai"
       ],
       "rank": 76429,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.3,
+      "growth": -49293
     }
   },
   {
@@ -24321,7 +24595,9 @@
         "剪映专业版"
       ],
       "rank": 57876,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 16.6,
+      "growth": 142779
     }
   },
   {
@@ -24426,7 +24702,9 @@
         "agent opus"
       ],
       "rank": 8018,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5.2,
+      "growth": 293439
     }
   },
   {
@@ -24526,7 +24804,9 @@
         "descargar videos de x"
       ],
       "rank": 28143,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.9,
+      "growth": -156711
     }
   },
   {
@@ -24629,7 +24909,9 @@
         "ai video generator",
         "free ai video generator"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 20.3,
+      "growth": 127128
     }
   },
   {
@@ -24729,7 +25011,9 @@
         "text to video generator"
       ],
       "rank": 46261,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -13.5,
+      "growth": -131994
     }
   },
   {
@@ -24829,7 +25113,9 @@
         "free ai video generator"
       ],
       "rank": 6410,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.9,
+      "growth": -129432
     }
   },
   {
@@ -24929,7 +25215,9 @@
         "ai video cut"
       ],
       "rank": 337370,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -10.6,
+      "growth": -11709
     }
   },
   {
@@ -25030,7 +25318,9 @@
         "clipchamp download"
       ],
       "rank": 6986,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -0.3,
+      "growth": -20701
     }
   },
   {
@@ -25132,7 +25422,9 @@
         "gpt"
       ],
       "rank": 6051,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.6,
+      "growth": 198918
     }
   },
   {
@@ -25232,7 +25524,9 @@
         "n8n"
       ],
       "rank": 7796,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.4,
+      "growth": -488162
     }
   },
   {
@@ -25333,7 +25627,9 @@
         "n8n automation"
       ],
       "rank": 10435,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3,
+      "growth": -182325
     }
   },
   {
@@ -25433,7 +25729,9 @@
         "relayapp"
       ],
       "rank": 182862,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 39.5,
+      "growth": 66571
     }
   },
   {
@@ -25533,7 +25831,9 @@
         "does bing execute js"
       ],
       "rank": 149593,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 7.4,
+      "growth": 23295
     }
   },
   {
@@ -25633,7 +25933,9 @@
         "chagpt"
       ],
       "rank": 56310,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -29.7,
+      "growth": -424102
     }
   },
   {
@@ -25733,7 +26035,9 @@
         "pdf ai"
       ],
       "rank": 126602,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -18.4,
+      "growth": -105462
     }
   },
   {
@@ -25833,7 +26137,9 @@
         "hunmanizer"
       ],
       "rank": 234441,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -27.5,
+      "growth": -55621
     }
   },
   {
@@ -25936,7 +26242,9 @@
         "adobe firefly"
       ],
       "rank": 87,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.7,
+      "growth": 23794374
     }
   },
   {
@@ -26005,7 +26313,9 @@
         "whch ai engine would be good for managing my hard disk storage"
       ],
       "rank": 2611600,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -18.2,
+      "growth": -1774
     }
   },
   {
@@ -26106,7 +26416,9 @@
         "khan academy ai"
       ],
       "rank": 294254,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -15.6,
+      "growth": -29639
     }
   },
   {
@@ -26209,7 +26521,9 @@
         "flashcards"
       ],
       "rank": 1284,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -22,
+      "growth": -10908956
     }
   },
   {
@@ -26305,7 +26619,9 @@
         "photomath expert",
         "photomath web"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -37.3,
+      "growth": -113517
     }
   },
   {
@@ -26364,7 +26680,9 @@
       "regions": [],
       "keywords": [],
       "rank": 2210780,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 29.6,
+      "growth": 3455
     }
   },
   {
@@ -26464,7 +26782,9 @@
         "image to 3d"
       ],
       "rank": 5372,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -15.7,
+      "growth": -4701248
     }
   },
   {
@@ -26564,7 +26884,9 @@
         "tripo 3d"
       ],
       "rank": 6954,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 48.9,
+      "growth": 7621642
     }
   },
   {
@@ -26664,7 +26986,9 @@
         "meshy"
       ],
       "rank": 7833,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 111.5,
+      "growth": 3393748
     }
   },
   {
@@ -26765,7 +27089,9 @@
         "lumalabs"
       ],
       "rank": 13997,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.1,
+      "growth": 58725
     }
   },
   {
@@ -26865,7 +27191,9 @@
         "runway"
       ],
       "rank": 82354,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5.2,
+      "growth": 23210
     }
   },
   {
@@ -26965,7 +27293,9 @@
         "predis.ai"
       ],
       "rank": 174628,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -15.2,
+      "growth": -45153
     }
   },
   {
@@ -27066,7 +27396,9 @@
         "hubspot crm"
       ],
       "rank": 603,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 4.7,
+      "growth": 2009713
     }
   },
   {
@@ -27166,7 +27498,9 @@
         "feedhice"
       ],
       "rank": 554757,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 8.4,
+      "growth": 4569
     }
   },
   {
@@ -27267,7 +27601,9 @@
         "excel ai"
       ],
       "rank": 203949,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.7,
+      "growth": 3602
     }
   },
   {
@@ -27367,7 +27703,9 @@
         "what website can i paste data from excel for an analysis"
       ],
       "rank": 179036,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -39.1,
+      "growth": -158328
     }
   },
   {
@@ -27436,7 +27774,9 @@
         "roxorai"
       ],
       "rank": 1718151,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.8,
+      "growth": -272
     }
   },
   {
@@ -27523,7 +27863,9 @@
         }
       ],
       "keywords": [],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 22.5,
+      "growth": 3068
     }
   },
   {
@@ -27563,7 +27905,9 @@
       "sources": [],
       "regions": [],
       "keywords": [],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -68,
+      "growth": -4495
     }
   },
   {
@@ -27662,7 +28006,9 @@
         "viblo ai"
       ],
       "rank": 277214,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.3,
+      "growth": -12080
     }
   },
   {
@@ -27762,7 +28108,9 @@
         "ai avatar chatbot"
       ],
       "rank": 309526,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -0.8,
+      "growth": -983
     }
   },
   {
@@ -27831,7 +28179,9 @@
         "deephrain"
       ],
       "rank": 2245238,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -23.9,
+      "growth": -3524
     }
   },
   {
@@ -27935,7 +28285,9 @@
         "raskai"
       ],
       "rank": 132809,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.7,
+      "growth": -12648
     }
   },
   {
@@ -28039,7 +28391,9 @@
         "dub dub ai"
       ],
       "rank": 238521,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.1,
+      "growth": 2781
     }
   },
   {
@@ -28098,7 +28452,9 @@
         "wayinvideo"
       ],
       "rank": 5816620,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -60.7,
+      "growth": -4988
     }
   },
   {
@@ -28198,7 +28554,9 @@
         "stable audio 2.5"
       ],
       "rank": 148064,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 20.3,
+      "growth": 25496
     }
   },
   {
@@ -28298,7 +28656,9 @@
         "how to create music in aiva"
       ],
       "rank": 205340,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -17.1,
+      "growth": -37732
     }
   },
   {
@@ -28398,7 +28758,9 @@
         "サウンドロー"
       ],
       "rank": 189240,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -19.1,
+      "growth": -55874
     }
   },
   {
@@ -28500,7 +28862,9 @@
         "mubet"
       ],
       "rank": 170486,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -5.6,
+      "growth": -16921
     }
   },
   {
@@ -28602,7 +28966,9 @@
         "昆仑天工"
       ],
       "rank": 226631,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -7.9,
+      "growth": -31168
     }
   },
   {
@@ -28702,7 +29068,9 @@
         "ai music generator"
       ],
       "rank": 243473,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.3,
+      "growth": 619
     }
   },
   {
@@ -28803,7 +29171,9 @@
         "vscode",
         "azure devops"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 8.9,
+      "growth": 565187
     }
   },
   {
@@ -28905,7 +29275,9 @@
         "mini max"
       ],
       "rank": 9873,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.3,
+      "growth": -82722
     }
   },
   {
@@ -29006,7 +29378,9 @@
         "火山"
       ],
       "rank": 5336,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.2,
+      "growth": -753683
     }
   },
   {
@@ -29107,7 +29481,9 @@
         "deepgram"
       ],
       "rank": 87404,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.8,
+      "growth": -56637
     }
   },
   {
@@ -29208,7 +29584,9 @@
         "assemblyai"
       ],
       "rank": 63429,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.3,
+      "growth": -72476
     }
   },
   {
@@ -29308,7 +29686,9 @@
         "janitor ia"
       ],
       "rank": 196,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 12.9,
+      "growth": 16312878
     }
   },
   {
@@ -29410,7 +29790,9 @@
         "ai girlfriend"
       ],
       "rank": 744,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 20.6,
+      "growth": 10804496
     }
   },
   {
@@ -29510,7 +29892,9 @@
         "spicy chat ai"
       ],
       "rank": 387,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -0.3,
+      "growth": -207491
     }
   },
   {
@@ -29612,7 +29996,9 @@
         "nomiai"
       ],
       "rank": 19977,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 55.2,
+      "growth": 601919
     }
   },
   {
@@ -29714,7 +30100,9 @@
         "translate"
       ],
       "rank": 1318,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.4,
+      "growth": -2868354
     }
   },
   {
@@ -29814,7 +30202,9 @@
         "chatgpt prompt"
       ],
       "rank": 126188,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.9,
+      "growth": 2939
     }
   },
   {
@@ -29914,7 +30304,9 @@
         "nsfw prompt"
       ],
       "rank": 42088,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0,
+      "growth": -128
     }
   },
   {
@@ -30016,7 +30408,9 @@
         "hemmingway editor"
       ],
       "rank": 105409,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.1,
+      "growth": 13366
     }
   },
   {
@@ -30116,7 +30510,9 @@
         "litmaps"
       ],
       "rank": 42761,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -0.5,
+      "growth": -7748
     }
   },
   {
@@ -30217,7 +30613,9 @@
         "exa api"
       ],
       "rank": 55392,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 11.9,
+      "growth": 90168
     }
   },
   {
@@ -30307,7 +30705,9 @@
         "komo ia"
       ],
       "rank": 565582,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 12.2,
+      "growth": 7169
     }
   },
   {
@@ -30408,7 +30808,9 @@
         "search",
         "bravesearch"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 8.2,
+      "growth": 49943070
     }
   },
   {
@@ -30510,7 +30912,9 @@
         "gpt 5.6"
       ],
       "rank": 31392,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 18.9,
+      "growth": 259923
     }
   },
   {
@@ -30616,7 +31020,9 @@
         "image enhancer"
       ],
       "rank": 2738,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 4.6,
+      "growth": 788976
     }
   },
   {
@@ -30716,7 +31122,9 @@
         "фрипик для авторов"
       ],
       "rank": 51380,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -75.4,
+      "growth": -4225795
     }
   },
   {
@@ -30816,7 +31224,9 @@
         "니지저니"
       ],
       "rank": 74604,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -15,
+      "growth": -39649
     }
   },
   {
@@ -30917,7 +31327,9 @@
         "comfyui manager"
       ],
       "rank": 19149,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.3,
+      "growth": 72857
     }
   },
   {
@@ -31019,7 +31431,9 @@
         "hd foto"
       ],
       "rank": 4747,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.2,
+      "growth": -1063839
     }
   },
   {
@@ -31124,7 +31538,9 @@
         "text remover"
       ],
       "rank": 73523,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -5.6,
+      "growth": -40649
     }
   },
   {
@@ -31225,7 +31641,9 @@
         "warp download"
       ],
       "rank": 56739,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -11.5,
+      "growth": -126265
     }
   },
   {
@@ -31326,7 +31744,9 @@
         "gpt"
       ],
       "rank": 383,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.5,
+      "growth": 2097523
     }
   },
   {
@@ -31428,7 +31848,9 @@
         "zed code editor"
       ],
       "rank": 47672,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -18.1,
+      "growth": -262201
     }
   },
   {
@@ -31530,7 +31952,9 @@
         "fathom desktop app"
       ],
       "rank": 12522,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.8,
+      "growth": 196219
     }
   },
   {
@@ -31631,7 +32055,9 @@
         "granola ai"
       ],
       "rank": 10663,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 13.4,
+      "growth": 561886
     }
   },
   {
@@ -31731,7 +32157,9 @@
         "tldv ログイン"
       ],
       "rank": 33479,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.5,
+      "growth": -22674
     }
   },
   {
@@ -31831,7 +32259,9 @@
         "granola mcp"
       ],
       "rank": 27488,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 17.5,
+      "growth": 372991
     }
   },
   {
@@ -31933,7 +32363,9 @@
         "pi　ai"
       ],
       "rank": 87743,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.3,
+      "growth": -18007
     }
   },
   {
@@ -32037,7 +32469,9 @@
         "how to cancel youtube tv"
       ],
       "rank": 67420,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5.8,
+      "growth": 37652
     }
   },
   {
@@ -32138,7 +32572,9 @@
         "adobe podcast ai",
         "adobe enhance"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.1,
+      "growth": 119414
     }
   },
   {
@@ -32239,7 +32675,9 @@
         "lalalai"
       ],
       "rank": 25768,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -5.1,
+      "growth": -126225
     }
   },
   {
@@ -32340,7 +32778,9 @@
         "enhance audio"
       ],
       "rank": 43201,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -0.4,
+      "growth": -4034
     }
   },
   {
@@ -32443,7 +32883,9 @@
         "moises ia"
       ],
       "rank": 10918,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.7,
+      "growth": 67667
     }
   },
   {
@@ -32514,7 +32956,9 @@
         "lockpickinglawyer"
       ],
       "rank": 1680205,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 65,
+      "growth": 6836
     }
   },
   {
@@ -32615,7 +33059,9 @@
         "wondercraft ai podcast"
       ],
       "rank": 259391,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.2,
+      "growth": -9504
     }
   },
   {
@@ -32717,7 +33163,9 @@
         "intercom help center"
       ],
       "rank": 6777,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 8.7,
+      "growth": 393704
     }
   },
   {
@@ -32819,7 +33267,9 @@
         "قوى"
       ],
       "rank": 394,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.8,
+      "growth": 2531962
     }
   },
   {
@@ -32920,7 +33370,9 @@
         "cognigy"
       ],
       "rank": 229953,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.6,
+      "growth": -16616
     }
   },
   {
@@ -33021,7 +33473,9 @@
         "tidio lyro"
       ],
       "rank": 55929,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.2,
+      "growth": 1101
     }
   },
   {
@@ -33122,7 +33576,9 @@
         "chatbasic"
       ],
       "rank": 84220,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -10.6,
+      "growth": -46728
     }
   },
   {
@@ -33223,7 +33679,9 @@
         "tts"
       ],
       "rank": 153242,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -5.1,
+      "growth": -19502
     }
   },
   {
@@ -33325,7 +33783,9 @@
         "harvey ai careers"
       ],
       "rank": 44114,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 16.8,
+      "growth": 190795
     }
   },
   {
@@ -33426,7 +33886,9 @@
         "what is considered proof of installation for teco hot water heater rebate"
       ],
       "rank": 187211,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 12.6,
+      "growth": 28741
     }
   },
   {
@@ -33496,7 +33958,9 @@
         "robin ai law"
       ],
       "rank": 1601135,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -30.7,
+      "growth": -6500
     }
   },
   {
@@ -33598,7 +34062,9 @@
         "spellbook associate"
       ],
       "rank": 699033,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -47.7,
+      "growth": -40695
     }
   },
   {
@@ -33694,7 +34160,9 @@
         "\"text.com\""
       ],
       "rank": 729959,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 49.6,
+      "growth": 17833
     }
   },
   {
@@ -33798,7 +34266,9 @@
         "arc browser download"
       ],
       "rank": 99189,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.1,
+      "growth": -62253
     }
   },
   {
@@ -33902,7 +34372,9 @@
         "opera mini"
       ],
       "rank": 701,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 8.7,
+      "growth": 6934827
     }
   },
   {
@@ -34007,7 +34479,9 @@
         "teams"
       ],
       "rank": 31,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.4,
+      "growth": 4146699
     }
   },
   {
@@ -34103,7 +34577,9 @@
         "can vivaldi email the url of the current page"
       ],
       "rank": 377666,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 7.8,
+      "growth": 8071
     }
   },
   {
@@ -34204,7 +34680,9 @@
         "ai prompts"
       ],
       "rank": 78407,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -15.4,
+      "growth": -107580
     }
   },
   {
@@ -34305,7 +34783,9 @@
         "warm gpt"
       ],
       "rank": 21409,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -20.4,
+      "growth": -512649
     }
   },
   {
@@ -34407,7 +34887,9 @@
         "ai prompts"
       ],
       "rank": 476425,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -35.9,
+      "growth": -40316
     }
   },
   {
@@ -34477,7 +34959,9 @@
         "unabyss"
       ],
       "rank": 2433722,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -37.9,
+      "growth": -5544
     }
   },
   {
@@ -34549,7 +35033,9 @@
         "ai test kitchen google"
       ],
       "rank": 1984125,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 27.1,
+      "growth": 3097
     }
   },
   {
@@ -34694,7 +35180,9 @@
         "artbreeder character creator"
       ],
       "rank": 80484,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.7,
+      "growth": -13821
     }
   },
   {
@@ -34795,7 +35283,9 @@
         "cual es esta pagina para copiarprompts"
       ],
       "rank": 126192,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -12.8,
+      "growth": -42764
     }
   },
   {
@@ -34896,7 +35386,9 @@
         "ai"
       ],
       "rank": 7437,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -0.6,
+      "growth": -53023
     }
   },
   {
@@ -34997,7 +35489,9 @@
         "haiper ai video"
       ],
       "rank": 293922,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 4.4,
+      "growth": 6187
     }
   },
   {
@@ -35098,7 +35592,9 @@
         "ltx studio ai"
       ],
       "rank": 128181,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -35.3,
+      "growth": -158789
     }
   },
   {
@@ -35200,7 +35696,9 @@
         "higgsfield ai free"
       ],
       "rank": 1366,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 16.8,
+      "growth": 4504063
     }
   },
   {
@@ -35301,7 +35799,9 @@
         "google workspace",
         "google doc"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -7.2,
+      "growth": -14065994
     }
   },
   {
@@ -35404,7 +35904,9 @@
         "gemini coding agent"
       ],
       "rank": 189657,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -26.3,
+      "growth": -97654
     }
   },
   {
@@ -35505,7 +36007,9 @@
         "pycharm download"
       ],
       "rank": 8514,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.3,
+      "growth": 193477
     }
   },
   {
@@ -35607,7 +36111,9 @@
         "continue cli"
       ],
       "rank": 106338,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -31.2,
+      "growth": -223124
     }
   },
   {
@@ -35710,7 +36216,9 @@
         "notion"
       ],
       "rank": 1110,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.1,
+      "growth": 2174832
     }
   },
   {
@@ -35813,7 +36321,9 @@
         "motion calendar"
       ],
       "rank": 75058,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.8,
+      "growth": -25262
     }
   },
   {
@@ -35915,7 +36425,9 @@
         "motion"
       ],
       "rank": 60583,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -14.7,
+      "growth": -116724
     }
   },
   {
@@ -35985,7 +36497,9 @@
         "best way to set up product descriptions in shopify"
       ],
       "rank": 714088,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -28.6,
+      "growth": -19007
     }
   },
   {
@@ -36086,7 +36600,9 @@
         "ジェミニ"
       ],
       "rank": 57959,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5.9,
+      "growth": 55657
     }
   },
   {
@@ -36189,7 +36705,9 @@
         "gpt"
       ],
       "rank": 212,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.6,
+      "growth": 6844643
     }
   },
   {
@@ -36230,7 +36748,9 @@
         "coqui tts api",
         "vits-tts"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -100,
+      "growth": -695
     }
   },
   {
@@ -36333,7 +36853,9 @@
         "t3"
       ],
       "rank": 129493,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -5,
+      "growth": -23587
     }
   },
   {
@@ -36436,7 +36958,9 @@
         "stool in vagina"
       ],
       "rank": 212232,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.6,
+      "growth": -3206
     }
   },
   {
@@ -36529,7 +37053,9 @@
         "woebit"
       ],
       "rank": 718324,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -37.4,
+      "growth": -26037
     }
   },
   {
@@ -36632,7 +37158,9 @@
         "most well reviewed and popular ai therapists"
       ],
       "rank": 411971,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -4.1,
+      "growth": -4531
     }
   },
   {
@@ -36736,7 +37264,9 @@
         "abridge jobs"
       ],
       "rank": 176604,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.8,
+      "growth": -26186
     }
   },
   {
@@ -36806,7 +37336,9 @@
         "corti careers"
       ],
       "rank": 773194,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 23.5,
+      "growth": 6702
     }
   },
   {
@@ -36876,7 +37408,9 @@
         "fiscal ai"
       ],
       "rank": 1266377,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.8,
+      "growth": 677
     }
   },
   {
@@ -36977,7 +37511,9 @@
         "best ai for investing"
       ],
       "rank": 430512,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -23,
+      "growth": -26774
     }
   },
   {
@@ -37078,7 +37614,9 @@
         "nok stock"
       ],
       "rank": 259911,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.5,
+      "growth": 2492
     }
   },
   {
@@ -37182,7 +37720,9 @@
         "capital one"
       ],
       "rank": 12352,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.3,
+      "growth": -118031
     }
   },
   {
@@ -37285,7 +37825,9 @@
         "betterment llc"
       ],
       "rank": 18556,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.5,
+      "growth": 143071
     }
   },
   {
@@ -37387,7 +37929,9 @@
         "alpaca login"
       ],
       "rank": 21078,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.9,
+      "growth": -44383
     }
   },
   {
@@ -37489,7 +38033,9 @@
         "hire vue"
       ],
       "rank": 48400,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 10.6,
+      "growth": 113156
     }
   },
   {
@@ -37590,7 +38136,9 @@
         "eightfold ai careers"
       ],
       "rank": 5821,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 9.5,
+      "growth": 770304
     }
   },
   {
@@ -37691,7 +38239,9 @@
         "textio"
       ],
       "rank": 1014032,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -11.2,
+      "growth": -3787
     }
   },
   {
@@ -37777,7 +38327,9 @@
         "how to fill out management reviews"
       ],
       "rank": 1283841,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -2.6,
+      "growth": -529
     }
   },
   {
@@ -37847,7 +38399,9 @@
         "fetcher online test"
       ],
       "rank": 1400611,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.2,
+      "growth": -1466
     }
   },
   {
@@ -37950,7 +38504,9 @@
         "instagram"
       ],
       "rank": 99,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 10.2,
+      "growth": 24314170
     }
   },
   {
@@ -38051,7 +38607,9 @@
         "pebbly"
       ],
       "rank": 401304,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -7.7,
+      "growth": -7989
     }
   },
   {
@@ -38152,7 +38710,9 @@
         "generate product photo flair.ai"
       ],
       "rank": 209089,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5.5,
+      "growth": 9220
     }
   },
   {
@@ -38243,7 +38803,9 @@
         "purple style labs"
       ],
       "rank": 991711,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -10.4,
+      "growth": -4002
     }
   },
   {
@@ -38350,7 +38912,9 @@
         "webshop shopping cart abandonment"
       ],
       "rank": 997556,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -18.4,
+      "growth": -6991
     }
   },
   {
@@ -38453,7 +39017,9 @@
         "poki"
       ],
       "rank": 5139,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 7.2,
+      "growth": 591695
     }
   },
   {
@@ -38555,7 +39121,9 @@
         "inworld tts"
       ],
       "rank": 85951,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1,
+      "growth": -4806
     }
   },
   {
@@ -38656,7 +39224,9 @@
         "scenario gg"
       ],
       "rank": 120113,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.6,
+      "growth": 4977
     }
   },
   {
@@ -38759,7 +39329,9 @@
         "ai games"
       ],
       "rank": 11494,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -5.8,
+      "growth": -254377
     }
   },
   {
@@ -38860,7 +39432,9 @@
         "sprite generator ai"
       ],
       "rank": 216211,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -14.1,
+      "growth": -32197
     }
   },
   {
@@ -38962,7 +39536,9 @@
         "geforce experience"
       ],
       "rank": 903,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.1,
+      "growth": 1147027
     }
   },
   {
@@ -39033,7 +39609,9 @@
         "guideseek"
       ],
       "rank": 1952737,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -13.2,
+      "growth": -1759
     }
   },
   {
@@ -39136,7 +39714,9 @@
         "layla.ai"
       ],
       "rank": 139247,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -24.4,
+      "growth": -91831
     }
   },
   {
@@ -39227,7 +39807,9 @@
         "rumah emelie / meow house reviews"
       ],
       "rank": 7508,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.9,
+      "growth": 695179
     }
   },
   {
@@ -39318,7 +39900,9 @@
         "ai trip bulider different cities"
       ],
       "rank": 537923,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.1,
+      "growth": 833
     }
   },
   {
@@ -39422,7 +40006,9 @@
         "herpper"
       ],
       "rank": 28984,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.7,
+      "growth": 11969
     }
   },
   {
@@ -39523,7 +40109,9 @@
         "relume icons"
       ],
       "rank": 104030,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -39.1,
+      "growth": -262772
     }
   },
   {
@@ -39625,7 +40213,9 @@
         "xnxx"
       ],
       "rank": 4016,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.1,
+      "growth": 270258
     }
   },
   {
@@ -39726,7 +40316,9 @@
         "surfer"
       ],
       "rank": 99229,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5.4,
+      "growth": 23160
     }
   },
   {
@@ -39827,7 +40419,9 @@
         "traffic checker"
       ],
       "rank": 6314,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.8,
+      "growth": 219127
     }
   },
   {
@@ -39928,7 +40522,9 @@
         "frase seo"
       ],
       "rank": 251061,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5.9,
+      "growth": 8769
     }
   },
   {
@@ -40029,7 +40625,9 @@
         "neurowriter"
       ],
       "rank": 385607,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.3,
+      "growth": -4888
     }
   },
   {
@@ -40132,7 +40730,9 @@
         "reddit"
       ],
       "rank": 13207,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.4,
+      "growth": 129980
     }
   },
   {
@@ -40234,7 +40834,9 @@
         "best time to post on instagram"
       ],
       "rank": 33440,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.4,
+      "growth": 6236
     }
   },
   {
@@ -40335,7 +40937,9 @@
         "instagram story"
       ],
       "rank": 17821,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 28.2,
+      "growth": 759602
     }
   },
   {
@@ -40436,7 +41040,9 @@
         "typefully pricing"
       ],
       "rank": 126661,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.4,
+      "growth": 10402
     }
   },
   {
@@ -40537,7 +41143,9 @@
         "descargar videos de youtube"
       ],
       "rank": 17666,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6,
+      "growth": 204351
     }
   },
   {
@@ -40640,7 +41248,9 @@
         "insta stories"
       ],
       "rank": 24206,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.4,
+      "growth": 53825
     }
   },
   {
@@ -40744,7 +41354,9 @@
         "perplexity"
       ],
       "rank": 6816,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 77.1,
+      "growth": 2143429
     }
   },
   {
@@ -40847,7 +41459,9 @@
         "shortwave email review"
       ],
       "rank": 182470,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.5,
+      "growth": 5563
     }
   },
   {
@@ -40948,7 +41562,9 @@
         "klaviyo composer"
       ],
       "rank": 5122,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.8,
+      "growth": 446830
     }
   },
   {
@@ -41050,7 +41666,9 @@
         "mailchimp pricing"
       ],
       "rank": 2805,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.7,
+      "growth": 90993
     }
   },
   {
@@ -41152,7 +41770,9 @@
         "mixmaxx"
       ],
       "rank": 170406,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 15.4,
+      "growth": 39015
     }
   },
   {
@@ -41254,7 +41874,9 @@
         "samebox"
       ],
       "rank": 321631,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 11.4,
+      "growth": 13396
     }
   },
   {
@@ -41356,7 +41978,9 @@
         "dark web"
       ],
       "rank": 18374,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -2.4,
+      "growth": -59000
     }
   },
   {
@@ -41458,7 +42082,9 @@
         "smtp"
       ],
       "rank": 171487,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.6,
+      "growth": -9319
     }
   },
   {
@@ -41559,7 +42185,9 @@
         "osint"
       ],
       "rank": 73552,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.1,
+      "growth": -47093
     }
   },
   {
@@ -41660,7 +42288,9 @@
         "abnormal"
       ],
       "rank": 258398,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 27.1,
+      "growth": 24196
     }
   },
   {
@@ -41761,7 +42391,9 @@
         "vectra ndr"
       ],
       "rank": 276341,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.1,
+      "growth": -11179
     }
   },
   {
@@ -41864,7 +42496,9 @@
         "xvideos"
       ],
       "rank": 46952,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -8.6,
+      "growth": -90339
     }
   },
   {
@@ -41965,7 +42599,9 @@
         "chaingpt labs"
       ],
       "rank": 419728,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.6,
+      "growth": -9992
     }
   },
   {
@@ -42066,7 +42702,9 @@
         "nansen leaderboard"
       ],
       "rank": 121234,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.1,
+      "growth": 7897
     }
   },
   {
@@ -42168,7 +42806,9 @@
         "how do i deploy nfts on bnb chain"
       ],
       "rank": 337068,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 25.8,
+      "growth": 20990
     }
   },
   {
@@ -42270,7 +42910,9 @@
         "kaito twitter"
       ],
       "rank": 212857,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 7.5,
+      "growth": 9675
     }
   },
   {
@@ -42318,7 +42960,9 @@
         "cookie login",
         "cookie v3"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 5,
+      "growth": 12
     }
   },
   {
@@ -42419,7 +43063,9 @@
         "caption generator"
       ],
       "rank": 9509,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -0.8,
+      "growth": -38958
     }
   },
   {
@@ -42520,7 +43166,9 @@
         "descargar video de tiktok"
       ],
       "rank": 54214,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.2,
+      "growth": -56622
     }
   },
   {
@@ -42621,7 +43269,9 @@
         "video compressor"
       ],
       "rank": 3946,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 6.7,
+      "growth": 576694
     }
   },
   {
@@ -42723,7 +43373,9 @@
         "ai chcker"
       ],
       "rank": 69204,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 11.9,
+      "growth": 75668
     }
   },
   {
@@ -42824,7 +43476,9 @@
         "row ai"
       ],
       "rank": 194833,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -0.2,
+      "growth": -559
     }
   },
   {
@@ -42920,7 +43574,9 @@
         "google analytics search console section and search console difference"
       ],
       "rank": 924251,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -29,
+      "growth": -14388
     }
   },
   {
@@ -42990,7 +43646,9 @@
         "data examples in pictures"
       ],
       "rank": 1296563,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 31.4,
+      "growth": 5177
     }
   },
   {
@@ -43060,7 +43718,9 @@
         "obviously.ai pricing"
       ],
       "rank": 2283324,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -16.3,
+      "growth": -1975
     }
   },
   {
@@ -43161,7 +43821,9 @@
         "image to 3d"
       ],
       "rank": 116046,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -12,
+      "growth": -49342
     }
   },
   {
@@ -43257,7 +43919,9 @@
         "kaedim ai"
       ],
       "rank": 1028262,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -33.9,
+      "growth": -13162
     }
   },
   {
@@ -43361,7 +44025,9 @@
         "rimini"
       ],
       "rank": 55115,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -5.8,
+      "growth": -53762
     }
   },
   {
@@ -43464,7 +44130,9 @@
         "topaz ai"
       ],
       "rank": 19638,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.2,
+      "growth": 62318
     }
   },
   {
@@ -43567,7 +44235,9 @@
         "image upscaler"
       ],
       "rank": 63200,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.4,
+      "growth": 20900
     }
   },
   {
@@ -43668,7 +44338,9 @@
         "one way recording states"
       ],
       "rank": 194598,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -13.3,
+      "growth": -30163
     }
   },
   {
@@ -43769,7 +44441,9 @@
         "semblyai"
       ],
       "rank": 369365,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 11,
+      "growth": 9751
     }
   },
   {
@@ -43869,7 +44543,9 @@
         "tome.app",
         "tome.app ai"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -4.2,
+      "growth": -2290
     }
   },
   {
@@ -43970,7 +44646,9 @@
         "gamma ai"
       ],
       "rank": 44914,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -10.4,
+      "growth": -90634
     }
   },
   {
@@ -44071,7 +44749,9 @@
         "unsplash"
       ],
       "rank": 18551,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -9.7,
+      "growth": -133785
     }
   },
   {
@@ -44173,7 +44853,9 @@
         "slides ai ppt"
       ],
       "rank": 170060,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -7.1,
+      "growth": -18064
     }
   },
   {
@@ -44274,7 +44956,9 @@
         "deck topus"
       ],
       "rank": 368276,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.1,
+      "growth": 760
     }
   },
   {
@@ -44366,7 +45050,9 @@
         "plus ai autonomous vehicles"
       ],
       "rank": 1120374,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.1,
+      "growth": 19
     }
   },
   {
@@ -44469,7 +45155,9 @@
         "mem download"
       ],
       "rank": 226410,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -21.1,
+      "growth": -46320
     }
   },
   {
@@ -44572,7 +45260,9 @@
         "reflect note"
       ],
       "rank": 502202,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -29.5,
+      "growth": -29776
     }
   },
   {
@@ -44673,7 +45363,9 @@
         "rewind.ai",
         "is there a free plan on minimax?"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 124.9,
+      "growth": 98598
     }
   },
   {
@@ -44775,7 +45467,9 @@
         "tana note"
       ],
       "rank": 294247,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -22.2,
+      "growth": -39078
     }
   },
   {
@@ -44878,7 +45572,9 @@
         "capacities note taking"
       ],
       "rank": 104469,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 14.2,
+      "growth": 57277
     }
   },
   {
@@ -44981,7 +45677,9 @@
         "heaptabase"
       ],
       "rank": 222309,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -3.6,
+      "growth": -6587
     }
   },
   {
@@ -45085,7 +45783,9 @@
         "kimi k3"
       ],
       "rank": 1410,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.9,
+      "growth": 1061957
     }
   },
   {
@@ -45188,7 +45888,9 @@
         "veo 3"
       ],
       "rank": 39584,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -11.4,
+      "growth": -138998
     }
   },
   {
@@ -45290,7 +45992,9 @@
         "langchain docs"
       ],
       "rank": 13384,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.7,
+      "growth": 23790
     }
   },
   {
@@ -45392,7 +46096,9 @@
         "lamaparser"
       ],
       "rank": 118014,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -11,
+      "growth": -50921
     }
   },
   {
@@ -45495,7 +46201,9 @@
         "pinecode"
       ],
       "rank": 85031,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -13.1,
+      "growth": -76160
     }
   },
   {
@@ -45597,7 +46305,9 @@
         "wandb login"
       ],
       "rank": 23058,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 1.9,
+      "growth": 38617
     }
   },
   {
@@ -45699,7 +46409,9 @@
         "runpod pricing"
       ],
       "rank": 19060,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 13.3,
+      "growth": 288526
     }
   },
   {
@@ -45801,7 +46513,9 @@
         "modal pricing"
       ],
       "rank": 43856,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -6.7,
+      "growth": -66192
     }
   },
   {
@@ -45903,7 +46617,9 @@
         "hermes rabbit os pc"
       ],
       "rank": 272856,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 14.8,
+      "growth": 19939
     }
   },
   {
@@ -46006,7 +46722,9 @@
         "ai pendant"
       ],
       "rank": 395426,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -13.2,
+      "growth": -14304
     }
   },
   {
@@ -46109,7 +46827,9 @@
         "friend ai wearable"
       ],
       "rank": 341918,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 16.9,
+      "growth": 20382
     }
   },
   {
@@ -46213,7 +46933,9 @@
         "plaud web"
       ],
       "rank": 9804,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 12,
+      "growth": 662198
     }
   },
   {
@@ -46316,7 +47038,9 @@
         "fb"
       ],
       "rank": 1364,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 12.1,
+      "growth": 4428341
     }
   },
   {
@@ -46421,7 +47145,9 @@
         "doulingo"
       ],
       "rank": 627,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 4.1,
+      "growth": 2202687
     }
   },
   {
@@ -46524,7 +47250,9 @@
         "perimetros algebraicos ejercicios"
       ],
       "rank": 123505,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -14.1,
+      "growth": -65615
     }
   },
   {
@@ -46625,7 +47353,9 @@
         "arcads"
       ],
       "rank": 51618,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 2.4,
+      "growth": 19654
     }
   },
   {
@@ -46716,7 +47446,9 @@
         "conversion marketing"
       ],
       "rank": 1850472,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -62.9,
+      "growth": -22060
     }
   },
   {
@@ -46817,7 +47549,9 @@
         "opticon 2026"
       ],
       "rank": 71406,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -12.5,
+      "growth": -86514
     }
   },
   {
@@ -46918,7 +47652,9 @@
         "mutiny login"
       ],
       "rank": 659882,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -11.6,
+      "growth": -6253
     }
   },
   {
@@ -47018,7 +47754,9 @@
         "openrouter api"
       ],
       "rank": 2023,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 11.3,
+      "growth": 1943088
     }
   },
   {
@@ -47122,7 +47860,9 @@
         "gpt"
       ],
       "rank": 212,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 3.6,
+      "growth": 6844643
     }
   },
   {
@@ -47221,7 +47961,9 @@
         "triple whale pricing"
       ],
       "rank": 36099,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 8.3,
+      "growth": 119489
     }
   },
   {
@@ -47292,7 +48034,9 @@
         "every.to ai teammates"
       ],
       "rank": 1756423,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -17.9,
+      "growth": -3149
     }
   },
   {
@@ -47391,7 +48135,9 @@
         "easypeasy"
       ],
       "rank": 61270,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -1.3,
+      "growth": -12278
     }
   },
   {
@@ -47490,7 +48236,9 @@
         "claude ai"
       ],
       "rank": 20898,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -40.4,
+      "growth": -1838078
     }
   },
   {
@@ -47594,7 +48342,9 @@
         "剪映在线梯队生成器"
       ],
       "rank": 319966,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 34.6,
+      "growth": 35663
     }
   },
   {
@@ -47663,7 +48413,9 @@
         "situs jual apikey lengkap dan bahkan lebih murah"
       ],
       "rank": 1269152,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 776.4,
+      "growth": 17872
     }
   },
   {
@@ -47762,7 +48514,9 @@
         "pixverse ai"
       ],
       "rank": 44857,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 0.3,
+      "growth": 2932
     }
   },
   {
@@ -47860,7 +48614,9 @@
         "zskay ai"
       ],
       "rank": 851881,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 30.7,
+      "growth": 6646
     }
   },
   {
@@ -47897,7 +48653,9 @@
       "keywords": [
         "„cr\"-pin icon ki java script"
       ],
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": -100,
+      "growth": -743
     }
   },
   {
@@ -47950,7 +48708,9 @@
         "chatseo pricing"
       ],
       "rank": 12049251,
-      "updatedAt": "July 2026"
+      "updatedAt": "July 2026",
+      "trend": 79.9,
+      "growth": 647
     }
   },
   {
