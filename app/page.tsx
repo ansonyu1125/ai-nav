@@ -10,6 +10,7 @@ import CategoryCard from "@/components/CategoryCard";
 import ToolCard from "@/components/ToolCard";
 import GrowthRankingList from "@/components/GrowthRankingList";
 import SectionHeading from "@/components/SectionHeading";
+import JsonLd from "@/components/JsonLd";
 import { BilingualText } from "@/components/Bilingual";
 
 export default function HomePage() {
@@ -28,6 +29,21 @@ export default function HomePage() {
 
   return (
     <div>
+      {/* 网站级结构化数据：利于 Google 站内搜索与富结果 */}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: site.name,
+          url: site.url,
+          potentialAction: {
+            "@type": "SearchAction",
+            target: `${site.url}/tools?q={search_term_string}`,
+            "query-input": "required name=search_term_string",
+          },
+        }}
+      />
+
       {/* Hero */}
       <section className="bg-gradient-to-b from-indigo-50/70 to-white">
         <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6 sm:py-24">

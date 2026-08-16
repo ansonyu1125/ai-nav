@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { tools, getTool, getAlternatives } from "@/lib/tools";
+import { site } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
 import { categoryMap } from "@/data/categories";
 import { PRICING_LABEL, getToolCategories } from "@/lib/types";
 import { formatScore } from "@/lib/utils";
@@ -29,6 +31,13 @@ export async function generateMetadata({
   return {
     title: tool.name,
     description: tool.description,
+    alternates: { canonical: `/tools/${slug}` },
+    openGraph: {
+      title: tool.name,
+      description: tool.description,
+      url: `${site.url}/tools/${slug}`,
+      type: "website",
+    },
   };
 }
 
@@ -47,8 +56,30 @@ export default async function ToolPage({
   const related = getAlternatives(tool);
   const screenshot = getPricingScreenshot(tool.id);
 
+  // SoftwareApplication 结构化数据：利于 Google 富结果与 AI 引擎（GEO）识别
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: tool.name,
+    description: tool.description,
+    url: `${site.url}/tools/${tool.id}`,
+    applicationCategory: cats[0]?.nameEn || "",
+    operatingSystem: "Web",
+    ...(tool.pricing === "paid"
+      ? {}
+      : {
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "USD",
+          },
+        }),
+  };
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+      <JsonLd data={jsonLd} />
+
       {/* 面包屑 */}
       <nav className="mb-6 text-sm text-slate-500">
         <Link href="/" className="hover:text-indigo-600">
