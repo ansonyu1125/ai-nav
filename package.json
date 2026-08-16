@@ -13,6 +13,7 @@
     "translate": "node scripts/translate.mjs",
     "enrich": "node scripts/enrich.mjs",
     "add:tools": "node scripts/add-tools.mjs",
+    "bulk:import": "node scripts/bulk-import.mjs",
     "fetch:new-logos": "node scripts/fetch-new-logos.mjs"
   },
   "dependencies": {

@@ -1,0 +1,21 @@
+# 批量导入工具列表模板
+# 用法：
+#   1. 复制本文件为 scripts/import-list.txt（已被 gitignore，不会入库）
+#   2. 每行一条：名称 | 网址（分隔符可用 | 、 ， 逗号 或 Tab，均可）
+#   3. 以 # 开头的行是注释，会被忽略
+#   4. 从 toolify 等目录站复制即可，例如：
+#
+#   名称           | 网址
+#   -------------- | ------------------------------------
+#   ElevenLabs     | https://elevenlabs.io
+#   NotebookLM     | https://notebooklm.google.com
+#
+# 运行：
+#   node scripts/bulk-import.mjs           # 干跑，生成预览到 scripts/import-review.json
+#   node scripts/bulk-import.mjs --write   # 确认后正式写入 data/tools.json
+#   node scripts/bulk-import.mjs --limit 50  # 限制每次处理条数
+
+# 下面每行都是一条「名称 | 网址」，把 # 去掉即可开始导入（示例）：
+# 海螺 AI | https://hailuoai.com
+# 讯飞听见 | https://www.iflyrec.com
+# GitHub Copilot | https://github.com/features/copilot
