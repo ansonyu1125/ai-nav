@@ -1,0 +1,82 @@
+[
+  {
+    "id": "chatgpt-guide",
+    "title": "ChatGPT 新手入门：注册、使用与进阶技巧",
+    "summary": "从零开始学会使用 ChatGPT，掌握基础对话、文件上传与联网搜索，快速上手这个全球最流行的 AI 助手。",
+    "category": "入门",
+    "emoji": "🤖",
+    "date": "2026-01-15",
+    "readMinutes": 8,
+    "tags": ["ChatGPT", "入门", "对话助手"]
+  },
+  {
+    "id": "prompt-skills",
+    "title": "Prompt 提示词技巧：让 AI 更懂你",
+    "summary": "同样的 AI，不同的提示词效果天差地别。掌握角色设定、结构化指令与思维链，让回答质量翻倍。",
+    "category": "提示词",
+    "emoji": "💡",
+    "date": "2026-02-10",
+    "readMinutes": 10,
+    "tags": ["提示词", "Prompt", "技巧"]
+  },
+  {
+    "id": "ai-painting",
+    "title": "AI 绘画入门：用 Midjourney 生成第一张图",
+    "summary": "从注册到生成，一步步教你用 Midjourney 画出满意的图片，并理解风格、参数与常用提示词套路。",
+    "category": "图像生成",
+    "emoji": "🎨",
+    "date": "2026-02-22",
+    "readMinutes": 9,
+    "tags": ["Midjourney", "文生图", "绘画"]
+  },
+  {
+    "id": "ai-coding",
+    "title": "AI 编程入门：用 Cursor 提升开发效率",
+    "summary": "了解 AI 编程的核心玩法，用 Cursor 完成代码补全、对话式改代码与多文件重构，让 AI 成为你的结对伙伴。",
+    "category": "编程开发",
+    "emoji": "💻",
+    "date": "2026-03-05",
+    "readMinutes": 9,
+    "tags": ["Cursor", "编程", "AI 编程"]
+  },
+  {
+    "id": "ai-video",
+    "title": "AI 视频生成入门：Sora 与可灵怎么用",
+    "summary": "看懂文生视频的工作原理，掌握 Sora、可灵等工具的使用方法与提示词写法，生成你的第一段 AI 视频。",
+    "category": "视频生成",
+    "emoji": "🎬",
+    "date": "2026-03-18",
+    "readMinutes": 8,
+    "tags": ["Sora", "可灵", "视频生成"]
+  },
+  {
+    "id": "ai-search",
+    "title": "AI 搜索实战：Perplexity 与秘塔的高效用法",
+    "summary": "告别关键词搜索，学会用 AI 搜索直接获得带来源的答案，掌握深度研究、学术搜索与溯源技巧。",
+    "category": "AI 搜索",
+    "emoji": "🔍",
+    "date": "2026-04-02",
+    "readMinutes": 7,
+    "tags": ["搜索", "Perplexity", "秘塔"]
+  },
+  {
+    "id": "ai-music",
+    "title": "AI 音乐创作：用 Suno 写一首歌",
+    "summary": "不需要会乐理，输入一句描述或一段歌词，让 Suno 为你生成完整的歌曲，并学会控制风格与结构。",
+    "category": "音频音乐",
+    "emoji": "🎵",
+    "date": "2026-04-15",
+    "readMinutes": 7,
+    "tags": ["Suno", "音乐", "创作"]
+  },
+  {
+    "id": "ai-office",
+    "title": "AI 办公提效：用 AI 做 PPT、写文档",
+    "summary": "把重复性的文档、PPT 与会议纪要交给 AI，掌握 Notion AI、WPS AI、Gamma 等工具的高效用法。",
+    "category": "办公效率",
+    "emoji": "📊",
+    "date": "2026-05-01",
+    "readMinutes": 8,
+    "tags": ["办公", "PPT", "提效"]
+  }
+]

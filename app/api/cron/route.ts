@@ -1,0 +1,40 @@
+import type { NextRequest } from "next/server";
+import { fetchFeedItems, generateArticles } from "@/lib/news-generate";
+import { getArticles, saveArticles } from "@/lib/news";
+
+export const runtime = "nodejs";
+export const maxDuration = 60;
+
+// 由 Vercel Cron 定时调用（见 vercel.json）。也可手动访问 /api/cron 测试。
+export async function GET(req: NextRequest) {
+  const secret = process.env.CRON_SECRET;
+  if (secret && req.headers.get("authorization") !== `Bearer ${secret}`) {
+    return Response.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const apiKey = process.env.DEEPSEEK_API_KEY;
+  if (!apiKey) {
+    return Response.json(
+      { error: "缺少 DEEPSEEK_API_KEY 环境变量" },
+      { status: 500 },
+    );
+  }
+
+  const existing = await getArticles();
+  const seen = new Set(existing.map((a) => a.sourceUrl));
+
+  const items = await fetchFeedItems();
+  const fresh = items.filter((i) => i.link && !seen.has(i.link)).slice(0, 5);
+
+  const generated = fresh.length > 0 ? await generateArticles(fresh, apiKey) : [];
+  const merged = [...generated, ...existing].slice(0, 200);
+
+  await saveArticles(merged);
+
+  return Response.json({
+    ok: true,
+    added: generated.length,
+    total: merged.length,
+    skipped: items.length - fresh.length,
+  });
+}

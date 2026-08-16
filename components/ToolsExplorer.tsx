@@ -1,0 +1,214 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import type { Category, Pricing, Tool } from "@/lib/types";
+import { PRICING_LABEL } from "@/lib/types";
+import ToolCard from "./ToolCard";
+import { cn } from "@/lib/utils";
+
+interface ToolsExplorerProps {
+  tools: Tool[];
+  categories: Category[];
+  initial: {
+    q: string;
+    category: string;
+    region: string;
+    pricing: string;
+    sort: string;
+  };
+}
+
+const PRICING_OPTIONS: Array<{ value: string; label: string }> = [
+  { value: "all", label: "全部费用" },
+  ...(Object.keys(PRICING_LABEL) as Pricing[]).map((p) => ({
+    value: p,
+    label: PRICING_LABEL[p],
+  })),
+];
+
+const SORT_OPTIONS = [
+  { value: "popularity", label: "热度" },
+  { value: "score", label: "评分" },
+  { value: "newest", label: "最新" },
+];
+
+const REGION_OPTIONS = [
+  { value: "all", label: "全部" },
+  { value: "domestic", label: "国内" },
+  { value: "overseas", label: "海外" },
+];
+
+export default function ToolsExplorer({
+  tools,
+  categories,
+  initial,
+}: ToolsExplorerProps) {
+  const [q, setQ] = useState(initial.q);
+  const [category, setCategory] = useState(initial.category);
+  const [region, setRegion] = useState(initial.region);
+  const [pricing, setPricing] = useState(initial.pricing);
+  const [sort, setSort] = useState(initial.sort);
+
+  const filtered = useMemo(() => {
+    let list = tools;
+
+    const query = q.trim().toLowerCase();
+    if (query) {
+      list = list.filter((t) =>
+        [t.name, t.nameZh, t.description, ...t.tags]
+          .join(" ")
+          .toLowerCase()
+          .includes(query),
+      );
+    }
+    if (category !== "all") list = list.filter((t) => t.category === category);
+    if (region !== "all") list = list.filter((t) => t.region === region);
+    if (pricing !== "all") list = list.filter((t) => t.pricing === pricing);
+
+    const arr = [...list];
+    if (sort === "score") arr.sort((a, b) => b.score - a.score);
+    else if (sort === "newest")
+      arr.sort((a, b) => (b.releaseYear ?? 0) - (a.releaseYear ?? 0));
+    else arr.sort((a, b) => b.popularity - a.popularity);
+    return arr;
+  }, [tools, q, category, region, pricing, sort]);
+
+  return (
+    <div>
+      {/* 搜索框 */}
+      <div className="rounded-full border border-slate-200 bg-white p-1.5 shadow-sm focus-within:border-indigo-400 focus-within:ring-2 focus-within:ring-indigo-100">
+        <div className="flex items-center gap-2">
+          <span className="pl-3 text-slate-400">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+            </svg>
+          </span>
+          <input
+            type="text"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="搜索工具名称、描述或标签…"
+            className="h-10 w-full bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"
+          />
+        </div>
+      </div>
+
+      {/* 分类筛选 */}
+      <div className="mt-4 flex flex-wrap gap-2">
+        <button
+          onClick={() => setCategory("all")}
+          className={cn(
+            "rounded-full px-4 py-1.5 text-sm font-medium transition",
+            category === "all"
+              ? "bg-indigo-600 text-white"
+              : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
+          )}
+        >
+          全部
+        </button>
+        {categories.map((c) => (
+          <button
+            key={c.id}
+            onClick={() => setCategory(c.id)}
+            className={cn(
+              "rounded-full px-4 py-1.5 text-sm font-medium transition",
+              category === c.id
+                ? "bg-indigo-600 text-white"
+                : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
+            )}
+          >
+            {c.emoji} {c.name}
+          </button>
+        ))}
+      </div>
+
+      {/* 地区筛选 */}
+      <div className="mt-4 flex flex-wrap items-center gap-2">
+        <span className="text-sm font-medium text-slate-400">地区</span>
+        {REGION_OPTIONS.map((r) => (
+          <button
+            key={r.value}
+            onClick={() => setRegion(r.value)}
+            className={cn(
+              "rounded-lg px-3 py-1.5 text-xs font-medium transition",
+              region === r.value
+                ? "bg-slate-900 text-white"
+                : "bg-white text-slate-500 ring-1 ring-slate-200 hover:bg-slate-50",
+            )}
+          >
+            {r.label}
+          </button>
+        ))}
+      </div>
+
+      {/* 费用 + 排序 */}
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap gap-2">
+          {PRICING_OPTIONS.map((p) => (
+            <button
+              key={p.value}
+              onClick={() => setPricing(p.value)}
+              className={cn(
+                "rounded-lg px-3 py-1.5 text-xs font-medium transition",
+                pricing === p.value
+                  ? "bg-slate-900 text-white"
+                  : "bg-white text-slate-500 ring-1 ring-slate-200 hover:bg-slate-50",
+              )}
+            >
+              {p.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-1 rounded-lg bg-white p-1 ring-1 ring-slate-200">
+          {SORT_OPTIONS.map((s) => (
+            <button
+              key={s.value}
+              onClick={() => setSort(s.value)}
+              className={cn(
+                "rounded-md px-3 py-1.5 text-xs font-medium transition",
+                sort === s.value
+                  ? "bg-indigo-50 text-indigo-600"
+                  : "text-slate-500 hover:text-slate-900",
+              )}
+            >
+              {s.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <p className="mt-6 text-sm text-slate-500">
+        共找到 <span className="font-semibold text-slate-900">{filtered.length}</span> 款工具
+      </p>
+
+      {/* 结果 */}
+      {filtered.length > 0 ? (
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {filtered.map((t) => (
+            <ToolCard key={t.id} tool={t} />
+          ))}
+        </div>
+      ) : (
+        <div className="mt-8 rounded-2xl border border-dashed border-slate-300 bg-slate-50 py-16 text-center">
+          <div className="text-4xl">🔍</div>
+          <p className="mt-3 font-medium text-slate-700">没有找到匹配的工具</p>
+          <p className="mt-1 text-sm text-slate-500">
+            试试更换关键词，或清空筛选条件
+          </p>
+          <button
+            onClick={() => {
+              setQ("");
+              setCategory("all");
+              setRegion("all");
+              setPricing("all");
+            }}
+            className="mt-4 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+          >
+            清空筛选
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
