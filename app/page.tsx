@@ -50,38 +50,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 分类 */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <SectionHeading
-          title="按分类浏览"
-          titleEn="Browse by category"
-          subtitle="从你最需要的场景开始，快速定位合适工具"
-          subtitleEn="Start from the use case you need and find the right tool fast"
-          href="/tools"
-        />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {categories.map((c) => (
-            <CategoryCard key={c.id} category={c} />
-          ))}
-        </div>
-      </section>
-
-      {/* 精选 */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <SectionHeading
-          title="精选推荐"
-          titleEn="Featured picks"
-          subtitle="口碑与热度兼具的明星工具"
-          subtitleEn="Top tools by reputation and popularity"
-          href="/tools"
-        />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {featured.map((t) => (
-            <ToolCard key={t.id} tool={t} />
-          ))}
-        </div>
-      </section>
-
       {/* 榜单 + 教程 */}
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-2">
@@ -126,6 +94,38 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 分类 */}
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <SectionHeading
+          title="按分类浏览"
+          titleEn="Browse by category"
+          subtitle="从你最需要的场景开始，快速定位合适工具"
+          subtitleEn="Start from the use case you need and find the right tool fast"
+          href="/tools"
+        />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {categories.map((c) => (
+            <CategoryCard key={c.id} category={c} />
+          ))}
+        </div>
+      </section>
+
+      {/* 精选 */}
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <SectionHeading
+          title="精选推荐"
+          titleEn="Featured picks"
+          subtitle="口碑与热度兼具的明星工具"
+          subtitleEn="Top tools by reputation and popularity"
+          href="/tools"
+        />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {featured.map((t) => (
+            <ToolCard key={t.id} tool={t} />
+          ))}
         </div>
       </section>
     </div>
