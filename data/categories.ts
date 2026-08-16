@@ -29,6 +29,12 @@ export const categories: Category[] = [
   { id: "legal", name: "法律", nameEn: "Legal", emoji: "⚖️", description: "合同审查、法律检索与合规 AI", descriptionEn: "Contract review, legal research & compliance AI" },
   { id: "browser", name: "浏览器", nameEn: "Browsers", emoji: "🧭", description: "内置 AI 的浏览器与智能浏览体验", descriptionEn: "AI-native browsers & smarter browsing" },
   { id: "prompt", name: "提示词", nameEn: "Prompts", emoji: "💡", description: "提示词市场、社区与模板库", descriptionEn: "Prompt marketplaces, communities & templates" },
+  { id: "health", name: "健康医疗", nameEn: "Health & Medical", emoji: "🩺", description: "AI 症状评估、心理健康与医疗辅助", descriptionEn: "AI symptom check, mental health & medical assistance" },
+  { id: "finance", name: "金融投资", nameEn: "Finance", emoji: "💰", description: "AI 投研、智能投顾与选股", descriptionEn: "AI investing research, robo-advisors & stock picking" },
+  { id: "hr", name: "招聘人事", nameEn: "HR & Recruiting", emoji: "👥", description: "AI 简历筛选、面试与人才智能", descriptionEn: "AI resume screening, interviews & talent intelligence" },
+  { id: "ecommerce", name: "电商运营", nameEn: "E-commerce", emoji: "🛒", description: "AI 产品图、商品文案与电商客服", descriptionEn: "AI product photos, listing copy & e-commerce support" },
+  { id: "gaming", name: "游戏娱乐", nameEn: "Gaming", emoji: "🎮", description: "AI 游戏开发、NPC 与互动叙事", descriptionEn: "AI game dev, NPCs & interactive storytelling" },
+  { id: "travel", name: "旅行出行", nameEn: "Travel", emoji: "✈️", description: "AI 行程规划与旅行助手", descriptionEn: "AI itinerary planning & travel assistants" },
 ];
 
 export const categoryMap: Record<string, Category> = Object.fromEntries(
