@@ -134,8 +134,8 @@
         "note": "Enterprise-grade security, admin, and advanced features"
       }
     ],
-    "model": "GPT 系列",
-    "modelEn": "GPT series"
+    "model": "GPT-5.6 / GPT-5.5",
+    "modelEn": "GPT-5.6 / GPT-5.5"
   },
   {
     "id": "claude",
@@ -260,8 +260,8 @@
         "note": "Enterprise-grade security and support"
       }
     ],
-    "model": "Claude 系列",
-    "modelEn": "Claude series"
+    "model": "Claude Opus 5",
+    "modelEn": "Claude Opus 5"
   },
   {
     "id": "gemini",
@@ -377,8 +377,8 @@
         "note": "Highest performance model for complex tasks"
       }
     ],
-    "model": "Gemini 系列",
-    "modelEn": "Gemini series"
+    "model": "Gemini 3.7",
+    "modelEn": "Gemini 3.7"
   },
   {
     "id": "deepseek",
@@ -484,8 +484,8 @@
         "note": "Usage-based billing, extremely low cost for developers"
       }
     ],
-    "model": "DeepSeek V3 / R1",
-    "modelEn": "DeepSeek V3 / R1"
+    "model": "DeepSeek V4 / V3.2",
+    "modelEn": "DeepSeek V4 / V3.2"
   },
   {
     "id": "kimi",
@@ -591,8 +591,8 @@
         "note": "Priority response, more advanced features"
       }
     ],
-    "model": "Kimi K2",
-    "modelEn": "Kimi K2"
+    "model": "Kimi K3",
+    "modelEn": "Kimi K3"
   },
   {
     "id": "doubao",
@@ -689,8 +689,8 @@
         "note": "All features free with no restrictions"
       }
     ],
-    "model": "豆包 / Seed",
-    "modelEn": "Doubao / Seed"
+    "model": "Seed 2.1",
+    "modelEn": "Seed 2.1"
   },
   {
     "id": "wenxin",
@@ -913,8 +913,8 @@
         "note": "Dedicated model and private deployment"
       }
     ],
-    "model": "通义千问 Qwen",
-    "modelEn": "Qwen"
+    "model": "Qwen3.8",
+    "modelEn": "Qwen3.8"
   },
   {
     "id": "chatglm",
@@ -1030,8 +1030,8 @@
         "note": "For developers, flexible billing"
       }
     ],
-    "model": "GLM 系列",
-    "modelEn": "GLM series"
+    "model": "GLM-5.3",
+    "modelEn": "GLM-5.3"
   },
   {
     "id": "yuanbao",
@@ -1244,8 +1244,8 @@
         "note": "High usage, priority support"
       }
     ],
-    "model": "自研模型",
-    "modelEn": "Proprietary"
+    "model": "V8.1",
+    "modelEn": "V8.1"
   },
   {
     "id": "dalle",
@@ -1686,8 +1686,8 @@
       "video",
       "image-edit"
     ],
-    "model": "Seedream（图）/ Seedance（视频）",
-    "modelEn": "Seedream / Seedance"
+    "model": "Seedream 5.0 / Seedance 2.5",
+    "modelEn": "Seedream 5.0 / Seedance 2.5"
   },
   {
     "id": "leonardo",
@@ -2026,8 +2026,8 @@
         "note": "Includes more Sora credits and priority access"
       }
     ],
-    "model": "Sora",
-    "modelEn": "Sora"
+    "model": "Sora 2",
+    "modelEn": "Sora 2"
   },
   {
     "id": "runway",
@@ -2156,8 +2156,8 @@
       "image",
       "image-edit"
     ],
-    "model": "Gen-4",
-    "modelEn": "Gen-4"
+    "model": "Gen-4.5 / Gen-4",
+    "modelEn": "Gen-4.5 / Gen-4"
   },
   {
     "id": "pika",
@@ -2382,8 +2382,8 @@
       "video",
       "image"
     ],
-    "model": "可灵 Kling",
-    "modelEn": "Kling"
+    "model": "Kling 3.0",
+    "modelEn": "Kling 3.0"
   },
   {
     "id": "hailuo",
@@ -2492,8 +2492,8 @@
         "note": "Unlimited generation, commercial license, dedicated support"
       }
     ],
-    "model": "MiniMax（video-01）",
-    "modelEn": "MiniMax"
+    "model": "Hailuo 3.0 (H3)",
+    "modelEn": "Hailuo 3.0 (H3)"
   },
   {
     "id": "luma",
@@ -2618,8 +2618,8 @@
       "video",
       "image"
     ],
-    "model": "Dream Machine（Ray）",
-    "modelEn": "Dream Machine"
+    "model": "Ray3.2",
+    "modelEn": "Ray3.2"
   },
   {
     "id": "heygen",
@@ -7463,8 +7463,8 @@
         "note": "Dedicated support, higher quotas, and customized services"
       }
     ],
-    "model": "Veo 3",
-    "modelEn": "Veo 3"
+    "model": "Veo 3.1",
+    "modelEn": "Veo 3.1"
   },
   {
     "id": "synthesia",

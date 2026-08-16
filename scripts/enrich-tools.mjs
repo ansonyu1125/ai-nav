@@ -11,16 +11,16 @@ const dataPath = join(__dirname, "..", "data", "tools.json");
 // id → 覆盖字段
 const overrides = {
   // ── 对话助手 ─────────────────────────────
-  chatgpt: { model: "GPT 系列", modelEn: "GPT series" },
-  claude: { model: "Claude 系列", modelEn: "Claude series" },
-  deepseek: { model: "DeepSeek V3 / R1", modelEn: "DeepSeek V3 / R1" },
-  gemini: { model: "Gemini 系列", modelEn: "Gemini series" },
-  doubao: { model: "豆包 / Seed", modelEn: "Doubao / Seed" },
-  kimi: { model: "Kimi K2", modelEn: "Kimi K2" },
+  chatgpt: { model: "GPT-5.6 / GPT-5.5", modelEn: "GPT-5.6 / GPT-5.5" },
+  claude: { model: "Claude Opus 5", modelEn: "Claude Opus 5" },
+  deepseek: { model: "DeepSeek V4 / V3.2", modelEn: "DeepSeek V4 / V3.2" },
+  gemini: { model: "Gemini 3.7", modelEn: "Gemini 3.7" },
+  doubao: { model: "Seed 2.1", modelEn: "Seed 2.1" },
+  kimi: { model: "Kimi K3", modelEn: "Kimi K3" },
   "meta-ai": { model: "Llama 系列", modelEn: "Llama series" },
   grok: { model: "Grok 系列", modelEn: "Grok series" },
-  tongyi: { model: "通义千问 Qwen", modelEn: "Qwen" },
-  chatglm: { model: "GLM 系列", modelEn: "GLM series" },
+  tongyi: { model: "Qwen3.8", modelEn: "Qwen3.8" },
+  chatglm: { model: "GLM-5.3", modelEn: "GLM-5.3" },
   wenxin: { model: "文心 ERNIE", modelEn: "ERNIE" },
   yuanbao: { model: "混元 Hunyuan", modelEn: "Hunyuan" },
   hunyuan: { model: "混元 Hunyuan", modelEn: "Hunyuan" },
@@ -33,13 +33,13 @@ const overrides = {
   sensenova: { model: "日日新 SenseNova", modelEn: "SenseNova" },
 
   // ── 图像生成 ─────────────────────────────
-  midjourney: { model: "自研模型", modelEn: "Proprietary" },
+  midjourney: { model: "V8.1", modelEn: "V8.1" },
   "stable-diffusion": { model: "Stable Diffusion 系列", modelEn: "SD series" },
   dalle: { model: "DALL·E 3", modelEn: "DALL·E 3" },
   jimeng: {
     categories: ["image", "video", "image-edit"],
-    model: "Seedream（图）/ Seedance（视频）",
-    modelEn: "Seedream / Seedance",
+    model: "Seedream 5.0 / Seedance 2.5",
+    modelEn: "Seedream 5.0 / Seedance 2.5",
   },
   flux: { model: "FLUX（Black Forest）", modelEn: "FLUX" },
   civitai: { model: "模型库平台（SD/LoRA）", modelEn: "Model hub (SD/LoRA)" },
@@ -64,22 +64,22 @@ const overrides = {
   "lets-enhance": { model: "自研模型", modelEn: "Proprietary" },
 
   // ── 视频生成 ─────────────────────────────
-  sora: { model: "Sora", modelEn: "Sora" },
+  sora: { model: "Sora 2", modelEn: "Sora 2" },
   runway: {
     categories: ["video", "image", "image-edit"],
-    model: "Gen-4",
-    modelEn: "Gen-4",
+    model: "Gen-4.5 / Gen-4",
+    modelEn: "Gen-4.5 / Gen-4",
   },
-  veo: { model: "Veo 3", modelEn: "Veo 3" },
+  veo: { model: "Veo 3.1", modelEn: "Veo 3.1" },
   kling: {
     categories: ["video", "image"],
-    model: "可灵 Kling",
-    modelEn: "Kling",
+    model: "Kling 3.0",
+    modelEn: "Kling 3.0",
   },
   pika: { model: "Pika 自研", modelEn: "Pika" },
   vidu: { model: "Vidu（生数科技）", modelEn: "Vidu" },
   filmora: { model: "自研 + AI 集成", modelEn: "Proprietary + AI" },
-  hailuo: { model: "MiniMax（video-01）", modelEn: "MiniMax" },
+  hailuo: { model: "Hailuo 3.0 (H3)", modelEn: "Hailuo 3.0 (H3)" },
   krea: {
     categories: ["video", "image"],
     model: "多模型（FLUX/SD）",
@@ -88,8 +88,8 @@ const overrides = {
   "zhipu-qingying": { model: "CogVideoX", modelEn: "CogVideoX" },
   luma: {
     categories: ["video", "image"],
-    model: "Dream Machine（Ray）",
-    modelEn: "Dream Machine",
+    model: "Ray3.2",
+    modelEn: "Ray3.2",
   },
   bcut: { model: "剪映 AI", modelEn: "Jianying AI" },
   pixverse: { model: "PixVerse 自研", modelEn: "PixVerse" },
