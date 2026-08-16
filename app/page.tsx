@@ -1,20 +1,19 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { categories } from "@/data/categories";
-import { tools, getFeaturedTools, topTools, countByCategory } from "@/lib/tools";
+import { tools, getFeaturedTools, countByCategory } from "@/lib/tools";
 import { scenarios } from "@/data/scenarios";
 import { tutorials } from "@/lib/tutorials";
 import { glossary } from "@/lib/glossary";
 import SearchBar from "@/components/SearchBar";
 import CategoryCard from "@/components/CategoryCard";
 import ToolCard from "@/components/ToolCard";
-import RankingList from "@/components/RankingList";
+import GrowthRankingList from "@/components/GrowthRankingList";
 import SectionHeading from "@/components/SectionHeading";
 import { BilingualText } from "@/components/Bilingual";
 
 export default function HomePage() {
   const featured = getFeaturedTools();
-  const hot = topTools("popularity", 8);
   const trending = tools.filter((t) => t.trending).slice(0, 8);
   const growing = tools
     .filter((t) => t.traffic?.growth != null)
@@ -68,24 +67,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* AI 月度增长榜 */}
-      {growing.length > 0 && (
-        <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-          <SectionHeading
-            title="AI 月度增长榜"
-            titleEn="Fastest growing"
-            subtitle="上月流量增长最快的 AI 工具，数据来自 SimilarWeb"
-            subtitleEn="AI tools with the fastest month-over-month traffic growth (SimilarWeb)"
-            href="/ranking"
-          />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {growing.map((t) => (
-              <ToolCard key={t.id} tool={t} />
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* 正在爆火 */}
       {trending.length > 0 && (
@@ -141,13 +122,13 @@ export default function HomePage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <SectionHeading
-              title="热门排行榜"
-              titleEn="Trending"
-              subtitle="按热度排名的 TOP 8"
-              subtitleEn="Top 8 by popularity"
+              title="AI 月度增长榜"
+              titleEn="Fastest growing"
+              subtitle="上月流量增长最快的 TOP 8"
+              subtitleEn="Top 8 by month-over-month growth"
               href="/ranking"
             />
-            <RankingList items={hot} metric="popularity" />
+            <GrowthRankingList items={growing} />
           </div>
 
           <div>
