@@ -84,60 +84,191 @@
       {
         "name": "免费版",
         "price": "免费",
-        "note": "基础对话功能，访问GPT-3.5或GPT-4o mini"
+        "note": "基础对话功能，访问GPT-3.5或GPT-4o mini",
+        "features": [
+          "基础对话与问答",
+          "网页端 + 移动端访问",
+          "有限的消息额度",
+          "基础 GPT 模型"
+        ]
       },
       {
         "name": "Plus",
         "price": "$20/月",
-        "note": "优先访问GPT-4o、联网、图像生成等"
+        "note": "优先访问GPT-4o、联网、图像生成等",
+        "features": [
+          "GPT-5 系列模型",
+          "更高消息额度",
+          "联网搜索",
+          "图像生成与识别（DALL·E）",
+          "文件上传与高级数据分析",
+          "优先访问新功能"
+        ]
       },
       {
         "name": "Pro",
         "price": "$200/月",
-        "note": "无限使用GPT-4o、高级语音、更高优先级"
+        "note": "无限使用GPT-4o、高级语音、更高优先级",
+        "features": [
+          "全部 Plus 功能",
+          "更高用量上限",
+          "优先性能与可用性",
+          "深度研究与推理"
+        ]
       },
       {
         "name": "Team",
         "price": "$25/人/月",
-        "note": "团队协作，共享工作空间"
+        "note": "团队协作，共享工作空间",
+        "features": [
+          "全部 Plus 功能",
+          "团队协作工作区",
+          "共享自定义 GPTs",
+          "团队管理控制台"
+        ]
       },
       {
         "name": "Enterprise",
         "price": "定制",
-        "note": "企业级安全、管理与高级功能"
+        "note": "企业级安全、管理与高级功能",
+        "features": [
+          "全部 Team 功能",
+          "企业级安全与合规",
+          "SSO/SAML 单点登录",
+          "专属支持与更长上下文"
+        ]
       }
     ],
     "pricingTiersEn": [
       {
         "name": "Free",
         "price": "Free",
-        "note": "Basic chat with GPT-3.5 or GPT-4o mini"
+        "note": "Basic chat with GPT-3.5 or GPT-4o mini",
+        "featuresEn": [
+          "Basic chat & Q&A",
+          "Web + mobile access",
+          "Limited message quota",
+          "Base GPT model"
+        ]
       },
       {
         "name": "Plus",
         "price": "$20/month",
-        "note": "Priority access to GPT-4o, browsing, image generation"
+        "note": "Priority access to GPT-4o, browsing, image generation",
+        "featuresEn": [
+          "GPT-5 series models",
+          "Higher message limits",
+          "Web browsing",
+          "Image generation & vision (DALL·E)",
+          "File upload & advanced data analysis",
+          "Early access to new features"
+        ]
       },
       {
         "name": "Pro",
         "price": "$200/month",
-        "note": "Unlimited GPT-4o, advanced voice, higher priority"
+        "note": "Unlimited GPT-4o, advanced voice, higher priority",
+        "featuresEn": [
+          "All Plus features",
+          "Higher usage limits",
+          "Priority performance & availability",
+          "Deep research & reasoning"
+        ]
       },
       {
         "name": "Team",
         "price": "$25/user/month",
-        "note": "Team collaboration with shared workspace"
+        "note": "Team collaboration with shared workspace",
+        "featuresEn": [
+          "All Plus features",
+          "Team workspace",
+          "Shared custom GPTs",
+          "Team admin console"
+        ]
       },
       {
         "name": "Enterprise",
         "price": "Custom",
-        "note": "Enterprise-grade security, admin, and advanced features"
+        "note": "Enterprise-grade security, admin, and advanced features",
+        "featuresEn": [
+          "All Team features",
+          "Enterprise security & compliance",
+          "SSO/SAML",
+          "Dedicated support & longer context"
+        ]
       }
     ],
     "model": "GPT-5.6 / GPT-5.5",
     "modelEn": "GPT-5.6 / GPT-5.5",
     "verified": true,
-    "lastChecked": "2026-08"
+    "lastChecked": "2026-08",
+    "useCases": [
+      "日常问答与知识查询：解答技术、学习、生活等各类问题",
+      "写作辅助：起草邮件、文案、文章、报告与代码注释",
+      "编程助手：解释代码、排查报错、生成代码片段",
+      "头脑风暴与创意：产品命名、方案构思、灵感发散",
+      "学习辅导：概念讲解、例题解析、知识梳理"
+    ],
+    "useCasesEn": [
+      "Everyday Q&A and knowledge lookup across tech, study and life",
+      "Writing help for emails, copy, articles, reports and code comments",
+      "Coding assistant for explaining code, debugging and generating snippets",
+      "Brainstorming and ideation for naming, planning and inspiration",
+      "Study support with concept explanations, examples and summaries"
+    ],
+    "faqs": [
+      {
+        "q": "ChatGPT 是免费的吗？",
+        "a": "有免费版；订阅 ChatGPT Plus/Pro 可解锁更高配额和更先进的模型。"
+      },
+      {
+        "q": "ChatGPT 和 GPT 模型有什么区别？",
+        "a": "ChatGPT 是面向用户的对话产品，GPT 是底层大模型，ChatGPT 调用 GPT 系列模型。"
+      },
+      {
+        "q": "我的对话会被用来训练模型吗？",
+        "a": "可在设置中关闭「为改进模型而训练」；企业版默认不训练。"
+      },
+      {
+        "q": "支持哪些语言？",
+        "a": "支持包括中文在内的数十种语言。"
+      },
+      {
+        "q": "有 API 吗？",
+        "a": "有，开发者可通过 OpenAI API 调用 GPT 模型。"
+      }
+    ],
+    "faqsEn": [
+      {
+        "q": "Is ChatGPT free?",
+        "a": "There is a free tier; ChatGPT Plus/Pro unlock higher quotas and more advanced models."
+      },
+      {
+        "q": "What's the difference between ChatGPT and GPT?",
+        "a": "ChatGPT is the user-facing chat product; GPT is the underlying model that ChatGPT calls."
+      },
+      {
+        "q": "Is my data used for training?",
+        "a": "You can turn off the 'improve the model' option in settings; Enterprise is off by default."
+      },
+      {
+        "q": "Which languages are supported?",
+        "a": "Dozens of languages, including Chinese."
+      },
+      {
+        "q": "Is there an API?",
+        "a": "Yes, developers can call GPT models via the OpenAI API."
+      }
+    ],
+    "company": {
+      "name": "OpenAI",
+      "nameEn": "OpenAI",
+      "location": "美国 · 旧金山",
+      "locationEn": "San Francisco, USA",
+      "officialUrl": "https://openai.com",
+      "loginUrl": "https://chatgpt.com/auth/login",
+      "signupUrl": "https://chatgpt.com/auth/login"
+    }
   },
   {
     "id": "claude",

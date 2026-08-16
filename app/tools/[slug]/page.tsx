@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { tools, getTool, getRelatedTools } from "@/lib/tools";
+import { tools, getTool, getAlternatives } from "@/lib/tools";
 import { categoryMap } from "@/data/categories";
 import { PRICING_LABEL, getToolCategories } from "@/lib/types";
 import { formatScore } from "@/lib/utils";
@@ -44,7 +44,7 @@ export default async function ToolPage({
   const cats = getToolCategories(tool)
     .map((id) => categoryMap[id])
     .filter(Boolean);
-  const related = getRelatedTools(tool);
+  const related = getAlternatives(tool);
   const screenshot = getPricingScreenshot(tool.id);
 
   return (
@@ -216,11 +216,11 @@ export default async function ToolPage({
       {/* 详情扩展：主要功能 / 如何使用 / 核心优势 / 使用环境 / 费用详情 / 收费标准截图 */}
       <ToolDetail tool={tool} screenshot={screenshot} />
 
-      {/* 相关工具 */}
+      {/* 代替品 */}
       {related.length > 0 && (
         <section className="mt-12">
           <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900">
-            <BilingualText zh="同类工具推荐" en="Similar tools" />
+            <BilingualText zh="代替品 · 同类型软件" en="Alternatives" />
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((t) => (

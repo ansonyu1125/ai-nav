@@ -45,6 +45,52 @@ export interface PricingTier {
   name: string;
   price: string;
   note?: string;
+  features?: string[]; // 该档位包含的功能权限（中文）
+  featuresEn?: string[]; // 英文，逐项对应
+}
+
+// 常见问题（详情页 FAQ）
+export interface ToolFaq {
+  q: string;
+  a: string;
+}
+
+// 公司信息（详情页）
+export interface ToolCompany {
+  name: string; // 公司名
+  nameEn?: string;
+  location: string; // 地理位置，如 "美国 · 旧金山"
+  locationEn?: string;
+  officialUrl?: string; // 公司官网（可与产品官网不同）
+  loginUrl?: string; // 登录链接
+  signupUrl?: string; // 注册链接
+}
+
+// 流量来源占比
+export interface TrafficSource {
+  name: string; // 中文，如 "直接访问"
+  nameEn?: string; // "Direct"
+  percent: number; // 0-100
+}
+
+// 流量地理分布
+export interface TrafficRegion {
+  country: string; // 中文，如 "美国"
+  countryEn?: string; // "United States"
+  percent: number; // 0-100
+}
+
+// 数据分析（官网流量/来源/地区/关键词）——数据需来自 Apify 等真实统计源
+export interface ToolTraffic {
+  monthlyVisits?: number; // 月访问量（估算）
+  visitsUnit?: string; // 单位，如 "M"、"万"
+  trend?: number; // 环比变化百分比，正负
+  sources?: TrafficSource[]; // 流量来源
+  regions?: TrafficRegion[]; // 地理分布
+  keywords?: string[]; // 热门关键词
+  savedCount?: number; // 目录站收藏数
+  rank?: number; // 目录排名
+  updatedAt?: string; // 数据更新时间，如 "2026-08"
 }
 
 export interface Tool {
@@ -86,6 +132,15 @@ export interface Tool {
   apiNameEn?: string;
   pricingTiers?: PricingTier[];
   pricingTiersEn?: PricingTier[];
+
+  // 详情页扩展内容（第二批新增）
+  useCases?: string[]; // 使用案例（中文）
+  useCasesEn?: string[]; // 使用案例（英文）
+  faqs?: ToolFaq[]; // 常见问题（中文）
+  faqsEn?: ToolFaq[]; // 常见问题（英文）
+  company?: ToolCompany; // 公司信息
+  traffic?: ToolTraffic; // 数据分析（流量/来源/地区/关键词）
+  alternatives?: string[]; // 代替品（显式指定的工具 id，缺省时按同分类自动推荐）
 }
 
 export interface Tutorial {

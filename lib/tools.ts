@@ -33,6 +33,16 @@ export function getRelatedTools(tool: Tool, limit = 6): Tool[] {
     .slice(0, limit);
 }
 
+// 代替品：优先用显式指定的 alternatives，不足再按同分类自动补齐
+export function getAlternatives(tool: Tool, limit = 6): Tool[] {
+  const explicit = (tool.alternatives ?? [])
+    .map((id) => getTool(id))
+    .filter((t): t is Tool => !!t && t.id !== tool.id);
+  const seen = new Set(explicit.map((t) => t.id));
+  const rest = getRelatedTools(tool, limit).filter((t) => !seen.has(t.id));
+  return [...explicit, ...rest].slice(0, limit);
+}
+
 export function searchTools(query: string): Tool[] {
   const q = query.trim().toLowerCase();
   if (!q) return tools;
