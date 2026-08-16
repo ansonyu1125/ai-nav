@@ -121,22 +121,26 @@ function extractJson(s: string): string {
 }
 
 async function buildArticle(item: RawItem, apiKey: string): Promise<Article> {
-  const prompt = `你是一名资深 AI 科技编辑，负责把海外英文 AI 新闻改写成一篇信息量充足的中文资讯文章，发布到 AI 导航网站。
+  const prompt = `你是一名资深 AI 科技编辑，负责把海外英文 AI 新闻改写成一篇信息量充足的资讯文章，同时提供中文和英文两个版本，发布到 AI 导航网站。
 
-请把下面这条英文资讯改写成一篇中文文章，只输出一个 JSON 对象（不要输出任何其他文字，不要用 Markdown 代码块包裹整个 JSON），字段如下：
+请把下面这条英文资讯改写，只输出一个 JSON 对象（不要输出任何其他文字，不要用 Markdown 代码块包裹整个 JSON），字段如下：
 {
   "title": "简洁有力的中文标题",
   "summary": "2-3 句中文摘要，点出核心信息",
   "content": "中文正文（Markdown 格式，用 ## 分小节）",
+  "titleEn": "Concise English title",
+  "summaryEn": "2-3 sentence English summary",
+  "contentEn": "English body (Markdown, use ## for sections)",
   "tags": ["2到4个中文标签"]
 }
 
-正文 content 必须满足以下要求（否则视为不合格）：
-1. 篇幅 600~1000 字，分 4~6 个小节，每节用 ## 标题开头。
+正文 content（中文）和 contentEn（英文）都必须满足以下要求（否则视为不合格）：
+1. 中文 600~1000 字，英文 300~500 词；各分 4~6 个小节，每节用 ## 标题开头。
 2. 必须大量摘录原文里的具体事实，让文章有信息量：关键数字、百分比、金额、价格、参数、版本号、发布日期、人名、公司名、产品名、引用的原话，都要保留并写进正文，禁止删掉或一笔带过。
 3. 严禁空话、套话，例如「本文介绍了」「具有重要意义」「值得关注」这类没有信息量的句子。
 4. 结构建议：开头直接说发生了什么（含具体数据）→ 列出原文的关键数据/细节（可用列表）→ 背景或影响 → 一句话总结。
-5. 语言面向中文读者、自然流畅；是改写概括，不是逐字直译，但数字和专有名词要准确无误。
+5. 中文面向中文读者、英文面向英文读者，各自自然流畅；是改写概括，不是逐字直译，但数字和专有名词要准确无误。
+6. 中英文两个版本是同一篇的两种语言，信息要一致，不要各写各的。
 
 只写原文确实出现的信息，不要臆造原文没有的数字或结论。
 
@@ -162,6 +166,9 @@ async function buildArticle(item: RawItem, apiKey: string): Promise<Article> {
     title,
     summary: parsed.summary || item.summary || "",
     content: parsed.content || text,
+    titleEn: (parsed.titleEn || item.title || "").trim(),
+    summaryEn: parsed.summaryEn || item.summary || "",
+    contentEn: parsed.contentEn || item.content,
     source: item.source,
     sourceUrl: item.link,
     publishedAt: new Date().toISOString(),

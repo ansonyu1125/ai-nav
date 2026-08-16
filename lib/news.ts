@@ -6,6 +6,9 @@ export interface Article {
   title: string;
   summary: string;
   content: string;
+  titleEn?: string;
+  summaryEn?: string;
+  contentEn?: string;
   source: string;
   sourceUrl: string;
   publishedAt: string;
