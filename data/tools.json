@@ -21024,5 +21024,1035 @@
       "linux"
     ],
     "lastChecked": "2026-08"
+  },
+  {
+    "id": "avoma",
+    "name": "Avoma",
+    "nameZh": "Avoma",
+    "category": "meeting",
+    "region": "overseas",
+    "description": "AI 会议与对话智能，转录、总结并分析销售通话。",
+    "descriptionEn": "AI meeting and conversation intelligence for calls, notes and insights.",
+    "officialUrl": "https://www.avoma.com",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "会议",
+      "对话智能"
+    ],
+    "tagsEn": [
+      "Meeting",
+      "Conversation"
+    ],
+    "score": 7.7,
+    "popularity": 46,
+    "emoji": "🗒️",
+    "releaseYear": 2017,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "sembly",
+    "name": "Sembly AI",
+    "nameZh": "Sembly AI",
+    "category": "meeting",
+    "region": "overseas",
+    "description": "AI 会议助手，自动记录、总结并提取行动项。",
+    "descriptionEn": "AI meeting assistant for notes, summaries and action items.",
+    "officialUrl": "https://www.sembly.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "会议",
+      "行动项"
+    ],
+    "tagsEn": [
+      "Meeting",
+      "Action items"
+    ],
+    "score": 7.6,
+    "popularity": 44,
+    "emoji": "📝",
+    "releaseYear": 2020,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "tome",
+    "name": "Tome",
+    "nameZh": "Tome",
+    "category": "slides",
+    "region": "overseas",
+    "description": "AI 叙事与演示工具，自动排版生成故事化页面。",
+    "descriptionEn": "AI storytelling and presentation tool with auto-designed pages.",
+    "officialUrl": "https://tome.app",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "演示",
+      "叙事"
+    ],
+    "tagsEn": [
+      "Presentation",
+      "Storytelling"
+    ],
+    "score": 7.8,
+    "popularity": 54,
+    "emoji": "📖",
+    "releaseYear": 2020,
+    "model": "GPT",
+    "modelEn": "GPT",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "beautiful",
+    "name": "Beautiful.ai",
+    "nameZh": "Beautiful.ai",
+    "category": "slides",
+    "region": "overseas",
+    "description": "AI 自动排版的演示文稿，智能适配内容与设计。",
+    "descriptionEn": "AI auto-layout presentations that adapt design to content.",
+    "officialUrl": "https://www.beautiful.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "演示",
+      "排版"
+    ],
+    "tagsEn": [
+      "Presentation",
+      "Layout"
+    ],
+    "score": 7.9,
+    "popularity": 56,
+    "emoji": "✨",
+    "releaseYear": 2018,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "pitch",
+    "name": "Pitch",
+    "nameZh": "Pitch",
+    "category": "slides",
+    "region": "overseas",
+    "description": "协作演示文稿工具，AI 辅助设计、模板与内容。",
+    "descriptionEn": "Collaborative presentations with AI-assisted design, templates and content.",
+    "officialUrl": "https://pitch.com",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "演示",
+      "协作"
+    ],
+    "tagsEn": [
+      "Presentation",
+      "Collaboration"
+    ],
+    "score": 7.7,
+    "popularity": 48,
+    "emoji": "🎯",
+    "releaseYear": 2018,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "slidesai",
+    "name": "SlidesAI",
+    "nameZh": "SlidesAI",
+    "category": "slides",
+    "region": "overseas",
+    "description": "AI 从文本一键生成幻灯片，集成 Google Slides。",
+    "descriptionEn": "AI that turns text into slides, integrated with Google Slides.",
+    "officialUrl": "https://www.slidesai.io",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "幻灯片",
+      "生成"
+    ],
+    "tagsEn": [
+      "Slides",
+      "Generation"
+    ],
+    "score": 7.6,
+    "popularity": 46,
+    "emoji": "🖥️",
+    "releaseYear": 2022,
+    "model": "GPT",
+    "modelEn": "GPT",
+    "platforms": [
+      "web",
+      "extension"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "decktopus",
+    "name": "Decktopus",
+    "nameZh": "Decktopus",
+    "category": "slides",
+    "region": "overseas",
+    "description": "AI 快速生成演示文稿，自动出大纲与设计。",
+    "descriptionEn": "AI presentation builder with auto outlines and design.",
+    "officialUrl": "https://www.decktopus.com",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "演示",
+      "生成"
+    ],
+    "tagsEn": [
+      "Presentation",
+      "Generation"
+    ],
+    "score": 7.5,
+    "popularity": 42,
+    "emoji": "📊",
+    "releaseYear": 2020,
+    "model": "GPT",
+    "modelEn": "GPT",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "plus-ai",
+    "name": "Plus AI",
+    "nameZh": "Plus AI",
+    "category": "slides",
+    "region": "overseas",
+    "description": "AI 幻灯片生成，直接集成 Google Slides 与 PowerPoint。",
+    "descriptionEn": "AI slide generation that integrates with Google Slides and PowerPoint.",
+    "officialUrl": "https://plus.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "幻灯片",
+      "生成"
+    ],
+    "tagsEn": [
+      "Slides",
+      "Generation"
+    ],
+    "score": 7.6,
+    "popularity": 44,
+    "emoji": "➕",
+    "releaseYear": 2023,
+    "model": "GPT",
+    "modelEn": "GPT",
+    "platforms": [
+      "web",
+      "extension"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "mem",
+    "name": "Mem",
+    "nameZh": "Mem",
+    "category": "knowledge",
+    "region": "overseas",
+    "description": "AI 笔记工具，自动整理、关联并检索你的想法。",
+    "descriptionEn": "AI notes that auto-organize, connect and retrieve your ideas.",
+    "officialUrl": "https://mem.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "笔记",
+      "AI"
+    ],
+    "tagsEn": [
+      "Notes",
+      "AI"
+    ],
+    "score": 7.8,
+    "popularity": 52,
+    "emoji": "🧠",
+    "releaseYear": 2019,
+    "model": "GPT",
+    "modelEn": "GPT",
+    "platforms": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "reflect",
+    "name": "Reflect",
+    "nameZh": "Reflect",
+    "category": "knowledge",
+    "region": "overseas",
+    "description": "AI 网络化笔记，构建第二大脑与双向链接。",
+    "descriptionEn": "AI networked notes for a second brain with backlinks.",
+    "officialUrl": "https://reflect.app",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "笔记",
+      "第二大脑"
+    ],
+    "tagsEn": [
+      "Notes",
+      "Second brain"
+    ],
+    "score": 7.7,
+    "popularity": 46,
+    "emoji": "🪞",
+    "releaseYear": 2020,
+    "model": "GPT",
+    "modelEn": "GPT",
+    "platforms": [
+      "web",
+      "macos",
+      "ios"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "rewind",
+    "name": "Rewind",
+    "nameZh": "Rewind",
+    "category": "knowledge",
+    "region": "overseas",
+    "description": "个人记忆 AI，回溯你看过、听过与输入过的一切。",
+    "descriptionEn": "Personal memory AI that replays everything you've seen, heard and typed.",
+    "officialUrl": "https://www.rewind.ai",
+    "pricing": "paid",
+    "pricingNote": "订阅制",
+    "tags": [
+      "记忆",
+      "回溯"
+    ],
+    "tagsEn": [
+      "Memory",
+      "Recall"
+    ],
+    "score": 7.9,
+    "popularity": 54,
+    "emoji": "⏪",
+    "releaseYear": 2020,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "macos"
+    ],
+    "trending": true,
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "tana",
+    "name": "Tana",
+    "nameZh": "Tana",
+    "category": "knowledge",
+    "region": "overseas",
+    "description": "强大的 AI 知识工作流工具，节点化组织与自动化。",
+    "descriptionEn": "Powerful AI knowledge workflow with node-based organization and automation.",
+    "officialUrl": "https://tana.inc",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "知识",
+      "工作流"
+    ],
+    "tagsEn": [
+      "Knowledge",
+      "Workflow"
+    ],
+    "score": 7.9,
+    "popularity": 50,
+    "emoji": "🌿",
+    "releaseYear": 2022,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web",
+      "macos"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "capacities",
+    "name": "Capacities",
+    "nameZh": "Capacities",
+    "category": "knowledge",
+    "region": "overseas",
+    "description": "对象化 AI 笔记，把信息按实体自动归类与连接。",
+    "descriptionEn": "Object-based AI notes that auto-sort and connect info by entity.",
+    "officialUrl": "https://capacities.io",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "笔记",
+      "对象化"
+    ],
+    "tagsEn": [
+      "Notes",
+      "Objects"
+    ],
+    "score": 7.6,
+    "popularity": 44,
+    "emoji": "🗂️",
+    "releaseYear": 2021,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web",
+      "macos",
+      "windows"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "heptabase",
+    "name": "Heptabase",
+    "nameZh": "Heptabase",
+    "category": "knowledge",
+    "region": "overseas",
+    "description": "视觉化知识管理与白板，把笔记卡片组织成地图。",
+    "descriptionEn": "Visual knowledge management with card-based whiteboards.",
+    "officialUrl": "https://heptabase.com",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "知识",
+      "白板"
+    ],
+    "tagsEn": [
+      "Knowledge",
+      "Whiteboard"
+    ],
+    "score": 7.7,
+    "popularity": 44,
+    "emoji": "🧩",
+    "releaseYear": 2021,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web",
+      "macos",
+      "windows"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face",
+    "nameZh": "Hugging Face",
+    "category": "mlops",
+    "region": "overseas",
+    "description": "AI 模型与数据集平台，托管、训练并部署开源模型。",
+    "descriptionEn": "AI model and dataset platform to host, train and deploy open models.",
+    "officialUrl": "https://huggingface.co",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "模型",
+      "开源"
+    ],
+    "tagsEn": [
+      "Models",
+      "Open source"
+    ],
+    "score": 8.8,
+    "popularity": 78,
+    "emoji": "🤗",
+    "releaseYear": 2016,
+    "model": "多模型",
+    "modelEn": "Multi-model",
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "verified": true,
+    "trending": true,
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "nameZh": "Replicate",
+    "category": "mlops",
+    "region": "overseas",
+    "description": "云端运行开源 AI 模型，一行代码调用图像/语音/语言模型。",
+    "descriptionEn": "Run open AI models in the cloud with one line of code.",
+    "officialUrl": "https://replicate.com",
+    "pricing": "freemium",
+    "pricingNote": "按量付费",
+    "tags": [
+      "模型部署",
+      "云端"
+    ],
+    "tagsEn": [
+      "Model deploy",
+      "Cloud"
+    ],
+    "score": 8.3,
+    "popularity": 62,
+    "emoji": "🔁",
+    "releaseYear": 2019,
+    "model": "多模型",
+    "modelEn": "Multi-model",
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "verified": true,
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "langchain",
+    "name": "LangChain",
+    "nameZh": "LangChain",
+    "category": "mlops",
+    "region": "overseas",
+    "description": "LLM 应用开发框架，编排提示、工具与 Agent。",
+    "descriptionEn": "LLM app framework for orchestrating prompts, tools and agents.",
+    "officialUrl": "https://www.langchain.com",
+    "pricing": "freemium",
+    "pricingNote": "开源 + 平台订阅",
+    "tags": [
+      "开发框架",
+      "LLM"
+    ],
+    "tagsEn": [
+      "Framework",
+      "LLM"
+    ],
+    "score": 8.5,
+    "popularity": 70,
+    "emoji": "⛓️",
+    "releaseYear": 2022,
+    "model": "多模型",
+    "modelEn": "Multi-model",
+    "platforms": [
+      "api",
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "llamaindex",
+    "name": "LlamaIndex",
+    "nameZh": "LlamaIndex",
+    "category": "mlops",
+    "region": "overseas",
+    "description": "数据框架，连接 LLM 与私有数据做检索增强生成。",
+    "descriptionEn": "Data framework connecting LLMs to private data for RAG.",
+    "officialUrl": "https://www.llamaindex.ai",
+    "pricing": "free",
+    "pricingNote": "开源免费",
+    "tags": [
+      "数据框架",
+      "RAG"
+    ],
+    "tagsEn": [
+      "Data framework",
+      "RAG"
+    ],
+    "score": 8.2,
+    "popularity": 60,
+    "emoji": "🦙",
+    "releaseYear": 2022,
+    "model": "多模型",
+    "modelEn": "Multi-model",
+    "platforms": [
+      "api",
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "pinecone",
+    "name": "Pinecone",
+    "nameZh": "Pinecone",
+    "category": "mlops",
+    "region": "overseas",
+    "description": "向量数据库，为 AI 应用提供语义检索与记忆。",
+    "descriptionEn": "Vector database for semantic search and memory in AI apps.",
+    "officialUrl": "https://www.pinecone.io",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "向量数据库",
+      "检索"
+    ],
+    "tagsEn": [
+      "Vector DB",
+      "Search"
+    ],
+    "score": 8.2,
+    "popularity": 58,
+    "emoji": "🌲",
+    "releaseYear": 2019,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "verified": true,
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "wandb",
+    "name": "Weights & Biases",
+    "nameZh": "Weights & Biases",
+    "category": "mlops",
+    "region": "overseas",
+    "description": "ML 实验跟踪与可视化，记录训练、对比模型。",
+    "descriptionEn": "ML experiment tracking and visualization for training and comparison.",
+    "officialUrl": "https://wandb.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "MLOps",
+      "实验跟踪"
+    ],
+    "tagsEn": [
+      "MLOps",
+      "Tracking"
+    ],
+    "score": 8,
+    "popularity": 54,
+    "emoji": "📈",
+    "releaseYear": 2017,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "runpod",
+    "name": "RunPod",
+    "nameZh": "RunPod",
+    "category": "mlops",
+    "region": "overseas",
+    "description": "GPU 云与 AI 推理平台，按需租用算力跑模型。",
+    "descriptionEn": "GPU cloud and AI inference for on-demand compute.",
+    "officialUrl": "https://www.runpod.io",
+    "pricing": "freemium",
+    "pricingNote": "按量付费",
+    "tags": [
+      "GPU 云",
+      "推理"
+    ],
+    "tagsEn": [
+      "GPU cloud",
+      "Inference"
+    ],
+    "score": 7.8,
+    "popularity": 50,
+    "emoji": "⚡",
+    "releaseYear": 2022,
+    "model": "多模型",
+    "modelEn": "Multi-model",
+    "platforms": [
+      "web",
+      "api"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "modal",
+    "name": "Modal",
+    "nameZh": "Modal",
+    "category": "mlops",
+    "region": "overseas",
+    "description": "无服务器 GPU 计算平台，秒级启动并弹性伸缩 AI 服务。",
+    "descriptionEn": "Serverless GPU compute that scales AI services on demand.",
+    "officialUrl": "https://modal.com",
+    "pricing": "freemium",
+    "pricingNote": "按量付费",
+    "tags": [
+      "无服务器",
+      "GPU"
+    ],
+    "tagsEn": [
+      "Serverless",
+      "GPU"
+    ],
+    "score": 7.9,
+    "popularity": 48,
+    "emoji": "🚀",
+    "releaseYear": 2021,
+    "model": "多模型",
+    "modelEn": "Multi-model",
+    "platforms": [
+      "api",
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "rabbit",
+    "name": "Rabbit R1",
+    "nameZh": "Rabbit R1",
+    "category": "hardware",
+    "region": "overseas",
+    "description": "AI 硬件助手，语音交互执行任务、查询与操作应用。",
+    "descriptionEn": "AI hardware assistant for voice-driven tasks, queries and app actions.",
+    "officialUrl": "https://www.rabbit.tech",
+    "pricing": "paid",
+    "pricingNote": "一次性购买",
+    "tags": [
+      "AI 硬件",
+      "语音助手"
+    ],
+    "tagsEn": [
+      "AI hardware",
+      "Voice"
+    ],
+    "score": 7,
+    "popularity": 46,
+    "emoji": "🐰",
+    "releaseYear": 2024,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "desktop"
+    ],
+    "verified": true,
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "limitless",
+    "name": "Limitless",
+    "nameZh": "Limitless",
+    "category": "hardware",
+    "region": "overseas",
+    "description": "AI 项链，全天候记录对话与会议并自动总结。",
+    "descriptionEn": "AI pendant that records conversations and meetings all day with summaries.",
+    "officialUrl": "https://www.limitless.ai",
+    "pricing": "paid",
+    "pricingNote": "硬件 + 订阅",
+    "tags": [
+      "AI 硬件",
+      "记录"
+    ],
+    "tagsEn": [
+      "AI hardware",
+      "Recording"
+    ],
+    "score": 7.4,
+    "popularity": 44,
+    "emoji": "📿",
+    "releaseYear": 2024,
+    "model": "多模型",
+    "modelEn": "Multi-model",
+    "platforms": [
+      "ios",
+      "macos",
+      "windows"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "friend",
+    "name": "Friend",
+    "nameZh": "Friend",
+    "category": "hardware",
+    "region": "overseas",
+    "description": "AI 陪伴吊坠，随身佩戴的对话式 AI 伙伴。",
+    "descriptionEn": "AI companion pendant — a wearable conversational AI friend.",
+    "officialUrl": "https://www.friend.com",
+    "pricing": "paid",
+    "pricingNote": "一次性购买",
+    "tags": [
+      "AI 硬件",
+      "陪伴"
+    ],
+    "tagsEn": [
+      "AI hardware",
+      "Companion"
+    ],
+    "score": 6.9,
+    "popularity": 40,
+    "emoji": "🤝",
+    "releaseYear": 2024,
+    "model": "多模型",
+    "modelEn": "Multi-model",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "trending": true,
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "plaud",
+    "name": "PLAUD Note",
+    "nameZh": "PLAUD Note",
+    "category": "hardware",
+    "region": "overseas",
+    "description": "AI 录音笔，轻巧记录并自动转录、总结会议与通话。",
+    "descriptionEn": "AI voice recorder that transcribes and summarizes meetings and calls.",
+    "officialUrl": "https://www.plaud.ai",
+    "pricing": "paid",
+    "pricingNote": "硬件 + 订阅",
+    "tags": [
+      "AI 硬件",
+      "录音笔"
+    ],
+    "tagsEn": [
+      "AI hardware",
+      "Recorder"
+    ],
+    "score": 7.6,
+    "popularity": 48,
+    "emoji": "🎙️",
+    "releaseYear": 2023,
+    "model": "GPT",
+    "modelEn": "GPT",
+    "platforms": [
+      "ios",
+      "android",
+      "desktop"
+    ],
+    "trending": true,
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "meta-rayban",
+    "name": "Ray-Ban Meta",
+    "nameZh": "Ray-Ban Meta",
+    "category": "hardware",
+    "region": "overseas",
+    "description": "AI 智能眼镜，拍照、听音乐并与 Meta AI 对话。",
+    "descriptionEn": "AI smart glasses for photos, music and chatting with Meta AI.",
+    "officialUrl": "https://www.meta.com/smart-glasses/",
+    "pricing": "paid",
+    "pricingNote": "一次性购买",
+    "tags": [
+      "智能眼镜",
+      "AI"
+    ],
+    "tagsEn": [
+      "Smart glasses",
+      "AI"
+    ],
+    "score": 7.8,
+    "popularity": 54,
+    "emoji": "🕶️",
+    "releaseYear": 2023,
+    "model": "Llama",
+    "modelEn": "Llama",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "verified": true,
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "duolingo",
+    "name": "Duolingo",
+    "nameZh": "多邻国",
+    "category": "education",
+    "region": "overseas",
+    "description": "AI 语言学习，个性化练习与 AI 角色对话。",
+    "descriptionEn": "AI language learning with personalized practice and AI conversations.",
+    "officialUrl": "https://www.duolingo.com",
+    "pricing": "freemium",
+    "pricingNote": "免费 + 订阅",
+    "tags": [
+      "语言学习",
+      "教育"
+    ],
+    "tagsEn": [
+      "Language",
+      "Education"
+    ],
+    "score": 8.2,
+    "popularity": 66,
+    "emoji": "🦉",
+    "releaseYear": 2012,
+    "model": "GPT",
+    "modelEn": "GPT",
+    "platforms": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "verified": true,
+    "trending": true,
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "numerade",
+    "name": "Numerade",
+    "nameZh": "Numerade",
+    "category": "education",
+    "region": "overseas",
+    "description": "AI 视频解题与辅导，海量习题讲解。",
+    "descriptionEn": "AI video homework help with a large library of explanations.",
+    "officialUrl": "https://www.numerade.com",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "视频解题",
+      "辅导"
+    ],
+    "tagsEn": [
+      "Video help",
+      "Tutoring"
+    ],
+    "score": 7.6,
+    "popularity": 44,
+    "emoji": "🎥",
+    "releaseYear": 2019,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "creatify",
+    "name": "Creatify",
+    "nameZh": "Creatify",
+    "category": "marketing",
+    "region": "overseas",
+    "description": "AI 视频广告生成，从链接一键生成营销短片。",
+    "descriptionEn": "AI video ad generation — turn a link into a marketing short.",
+    "officialUrl": "https://creatify.ai",
+    "pricing": "freemium",
+    "pricingNote": "免费额度 + 订阅",
+    "tags": [
+      "视频广告",
+      "营销"
+    ],
+    "tagsEn": [
+      "Video ads",
+      "Marketing"
+    ],
+    "score": 7.6,
+    "popularity": 46,
+    "emoji": "📺",
+    "releaseYear": 2023,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "persado",
+    "name": "Persado",
+    "nameZh": "Persado",
+    "category": "marketing",
+    "region": "overseas",
+    "description": "AI 营销文案优化，用数据驱动提升转化。",
+    "descriptionEn": "AI marketing language optimization driven by data to lift conversion.",
+    "officialUrl": "https://www.persado.com",
+    "pricing": "paid",
+    "pricingNote": "企业订阅",
+    "tags": [
+      "文案优化",
+      "营销"
+    ],
+    "tagsEn": [
+      "Copy",
+      "Marketing"
+    ],
+    "score": 7.5,
+    "popularity": 42,
+    "emoji": "💬",
+    "releaseYear": 2012,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "optimizely",
+    "name": "Optimizely",
+    "nameZh": "Optimizely",
+    "category": "marketing",
+    "region": "overseas",
+    "description": "实验与个性化平台，A/B 测试与 AI 优化体验。",
+    "descriptionEn": "Experimentation and personalization with A/B testing and AI optimization.",
+    "officialUrl": "https://www.optimizely.com",
+    "pricing": "paid",
+    "pricingNote": "企业订阅",
+    "tags": [
+      "A/B 测试",
+      "个性化"
+    ],
+    "tagsEn": [
+      "A/B testing",
+      "Personalization"
+    ],
+    "score": 7.8,
+    "popularity": 48,
+    "emoji": "🧪",
+    "releaseYear": 2009,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
+  },
+  {
+    "id": "mutiny",
+    "name": "Mutiny",
+    "nameZh": "Mutiny",
+    "category": "marketing",
+    "region": "overseas",
+    "description": "AI 网站个性化，为不同访客自动定制内容。",
+    "descriptionEn": "AI website personalization that tailors content per visitor.",
+    "officialUrl": "https://www.mutinyhq.com",
+    "pricing": "paid",
+    "pricingNote": "企业订阅",
+    "tags": [
+      "个性化",
+      "转化"
+    ],
+    "tagsEn": [
+      "Personalization",
+      "Conversion"
+    ],
+    "score": 7.4,
+    "popularity": 40,
+    "emoji": "🎯",
+    "releaseYear": 2018,
+    "model": "自研",
+    "modelEn": "Proprietary",
+    "platforms": [
+      "web"
+    ],
+    "lastChecked": "2026-08"
   }
 ]
