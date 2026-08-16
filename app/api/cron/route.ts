@@ -40,19 +40,32 @@ export async function GET(req: NextRequest) {
     }
   }
 
+  // 存完立刻读回，验证「写→读」是否闭环
+  let readBackCount = -1;
+  let rawGet = "";
+  let rawGetError: string | null = null;
+  if (redis) {
+    readBackCount = (await getArticles()).length;
+    try {
+      const raw = await redis.get<string>("news:articles");
+      rawGet = typeof raw === "string" ? raw.slice(0, 120) : String(raw);
+    } catch (e) {
+      rawGetError = e instanceof Error ? e.message : String(e);
+    }
+  }
+
   return Response.json({
     ok: true,
     added: generated.length,
     total: merged.length,
     skipped: items.length - fresh.length,
     diag: {
-      version: "diag-1",
-      hasRedisUrl: !!process.env.UPSTASH_REDIS_REST_URL,
-      hasRedisToken: !!process.env.UPSTASH_REDIS_REST_TOKEN,
-      hasDeepseek: !!process.env.DEEPSEEK_API_KEY,
+      version: "diag-2",
       redisConnected: redis !== null,
-      existingCount: existing.length,
       saveError,
+      readBackCount,
+      rawGet,
+      rawGetError,
     },
   });
 }
