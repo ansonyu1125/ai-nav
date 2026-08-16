@@ -15,6 +15,15 @@ export const categories: Category[] = [
   { id: "translate", name: "翻译工具", nameEn: "Translation", emoji: "🌐", description: "机器翻译与沉浸式翻译", descriptionEn: "Machine & immersive translation" },
   { id: "design", name: "设计创意", nameEn: "Design & Creative", emoji: "🖌️", description: "平面设计、UI 与创意素材", descriptionEn: "Graphic design, UI & creative assets" },
   { id: "companion", name: "角色陪伴", nameEn: "Companion AI", emoji: "💕", description: "AI 角色对话与情感陪伴", descriptionEn: "AI character chat & companionship" },
+  { id: "agent", name: "智能体 Agent", nameEn: "AI Agents", emoji: "🤖", description: "自主执行任务的 AI 智能体与多步骤工作流", descriptionEn: "Autonomous AI agents & multi-step workflows" },
+  { id: "research", name: "研究学术", nameEn: "Research", emoji: "🧪", description: "AI 学术搜索、文献综述与论文写作", descriptionEn: "AI academic search, literature review & paper writing" },
+  { id: "video-edit", name: "视频编辑", nameEn: "Video Editing", emoji: "🎞️", description: "AI 剪辑、字幕与短视频创作", descriptionEn: "AI editing, subtitles & short-video creation" },
+  { id: "automation", name: "自动化工作流", nameEn: "Automation", emoji: "⚙️", description: "无代码连接应用与 AI 自动执行任务", descriptionEn: "No-code app connections & AI task automation" },
+  { id: "pdf", name: "PDF 文档", nameEn: "PDF & Docs", emoji: "📄", description: "与 PDF/文档对话、摘要与问答", descriptionEn: "Chat with PDFs, summarization & Q&A" },
+  { id: "education", name: "教育学习", nameEn: "Education", emoji: "🎓", description: "AI 辅导、题库与语言学习", descriptionEn: "AI tutoring, quizzes & language learning" },
+  { id: "3d", name: "3D 生成", nameEn: "3D Generation", emoji: "🧊", description: "文生 3D 模型与材质生成", descriptionEn: "Text-to-3D models & material generation" },
+  { id: "marketing", name: "营销增长", nameEn: "Marketing", emoji: "📈", description: "AI 广告创意、社媒内容与增长", descriptionEn: "AI ad creative, social content & growth" },
+  { id: "data", name: "数据分析", nameEn: "Data Analysis", emoji: "🧮", description: "用自然语言做数据分析与可视化", descriptionEn: "Natural-language data analysis & visualization" },
 ];
 
 export const categoryMap: Record<string, Category> = Object.fromEntries(

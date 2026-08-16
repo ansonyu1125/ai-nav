@@ -1,5 +1,6 @@
-// 新增海内外 AI 工具：根据基础字段用 DeepSeek 生成描述 + 双语扩展内容，追加到 data/tools.json。
-// 幂等：已存在的 id 会被跳过。运行：npm run add:tools
+// 一次性扩充脚本：为 data/tools.json 追加缺失的重要 AI 工具（参考 theresanaiforthat / Futurepedia / Toolify / FutureTools 等目录），
+// 并为已有工具补充 verified / trending / lastChecked 元信息。
+// 用法：node scripts/add-tools.mjs
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -7,214 +8,217 @@ import { dirname, join } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataPath = join(__dirname, "..", "data", "tools.json");
 
-function loadEnv() {
-  try {
-    const txt = readFileSync(join(__dirname, "..", ".env.local"), "utf8");
-    for (const line of txt.split("\n")) {
-      const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/);
-      if (m && m[2] && !process.env[m[1]]) {
-        process.env[m[1]] = m[2].replace(/^["']|["']$/g, "");
-      }
-    }
-  } catch {
-    /* ignore */
-  }
-}
-loadEnv();
+// 已有工具 → 补充元信息（官方认证 / 趋势榜 / 最近核验日期）
+const metaOverrides = {
+  // 官方认证（官网或官方出品）
+  chatgpt: { verified: true, lastChecked: "2026-08" },
+  claude: { verified: true, lastChecked: "2026-08" },
+  gemini: { verified: true, lastChecked: "2026-08" },
+  deepseek: { verified: true, trending: true, lastChecked: "2026-08" },
+  kimi: { verified: true, lastChecked: "2026-08" },
+  doubao: { verified: true, lastChecked: "2026-08" },
+  wenxin: { verified: true },
+  tongyi: { verified: true, lastChecked: "2026-08" },
+  chatglm: { verified: true, lastChecked: "2026-08" },
+  yuanbao: { verified: true },
+  xinghuo: { verified: true },
+  grok: { verified: true },
+  mistral: { verified: true },
+  cohere: { verified: true },
+  midjourney: { verified: true, trending: true, lastChecked: "2026-08" },
+  dalle: { verified: true },
+  "stable-diffusion": { verified: true },
+  flux: { verified: true },
+  jimeng: { verified: true, trending: true, lastChecked: "2026-08" },
+  kling: { verified: true, trending: true, lastChecked: "2026-08" },
+  runway: { verified: true, lastChecked: "2026-08" },
+  sora: { verified: true, lastChecked: "2026-08" },
+  veo: { verified: true, lastChecked: "2026-08" },
+  hailuo: { verified: true, lastChecked: "2026-08" },
+  luma: { verified: true, lastChecked: "2026-08" },
+  ideogram: { verified: true },
+  leonardo: { verified: true },
+  firefly: { verified: true },
+  suno: { verified: true, trending: true },
+  elevenlabs: { verified: true, trending: true },
+  canva: { verified: true },
+  figma: { verified: true },
+  "notion-ai": { verified: true },
+  notebooklm: { verified: true, trending: true },
+  perplexity: { verified: true, trending: true },
+  metaso: { verified: true },
+  deepl: { verified: true },
+  cursor: { verified: true, trending: true },
+  copilot: { verified: true },
+  lovable: { verified: true, trending: true },
+  grammarly: { verified: true },
+  "nano-banana": { trending: true },
+};
 
-const API_KEY = process.env.DEEPSEEK_API_KEY;
-if (!API_KEY) {
-  console.error("缺少 DEEPSEEK_API_KEY（请在 .env.local 中配置）");
-  process.exit(1);
-}
+// 新增工具（id → 完整字段）。字段见 lib/types.ts 的 Tool 接口。
+const newTools = [
+  // ── 智能体 Agent ─────────────────────────────
+  { id: "manus", name: "Manus", nameZh: "Manus", category: "agent", categories: ["agent", "chat"], region: "domestic", description: "国产通用 AI 智能体，能自主分解并执行复杂任务，如写报告、做表格、跑数据。", descriptionEn: "China's general-purpose AI agent that autonomously plans and executes complex tasks like reports, spreadsheets and data work.", officialUrl: "https://manus.im", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["智能体", "自动化", "任务执行"], tagsEn: ["Agent", "Automation"], score: 9.2, popularity: 93, emoji: "🧠", releaseYear: 2025, model: "多模型（DeepSeek/Qwen）", modelEn: "Multi-model", platforms: ["web", "macos", "windows"], trending: true, verified: true, lastChecked: "2026-08" },
+  { id: "devin", name: "Devin", nameZh: "Devin", category: "agent", categories: ["agent", "code"], region: "overseas", description: "Cognition 出品的自主 AI 编程工程师，可独立完成代码任务、调试与部署。", descriptionEn: "Cognition's autonomous AI software engineer that independently completes coding tasks, debugging and deployment.", officialUrl: "https://devin.ai", pricing: "paid", pricingNote: "订阅制", tags: ["智能体", "编程", "自动化"], tagsEn: ["Agent", "Coding"], score: 8.6, popularity: 78, emoji: "🤖", releaseYear: 2024, model: "自研", modelEn: "Proprietary", platforms: ["web", "api"] },
+  { id: "openai-operator", name: "Operator", nameZh: "Operator", category: "agent", region: "overseas", description: "OpenAI 的浏览器操作智能体，能替你预订、下单、填表等网页任务。", descriptionEn: "OpenAI's browser agent that books, orders and fills forms on your behalf.", officialUrl: "https://operator.chatgpt.com", pricing: "freemium", pricingNote: "ChatGPT Pro 功能", tags: ["智能体", "浏览器", "OpenAI"], tagsEn: ["Agent", "Browser"], score: 8.5, popularity: 82, emoji: "🖱️", releaseYear: 2025, model: "GPT-5", modelEn: "GPT-5", platforms: ["web"] },
+  { id: "autogpt", name: "AutoGPT", nameZh: "AutoGPT", category: "agent", region: "overseas", description: "开源自主智能体平台，让 AI 制定计划并多步骤执行任务。", descriptionEn: "Open-source autonomous agent platform that lets AI plan and execute multi-step tasks.", officialUrl: "https://agpt.co", pricing: "free", pricingNote: "开源免费", tags: ["智能体", "开源"], tagsEn: ["Agent", "Open source"], score: 7.8, popularity: 60, emoji: "⚙️", releaseYear: 2023, model: "多模型", modelEn: "Multi-model", platforms: ["web"] },
 
-// 基础字段（我人工校验过的真实信息），其余字段由 DeepSeek 生成
-const NEW_TOOLS = [
-  // 对话助手
-  { id: "meta-ai", name: "Meta AI", nameZh: "Meta AI", category: "chat", region: "overseas", officialUrl: "https://www.meta.ai", pricing: "freemium", pricingNote: "免费使用", tags: ["对话", "多模态", "Llama"], emoji: "🤖", releaseYear: 2023, score: 9.0, popularity: 88 },
-  { id: "cohere", name: "Cohere", nameZh: "Cohere", category: "chat", region: "overseas", officialUrl: "https://cohere.com", pricing: "freemium", pricingNote: "免费额度 + API 按量付费", tags: ["对话", "API", "企业"], emoji: "🔮", releaseYear: 2019, score: 8.5, popularity: 70 },
-  { id: "baichuan", name: "百川智能", nameZh: "百川智能", category: "chat", region: "domestic", officialUrl: "https://www.baichuan-ai.com", pricing: "freemium", pricingNote: "免费版 + API 按量付费", tags: ["对话", "大模型", "API"], emoji: "🧠", releaseYear: 2023, score: 8.0, popularity: 62 },
-  { id: "hunyuan", name: "腾讯混元", nameZh: "腾讯混元", category: "chat", region: "domestic", officialUrl: "https://hunyuan.tencent.com", pricing: "freemium", pricingNote: "免费版 + API 付费", tags: ["对话", "多模态", "腾讯"], emoji: "🧩", releaseYear: 2023, score: 8.4, popularity: 78 },
-  { id: "sensenova", name: "商汤日日新", nameZh: "商汤日日新", category: "chat", region: "domestic", officialUrl: "https://platform.sensenova.cn", pricing: "freemium", pricingNote: "免费版 + 企业定制", tags: ["对话", "多模态", "商汤"], emoji: "🌟", releaseYear: 2023, score: 7.8, popularity: 55 },
-  { id: "ai360", name: "360 智脑", nameZh: "360 智脑", category: "chat", region: "domestic", officialUrl: "https://ai.360.cn", pricing: "freemium", pricingNote: "免费使用", tags: ["对话", "搜索", "360"], emoji: "🔵", releaseYear: 2023, score: 7.5, popularity: 60 },
+  // ── 研究学术 ─────────────────────────────
+  { id: "consensus", name: "Consensus", nameZh: "Consensus", category: "research", region: "overseas", description: "AI 学术搜索引擎，答案直接引用已发表论文，适合快速查证结论。", descriptionEn: "AI academic search engine that answers questions with citations from published papers.", officialUrl: "https://consensus.app", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["学术搜索", "论文", "研究"], tagsEn: ["Academic", "Papers"], score: 8.3, popularity: 72, emoji: "🔬", releaseYear: 2021, model: "自研 + GPT", modelEn: "Proprietary + GPT", platforms: ["web"] },
+  { id: "elicit", name: "Elicit", nameZh: "Elicit", category: "research", region: "overseas", description: "AI 文献综述助手，自动提取论文关键数据，加速研究调研。", descriptionEn: "AI literature review assistant that extracts key data from papers to speed up research.", officialUrl: "https://elicit.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["文献综述", "研究"], tagsEn: ["Literature", "Research"], score: 8.1, popularity: 66, emoji: "📑", releaseYear: 2022, model: "多模型", modelEn: "Multi-model", platforms: ["web"] },
+  { id: "scispace", name: "SciSpace", nameZh: "SciSpace", category: "research", region: "overseas", description: "论文阅读与写作助手，提供文献解析、问答与 AI 写作。", descriptionEn: "Paper reading and writing assistant with literature parsing, Q&A and AI writing.", officialUrl: "https://scispace.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["论文", "阅读", "写作"], tagsEn: ["Papers", "Reading"], score: 8.0, popularity: 70, emoji: "📄", releaseYear: 2020, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "semantic-scholar", name: "Semantic Scholar", nameZh: "Semantic Scholar", category: "research", region: "overseas", description: "免费学术文献库，用 AI 做引用分析与语义检索。", descriptionEn: "Free academic literature database with AI-powered citation analysis and semantic search.", officialUrl: "https://www.semanticscholar.org", pricing: "free", pricingNote: "免费", tags: ["学术", "文献库"], tagsEn: ["Academic", "Database"], score: 8.2, popularity: 68, emoji: "🔍", releaseYear: 2015, model: "自研", modelEn: "Proprietary", platforms: ["web", "api"] },
+  { id: "research-rabbit", name: "Research Rabbit", nameZh: "Research Rabbit", category: "research", region: "overseas", description: "可视化文献关系图谱，从一篇论文出发发现相关研究。", descriptionEn: "Visual literature mapping tool that finds related research starting from one paper.", officialUrl: "https://researchrabbitapp.com", pricing: "free", pricingNote: "免费", tags: ["文献图谱", "研究"], tagsEn: ["Mapping", "Research"], score: 7.4, popularity: 44, emoji: "🐇", releaseYear: 2021, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "scite", name: "Scite", nameZh: "Scite", category: "research", region: "overseas", description: "智能引文分析工具，标记论文引用是支持还是反驳，帮你判断可信度。", descriptionEn: "Smart citation tool that flags whether citations support or refute a claim.", officialUrl: "https://scite.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["引文分析", "论文"], tagsEn: ["Citation", "Papers"], score: 7.6, popularity: 50, emoji: "✅", releaseYear: 2018, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "connected-papers", name: "Connected Papers", nameZh: "Connected Papers", category: "research", region: "overseas", description: "输入一篇论文即可生成相关研究网络图，快速摸清一个领域。", descriptionEn: "Enter a paper and get a graph of related research to map a field quickly.", officialUrl: "https://www.connectedpapers.com", pricing: "free", pricingNote: "免费", tags: ["文献图谱", "研究"], tagsEn: ["Mapping", "Research"], score: 7.5, popularity: 52, emoji: "🕸️", releaseYear: 2020, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
 
-  // 图像生成 / 图片编辑
-  { id: "civitai", name: "Civitai", nameZh: "Civitai", category: "image", region: "overseas", officialUrl: "https://civitai.com", pricing: "freemium", pricingNote: "免费使用 + 会员订阅", tags: ["模型社区", "图像", "Stable Diffusion"], emoji: "🎨", releaseYear: 2022, score: 8.8, popularity: 82 },
-  { id: "magnific", name: "Magnific AI", nameZh: "Magnific AI", category: "image-edit", region: "overseas", officialUrl: "https://magnific.ai", pricing: "paid", pricingNote: "订阅付费", tags: ["图像放大", "增强", "修图"], emoji: "🔍", releaseYear: 2023, score: 8.2, popularity: 58 },
-  { id: "topaz-photo", name: "Topaz Photo AI", nameZh: "Topaz Photo AI", category: "image-edit", region: "overseas", officialUrl: "https://www.topazlabs.com", pricing: "paid", pricingNote: "一次性买断 / 订阅", tags: ["图像增强", "降噪", "修图"], emoji: "📷", releaseYear: 2022, score: 8.4, popularity: 66 },
-  { id: "lets-enhance", name: "Let's Enhance", nameZh: "Let's Enhance", category: "image-edit", region: "overseas", officialUrl: "https://letsenhance.io", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["图像放大", "增强"], emoji: "🖼️", releaseYear: 2019, score: 7.6, popularity: 48 },
+  // ── 视频编辑 ─────────────────────────────
+  { id: "capcut", name: "剪映 / CapCut", nameZh: "剪映", category: "video-edit", categories: ["video-edit", "video"], region: "domestic", description: "字节跳动出品的国民级剪辑工具，AI 字幕、智能抠像与一键成片。", descriptionEn: "ByteDance's hugely popular editor with AI captions, smart cutout and one-click edits.", officialUrl: "https://www.capcut.cn", pricing: "freemium", pricingNote: "免费 + 会员", tags: ["剪辑", "字幕", "短视频"], tagsEn: ["Editing", "Captions"], score: 9.4, popularity: 96, emoji: "✂️", releaseYear: 2019, model: "剪映 AI", modelEn: "CapCut AI", platforms: ["web", "ios", "android", "windows", "macos"], trending: true, verified: true, lastChecked: "2026-08" },
+  { id: "opus-clip", name: "Opus Clip", nameZh: "Opus Clip", category: "video-edit", categories: ["video-edit", "marketing"], region: "overseas", description: "把长视频自动切成爆款短视频，AI 识别高光片段并加字幕。", descriptionEn: "Turns long videos into viral short clips, auto-detecting highlights and adding captions.", officialUrl: "https://www.opus.pro", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["短视频", "剪辑", "营销"], tagsEn: ["Shorts", "Marketing"], score: 8.4, popularity: 71, emoji: "🎬", releaseYear: 2023, model: "多模型", modelEn: "Multi-model", platforms: ["web"] },
+  { id: "vizard", name: "Vizard", nameZh: "Vizard", category: "video-edit", region: "overseas", description: "AI 视频剪辑与字幕工具，长视频转竖屏短视频。", descriptionEn: "AI video editing and subtitling tool that repurposes long videos into vertical clips.", officialUrl: "https://vizard.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["剪辑", "字幕"], tagsEn: ["Editing", "Captions"], score: 7.8, popularity: 58, emoji: "🎥", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "fliki", name: "Fliki", nameZh: "Fliki", category: "video-edit", categories: ["video-edit", "voice"], region: "overseas", description: "文字一键转视频，内置 AI 配音与海量素材库。", descriptionEn: "Text-to-video in one click, with built-in AI voiceovers and a large stock library.", officialUrl: "https://fliki.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["文字转视频", "配音"], tagsEn: ["Text-to-video", "Voice"], score: 7.7, popularity: 55, emoji: "🗣️", releaseYear: 2022, model: "多模型", modelEn: "Multi-model", platforms: ["web"] },
+  { id: "pictory", name: "Pictory", nameZh: "Pictory", category: "video-edit", region: "overseas", description: "从文章或脚本自动生成营销短视频，附带字幕与配音。", descriptionEn: "Auto-generates marketing videos from articles or scripts, with captions and voiceover.", officialUrl: "https://pictory.ai", pricing: "trial", pricingNote: "试用后订阅", tags: ["文字转视频", "营销"], tagsEn: ["Text-to-video", "Marketing"], score: 7.5, popularity: 54, emoji: "🎞️", releaseYear: 2020, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "invideo", name: "InVideo", nameZh: "InVideo", category: "video-edit", region: "overseas", description: "AI 视频生成与剪辑平台，用提示词快速产出宣传片。", descriptionEn: "AI video generation and editing platform that produces promos from prompts.", officialUrl: "https://invideo.io", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["视频生成", "剪辑"], tagsEn: ["Generation", "Editing"], score: 7.9, popularity: 62, emoji: "📹", releaseYear: 2018, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "wisecut", name: "Wisecut", nameZh: "Wisecut", category: "video-edit", region: "overseas", description: "自动剪辑工具，AI 识别停顿与静音，自动加字幕和背景音乐。", descriptionEn: "Auto-editor that removes pauses and silences, adding captions and background music.", officialUrl: "https://www.wisecut.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["自动剪辑", "字幕"], tagsEn: ["Auto-edit", "Captions"], score: 7.2, popularity: 42, emoji: "✂️", releaseYear: 2021, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "clipchamp", name: "Clipchamp", nameZh: "Clipchamp", category: "video-edit", region: "overseas", description: "微软旗下在线剪辑器，内置 AI 语音转文字与自动字幕。", descriptionEn: "Microsoft's online editor with AI speech-to-text and auto-captions.", officialUrl: "https://clipchamp.com", pricing: "freemium", pricingNote: "免费 + 订阅", tags: ["剪辑", "字幕"], tagsEn: ["Editing", "Captions"], score: 7.4, popularity: 48, emoji: "🎬", releaseYear: 2020, model: "微软 AI", modelEn: "Microsoft AI", platforms: ["web", "windows"] },
 
-  // 视频生成
-  { id: "pixverse", name: "PixVerse", nameZh: "PixVerse", category: "video", region: "domestic", officialUrl: "https://pixverse.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["文生视频", "图生视频"], emoji: "🎬", releaseYear: 2023, score: 8.3, popularity: 74 },
-  { id: "genmo", name: "Genmo", nameZh: "Genmo", category: "video", region: "overseas", officialUrl: "https://www.genmo.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["文生视频", "图像"], emoji: "🎥", releaseYear: 2023, score: 7.7, popularity: 50 },
-  { id: "filmora", name: "万兴喵影", nameZh: "Filmora", category: "video", region: "domestic", officialUrl: "https://filmora.wondershare.com", pricing: "freemium", pricingNote: "免费版 + 订阅/买断", tags: ["视频剪辑", "AI", "万兴"], emoji: "🎞️", releaseYear: 2019, score: 8.2, popularity: 80 },
+  // ── 自动化工作流 ─────────────────────────────
+  { id: "zapier", name: "Zapier", nameZh: "Zapier", category: "automation", region: "overseas", description: "全球最流行的无代码自动化平台，用 AI 连接数千款应用自动执行任务。", descriptionEn: "The most popular no-code automation platform, using AI to connect thousands of apps.", officialUrl: "https://zapier.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["自动化", "无代码"], tagsEn: ["Automation", "No-code"], score: 9.0, popularity: 88, emoji: "⚡", releaseYear: 2011, model: "GPT / 多模型", modelEn: "GPT / Multi", platforms: ["web"], verified: true, lastChecked: "2026-08" },
+  { id: "make", name: "Make", nameZh: "Make", category: "automation", region: "overseas", description: "可视化工作流自动化平台（原 Integromat），拖拽搭建复杂流程。", descriptionEn: "Visual workflow automation platform (formerly Integromat) for building complex pipelines.", officialUrl: "https://www.make.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["自动化", "工作流"], tagsEn: ["Automation", "Workflow"], score: 8.6, popularity: 74, emoji: "🔗", releaseYear: 2016, model: "多模型", modelEn: "Multi-model", platforms: ["web"] },
+  { id: "n8n", name: "n8n", nameZh: "n8n", category: "automation", region: "overseas", description: "开源自动化工作流引擎，支持 AI Agent 节点，可自托管。", descriptionEn: "Open-source workflow automation engine with AI agent nodes and self-hosting.", officialUrl: "https://n8n.io", pricing: "freemium", pricingNote: "自托管免费 + 云订阅", tags: ["自动化", "开源"], tagsEn: ["Automation", "Open source"], score: 8.5, popularity: 73, emoji: "🧩", releaseYear: 2019, model: "多模型", modelEn: "Multi-model", platforms: ["web", "api"] },
+  { id: "relay-app", name: "Relay.app", nameZh: "Relay.app", category: "automation", region: "overseas", description: "现代自动化平台，AI 驱动工作流，界面简洁易上手。", descriptionEn: "Modern automation platform with AI-driven workflows and a clean interface.", officialUrl: "https://relay.app", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["自动化", "工作流"], tagsEn: ["Automation", "Workflow"], score: 7.3, popularity: 40, emoji: "🔁", releaseYear: 2023, model: "GPT", modelEn: "GPT", platforms: ["web"] },
+  { id: "latenode", name: "Latenode", nameZh: "Latenode", category: "automation", region: "overseas", description: "低代码自动化平台，用 AI 快速搭建后端与工作流。", descriptionEn: "Low-code automation platform for building backends and workflows with AI.", officialUrl: "https://latenode.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["自动化", "低代码"], tagsEn: ["Automation", "Low-code"], score: 7.1, popularity: 36, emoji: "🧩", releaseYear: 2022, model: "多模型", modelEn: "Multi-model", platforms: ["web"] },
 
-  // 数字人
-  { id: "did", name: "D-ID", nameZh: "D-ID", category: "avatar", region: "overseas", officialUrl: "https://www.d-id.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["数字人", "口播", "视频"], emoji: "🧑‍💼", releaseYear: 2017, score: 8.0, popularity: 60 },
+  // ── PDF 文档 ─────────────────────────────
+  { id: "chatpdf", name: "ChatPDF", nameZh: "ChatPDF", category: "pdf", region: "overseas", description: "上传 PDF 即可对话提问，快速提取摘要、要点与答案。", descriptionEn: "Upload a PDF and chat with it to extract summaries, key points and answers.", officialUrl: "https://www.chatpdf.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["PDF", "文档问答"], tagsEn: ["PDF", "Q&A"], score: 8.4, popularity: 70, emoji: "📄", releaseYear: 2023, model: "GPT", modelEn: "GPT", platforms: ["web"] },
+  { id: "pdf-ai", name: "PDF.ai", nameZh: "PDF.ai", category: "pdf", region: "overseas", description: "与 PDF 文档对话，支持批量上传与团队协作。", descriptionEn: "Chat with PDF documents, with batch upload and team collaboration.", officialUrl: "https://pdf.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["PDF", "文档问答"], tagsEn: ["PDF", "Q&A"], score: 7.6, popularity: 50, emoji: "📄", releaseYear: 2023, model: "GPT", modelEn: "GPT", platforms: ["web"] },
+  { id: "humata", name: "Humata", nameZh: "Humata", category: "pdf", region: "overseas", description: "AI 文档问答，把长报告变成可提问的知识库。", descriptionEn: "AI document Q&A that turns long reports into an askable knowledge base.", officialUrl: "https://www.humata.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["PDF", "问答"], tagsEn: ["PDF", "Q&A"], score: 7.5, popularity: 48, emoji: "📚", releaseYear: 2022, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "adobe-acrobat-ai", name: "Adobe Acrobat AI", nameZh: "Acrobat AI", category: "pdf", region: "overseas", description: "Acrobat 内置的 AI 助手，可摘要文档、问答与生成洞察。", descriptionEn: "Acrobat's built-in AI assistant for summarizing, Q&A and insights from documents.", officialUrl: "https://www.adobe.com/acrobat", pricing: "paid", pricingNote: "订阅制", tags: ["PDF", "Adobe"], tagsEn: ["PDF", "Adobe"], score: 8.2, popularity: 66, emoji: "📕", releaseYear: 2023, model: "Adobe AI", modelEn: "Adobe AI", platforms: ["web", "windows", "macos"], verified: true },
+  { id: "filegpt", name: "FileGPT", nameZh: "FileGPT", category: "pdf", region: "overseas", description: "与多种文件格式对话，支持 PDF、文档、网页与音视频。", descriptionEn: "Chat with many file formats including PDF, docs, web pages and audio/video.", officialUrl: "https://filegpt.app", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["PDF", "多格式"], tagsEn: ["PDF", "Multi-format"], score: 7.0, popularity: 34, emoji: "🗂️", releaseYear: 2023, model: "GPT", modelEn: "GPT", platforms: ["web"] },
 
-  // 音乐生成
-  { id: "boomy", name: "Boomy", nameZh: "Boomy", category: "music", region: "overseas", officialUrl: "https://boomy.com", pricing: "freemium", pricingNote: "免费版 + 订阅", tags: ["AI 音乐", "作曲"], emoji: "🎵", releaseYear: 2018, score: 7.4, popularity: 45 },
-  { id: "tianyin", name: "网易天音", nameZh: "网易天音", category: "music", region: "domestic", officialUrl: "https://tianyin.163.com", pricing: "freemium", pricingNote: "免费版 + 会员", tags: ["AI 音乐", "编曲", "网易"], emoji: "🎼", releaseYear: 2021, score: 7.5, popularity: 42 },
+  // ── 教育学习 ─────────────────────────────
+  { id: "khanmigo", name: "Khanmigo", nameZh: "Khanmigo", category: "education", region: "overseas", description: "可汗学院的 AI 导师，一对一辅导数学、写作与各学科。", descriptionEn: "Khan Academy's AI tutor for one-on-one help in math, writing and other subjects.", officialUrl: "https://www.khanmigo.ai", pricing: "paid", pricingNote: "订阅制", tags: ["AI 辅导", "教育"], tagsEn: ["Tutor", "Education"], score: 8.3, popularity: 64, emoji: "🎓", releaseYear: 2023, model: "GPT", modelEn: "GPT", platforms: ["web"], verified: true },
+  { id: "quizlet", name: "Quizlet", nameZh: "Quizlet", category: "education", region: "overseas", description: "知名学习工具，AI 生成闪卡、测验与学习计划。", descriptionEn: "Popular study tool with AI-generated flashcards, quizzes and study plans.", officialUrl: "https://quizlet.com", pricing: "freemium", pricingNote: "免费 + 订阅", tags: ["学习", "闪卡"], tagsEn: ["Study", "Flashcards"], score: 8.6, popularity: 78, emoji: "📚", releaseYear: 2006, model: "自研", modelEn: "Proprietary", platforms: ["web", "ios", "android"], verified: true },
+  { id: "duolingo-max", name: "Duolingo Max", nameZh: "Duolingo Max", category: "education", region: "overseas", description: "多邻国的高级 AI 功能，用 GPT 提供个性化语言练习与讲解。", descriptionEn: "Duolingo's premium AI tier with GPT-powered personalized practice and explanations.", officialUrl: "https://www.duolingo.com", pricing: "freemium", pricingNote: "免费 + Max 订阅", tags: ["语言学习", "AI 辅导"], tagsEn: ["Language", "Tutor"], score: 8.5, popularity: 76, emoji: "🦉", releaseYear: 2023, model: "GPT", modelEn: "GPT", platforms: ["web", "ios", "android"], verified: true },
+  { id: "photomath", name: "Photomath", nameZh: "Photomath", category: "education", region: "overseas", description: "拍照解题应用，识别手写公式并给出分步解答。", descriptionEn: "Photo-based math solver that reads handwritten problems and shows step-by-step solutions.", officialUrl: "https://photomath.com", pricing: "freemium", pricingNote: "免费 + 订阅", tags: ["数学", "解题"], tagsEn: ["Math", "Solver"], score: 7.9, popularity: 60, emoji: "📐", releaseYear: 2014, model: "自研", modelEn: "Proprietary", platforms: ["ios", "android", "web"] },
+  { id: "socratic", name: "Socratic", nameZh: "Socratic", category: "education", region: "overseas", description: "谷歌出品的作业辅导应用，拍照提问获得讲解。", descriptionEn: "Google's homework helper that explains answers from a photo of the question.", officialUrl: "https://socratic.org", pricing: "free", pricingNote: "免费", tags: ["作业辅导", "教育"], tagsEn: ["Homework", "Education"], score: 7.3, popularity: 46, emoji: "🧪", releaseYear: 2013, model: "Gemini", modelEn: "Gemini", platforms: ["ios", "android"] },
 
-  // 语音合成
-  { id: "murf", name: "Murf AI", nameZh: "Murf AI", category: "voice", region: "overseas", officialUrl: "https://murf.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["语音合成", "配音"], emoji: "🎙️", releaseYear: 2020, score: 8.1, popularity: 62 },
-  { id: "playht", name: "PlayHT", nameZh: "PlayHT", category: "voice", region: "overseas", officialUrl: "https://play.ht", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["语音合成", "声音克隆"], emoji: "🗣️", releaseYear: 2020, score: 8.0, popularity: 58 },
-  { id: "speechify", name: "Speechify", nameZh: "Speechify", category: "voice", region: "overseas", officialUrl: "https://speechify.com", pricing: "freemium", pricingNote: "免费版 + 订阅", tags: ["文字转语音", "朗读"], emoji: "📖", releaseYear: 2017, score: 8.3, popularity: 70 },
-  { id: "moyin", name: "魔音工坊", nameZh: "魔音工坊", category: "voice", region: "domestic", officialUrl: "https://www.moyin.com", pricing: "freemium", pricingNote: "免费版 + 付费", tags: ["配音", "语音合成", "出门问问"], emoji: "🎧", releaseYear: 2019, score: 7.6, popularity: 46 },
+  // ── 3D 生成 ─────────────────────────────
+  { id: "meshy", name: "Meshy", nameZh: "Meshy", category: "3d", region: "overseas", description: "文生 3D 与图生 3D 工具，为游戏与设计快速产出模型。", descriptionEn: "Text-to-3D and image-to-3D tool for generating models for games and design.", officialUrl: "https://www.meshy.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["3D", "文生 3D"], tagsEn: ["3D", "Text-to-3D"], score: 8.2, popularity: 65, emoji: "🧊", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "tripo", name: "Tripo", nameZh: "Tripo", category: "3d", region: "overseas", description: "高质量 AI 3D 生成，从文字或图片秒出可用的 3D 模型。", descriptionEn: "High-quality AI 3D generation, producing usable 3D models from text or images.", officialUrl: "https://www.tripo3d.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["3D", "文生 3D"], tagsEn: ["3D", "Text-to-3D"], score: 7.9, popularity: 56, emoji: "🧊", releaseYear: 2024, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "rodin", name: "Rodin", nameZh: "Rodin", category: "3d", region: "overseas", description: "Hyper3D 出品的 AI 3D 模型生成，注重材质与细节。", descriptionEn: "Hyper3D's AI 3D model generator focused on materials and detail.", officialUrl: "https://hyper3d.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["3D", "生成"], tagsEn: ["3D", "Generation"], score: 7.7, popularity: 52, emoji: "🗿", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "luma-genie", name: "Luma Genie", nameZh: "Luma Genie", category: "3d", region: "overseas", description: "Luma Labs 的文字转 3D 模型工具，一句话生成可交互 3D。", descriptionEn: "Luma Labs' text-to-3D tool that generates interactive 3D from a sentence.", officialUrl: "https://lumalabs.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["3D", "文生 3D"], tagsEn: ["3D", "Text-to-3D"], score: 8.1, popularity: 62, emoji: "✨", releaseYear: 2024, model: "Genie", modelEn: "Genie", platforms: ["web", "ios"] },
 
-  // 编程开发
-  { id: "codeium", name: "Codeium", nameZh: "Codeium", category: "code", region: "overseas", officialUrl: "https://codeium.com", pricing: "freemium", pricingNote: "免费版 + 团队/企业版", tags: ["代码补全", "AI 编程"], emoji: "💻", releaseYear: 2021, score: 8.5, popularity: 74 },
-  { id: "tabnine", name: "Tabnine", nameZh: "Tabnine", category: "code", region: "overseas", officialUrl: "https://www.tabnine.com", pricing: "freemium", pricingNote: "免费版 + Pro 订阅", tags: ["代码补全", "IDE 插件"], emoji: "⌨️", releaseYear: 2019, score: 8.0, popularity: 62 },
-  { id: "cody", name: "Sourcegraph Cody", nameZh: "Cody", category: "code", region: "overseas", officialUrl: "https://sourcegraph.com/cody", pricing: "freemium", pricingNote: "免费版 + Pro 订阅", tags: ["代码助手", "AI 编程"], emoji: "🔍", releaseYear: 2023, score: 8.2, popularity: 55 },
+  // ── 营销增长 ─────────────────────────────
+  { id: "adcreative", name: "AdCreative.ai", nameZh: "AdCreative.ai", category: "marketing", region: "overseas", description: "AI 广告创意生成，批量产出高转化率的广告素材。", descriptionEn: "AI ad creative generator that produces high-converting ad assets at scale.", officialUrl: "https://www.adcreative.ai", pricing: "trial", pricingNote: "试用后订阅", tags: ["广告创意", "营销"], tagsEn: ["Ads", "Marketing"], score: 7.8, popularity: 55, emoji: "📢", releaseYear: 2021, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "predis-ai", name: "Predis.ai", nameZh: "Predis.ai", category: "marketing", region: "overseas", description: "社媒内容生成，用 AI 做图文、短视频与排期。", descriptionEn: "Social media content generation with AI for posts, videos and scheduling.", officialUrl: "https://predis.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["社媒", "内容生成"], tagsEn: ["Social", "Content"], score: 7.5, popularity: 49, emoji: "📱", releaseYear: 2021, model: "GPT", modelEn: "GPT", platforms: ["web"] },
+  { id: "hubspot-breeze", name: "HubSpot Breeze", nameZh: "HubSpot Breeze", category: "marketing", region: "overseas", description: "HubSpot 的 AI 套件，覆盖内容生成、CRM 与客户服务。", descriptionEn: "HubSpot's AI suite covering content generation, CRM and customer service.", officialUrl: "https://www.hubspot.com", pricing: "freemium", pricingNote: "免费 + 订阅", tags: ["营销", "CRM"], tagsEn: ["Marketing", "CRM"], score: 8.2, popularity: 60, emoji: "📈", releaseYear: 2024, model: "GPT", modelEn: "GPT", platforms: ["web"], verified: true },
+  { id: "feedhive", name: "FeedHive", nameZh: "FeedHive", category: "marketing", region: "overseas", description: "AI 社媒管理与排期工具，优化发布时间与内容。", descriptionEn: "AI social media management and scheduling that optimizes timing and content.", officialUrl: "https://www.feedhive.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["社媒", "排期"], tagsEn: ["Social", "Scheduling"], score: 7.2, popularity: 38, emoji: "🐝", releaseYear: 2022, model: "GPT", modelEn: "GPT", platforms: ["web"] },
 
-  // 办公效率
-  { id: "otter", name: "Otter.ai", nameZh: "Otter.ai", category: "office", region: "overseas", officialUrl: "https://otter.ai", pricing: "freemium", pricingNote: "免费版 + Pro 订阅", tags: ["会议转写", "纪要", "实时"], emoji: "📝", releaseYear: 2016, score: 8.3, popularity: 70 },
-  { id: "fireflies", name: "Fireflies.ai", nameZh: "Fireflies.ai", category: "office", region: "overseas", officialUrl: "https://fireflies.ai", pricing: "freemium", pricingNote: "免费版 + Pro 订阅", tags: ["会议纪要", "转写"], emoji: "🐝", releaseYear: 2019, score: 8.0, popularity: 60 },
-  { id: "descript", name: "Descript", nameZh: "Descript", category: "office", region: "overseas", officialUrl: "https://www.descript.com", pricing: "freemium", pricingNote: "免费版 + 订阅", tags: ["音视频剪辑", "转写"], emoji: "✂️", releaseYear: 2017, score: 8.5, popularity: 72 },
-  { id: "iflyrec", name: "讯飞听见", nameZh: "讯飞听见", category: "office", region: "domestic", officialUrl: "https://www.iflyrec.com", pricing: "freemium", pricingNote: "免费额度 + 付费", tags: ["录音转文字", "会议", "讯飞"], emoji: "🎙️", releaseYear: 2016, score: 8.0, popularity: 55 },
+  // ── 数据分析 ─────────────────────────────
+  { id: "julius-ai", name: "Julius AI", nameZh: "Julius AI", category: "data", region: "overseas", description: "用自然语言做数据分析，上传表格即可提问、绘图与建模。", descriptionEn: "Natural-language data analysis — upload a table to ask questions, plot and model.", officialUrl: "https://julius.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["数据分析", "可视化"], tagsEn: ["Data", "Visualization"], score: 8.3, popularity: 63, emoji: "📊", releaseYear: 2023, model: "GPT", modelEn: "GPT", platforms: ["web"] },
+  { id: "numerous-ai", name: "Numerous.ai", nameZh: "Numerous.ai", category: "data", region: "overseas", description: "在 Excel / Google Sheets 里用 AI 公式处理数据。", descriptionEn: "Use AI formulas inside Excel and Google Sheets to process data.", officialUrl: "https://numerous.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["表格", "数据分析"], tagsEn: ["Spreadsheet", "Data"], score: 7.4, popularity: 42, emoji: "📈", releaseYear: 2023, model: "GPT", modelEn: "GPT", platforms: ["web", "extension"] },
+  { id: "formula-bot", name: "Formula Bot", nameZh: "Formula Bot", category: "data", region: "overseas", description: "把自然语言转成 Excel 公式，生成 VBA 与 SQL。", descriptionEn: "Converts natural language into Excel formulas, VBA and SQL.", officialUrl: "https://formulabot.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["Excel", "公式"], tagsEn: ["Excel", "Formulas"], score: 7.3, popularity: 40, emoji: "🧮", releaseYear: 2022, model: "GPT", modelEn: "GPT", platforms: ["web"] },
+  { id: "rose-ai", name: "Rose AI", nameZh: "Rose AI", category: "data", region: "overseas", description: "AI 数据可视化与搜索平台，快速生成图表与洞察。", descriptionEn: "AI data visualization and search platform for charts and insights.", officialUrl: "https://rose.ai", pricing: "paid", pricingNote: "订阅制", tags: ["可视化", "数据"], tagsEn: ["Visualization", "Data"], score: 7.1, popularity: 32, emoji: "🌹", releaseYear: 2022, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
 
-  // 写作助手
-  { id: "wordtune", name: "Wordtune", nameZh: "Wordtune", category: "writing", region: "overseas", officialUrl: "https://www.wordtune.com", pricing: "freemium", pricingNote: "免费版 + Premium 订阅", tags: ["改写", "润色"], emoji: "✍️", releaseYear: 2019, score: 8.2, popularity: 66 },
-  { id: "rytr", name: "Rytr", nameZh: "Rytr", category: "writing", region: "overseas", officialUrl: "https://rytr.me", pricing: "freemium", pricingNote: "免费版 + 订阅", tags: ["AI 写作", "文案"], emoji: "📝", releaseYear: 2021, score: 7.5, popularity: 50 },
+  // ── 数字人（补） ─────────────────────────────
+  { id: "zhipin-video", name: "腾讯智影", nameZh: "腾讯智影", category: "avatar", categories: ["avatar", "video-edit"], region: "domestic", description: "腾讯出品的数字人视频创作平台，AI 数字人口播一键成片。", descriptionEn: "Tencent's digital human video platform for AI avatar narration and one-click videos.", officialUrl: "https://zenvideo.qq.com", pricing: "freemium", pricingNote: "免费额度 + 会员", tags: ["数字人", "口播"], tagsEn: ["Avatar", "Narration"], score: 8.4, popularity: 70, emoji: "🧑‍💼", releaseYear: 2022, model: "腾讯混元", modelEn: "Hunyuan", platforms: ["web"] },
+  { id: "yizhen", name: "一帧秒创", nameZh: "一帧秒创", category: "avatar", categories: ["avatar", "video-edit"], region: "domestic", description: "AI 数字人与视频创作工具，文字快速转成数字人口播视频。", descriptionEn: "AI avatar and video creation tool that turns text into digital human videos.", officialUrl: "https://aigc.yizhentv.com", pricing: "freemium", pricingNote: "免费额度 + 会员", tags: ["数字人", "视频"], tagsEn: ["Avatar", "Video"], score: 7.4, popularity: 44, emoji: "🎬", releaseYear: 2022, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "kreado-ai", name: "Kreado AI", nameZh: "Kreado AI", category: "avatar", categories: ["avatar", "voice"], region: "overseas", description: "AI 数字人口播视频生成，支持多语言配音。", descriptionEn: "AI digital human video generation with multilingual voiceover.", officialUrl: "https://www.kreadoai.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["数字人", "多语言"], tagsEn: ["Avatar", "Multilingual"], score: 7.3, popularity: 40, emoji: "🎙️", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "colossyan", name: "Colossyan", nameZh: "Colossyan", category: "avatar", region: "overseas", description: "企业级 AI 数字人视频，用于培训与营销口播。", descriptionEn: "Enterprise AI digital human videos for training and marketing narration.", officialUrl: "https://www.colossyan.com", pricing: "trial", pricingNote: "试用后订阅", tags: ["数字人", "企业"], tagsEn: ["Avatar", "Enterprise"], score: 7.6, popularity: 46, emoji: "🧑‍💼", releaseYear: 2020, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "deepbrain", name: "DeepBrain AI", nameZh: "DeepBrain AI", category: "avatar", region: "overseas", description: "逼真数字人生成，用于口播、客服与新闻播报。", descriptionEn: "Realistic digital human generation for narration, support and news.", officialUrl: "https://www.deepbrain.io", pricing: "trial", pricingNote: "试用后订阅", tags: ["数字人", "口播"], tagsEn: ["Avatar", "Narration"], score: 7.5, popularity: 44, emoji: "🧠", releaseYear: 2016, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "rask-ai", name: "Rask AI", nameZh: "Rask AI", category: "avatar", categories: ["avatar", "translate"], region: "overseas", description: "视频翻译与配音工具，一键把视频本地化到多语言。", descriptionEn: "Video translation and dubbing tool for one-click multilingual localization.", officialUrl: "https://www.rask.ai", pricing: "trial", pricingNote: "试用后订阅", tags: ["视频翻译", "配音"], tagsEn: ["Translation", "Dubbing"], score: 7.7, popularity: 52, emoji: "🌐", releaseYear: 2023, model: "多模型", modelEn: "Multi-model", platforms: ["web"] },
+  { id: "dupdub", name: "DupDub", nameZh: "DupDub", category: "avatar", categories: ["avatar", "voice"], region: "overseas", description: "AI 配音与数字人口播，支持声音克隆。", descriptionEn: "AI voiceover and digital human narration with voice cloning.", officialUrl: "https://dupdub.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["数字人", "配音"], tagsEn: ["Avatar", "Voice"], score: 7.0, popularity: 33, emoji: "🗣️", releaseYear: 2022, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "hour-one", name: "Hour One", nameZh: "Hour One", category: "avatar", region: "overseas", description: "AI 数字人视频生成平台，主打企业培训与商务场景。", descriptionEn: "AI digital human video platform for enterprise training and business use.", officialUrl: "https://hourone.ai", pricing: "trial", pricingNote: "试用后订阅", tags: ["数字人", "企业"], tagsEn: ["Avatar", "Enterprise"], score: 7.2, popularity: 36, emoji: "🧑‍💼", releaseYear: 2019, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
 
-  // AI 搜索
-  { id: "you", name: "You.com", nameZh: "You.com", category: "search", region: "overseas", officialUrl: "https://you.com", pricing: "freemium", pricingNote: "免费版 + Pro 订阅", tags: ["AI 搜索", "问答"], emoji: "🔍", releaseYear: 2021, score: 7.8, popularity: 55 },
-  { id: "phind", name: "Phind", nameZh: "Phind", category: "search", region: "overseas", officialUrl: "https://www.phind.com", pricing: "freemium", pricingNote: "免费版 + Pro 订阅", tags: ["开发者搜索", "问答"], emoji: "👨‍💻", releaseYear: 2022, score: 8.0, popularity: 58 },
+  // ── 音乐生成（补） ─────────────────────────────
+  { id: "stable-audio", name: "Stable Audio", nameZh: "Stable Audio", category: "music", region: "overseas", description: "Stability AI 的音乐生成，用文字描述生成完整曲目与音效。", descriptionEn: "Stability AI's music generator that creates full tracks and sounds from text.", officialUrl: "https://stableaudio.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["音乐生成", "AI 作曲"], tagsEn: ["Music", "Composition"], score: 7.8, popularity: 54, emoji: "🎵", releaseYear: 2023, model: "Stable Audio", modelEn: "Stable Audio", platforms: ["web"] },
+  { id: "aiva", name: "AIVA", nameZh: "AIVA", category: "music", region: "overseas", description: "AI 作曲工具，为电影、游戏与广告生成配乐。", descriptionEn: "AI composer that creates scores for film, games and ads.", officialUrl: "https://www.aiva.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["作曲", "配乐"], tagsEn: ["Composition", "Score"], score: 7.6, popularity: 50, emoji: "🎼", releaseYear: 2016, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "soundraw", name: "Soundraw", nameZh: "Soundraw", category: "music", region: "overseas", description: "AI 生成免版税音乐，按情绪、风格与时长定制。", descriptionEn: "AI-generated royalty-free music, customizable by mood, style and length.", officialUrl: "https://soundraw.io", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["音乐", "免版税"], tagsEn: ["Music", "Royalty-free"], score: 7.4, popularity: 46, emoji: "🎹", releaseYear: 2020, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "mubert", name: "Mubert", nameZh: "Mubert", category: "music", region: "overseas", description: "AI 音乐流与生成平台，实时生成配乐与背景音乐。", descriptionEn: "AI music streaming and generation for real-time scores and background music.", officialUrl: "https://mubert.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["音乐", "背景音乐"], tagsEn: ["Music", "Background"], score: 7.3, popularity: 44, emoji: "🎧", releaseYear: 2017, model: "自研", modelEn: "Proprietary", platforms: ["web", "ios", "android"] },
+  { id: "tiangong-music", name: "天工音乐", nameZh: "天工音乐", category: "music", region: "domestic", description: "昆仑万维天工的 AI 音乐生成，中文歌词歌曲一键生成。", descriptionEn: "Kunlun Wanwei's AI music generator for one-click Chinese songs with lyrics.", officialUrl: "https://www.tiangong.cn", pricing: "free", pricingNote: "免费", tags: ["音乐生成", "中文歌曲"], tagsEn: ["Music", "Chinese"], score: 7.9, popularity: 58, emoji: "🎶", releaseYear: 2023, model: "天工", modelEn: "Tiangong", platforms: ["web", "ios", "android"] },
+  { id: "beatoven", name: "Beatoven.ai", nameZh: "Beatoven.ai", category: "music", region: "overseas", description: "AI 背景音乐生成，为视频与播客定制情绪配乐。", descriptionEn: "AI background music generator for videos and podcasts with mood-based scoring.", officialUrl: "https://www.beatoven.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["背景音乐", "配乐"], tagsEn: ["Background", "Score"], score: 7.2, popularity: 38, emoji: "🥁", releaseYear: 2021, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
 
-  // 翻译工具
-  { id: "caiyun", name: "彩云小译", nameZh: "彩云小译", category: "translate", region: "domestic", officialUrl: "https://caiyunapp.com", pricing: "freemium", pricingNote: "免费版 + 会员", tags: ["翻译", "双语对照"], emoji: "🌐", releaseYear: 2018, score: 7.6, popularity: 48 },
-  { id: "reverso", name: "Reverso", nameZh: "Reverso", category: "translate", region: "overseas", officialUrl: "https://www.reverso.net", pricing: "freemium", pricingNote: "免费版 + Premium 订阅", tags: ["翻译", "例句", "词典"], emoji: "🌐", releaseYear: 1998, score: 8.0, popularity: 62 },
+  // ── 语音合成（补） ─────────────────────────────
+  { id: "azure-speech", name: "Azure AI Speech", nameZh: "Azure 语音", category: "voice", region: "overseas", description: "微软语音服务，提供高质量 TTS、语音识别与声音定制。", descriptionEn: "Microsoft's speech service with high-quality TTS, speech recognition and voice tuning.", officialUrl: "https://azure.microsoft.com/products/ai-services/ai-speech", pricing: "freemium", pricingNote: "免费额度 + 按量付费", tags: ["语音合成", "微软"], tagsEn: ["TTS", "Microsoft"], score: 8.4, popularity: 62, emoji: "🎙️", releaseYear: 2018, model: "Azure", modelEn: "Azure", platforms: ["web", "api"], verified: true },
+  { id: "minimax-audio", name: "MiniMax Audio", nameZh: "MiniMax 语音", category: "voice", region: "domestic", description: "海螺（MiniMax）的语音合成，音色自然、支持声音克隆。", descriptionEn: "Hailuo (MiniMax) speech synthesis with natural voices and cloning.", officialUrl: "https://www.minimax.io", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["语音合成", "声音克隆"], tagsEn: ["TTS", "Cloning"], score: 8.5, popularity: 66, emoji: "🗣️", releaseYear: 2024, model: "Hailuo H3", modelEn: "Hailuo H3", platforms: ["web", "api"], lastChecked: "2026-08" },
+  { id: "volcengine-tts", name: "火山引擎语音", nameZh: "火山引擎语音", category: "voice", region: "domestic", description: "字节跳动火山引擎的语音合成服务，豆包同源音色。", descriptionEn: "ByteDance Volcano Engine TTS, powered by Doubao voices.", officialUrl: "https://www.volcengine.com", pricing: "freemium", pricingNote: "免费额度 + 按量付费", tags: ["语音合成", "字节"], tagsEn: ["TTS", "ByteDance"], score: 8.2, popularity: 60, emoji: "🎙️", releaseYear: 2021, model: "豆包 Seed", modelEn: "Doubao Seed", platforms: ["web", "api"] },
+  { id: "assemblyai", name: "AssemblyAI", nameZh: "AssemblyAI", category: "voice", region: "overseas", description: "语音识别 API，把音视频转成文字，支持说话人分离。", descriptionEn: "Speech recognition API that transcribes audio/video with speaker separation.", officialUrl: "https://www.assemblyai.com", pricing: "freemium", pricingNote: "免费额度 + 按量付费", tags: ["语音识别", "转写"], tagsEn: ["ASR", "Transcription"], score: 8.1, popularity: 58, emoji: "📝", releaseYear: 2017, model: "自研", modelEn: "Proprietary", platforms: ["web", "api"] },
+  { id: "deepgram", name: "Deepgram", nameZh: "Deepgram", category: "voice", region: "overseas", description: "低延迟语音识别 API，实时转写与语音分析。", descriptionEn: "Low-latency speech recognition API for real-time transcription and analysis.", officialUrl: "https://deepgram.com", pricing: "freemium", pricingNote: "免费额度 + 按量付费", tags: ["语音识别", "实时"], tagsEn: ["ASR", "Realtime"], score: 7.9, popularity: 52, emoji: "🎤", releaseYear: 2015, model: "自研", modelEn: "Proprietary", platforms: ["web", "api"] },
 
-  // 设计创意
-  { id: "framer", name: "Framer", nameZh: "Framer", category: "design", region: "overseas", officialUrl: "https://www.framer.com", pricing: "freemium", pricingNote: "免费版 + 订阅", tags: ["网站设计", "AI 建站"], emoji: "🖌️", releaseYear: 2015, score: 8.6, popularity: 78 },
-  { id: "spline", name: "Spline", nameZh: "Spline", category: "design", region: "overseas", officialUrl: "https://spline.design", pricing: "freemium", pricingNote: "免费版 + 订阅", tags: ["3D 设计", "AI"], emoji: "🧊", releaseYear: 2020, score: 8.1, popularity: 60 },
+  // ── 角色陪伴（补） ─────────────────────────────
+  { id: "janitor-ai", name: "Janitor.ai", nameZh: "Janitor.ai", category: "companion", region: "overseas", description: "高人气 AI 角色聊天平台，海量可自定义角色。", descriptionEn: "Popular AI character chat platform with a huge library of customizable characters.", officialUrl: "https://janitorai.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["角色", "聊天"], tagsEn: ["Character", "Chat"], score: 8.0, popularity: 70, emoji: "💬", releaseYear: 2023, model: "多模型", modelEn: "Multi-model", platforms: ["web"] },
+  { id: "candy-ai", name: "Candy.ai", nameZh: "Candy.ai", category: "companion", region: "overseas", description: "AI 虚拟伴侣应用，支持自定义形象与情感化对话。", descriptionEn: "AI virtual companion app with custom personas and emotional conversation.", officialUrl: "https://candy.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["伴侣", "角色"], tagsEn: ["Companion", "Character"], score: 7.6, popularity: 60, emoji: "🍬", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web", "ios", "android"] },
+  { id: "spicychat", name: "SpicyChat", nameZh: "SpicyChat", category: "companion", region: "overseas", description: "AI 角色聊天平台，主打沉浸式角色扮演。", descriptionEn: "AI character chat platform focused on immersive roleplay.", officialUrl: "https://spicychat.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["角色", "角色扮演"], tagsEn: ["Character", "Roleplay"], score: 7.5, popularity: 58, emoji: "🔥", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "nomi-ai", name: "Nomi AI", nameZh: "Nomi AI", category: "companion", region: "overseas", description: "注重记忆与深度陪伴的 AI 伴侣，长期关系更自然。", descriptionEn: "AI companion focused on memory and deep companionship for natural long-term bonds.", officialUrl: "https://nomi.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["伴侣", "陪伴"], tagsEn: ["Companion", "Memory"], score: 7.4, popularity: 50, emoji: "💕", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web", "ios", "android"] },
 
-  // 角色陪伴
-  { id: "xingye", name: "星野", nameZh: "星野", category: "companion", region: "domestic", officialUrl: "https://www.xingye.app", pricing: "freemium", pricingNote: "免费使用 + 内购", tags: ["角色陪伴", "互动", "MiniMax"], emoji: "💫", releaseYear: 2023, score: 7.8, popularity: 55 },
+  // ── 写作助手（补） ─────────────────────────────
+  { id: "quillbot", name: "QuillBot", nameZh: "QuillBot", category: "writing", region: "overseas", description: "改写润色与语法检查工具，支持多语言同义改写。", descriptionEn: "Paraphrasing and grammar tool with multilingual rewriting.", officialUrl: "https://quillbot.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["改写", "润色", "语法"], tagsEn: ["Paraphrase", "Grammar"], score: 8.6, popularity: 80, emoji: "✍️", releaseYear: 2017, model: "自研", modelEn: "Proprietary", platforms: ["web", "extension"] },
+  { id: "writesonic", name: "Writesonic", nameZh: "Writesonic", category: "writing", region: "overseas", description: "AI 营销文案与内容生成，覆盖博客、广告与 SEO。", descriptionEn: "AI marketing copy and content generation for blogs, ads and SEO.", officialUrl: "https://writesonic.com", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["文案", "营销"], tagsEn: ["Copywriting", "Marketing"], score: 8.0, popularity: 64, emoji: "🚀", releaseYear: 2020, model: "GPT", modelEn: "GPT", platforms: ["web"] },
+  { id: "sudowrite", name: "Sudowrite", nameZh: "Sudowrite", category: "writing", region: "overseas", description: "专为小说创作设计的 AI 写作工具，助你构建情节与人物。", descriptionEn: "AI writing tool built for fiction, helping with plot and character development.", officialUrl: "https://www.sudowrite.com", pricing: "trial", pricingNote: "试用后订阅", tags: ["小说", "创作"], tagsEn: ["Fiction", "Creative"], score: 7.7, popularity: 50, emoji: "📖", releaseYear: 2020, model: "GPT / Claude", modelEn: "GPT / Claude", platforms: ["web"] },
+  { id: "hemingway", name: "Hemingway Editor", nameZh: "Hemingway Editor", category: "writing", region: "overseas", description: "让文章更简洁清晰的写作工具，标记冗长句与被动语态。", descriptionEn: "Writing tool that makes prose clearer by flagging wordy sentences and passive voice.", officialUrl: "https://hemingwayapp.com", pricing: "freemium", pricingNote: "网页免费 + 桌面付费", tags: ["简洁写作", "校对"], tagsEn: ["Clarity", "Editing"], score: 7.6, popularity: 56, emoji: "📝", releaseYear: 2013, model: "自研", modelEn: "Proprietary", platforms: ["web", "windows", "macos"] },
+  { id: "jenni-ai", name: "Jenni AI", nameZh: "Jenni AI", category: "writing", region: "overseas", description: "学术写作助手，实时续写、引用与润色论文。", descriptionEn: "Academic writing assistant for real-time drafting, citations and polishing.", officialUrl: "https://jenni.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["学术写作", "论文"], tagsEn: ["Academic", "Papers"], score: 7.5, popularity: 48, emoji: "🎓", releaseYear: 2020, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+
+  // ── AI 搜索（补） ─────────────────────────────
+  { id: "exa", name: "Exa", nameZh: "Exa", category: "search", region: "overseas", description: "为 AI 与开发者设计的语义搜索引擎，可精确检索网页。", descriptionEn: "Semantic search engine built for AI and developers with precise web retrieval.", officialUrl: "https://exa.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["语义搜索", "开发者"], tagsEn: ["Semantic", "Developer"], score: 8.0, popularity: 58, emoji: "🔍", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web", "api"] },
+  { id: "komo", name: "Komo", nameZh: "Komo", category: "search", region: "overseas", description: "AI 搜索与问答，无广告、注重隐私。", descriptionEn: "AI search and Q&A that is ad-free and privacy-focused.", officialUrl: "https://komo.ai", pricing: "freemium", pricingNote: "免费 + 订阅", tags: ["AI 搜索", "隐私"], tagsEn: ["Search", "Privacy"], score: 7.2, popularity: 40, emoji: "🔍", releaseYear: 2022, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "brave-search", name: "Brave Search", nameZh: "Brave Search", category: "search", region: "overseas", description: "注重隐私的搜索引擎，内置 AI 摘要助手 Leo。", descriptionEn: "Privacy-focused search engine with built-in AI summarizer Leo.", officialUrl: "https://search.brave.com", pricing: "free", pricingNote: "免费", tags: ["搜索", "隐私"], tagsEn: ["Search", "Privacy"], score: 7.9, popularity: 56, emoji: "🦁", releaseYear: 2021, model: "Leo", modelEn: "Leo", platforms: ["web", "ios", "android"] },
+  { id: "felo", name: "Felo", nameZh: "Felo", category: "search", region: "overseas", description: "多语言 AI 搜索，擅长跨语言检索与信息整合。", descriptionEn: "Multilingual AI search for cross-language retrieval and information synthesis.", officialUrl: "https://felo.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["AI 搜索", "多语言"], tagsEn: ["Search", "Multilingual"], score: 7.8, popularity: 54, emoji: "🌏", releaseYear: 2023, model: "多模型", modelEn: "Multi-model", platforms: ["web", "ios", "android"] },
+
+  // ── 图像生成（补） ─────────────────────────────
+  { id: "picsart", name: "Picsart", nameZh: "Picsart", category: "image", categories: ["image", "image-edit"], region: "overseas", description: "全能图像编辑应用，AI 修图、海报与创意素材。", descriptionEn: "All-in-one image editor with AI retouching, posters and creative assets.", officialUrl: "https://picsart.com", pricing: "freemium", pricingNote: "免费 + 订阅", tags: ["修图", "海报"], tagsEn: ["Editing", "Poster"], score: 8.5, popularity: 74, emoji: "📸", releaseYear: 2012, model: "自研", modelEn: "Proprietary", platforms: ["web", "ios", "android"] },
+  { id: "freepik", name: "Freepik", nameZh: "Freepik", category: "image", region: "overseas", description: "设计素材库，AI 图像生成与海量矢量、图片素材。", descriptionEn: "Design asset library with AI image generation and a huge stock collection.", officialUrl: "https://www.freepik.com", pricing: "freemium", pricingNote: "免费 + 订阅", tags: ["素材", "图像生成"], tagsEn: ["Assets", "Generation"], score: 8.2, popularity: 68, emoji: "🖼️", releaseYear: 2010, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "niji-journey", name: "Niji Journey", nameZh: "Niji Journey", category: "image", region: "overseas", description: "Midjourney 团队出品的二次元/动漫画风 AI 绘图。", descriptionEn: "Midjourney's anime-focused AI image generator for anime/manga styles.", officialUrl: "https://nijijourney.com", pricing: "freemium", pricingNote: "订阅制", tags: ["二次元", "动漫"], tagsEn: ["Anime", "Manga"], score: 8.6, popularity: 70, emoji: "🌸", releaseYear: 2022, model: "Niji (MJ)", modelEn: "Niji (MJ)", platforms: ["web"] },
+  { id: "comfyui", name: "ComfyUI", nameZh: "ComfyUI", category: "image", region: "overseas", description: "开源的节点式 AI 绘图工作流，精细控制 Stable Diffusion / FLUX。", descriptionEn: "Open-source node-based image workflow for precise control over Stable Diffusion / FLUX.", officialUrl: "https://www.comfy.org", pricing: "free", pricingNote: "开源免费", tags: ["开源", "工作流"], tagsEn: ["Open source", "Workflow"], score: 8.8, popularity: 72, emoji: "🧩", releaseYear: 2023, model: "SD / FLUX", modelEn: "SD / FLUX", platforms: ["web", "desktop"] },
+
+  // ── 图片编辑（补） ─────────────────────────────
+  { id: "pixelcut", name: "Pixelcut", nameZh: "Pixelcut", category: "image-edit", region: "overseas", description: "AI 电商图片工具，一键去背景、抠图与做商品图。", descriptionEn: "AI e-commerce image tool for background removal, cutouts and product shots.", officialUrl: "https://pixelcut.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["去背景", "电商"], tagsEn: ["Remove BG", "E-commerce"], score: 7.8, popularity: 52, emoji: "✂️", releaseYear: 2021, model: "自研", modelEn: "Proprietary", platforms: ["web", "ios", "android"] },
+  { id: "clipdrop", name: "Clipdrop", nameZh: "Clipdrop", category: "image-edit", categories: ["image-edit", "image"], region: "overseas", description: "Jasper 旗下的 AI 图像编辑套件，抠图、放大与光效重打。", descriptionEn: "Jasper's AI image editing suite for cutouts, upscaling and relighting.", officialUrl: "https://clipdrop.co", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["抠图", "放大"], tagsEn: ["Cutout", "Upscale"], score: 7.9, popularity: 56, emoji: "✨", releaseYear: 2022, model: "多模型", modelEn: "Multi-model", platforms: ["web", "ios"] },
+
+  // ── 编程开发（补） ─────────────────────────────
+  { id: "warp", name: "Warp", nameZh: "Warp", category: "code", region: "overseas", description: "AI 加持的现代终端，自然语言命令与智能补全。", descriptionEn: "AI-powered modern terminal with natural-language commands and smart completion.", officialUrl: "https://www.warp.dev", pricing: "freemium", pricingNote: "免费 + 订阅", tags: ["终端", "AI 命令"], tagsEn: ["Terminal", "AI CLI"], score: 8.2, popularity: 60, emoji: "🖥️", releaseYear: 2021, model: "多模型", modelEn: "Multi-model", platforms: ["macos", "linux"] },
+  { id: "amazon-q", name: "Amazon Q Developer", nameZh: "Amazon Q", category: "code", region: "overseas", description: "亚马逊的 AI 编程助手，补全代码与解答 AWS 相关开发问题。", descriptionEn: "Amazon's AI coding assistant for completion and AWS development help.", officialUrl: "https://aws.amazon.com/q/developer", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["编程", "AWS"], tagsEn: ["Coding", "AWS"], score: 7.8, popularity: 54, emoji: "☁️", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web", "extension"] },
+  { id: "zed", name: "Zed", nameZh: "Zed", category: "code", region: "overseas", description: "高性能开源代码编辑器，内置 AI 助手与多人协作。", descriptionEn: "High-performance open-source code editor with built-in AI assistant and collaboration.", officialUrl: "https://zed.dev", pricing: "free", pricingNote: "开源免费", tags: ["编辑器", "开源"], tagsEn: ["Editor", "Open source"], score: 8.0, popularity: 52, emoji: "⚡", releaseYear: 2023, model: "多模型", modelEn: "Multi-model", platforms: ["macos", "linux", "windows"] },
+
+  // ── 办公效率（补） ─────────────────────────────
+  { id: "fathom", name: "Fathom", nameZh: "Fathom", category: "office", region: "overseas", description: "免费 AI 会议记录，自动转录、总结并同步 CRM。", descriptionEn: "Free AI meeting recorder that transcribes, summarizes and syncs to CRM.", officialUrl: "https://fathom.video", pricing: "free", pricingNote: "免费", tags: ["会议记录", "转录"], tagsEn: ["Meetings", "Transcription"], score: 8.3, popularity: 62, emoji: "📹", releaseYear: 2020, model: "自研", modelEn: "Proprietary", platforms: ["web", "macos", "windows"] },
+  { id: "read-ai", name: "Read.ai", nameZh: "Read.ai", category: "office", region: "overseas", description: "AI 会议摘要与协作，自动生成行动项与周报。", descriptionEn: "AI meeting summaries and collaboration with auto action items and recaps.", officialUrl: "https://www.read.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["会议", "摘要"], tagsEn: ["Meetings", "Summary"], score: 7.9, popularity: 56, emoji: "📊", releaseYear: 2021, model: "自研", modelEn: "Proprietary", platforms: ["web", "extension"] },
+  { id: "tldv", name: "tl;dv", nameZh: "tl;dv", category: "office", region: "overseas", description: "会议录制与 AI 摘要，标注高光时刻便于回看。", descriptionEn: "Meeting recording and AI summaries with highlights for easy review.", officialUrl: "https://tldv.io", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["会议", "录制"], tagsEn: ["Meetings", "Recording"], score: 7.7, popularity: 50, emoji: "🎥", releaseYear: 2020, model: "自研", modelEn: "Proprietary", platforms: ["web"] },
+  { id: "granola", name: "Granola", nameZh: "Granola", category: "office", region: "overseas", description: "AI 会议笔记，把你的速记扩充成完整清晰的纪要。", descriptionEn: "AI meeting notes that expand your quick notes into full, clear summaries.", officialUrl: "https://www.granola.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["会议笔记", "摘要"], tagsEn: ["Notes", "Summary"], score: 7.8, popularity: 52, emoji: "🥣", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["macos"] },
+  { id: "mem-ai", name: "Mem", nameZh: "Mem", category: "office", region: "overseas", description: "AI 笔记与第二大脑，自动整理并连接你的知识。", descriptionEn: "AI note-taking and second brain that auto-organizes and connects your knowledge.", officialUrl: "https://get.mem.ai", pricing: "freemium", pricingNote: "免费额度 + 订阅", tags: ["笔记", "第二大脑"], tagsEn: ["Notes", "Second brain"], score: 7.6, popularity: 48, emoji: "🧠", releaseYear: 2019, model: "自研", modelEn: "Proprietary", platforms: ["web", "ios"] },
+
+  // ── 对话助手（补） ─────────────────────────────
+  { id: "pi", name: "Pi", nameZh: "Pi", category: "chat", region: "overseas", description: "Inflection 出品的情感化 AI 助手，对话温暖自然。", descriptionEn: "Inflection's empathetic AI assistant with warm, natural conversation.", officialUrl: "https://pi.ai", pricing: "free", pricingNote: "免费", tags: ["对话", "情感陪伴"], tagsEn: ["Chat", "Empathetic"], score: 7.4, popularity: 44, emoji: "🤗", releaseYear: 2023, model: "自研", modelEn: "Proprietary", platforms: ["web", "ios", "android"] },
 ];
 
-const PLATFORM_KEYS = ["web", "macos", "windows", "linux", "ios", "android", "api", "extension", "desktop", "wechat"];
+const tools = JSON.parse(readFileSync(dataPath, "utf8"));
+const existing = new Set(tools.map((t) => t.id));
 
-const SYSTEM = `你是一名严谨的 AI 产品信息整理助手。根据给定的 AI 软件基础信息，生成该软件的介绍文案与详情页扩展内容，全部用简体中文和英文双语输出。
-
-要求：
-1. description：中文简介，50~80 字，概括定位与核心能力。
-2. descriptionEn：英文简介，与中文对应。
-3. tagsEn：英文标签数组，与给定的中文 tags 逐项对应。
-4. pricingNoteEn：英文费用说明，与给定 pricingNote 对应。
-5. features / featuresEn：主要功能，各 4~6 条，每条简短（10~25 字）。
-6. howToUse / howToUseEn：如何使用，各 3~5 个步骤，按先后顺序，简洁可执行。
-7. advantages / advantagesEn：核心优势，各 3~5 条。
-8. platforms：使用环境，只能从以下词汇中选取，且只选真实支持的平台：${PLATFORM_KEYS.join("、")}。
-   （web=网页版、macos、windows、linux、ios、android、api=提供API接口、extension=浏览器插件、desktop=桌面客户端、wechat=微信小程序）拿不准不要选。
-9. apiName / apiNameEn：该软件提供的官方 API 接口名称；若没有公开 API 则输出空字符串 ""。
-10. pricingTiers / pricingTiersEn：费用详细列表，2~5 档，每档 { name, price, note }；price 写具体价格，拿不准用"约/起"并注明以官网为准。pricingTiers 中文、pricingTiersEn 英文，逐项对应、数量一致。
-
-务必基于真实、公开信息作答，不要编造平台或价格；拿不准就保守省略或注明"以官网为准"。
-
-只输出一个 JSON 对象，结构严格为：
-{
-  "description": "...",
-  "descriptionEn": "...",
-  "tagsEn": ["..."],
-  "pricingNoteEn": "...",
-  "features": ["..."],
-  "featuresEn": ["..."],
-  "howToUse": ["..."],
-  "howToUseEn": ["..."],
-  "advantages": ["..."],
-  "advantagesEn": ["..."],
-  "platforms": ["web"],
-  "apiName": "...",
-  "apiNameEn": "...",
-  "pricingTiers": [{ "name": "...", "price": "...", "note": "..." }],
-  "pricingTiersEn": [{ "name": "...", "price": "...", "note": "..." }]
-}`;
-
-async function gen(base) {
-  const user = JSON.stringify({
-    name: base.name,
-    nameZh: base.nameZh,
-    officialUrl: base.officialUrl,
-    pricing: base.pricing,
-    pricingNote: base.pricingNote,
-    tags: base.tags,
-    region: base.region,
-    releaseYear: base.releaseYear,
-  });
-
-  const res = await fetch("https://api.deepseek.com/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "deepseek-chat",
-      messages: [
-        { role: "system", content: SYSTEM },
-        { role: "user", content: user },
-      ],
-      temperature: 0.3,
-      response_format: { type: "json_object" },
-      max_tokens: 2600,
-    }),
-  });
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`HTTP ${res.status}: ${text.slice(0, 200)}`);
-  }
-
-  const data = await res.json();
-  const content = data.choices?.[0]?.message?.content ?? "";
-  const json = content.replace(/^```json\s*/i, "").replace(/\s*```\s*$/, "").trim();
-  const r = JSON.parse(json);
-
-  // 规范化
-  r.tagsEn = Array.isArray(r.tagsEn) ? r.tagsEn : [];
-  r.features = r.features ?? [];
-  r.featuresEn = r.featuresEn ?? [];
-  r.howToUse = r.howToUse ?? [];
-  r.howToUseEn = r.howToUseEn ?? [];
-  r.advantages = r.advantages ?? [];
-  r.advantagesEn = r.advantagesEn ?? [];
-  r.platforms = (r.platforms ?? []).filter((p) => PLATFORM_KEYS.includes(p));
-  r.apiName = r.apiName ?? "";
-  r.apiNameEn = r.apiNameEn ?? "";
-  r.pricingTiers = r.pricingTiers ?? [];
-  r.pricingTiersEn = r.pricingTiersEn ?? [];
-  return r;
+// 1) 为已有工具补充元信息
+let metaChanged = 0;
+for (const t of tools) {
+  const m = metaOverrides[t.id];
+  if (!m) continue;
+  if (m.verified !== undefined) t.verified = m.verified;
+  if (m.trending !== undefined) t.trending = m.trending;
+  if (m.lastChecked !== undefined) t.lastChecked = m.lastChecked;
+  metaChanged++;
 }
 
-async function run() {
-  const tools = JSON.parse(readFileSync(dataPath, "utf8"));
-  const existing = new Set(tools.map((t) => t.id));
-  const todo = NEW_TOOLS.filter((t) => !existing.has(t.id));
-  console.log(`待新增 ${todo.length} 个（已存在 ${NEW_TOOLS.length - todo.length} 个被跳过）`);
-
-  let added = 0;
-  let failed = 0;
-  const persist = () => writeFileSync(dataPath, JSON.stringify(tools, null, 2) + "\n");
-
-  for (const base of todo) {
-    try {
-      const r = await gen(base);
-      tools.push({ ...base, ...r });
-      added++;
-      console.log(`✓ [${added}/${todo.length}] ${base.name}`);
-    } catch (e) {
-      failed++;
-      console.error(`✗ ${base.name}: ${e.message}`);
-    }
-    persist();
+// 2) 追加新工具（跳过重复 id）
+let added = 0;
+const skipped = [];
+for (const nt of newTools) {
+  if (existing.has(nt.id)) {
+    skipped.push(nt.id);
+    continue;
   }
-
-  persist();
-  console.log(`完成：新增 ${added}，失败 ${failed}。当前共 ${tools.length} 个工具。`);
+  tools.push(nt);
+  added++;
 }
 
-run().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+writeFileSync(dataPath, JSON.stringify(tools, null, 2) + "\n", "utf8");
+console.log(`meta updated: ${metaChanged}`);
+console.log(`added: ${added} new tools`);
+if (skipped.length) console.log(`skipped (dup): ${skipped.join(", ")}`);
+console.log(`total: ${tools.length} tools`);

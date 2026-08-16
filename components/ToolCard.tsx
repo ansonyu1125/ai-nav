@@ -29,8 +29,18 @@ export default function ToolCard({ tool }: { tool: Tool }) {
         </div>
       </div>
 
-      <h3 className="mt-4 font-semibold text-slate-900 group-hover:text-indigo-600">
-        {tool.name}
+      <h3 className="mt-4 flex items-center gap-1.5 font-semibold text-slate-900 group-hover:text-indigo-600">
+        <span className="truncate">{tool.name}</span>
+        {tool.verified && (
+          <span
+            title={localize(lang, "官方认证", "Verified")}
+            className="inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-white"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" className="h-3 w-3">
+              <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
+            </svg>
+          </span>
+        )}
       </h3>
       {tool.model && (
         <div className="mt-0.5 text-xs font-medium text-indigo-600">
@@ -58,6 +68,11 @@ export default function ToolCard({ tool }: { tool: Tool }) {
               {pricing.startingPrice ?? localize(lang, "定制 / 联系官网", "Custom")}
             </span>
           </>
+        )}
+        {tool.lastChecked && (
+          <span className="ml-auto text-slate-400">
+            {localize(lang, `更新 ${tool.lastChecked}`, `Updated ${tool.lastChecked}`)}
+          </span>
         )}
       </div>
 

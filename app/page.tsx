@@ -15,11 +15,12 @@ import { BilingualText } from "@/components/Bilingual";
 export default function HomePage() {
   const featured = getFeaturedTools();
   const hot = topTools("popularity", 8);
+  const trending = tools.filter((t) => t.trending).slice(0, 8);
   const stats = [
-    { label: "收录工具", labelEn: "Tools", value: tools.length },
-    { label: "工具分类", labelEn: "Categories", value: categories.length },
-    { label: "AI 教程", labelEn: "Tutorials", value: tutorials.length },
-    { label: "术语词条", labelEn: "Glossary", value: glossary.length },
+    { label: "收录工具", labelEn: "Tools", value: tools.length, emoji: "🧰" },
+    { label: "工具分类", labelEn: "Categories", value: categories.length, emoji: "🗂️" },
+    { label: "AI 教程", labelEn: "Tutorials", value: tutorials.length, emoji: "📚" },
+    { label: "术语词条", labelEn: "Glossary", value: glossary.length, emoji: "📖" },
   ];
 
   return (
@@ -27,6 +28,16 @@ export default function HomePage() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-indigo-50/70 to-white">
         <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6 sm:py-24">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-indigo-600 shadow-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-500"></span>
+            </span>
+            <BilingualText
+              zh={`已收录 ${tools.length} 款 AI 工具，持续更新`}
+              en={`${tools.length} AI tools and counting`}
+            />
+          </span>
           <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             <BilingualText zh={site.tagline} en={site.taglineEn} />
           </h1>
@@ -40,8 +51,11 @@ export default function HomePage() {
 
           <div className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-4 sm:grid-cols-4">
             {stats.map((s) => (
-              <div key={s.label} className="rounded-2xl border border-slate-200 bg-white px-4 py-3">
-                <div className="text-2xl font-bold text-indigo-600">{s.value}</div>
+              <div key={s.label} className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-left">
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-indigo-600">{s.value}</div>
+                  <span className="text-2xl">{s.emoji}</span>
+                </div>
                 <div className="mt-0.5 text-sm text-slate-500">
                   <BilingualText zh={s.label} en={s.labelEn} />
                 </div>
@@ -50,6 +64,24 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 正在爆火 */}
+      {trending.length > 0 && (
+        <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <SectionHeading
+            title="正在爆火"
+            titleEn="Hot right now"
+            subtitle="编辑甄选，近期最值得关注的 AI 工具"
+            subtitleEn="Editor-curated AI tools everyone is talking about"
+            href="/ranking?metric=popularity"
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {trending.map((t) => (
+              <ToolCard key={t.id} tool={t} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* 场景导航 */}
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">

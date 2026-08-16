@@ -73,6 +73,14 @@ export default async function ToolPage({
               </h1>
               <RegionBadge region={tool.region} />
               <PricingBadge pricing={tool.pricing} />
+              {tool.verified && (
+                <span className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-600">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5">
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
+                  </svg>
+                  <BilingualText zh="官方认证" en="Verified" />
+                </span>
+              )}
             </div>
             {tool.nameZh && tool.nameZh !== tool.name && (
               <ZhOnlyText zh={tool.nameZh} className="mt-1 text-slate-500" />
@@ -192,6 +200,14 @@ export default async function ToolPage({
               />
             ) : (
               "—"
+            )}
+            {tool.lastChecked && (
+              <div className="mt-0.5 text-xs font-normal text-slate-400">
+                <BilingualText
+                  zh={`更新 ${tool.lastChecked}`}
+                  en={`Updated ${tool.lastChecked}`}
+                />
+              </div>
             )}
           </div>
         </div>
