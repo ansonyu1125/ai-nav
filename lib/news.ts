@@ -57,6 +57,13 @@ export async function saveArticles(articles: Article[]): Promise<void> {
   }
 }
 
+export async function clearArticles(): Promise<void> {
+  const redis = getRedis();
+  if (redis) {
+    await redis.del(KV_KEY);
+  }
+}
+
 export async function getArticle(slug: string): Promise<Article | undefined> {
   const all = await getArticles();
   return all.find((a) => a.slug === slug);

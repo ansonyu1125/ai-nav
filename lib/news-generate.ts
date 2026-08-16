@@ -62,11 +62,13 @@ async function callDeepSeek(user: string, apiKey: string): Promise<string> {
 }
 
 function slugify(s: string): string {
-  return s
+  // 只保留英文/数字，避免中文进入 URL 导致详情页路由对不上（404）
+  const ascii = s
     .toLowerCase()
-    .replace(/[^a-z0-9一-龥]+/g, "-")
+    .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 40);
+  return ascii || "news";
 }
 
 function shortHash(s: string): string {
