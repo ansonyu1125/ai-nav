@@ -7,8 +7,9 @@ export const maxDuration = 60;
 
 // 由 Vercel Cron 定时调用（见 vercel.json）。也可手动访问 /api/cron 测试。
 export async function GET(req: NextRequest) {
+  // fail-closed：没配 CRON_SECRET 也直接拒绝，避免漏配时接口裸奔
   const secret = process.env.CRON_SECRET;
-  if (secret && req.headers.get("authorization") !== `Bearer ${secret}`) {
+  if (!secret || req.headers.get("authorization") !== `Bearer ${secret}`) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 
