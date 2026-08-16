@@ -699,7 +699,7 @@
     "featured": false,
     "emoji": "📜",
     "releaseYear": 2023,
-    "logo": "/logos/wenxin.ico",
+    "logo": "/logos/wenxin.svg",
     "region": "domestic",
     "descriptionEn": "A Chinese large model assistant launched by Baidu, based on the ERNIE model, deeply rooted in Chinese semantics and knowledge enhancement.",
     "tagsEn": [
@@ -1244,7 +1244,7 @@
     "featured": false,
     "emoji": "🖼️",
     "releaseYear": 2023,
-    "logo": "/logos/dalle.png",
+    "logo": "/logos/dalle.svg",
     "region": "overseas",
     "descriptionEn": "OpenAI's image generation model, integrated into ChatGPT, excels at understanding natural language prompts and generating high-quality images.",
     "tagsEn": [
@@ -1905,7 +1905,7 @@
     "featured": true,
     "emoji": "🎥",
     "releaseYear": 2024,
-    "logo": "/logos/sora.png",
+    "logo": "/logos/sora.svg",
     "region": "overseas",
     "descriptionEn": "OpenAI's text-to-video model that can generate high-quality videos up to one minute long, setting the benchmark in the video generation field.",
     "tagsEn": [
@@ -9982,7 +9982,7 @@
     "emoji": "📋",
     "releaseYear": 2021,
     "region": "overseas",
-    "logo": "/logos/figjam.svg",
+    "logo": "/logos/figjam.png",
     "descriptionEn": "An online collaborative whiteboard by Figma, featuring AI-generated sticky notes, summaries, and flowcharts.",
     "tagsEn": [
       "whiteboard",
