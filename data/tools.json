@@ -19,7 +19,14 @@
     "emoji": "🤖",
     "releaseYear": 2022,
     "logo": "/logos/chatgpt.svg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A conversational AI assistant launched by OpenAI, based on the GPT series of large models, supporting dialogue, writing, coding, image understanding and generation, and is one of the most widely used AI products globally.",
+    "tagsEn": [
+      "Conversation",
+      "Writing",
+      "GPT"
+    ],
+    "pricingNoteEn": "Free tier + Plus/Pro subscription"
   },
   {
     "id": "claude",
@@ -41,7 +48,14 @@
     "emoji": "🧠",
     "releaseYear": 2023,
     "logo": "/logos/claude.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An AI assistant from Anthropic, known for its long context, reasoning, and coding capabilities. Claude Code and Artifacts are highly popular among developers.",
+    "tagsEn": [
+      "Conversation",
+      "Programming",
+      "Long Context"
+    ],
+    "pricingNoteEn": "Free tier + Pro subscription"
   },
   {
     "id": "gemini",
@@ -63,7 +77,14 @@
     "emoji": "✨",
     "releaseYear": 2023,
     "logo": "/logos/gemini.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A multimodal large model assistant launched by Google, deeply integrated with Google Search, Gmail, and Workspace, with strong multimodal understanding capabilities.",
+    "tagsEn": [
+      "multimodal",
+      "search",
+      "conversation"
+    ],
+    "pricingNoteEn": "Free tier + Google AI Pro"
   },
   {
     "id": "deepseek",
@@ -85,7 +106,14 @@
     "emoji": "🐋",
     "releaseYear": 2023,
     "logo": "/logos/deepseek.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An open-source large model launched by DeepSeek, with strong reasoning capabilities, extremely low API prices, and support for web search and deep thinking modes.",
+    "tagsEn": [
+      "Reasoning",
+      "Open Source",
+      "Code"
+    ],
+    "pricingNoteEn": "Completely free"
   },
   {
     "id": "kimi",
@@ -107,7 +135,14 @@
     "emoji": "🌙",
     "releaseYear": 2023,
     "logo": "/logos/kimi.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A Chinese AI assistant by Moonshot AI, known for its ultra-long context, supporting multi-file upload and web search.",
+    "tagsEn": [
+      "Long Context",
+      "Chinese",
+      "Document"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "doubao",
@@ -129,7 +164,14 @@
     "emoji": "🫘",
     "releaseYear": 2023,
     "logo": "/logos/doubao.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "AI assistant from ByteDance, with strong multimodal capabilities, supporting voice conversations, image generation, and intelligent agents. Free and easy to use.",
+    "tagsEn": [
+      "multimodal",
+      "voice",
+      "image"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "wenxin",
@@ -151,7 +193,14 @@
     "emoji": "📜",
     "releaseYear": 2023,
     "logo": "/logos/wenxin.ico",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A Chinese large model assistant launched by Baidu, based on the ERNIE model, deeply rooted in Chinese semantics and knowledge enhancement.",
+    "tagsEn": [
+      "Chinese",
+      "Knowledge",
+      "Dialogue"
+    ],
+    "pricingNoteEn": "Free version + Membership"
   },
   {
     "id": "tongyi",
@@ -173,7 +222,14 @@
     "emoji": "☁️",
     "releaseYear": 2023,
     "logo": "/logos/tongyi.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An all-purpose AI assistant launched by Alibaba Cloud, covering conversation, office work, creation, and coding, deeply integrated with the Alibaba ecosystem.",
+    "tagsEn": [
+      "Conversation",
+      "Office",
+      "Multimodal"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "chatglm",
@@ -195,7 +251,14 @@
     "emoji": "🔮",
     "releaseYear": 2023,
     "logo": "/logos/chatglm.ico",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A conversational assistant launched by Zhipu AI, based on the GLM series models, supporting agents, video understanding, and multi-turn dialogue.",
+    "tagsEn": [
+      "Dialogue",
+      "Agent",
+      "Open Source"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "yuanbao",
@@ -217,7 +280,14 @@
     "emoji": "💎",
     "releaseYear": 2024,
     "logo": "/logos/yuanbao.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "AI assistant launched by Tencent, integrated with the WeChat ecosystem, supporting official account content search and multimodal Q&A.",
+    "tagsEn": [
+      "WeChat ecosystem",
+      "multimodal",
+      "search"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "midjourney",
@@ -239,7 +309,14 @@
     "emoji": "🎨",
     "releaseYear": 2022,
     "logo": "/logos/midjourney.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "One of the most popular text-to-image tools, known for its artistic quality and aesthetic style, accessible via Discord or web.",
+    "tagsEn": [
+      "text-to-image",
+      "art",
+      "stylized"
+    ],
+    "pricingNoteEn": "Subscription-based (from about $10/month)"
   },
   {
     "id": "dalle",
@@ -261,7 +338,14 @@
     "emoji": "🖼️",
     "releaseYear": 2023,
     "logo": "/logos/dalle.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "OpenAI's image generation model, integrated into ChatGPT, excels at understanding natural language prompts and generating high-quality images.",
+    "tagsEn": [
+      "Text-to-Image",
+      "OpenAI",
+      "Multimodal"
+    ],
+    "pricingNoteEn": "Included with ChatGPT subscription"
   },
   {
     "id": "stable-diffusion",
@@ -283,7 +367,14 @@
     "emoji": "🌄",
     "releaseYear": 2022,
     "logo": "/logos/stable-diffusion.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Stability AI's open-source image generation model, deployable locally and freely customizable, with an extremely rich ecosystem of plugins.",
+    "tagsEn": [
+      "Open Source",
+      "Text-to-Image",
+      "Local Deployment"
+    ],
+    "pricingNoteEn": "Open source and free, with separate commercial licensing available."
   },
   {
     "id": "flux",
@@ -305,7 +396,14 @@
     "emoji": "🌀",
     "releaseYear": 2024,
     "logo": "/logos/flux.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "The next-generation image model from Black Forest Labs, excelling in detail and text rendering, with high popularity in the open-source community.",
+    "tagsEn": [
+      "Text-to-Image",
+      "Open Source",
+      "High Quality"
+    ],
+    "pricingNoteEn": "Open source + paid API"
   },
   {
     "id": "jimeng",
@@ -327,7 +425,14 @@
     "emoji": "🪄",
     "releaseYear": 2023,
     "logo": "/logos/jimeng.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "ByteDance's AI creation platform supporting text-to-image, image-to-image, and video generation, with friendly Chinese prompts.",
+    "tagsEn": [
+      "text-to-image",
+      "video",
+      "Chinese"
+    ],
+    "pricingNoteEn": "Free tier + membership"
   },
   {
     "id": "leonardo",
@@ -349,7 +454,14 @@
     "emoji": "🧑‍🎨",
     "releaseYear": 2022,
     "logo": "/logos/leonardo.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "AI image generation platform for games and design, offering controllable model and style training capabilities.",
+    "tagsEn": [
+      "Text-to-Image",
+      "Game Assets",
+      "Style Training"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "yige",
@@ -371,7 +483,14 @@
     "emoji": "🖍️",
     "releaseYear": 2022,
     "logo": "/logos/yige.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An AI painting platform powered by Baidu's ERNIE large model, with strong Chinese language understanding and support for multiple style generation.",
+    "tagsEn": [
+      "Text-to-Image",
+      "Chinese",
+      "Stylized"
+    ],
+    "pricingNoteEn": "Free quota + membership"
   },
   {
     "id": "sora",
@@ -393,7 +512,14 @@
     "emoji": "🎥",
     "releaseYear": 2024,
     "logo": "/logos/sora.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "OpenAI's text-to-video model that can generate high-quality videos up to one minute long, setting the benchmark in the video generation field.",
+    "tagsEn": [
+      "text-to-video",
+      "OpenAI",
+      "high-quality"
+    ],
+    "pricingNoteEn": "Included with ChatGPT subscription"
   },
   {
     "id": "runway",
@@ -415,7 +541,14 @@
     "emoji": "🎬",
     "releaseYear": 2023,
     "logo": "/logos/runway.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Professional AI video creation and editing platform offering text-to-video, image-to-video, and video editing tools.",
+    "tagsEn": [
+      "Text-to-Video",
+      "Video Editing",
+      "Cinematic"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "pika",
@@ -437,7 +570,14 @@
     "emoji": "🐰",
     "releaseYear": 2023,
     "logo": "/logos/pika.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A lightweight and easy-to-use text-to-video tool that supports various effects and character animations, with a quick learning curve.",
+    "tagsEn": [
+      "text-to-video",
+      "effects",
+      "animation"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "kling",
@@ -459,7 +599,14 @@
     "emoji": "⚡",
     "releaseYear": 2024,
     "logo": "/logos/kling.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A text-to-video large model launched by Kuaishou, featuring smooth motion and excellent physics effects, with outstanding performance in Chinese scenarios.",
+    "tagsEn": [
+      "text-to-video",
+      "Chinese",
+      "physics effects"
+    ],
+    "pricingNoteEn": "Free quota + membership"
   },
   {
     "id": "hailuo",
@@ -481,7 +628,14 @@
     "emoji": "🐚",
     "releaseYear": 2024,
     "logo": "/logos/hailuo.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An AI video generation tool launched by MiniMax, supporting text-to-video and voice cloning with fast generation speed.",
+    "tagsEn": [
+      "text-to-video",
+      "voice",
+      "fast generation"
+    ],
+    "pricingNoteEn": "Free quota + membership"
   },
   {
     "id": "luma",
@@ -503,7 +657,14 @@
     "emoji": "💭",
     "releaseYear": 2024,
     "logo": "/logos/luma.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Dream Machine text-to-video model, excels at realism and camera movement, with an active creative community.",
+    "tagsEn": [
+      "text-to-video",
+      "realism",
+      "camera movement"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "heygen",
@@ -525,7 +686,14 @@
     "emoji": "🧑‍💻",
     "releaseYear": 2023,
     "logo": "/logos/heygen.svg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A digital human video generation platform that can create multilingual videos with realistic digital human presenters in one click.",
+    "tagsEn": [
+      "digital human",
+      "multilingual",
+      "talking-head video"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "suno",
@@ -547,7 +715,14 @@
     "emoji": "🎵",
     "releaseYear": 2023,
     "logo": "/logos/suno.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Leading AI music generation tool that creates complete songs with vocals and accompaniment from lyrics or descriptions.",
+    "tagsEn": [
+      "Music Generation",
+      "Vocals",
+      "Creation"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "udio",
@@ -569,7 +744,14 @@
     "emoji": "🎶",
     "releaseYear": 2024,
     "logo": "/logos/udio.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "High-quality AI music generation platform with refined sound, diverse styles, and support for custom lyrics and styles.",
+    "tagsEn": [
+      "Music Generation",
+      "High Quality",
+      "Diverse Styles"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "elevenlabs",
@@ -590,7 +772,14 @@
     "featured": false,
     "emoji": "🗣️",
     "releaseYear": 2022,
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Top-tier AI voice synthesis and cloning platform, supporting realistic multi-language dubbing and real-time voice.",
+    "tagsEn": [
+      "Voice Synthesis",
+      "Voice Cloning",
+      "Multilingual"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "copilot",
@@ -612,7 +801,14 @@
     "emoji": "🐙",
     "releaseYear": 2021,
     "logo": "/logos/copilot.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An AI programming assistant from GitHub that provides real-time code completion, function generation, and test creation in your IDE.",
+    "tagsEn": [
+      "Code Completion",
+      "IDE",
+      "GitHub"
+    ],
+    "pricingNoteEn": "Free trial + subscription"
   },
   {
     "id": "cursor",
@@ -634,7 +830,14 @@
     "emoji": "🖱️",
     "releaseYear": 2023,
     "logo": "/logos/cursor.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An AI-powered code editor that supports conversational code modification, multi-file editing, and intelligent autocompletion, highly praised by developers.",
+    "tagsEn": [
+      "Code editor",
+      "AI programming",
+      "Multi-file"
+    ],
+    "pricingNoteEn": "Free tier + Pro subscription"
   },
   {
     "id": "windsurf",
@@ -656,7 +859,14 @@
     "emoji": "🏄",
     "releaseYear": 2024,
     "logo": "/logos/windsurf.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An AI IDE launched by the Codeium team, known for its agent-driven development workflow and high cost-effectiveness.",
+    "tagsEn": [
+      "AI IDE",
+      "Agent",
+      "Code"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "claude-code",
@@ -678,7 +888,14 @@
     "emoji": "⌨️",
     "releaseYear": 2025,
     "logo": "/logos/claude-code.svg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Anthropic's official terminal AI coding agent that can read, write, debug, and refactor code from the command line.",
+    "tagsEn": [
+      "Terminal",
+      "Agent",
+      "Claude"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "lingma",
@@ -700,7 +917,14 @@
     "emoji": "🧩",
     "releaseYear": 2023,
     "logo": "/logos/lingma.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "AI programming assistant launched by Alibaba Cloud, supporting code completion, conversation, and unit test generation, available for free.",
+    "tagsEn": [
+      "Code Completion",
+      "Chinese",
+      "Alibaba Cloud"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "replit",
@@ -722,7 +946,14 @@
     "emoji": "♻️",
     "releaseYear": 2016,
     "logo": "/logos/replit.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Cloud IDE and AI coding platform that lets you write, run, and deploy apps directly in your browser.",
+    "tagsEn": [
+      "Cloud IDE",
+      "Deployment",
+      "Collaboration"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "v0",
@@ -744,7 +975,14 @@
     "emoji": "🚀",
     "releaseYear": 2023,
     "logo": "/logos/v0.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An AI interface generation tool launched by Vercel, which can generate frontend components and page code using natural language.",
+    "tagsEn": [
+      "Frontend",
+      "UI Generation",
+      "React"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "bolt",
@@ -766,7 +1004,14 @@
     "emoji": "🔩",
     "releaseYear": 2024,
     "logo": "/logos/bolt.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An in-browser AI full-stack development platform that generates runnable full-stack web applications from descriptions.",
+    "tagsEn": [
+      "Full-stack",
+      "Web App",
+      "Low-code"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "notion-ai",
@@ -788,7 +1033,14 @@
     "emoji": "📝",
     "releaseYear": 2023,
     "logo": "/logos/notion-ai.svg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Notion's built-in AI assistant that automatically summarizes, continues writing, translates, and answers questions, enhancing note-taking and collaboration efficiency.",
+    "tagsEn": [
+      "Note-taking",
+      "Summarization",
+      "Collaboration"
+    ],
+    "pricingNoteEn": "Included with Notion subscription"
   },
   {
     "id": "wps-ai",
@@ -810,7 +1062,14 @@
     "emoji": "📄",
     "releaseYear": 2023,
     "logo": "/logos/wps-ai.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An AI office assistant launched by Kingsoft Office, deeply integrated with WPS Writer, Spreadsheets, and Presentation, enabling one-click generation of documents and PPTs.",
+    "tagsEn": [
+      "Documents",
+      "PPT",
+      "Spreadsheets"
+    ],
+    "pricingNoteEn": "Free version + membership"
   },
   {
     "id": "feishu",
@@ -832,7 +1091,14 @@
     "emoji": "🐦",
     "releaseYear": 2023,
     "logo": "/logos/feishu.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "Feishu's built-in AI collaboration assistant, supporting meeting minutes, document summarization, and intelligent Q&A for multi-dimensional tables.",
+    "tagsEn": [
+      "Meeting Minutes",
+      "Collaboration",
+      "Documents"
+    ],
+    "pricingNoteEn": "Free version + Paid version"
   },
   {
     "id": "dingtalk",
@@ -854,7 +1120,14 @@
     "emoji": "📌",
     "releaseYear": 2023,
     "logo": "/logos/dingtalk.ico",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "AI assistant integrated with DingTalk, supporting group chat Q&A, document assistance, and intelligent capabilities within the DingTalk app ecosystem.",
+    "tagsEn": [
+      "collaboration",
+      "group chat",
+      "office"
+    ],
+    "pricingNoteEn": "Free version + paid version"
   },
   {
     "id": "gamma",
@@ -876,7 +1149,14 @@
     "emoji": "📊",
     "releaseYear": 2022,
     "logo": "/logos/gamma.svg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "AI-powered presentation and webpage generation tool that creates stunning PPTs and web pages from a topic.",
+    "tagsEn": [
+      "PPT",
+      "Presentation",
+      "Webpage Generation"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "xinghuo",
@@ -898,7 +1178,14 @@
     "emoji": "🔥",
     "releaseYear": 2023,
     "logo": "/logos/xinghuo.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A cognitive large model launched by iFlytek, covering scenarios such as office, education, and voice, with outstanding Chinese speech capabilities.",
+    "tagsEn": [
+      "voice",
+      "office",
+      "education"
+    ],
+    "pricingNoteEn": "Free version + membership"
   },
   {
     "id": "grammarly",
@@ -920,7 +1207,14 @@
     "emoji": "✅",
     "releaseYear": 2009,
     "logo": "/logos/grammarly.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An English writing proofreading tool with AI grammar checking, spelling correction, and tone polishing, serving as an essential assistant for English writing.",
+    "tagsEn": [
+      "Grammar",
+      "Proofreading",
+      "English"
+    ],
+    "pricingNoteEn": "Free version + Premium"
   },
   {
     "id": "xiezuocat",
@@ -942,7 +1236,14 @@
     "emoji": "🐱",
     "releaseYear": 2021,
     "logo": "/logos/xiezuocat.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A Chinese AI writing and proofreading tool that supports copy polishing, rewriting, error correction, and full-text translation.",
+    "tagsEn": [
+      "Chinese",
+      "Polishing",
+      "Rewriting"
+    ],
+    "pricingNoteEn": "Free version + membership"
   },
   {
     "id": "jasper",
@@ -964,7 +1265,14 @@
     "emoji": "🖋️",
     "releaseYear": 2021,
     "logo": "/logos/jasper.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "AI content generation platform for marketing teams, specializing in ad copy, blogs, and brand content creation.",
+    "tagsEn": [
+      "Marketing",
+      "Copywriting",
+      "Brand"
+    ],
+    "pricingNoteEn": "Subscription-based"
   },
   {
     "id": "copyai",
@@ -986,7 +1294,14 @@
     "emoji": "✍️",
     "releaseYear": 2020,
     "logo": "/logos/copyai.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "AI marketing copy generator that quickly creates ad slogans, emails, and social media content.",
+    "tagsEn": [
+      "copywriting",
+      "marketing",
+      "email"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "perplexity",
@@ -1008,7 +1323,14 @@
     "emoji": "🔎",
     "releaseYear": 2022,
     "logo": "/logos/perplexity.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "AI-powered conversational search engine that connects to the internet in real time, cites sources, and provides precise answers with references.",
+    "tagsEn": [
+      "Search",
+      "Q&A",
+      "Citations"
+    ],
+    "pricingNoteEn": "Free tier + Pro"
   },
   {
     "id": "metaso",
@@ -1030,7 +1352,14 @@
     "emoji": "🗿",
     "releaseYear": 2024,
     "logo": "/logos/metaso.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A domestic AI search engine with no ads and traceable results, supporting academic search and deep research modes.",
+    "tagsEn": [
+      "Search",
+      "Academic",
+      "Traceability"
+    ],
+    "pricingNoteEn": "Free version + membership"
   },
   {
     "id": "copilot-microsoft",
@@ -1052,7 +1381,14 @@
     "emoji": "🔷",
     "releaseYear": 2023,
     "logo": "/logos/copilot-microsoft.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Microsoft's AI assistant that integrates Bing search and office applications, supporting online Q&A and image generation.",
+    "tagsEn": [
+      "Search",
+      "Office",
+      "Multimodal"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "tiangong",
@@ -1074,7 +1410,14 @@
     "emoji": "⛏️",
     "releaseYear": 2023,
     "logo": "/logos/tiangong.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "AI search by Kunlun Wanwei, supporting real-time web access and multimodal Q&A, with strong Chinese information retrieval capabilities.",
+    "tagsEn": [
+      "search",
+      "Chinese",
+      "multimodal"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "deepl",
@@ -1096,7 +1439,14 @@
     "emoji": "🐠",
     "releaseYear": 2017,
     "logo": "/logos/deepl.svg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A machine translation tool renowned for its translation quality, supporting 30+ languages with natural and fluent output.",
+    "tagsEn": [
+      "translation",
+      "multilingual",
+      "high-quality"
+    ],
+    "pricingNoteEn": "Free version + Pro"
   },
   {
     "id": "immersive",
@@ -1118,7 +1468,14 @@
     "emoji": "🌐",
     "releaseYear": 2022,
     "logo": "/logos/immersive.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "Browser translation plugin supporting bilingual comparison translation for web pages, PDFs, and video subtitles, with multiple engine options.",
+    "tagsEn": [
+      "Browser Extension",
+      "Bilingual Comparison",
+      "PDF"
+    ],
+    "pricingNoteEn": "Free version + Membership"
   },
   {
     "id": "youdao",
@@ -1140,7 +1497,14 @@
     "emoji": "📖",
     "releaseYear": 2008,
     "logo": "/logos/youdao.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A translation tool under NetEase, supporting text, document, image, and web page translation, with a well-established Chinese ecosystem.",
+    "tagsEn": [
+      "Translation",
+      "Dictionary",
+      "Documents"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "google-translate",
@@ -1162,7 +1526,14 @@
     "emoji": "🔤",
     "releaseYear": 2006,
     "logo": "/logos/google-translate.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A free translation tool supporting 100+ languages, with text, voice, image, and real-time conversation translation.",
+    "tagsEn": [
+      "translation",
+      "multilingual",
+      "real-time"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "canva",
@@ -1184,7 +1555,14 @@
     "emoji": "🖌️",
     "releaseYear": 2013,
     "logo": "/logos/canva.jpg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Online graphic design platform with built-in AI image generation, copywriting, and magic design, offering a vast library of easy-to-use templates.",
+    "tagsEn": [
+      "Graphic Design",
+      "Templates",
+      "AI Design"
+    ],
+    "pricingNoteEn": "Free version + Pro"
   },
   {
     "id": "figma",
@@ -1206,7 +1584,14 @@
     "emoji": "🎯",
     "releaseYear": 2016,
     "logo": "/logos/figma.svg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A mainstream UI/UX collaborative design tool, with AI capabilities for auto-layout, generation, and prototyping.",
+    "tagsEn": [
+      "UI design",
+      "Collaboration",
+      "Prototyping"
+    ],
+    "pricingNoteEn": "Free version + paid version"
   },
   {
     "id": "gaoding",
@@ -1228,7 +1613,14 @@
     "emoji": "🧩",
     "releaseYear": 2015,
     "logo": "/logos/gaoding.png",
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A domestic online design platform offering a vast array of templates and convenient tools such as AI background removal and AI image generation.",
+    "tagsEn": [
+      "Graphic Design",
+      "Background Removal",
+      "Templates"
+    ],
+    "pricingNoteEn": "Free version + Membership"
   },
   {
     "id": "recraft",
@@ -1250,7 +1642,14 @@
     "emoji": "🧊",
     "releaseYear": 2023,
     "logo": "/logos/recraft.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "AI design tool for designers, supporting vector graphics, icons, and brand asset generation.",
+    "tagsEn": [
+      "vector graphics",
+      "icons",
+      "brand"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "grok",
@@ -1272,7 +1671,14 @@
     "emoji": "🪐",
     "releaseYear": 2023,
     "logo": "/logos/grok.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "AI assistant launched by xAI, deeply integrated with real-time information from X (Twitter), featuring a humorous and direct style with strong reasoning capabilities.",
+    "tagsEn": [
+      "Conversation",
+      "Reasoning",
+      "Real-time Information"
+    ],
+    "pricingNoteEn": "Free tier + X Premium"
   },
   {
     "id": "mistral",
@@ -1294,7 +1700,14 @@
     "emoji": "🌬️",
     "releaseYear": 2024,
     "logo": "/logos/mistral.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A conversational assistant from European AI unicorn Mistral, with a robust open-source model ecosystem and strong multilingual and coding capabilities.",
+    "tagsEn": [
+      "Conversation",
+      "Open Source",
+      "Europe"
+    ],
+    "pricingNoteEn": "Free tier + Pro"
   },
   {
     "id": "poe",
@@ -1316,7 +1729,14 @@
     "emoji": "🎪",
     "releaseYear": 2023,
     "logo": "/logos/poe.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An AI aggregation platform launched by Quora, providing access to multiple mainstream models like GPT, Claude, and Gemini from a single entry point.",
+    "tagsEn": [
+      "Aggregation",
+      "Multi-model",
+      "Conversation"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "ideogram",
@@ -1338,7 +1758,14 @@
     "emoji": "🔡",
     "releaseYear": 2023,
     "logo": "/logos/ideogram.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An AI drawing tool that excels at rendering text in images, suitable for posters, logos, and designs with text.",
+    "tagsEn": [
+      "Text-to-Image",
+      "Text Rendering",
+      "Poster"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "nano-banana",
@@ -1360,7 +1787,14 @@
     "emoji": "🍌",
     "releaseYear": 2025,
     "logo": "/logos/nano-banana.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Google Gemini's image generation and editing model, known for its powerful image editing, inpainting, and 'P图' capabilities.",
+    "tagsEn": [
+      "Image Editing",
+      "Inpainting",
+      "Gemini"
+    ],
+    "pricingNoteEn": "Free tier + Google AI Pro"
   },
   {
     "id": "remove-bg",
@@ -1382,7 +1816,14 @@
     "emoji": "🧹",
     "releaseYear": 2018,
     "logo": "/logos/remove-bg.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "One-click intelligent background remover that automatically removes image backgrounds with fast processing and clean edges.",
+    "tagsEn": [
+      "background removal",
+      "remove background",
+      "e-commerce"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "photoroom",
@@ -1404,7 +1845,14 @@
     "emoji": "📦",
     "releaseYear": 2019,
     "logo": "/logos/photoroom.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "AI image editing tool for e-commerce, batch background removal, product image generation, and marketing material creation.",
+    "tagsEn": [
+      "Product images",
+      "Background removal",
+      "E-commerce"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "veo",
@@ -1426,7 +1874,14 @@
     "emoji": "🎞️",
     "releaseYear": 2024,
     "logo": "/logos/veo.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A text-to-video model by Google DeepMind, offering excellent image quality and physical consistency, with support for high-resolution generation.",
+    "tagsEn": [
+      "text-to-video",
+      "Google",
+      "high quality"
+    ],
+    "pricingNoteEn": "Subscription-based"
   },
   {
     "id": "synthesia",
@@ -1448,7 +1903,14 @@
     "emoji": "🧑‍💼",
     "releaseYear": 2017,
     "logo": "/logos/synthesia.svg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Enterprise-grade AI digital human video platform for batch-generating multilingual explainer and training videos.",
+    "tagsEn": [
+      "digital human",
+      "enterprise",
+      "multilingual"
+    ],
+    "pricingNoteEn": "Subscription-based"
   },
   {
     "id": "fish-audio",
@@ -1469,7 +1931,14 @@
     "featured": false,
     "emoji": "🐟",
     "releaseYear": 2023,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An AI voice synthesis and voice cloning platform in the open-source ecosystem, with excellent Chinese voice quality and real-time voice support.",
+    "tagsEn": [
+      "Voice Synthesis",
+      "Voice Cloning",
+      "Chinese"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "lovable",
@@ -1491,7 +1960,14 @@
     "emoji": "❤️",
     "releaseYear": 2024,
     "logo": "/logos/lovable.png",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "A popular European AI full-stack development platform that lets you build and launch web apps using natural language.",
+    "tagsEn": [
+      "full-stack",
+      "web apps",
+      "low-code"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "notebooklm",
@@ -1513,7 +1989,14 @@
     "emoji": "📓",
     "releaseYear": 2023,
     "logo": "/logos/notebooklm.ico",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Google's AI note-taking and deep research tool. Upload materials to generate summaries, Q&A, and audio overviews.",
+    "tagsEn": [
+      "Note-taking",
+      "Research",
+      "Audio Overview"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "character-ai",
@@ -1535,7 +2018,14 @@
     "emoji": "🎭",
     "releaseYear": 2022,
     "logo": "/logos/character-ai.svg",
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An AI character companionship and interaction platform where users can create or chat with various AI characters, offering strong emotional companionship and entertainment value.",
+    "tagsEn": [
+      "Character Companionship",
+      "Chat",
+      "Entertainment"
+    ],
+    "pricingNoteEn": "Free version + Subscription"
   },
   {
     "id": "talkie",
@@ -1556,7 +2046,14 @@
     "featured": false,
     "emoji": "⭐",
     "releaseYear": 2023,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An AI character companionship and interaction platform launched by MiniMax (domestically known as 'Xingye'), supporting voice and role-playing.",
+    "tagsEn": [
+      "Character companionship",
+      "Voice",
+      "Interaction"
+    ],
+    "pricingNoteEn": "Free version + subscription"
   },
   {
     "id": "replika",
@@ -1577,7 +2074,14 @@
     "featured": false,
     "emoji": "💖",
     "releaseYear": 2017,
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "AI virtual companion app for personalized chat and emotional support, supporting text and voice interaction.",
+    "tagsEn": [
+      "virtual companion",
+      "emotional support",
+      "voice"
+    ],
+    "pricingNoteEn": "Free + Pro"
   },
   {
     "id": "zhipu-qingying",
@@ -1599,7 +2103,14 @@
     "emoji": "📽️",
     "releaseYear": 2024,
     "region": "domestic",
-    "logo": "/logos/zhipu-qingying.ico"
+    "logo": "/logos/zhipu-qingying.ico",
+    "descriptionEn": "A video generation tool launched by Zhipu AI, based on the CogVideo model, supporting text-to-video and image-to-video.",
+    "tagsEn": [
+      "text-to-video",
+      "Chinese",
+      "CogVideo"
+    ],
+    "pricingNoteEn": "Free quota + membership"
   },
   {
     "id": "vidu",
@@ -1620,7 +2131,14 @@
     "featured": false,
     "emoji": "🪩",
     "releaseYear": 2024,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A large model for text-to-video and image-to-video generation launched by Shengshu Technology, featuring fast generation speed and coherent motion.",
+    "tagsEn": [
+      "text-to-video",
+      "image-to-video",
+      "Chinese"
+    ],
+    "pricingNoteEn": "Free quota + membership"
   },
   {
     "id": "bcut",
@@ -1641,7 +2159,14 @@
     "featured": false,
     "emoji": "🎬",
     "releaseYear": 2021,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A video editing tool under Bilibili, featuring built-in AI subtitles, digital humans, and intelligent editing capabilities.",
+    "tagsEn": [
+      "Video Editing",
+      "Subtitles",
+      "Digital Human"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "krea",
@@ -1663,7 +2188,14 @@
     "emoji": "🕹️",
     "releaseYear": 2023,
     "region": "overseas",
-    "logo": "/logos/krea.png"
+    "logo": "/logos/krea.png",
+    "descriptionEn": "A real-time AI image and video generation platform supporting live drawing and video enhancement, with an active creator community.",
+    "tagsEn": [
+      "real-time generation",
+      "video",
+      "image"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "wanxiang",
@@ -1685,7 +2217,14 @@
     "emoji": "🪆",
     "releaseYear": 2023,
     "region": "domestic",
-    "logo": "/logos/wanxiang.png"
+    "logo": "/logos/wanxiang.png",
+    "descriptionEn": "AI painting and image generation model launched by Alibaba Cloud, with good Chinese understanding and support for multiple styles and videos.",
+    "tagsEn": [
+      "Text-to-Image",
+      "Chinese",
+      "Alibaba Cloud"
+    ],
+    "pricingNoteEn": "Free quota + membership"
   },
   {
     "id": "firefly",
@@ -1707,7 +2246,14 @@
     "emoji": "🪶",
     "releaseYear": 2023,
     "region": "overseas",
-    "logo": "/logos/firefly.png"
+    "logo": "/logos/firefly.png",
+    "descriptionEn": "Generative AI image tool by Adobe, deeply integrated with Photoshop, specializing in commercially safe assets.",
+    "tagsEn": [
+      "Text-to-Image",
+      "Adobe",
+      "Commercial Safety"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "playground",
@@ -1729,7 +2275,14 @@
     "emoji": "🎠",
     "releaseYear": 2023,
     "region": "overseas",
-    "logo": "/logos/playground.ico"
+    "logo": "/logos/playground.ico",
+    "descriptionEn": "An easy-to-use AI image and design platform with a graphical interface for creating posters, logos, and icons.",
+    "tagsEn": [
+      "text-to-image",
+      "poster",
+      "logo"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "seaart",
@@ -1750,7 +2303,14 @@
     "featured": false,
     "emoji": "🌊",
     "releaseYear": 2023,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A domestic AI painting platform with rich models and massive templates, supporting text-to-image, image-to-image, and model training.",
+    "tagsEn": [
+      "text-to-image",
+      "rich models",
+      "training"
+    ],
+    "pricingNoteEn": "Free quota + membership"
   },
   {
     "id": "aippt",
@@ -1771,7 +2331,14 @@
     "featured": false,
     "emoji": "📑",
     "releaseYear": 2023,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "AI generates PPT outlines and presentations in one click; simply enter a topic to produce a complete, editable PPT.",
+    "tagsEn": [
+      "PPT",
+      "Presentation",
+      "One-click generation"
+    ],
+    "pricingNoteEn": "Free tier + membership"
   },
   {
     "id": "wanzhi",
@@ -1792,7 +2359,14 @@
     "featured": false,
     "emoji": "📚",
     "releaseYear": 2024,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "AI office assistant launched by 01.AI, supporting document interpretation, writing, and knowledge Q&A.",
+    "tagsEn": [
+      "Document",
+      "Writing",
+      "Q&A"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "xunfei-zhiwen",
@@ -1813,7 +2387,14 @@
     "featured": false,
     "emoji": "🗂️",
     "releaseYear": 2023,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An AI document writing tool launched by iFlytek, supporting one-click generation of Word/PPT and intelligent layout.",
+    "tagsEn": [
+      "Document",
+      "PPT",
+      "Intelligent Layout"
+    ],
+    "pricingNoteEn": "Free quota + membership"
   },
   {
     "id": "marscode",
@@ -1834,7 +2415,14 @@
     "featured": false,
     "emoji": "🧑‍🚀",
     "releaseYear": 2024,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "AI coding assistant and cloud IDE launched by ByteDance, supporting code completion, Agent, and one-click deployment.",
+    "tagsEn": [
+      "AI IDE",
+      "Code Completion",
+      "ByteDance"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "codegeex",
@@ -1855,7 +2443,14 @@
     "featured": false,
     "emoji": "⚙️",
     "releaseYear": 2022,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An AI coding assistant launched by Zhipu AI, driven by open-source models, supporting multi-language code generation and completion.",
+    "tagsEn": [
+      "Code Completion",
+      "Open Source",
+      "Multi-language"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "cline",
@@ -1876,7 +2471,14 @@
     "featured": false,
     "emoji": "🛠️",
     "releaseYear": 2024,
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An open-source AI coding agent that automatically plans, reads and writes code, and executes tasks in VS Code.",
+    "tagsEn": [
+      "Agent",
+      "Open Source",
+      "VS Code"
+    ],
+    "pricingNoteEn": "Free open source + API billing"
   },
   {
     "id": "aider",
@@ -1897,7 +2499,14 @@
     "featured": false,
     "emoji": "🔧",
     "releaseYear": 2023,
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "Terminal AI pair programming tool supporting multi-file editing and Git integration, open source and free.",
+    "tagsEn": [
+      "Terminal",
+      "Git",
+      "Open Source"
+    ],
+    "pricingNoteEn": "Open source free + API billing"
   },
   {
     "id": "paperpal",
@@ -1918,7 +2527,14 @@
     "featured": false,
     "emoji": "🎓",
     "releaseYear": 2022,
-    "region": "overseas"
+    "region": "overseas",
+    "descriptionEn": "An AI polishing tool for academic writing, specializing in thesis grammar, word choice, and journal submission standards.",
+    "tagsEn": [
+      "Academic",
+      "English Polishing",
+      "Thesis"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "devv",
@@ -1939,7 +2555,14 @@
     "featured": false,
     "emoji": "🖥️",
     "releaseYear": 2023,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "An AI search engine for developers, focusing on technical Q&A and code retrieval with precise results.",
+    "tagsEn": [
+      "Developer",
+      "Search",
+      "Code"
+    ],
+    "pricingNoteEn": "Free tier + subscription"
   },
   {
     "id": "quark",
@@ -1960,7 +2583,14 @@
     "featured": false,
     "emoji": "🧭",
     "releaseYear": 2023,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "AI assistant of Alibaba's Quark browser, integrating search, Q&A, and file processing.",
+    "tagsEn": [
+      "Search",
+      "Browser",
+      "Q&A"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "baidu-translate",
@@ -1982,7 +2612,14 @@
     "emoji": "🐻",
     "releaseYear": 2011,
     "region": "domestic",
-    "logo": "/logos/baidu-translate.ico"
+    "logo": "/logos/baidu-translate.ico",
+    "descriptionEn": "A translation tool launched by Baidu, supporting mutual translation in over 200 languages, photo translation, and document translation.",
+    "tagsEn": [
+      "Translation",
+      "Multilingual",
+      "Documents"
+    ],
+    "pricingNoteEn": "Free"
   },
   {
     "id": "figjam",
@@ -2004,7 +2641,14 @@
     "emoji": "📋",
     "releaseYear": 2021,
     "region": "overseas",
-    "logo": "/logos/figjam.svg"
+    "logo": "/logos/figjam.svg",
+    "descriptionEn": "An online collaborative whiteboard by Figma, featuring AI-generated sticky notes, summaries, and flowcharts.",
+    "tagsEn": [
+      "whiteboard",
+      "collaboration",
+      "flowchart"
+    ],
+    "pricingNoteEn": "Free tier + paid plans"
   },
   {
     "id": "ms-designer",
@@ -2026,7 +2670,14 @@
     "emoji": "🪟",
     "releaseYear": 2023,
     "region": "overseas",
-    "logo": "/logos/ms-designer.png"
+    "logo": "/logos/ms-designer.png",
+    "descriptionEn": "An AI design tool from Microsoft that generates posters, invitations, and social media images from descriptions.",
+    "tagsEn": [
+      "Poster",
+      "Social Media Images",
+      "Microsoft"
+    ],
+    "pricingNoteEn": "Free tier + Copilot subscription"
   },
   {
     "id": "stepfun",
@@ -2047,6 +2698,13 @@
     "featured": false,
     "emoji": "🪜",
     "releaseYear": 2023,
-    "region": "domestic"
+    "region": "domestic",
+    "descriptionEn": "A large model platform and 'Yuewen' assistant launched by StepFun, with strong multimodal and long-text capabilities.",
+    "tagsEn": [
+      "Dialogue",
+      "Multimodal",
+      "Long-text"
+    ],
+    "pricingNoteEn": "Free tier + API billing"
   }
 ]

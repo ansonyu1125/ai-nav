@@ -7,7 +7,19 @@
     "emoji": "🤖",
     "date": "2026-01-15",
     "readMinutes": 8,
-    "tags": ["ChatGPT", "入门", "对话助手"]
+    "tags": [
+      "ChatGPT",
+      "入门",
+      "对话助手"
+    ],
+    "titleEn": "ChatGPT Beginner's Guide: Registration, Usage, and Advanced Tips",
+    "summaryEn": "Learn to use ChatGPT from scratch, master basic conversations, file uploads, and web search, and quickly get started with the world's most popular AI assistant.",
+    "categoryEn": "Beginner",
+    "tagsEn": [
+      "ChatGPT",
+      "Beginner",
+      "Conversational Assistant"
+    ]
   },
   {
     "id": "prompt-skills",
@@ -17,7 +29,19 @@
     "emoji": "💡",
     "date": "2026-02-10",
     "readMinutes": 10,
-    "tags": ["提示词", "Prompt", "技巧"]
+    "tags": [
+      "提示词",
+      "Prompt",
+      "技巧"
+    ],
+    "titleEn": "Prompt Tips: Make AI Understand You Better",
+    "summaryEn": "The same AI, different prompts can lead to vastly different results. Master role-setting, structured instructions, and chain-of-thought to double the quality of responses.",
+    "categoryEn": "Prompt Engineering",
+    "tagsEn": [
+      "Prompt",
+      "Tips",
+      "Techniques"
+    ]
   },
   {
     "id": "ai-painting",
@@ -27,7 +51,19 @@
     "emoji": "🎨",
     "date": "2026-02-22",
     "readMinutes": 9,
-    "tags": ["Midjourney", "文生图", "绘画"]
+    "tags": [
+      "Midjourney",
+      "文生图",
+      "绘画"
+    ],
+    "titleEn": "AI Drawing Beginner's Guide: Generate Your First Image with Midjourney",
+    "summaryEn": "From registration to generation, step by step learn to use Midjourney to create satisfying images, and understand styles, parameters, and common prompt patterns.",
+    "categoryEn": "Image Generation",
+    "tagsEn": [
+      "Midjourney",
+      "Text-to-Image",
+      "Drawing"
+    ]
   },
   {
     "id": "ai-coding",
@@ -37,7 +73,19 @@
     "emoji": "💻",
     "date": "2026-03-05",
     "readMinutes": 9,
-    "tags": ["Cursor", "编程", "AI 编程"]
+    "tags": [
+      "Cursor",
+      "编程",
+      "AI 编程"
+    ],
+    "titleEn": "Getting Started with AI Programming: Boost Development Efficiency with Cursor",
+    "summaryEn": "Learn the core concepts of AI programming and use Cursor for code completion, conversational code editing, and multi-file refactoring, making AI your pair programming partner.",
+    "categoryEn": "Programming & Development",
+    "tagsEn": [
+      "Cursor",
+      "Programming",
+      "AI Programming"
+    ]
   },
   {
     "id": "ai-video",
@@ -47,7 +95,19 @@
     "emoji": "🎬",
     "date": "2026-03-18",
     "readMinutes": 8,
-    "tags": ["Sora", "可灵", "视频生成"]
+    "tags": [
+      "Sora",
+      "可灵",
+      "视频生成"
+    ],
+    "titleEn": "Getting Started with AI Video Generation: How to Use Sora and Kling",
+    "summaryEn": "Understand the working principles of text-to-video, master the usage and prompt writing of tools like Sora and Kling, and generate your first AI video.",
+    "categoryEn": "Video Generation",
+    "tagsEn": [
+      "Sora",
+      "Kling",
+      "Video Generation"
+    ]
   },
   {
     "id": "ai-search",
@@ -57,7 +117,19 @@
     "emoji": "🔍",
     "date": "2026-04-02",
     "readMinutes": 7,
-    "tags": ["搜索", "Perplexity", "秘塔"]
+    "tags": [
+      "搜索",
+      "Perplexity",
+      "秘塔"
+    ],
+    "titleEn": "AI Search in Practice: Efficient Use of Perplexity and Metaso",
+    "summaryEn": "Say goodbye to keyword search and learn to use AI search to get answers with sources directly, mastering deep research, academic search, and source tracing techniques.",
+    "categoryEn": "AI Search",
+    "tagsEn": [
+      "Search",
+      "Perplexity",
+      "Metaso"
+    ]
   },
   {
     "id": "ai-music",
@@ -67,7 +139,19 @@
     "emoji": "🎵",
     "date": "2026-04-15",
     "readMinutes": 7,
-    "tags": ["Suno", "音乐", "创作"]
+    "tags": [
+      "Suno",
+      "音乐",
+      "创作"
+    ],
+    "titleEn": "AI Music Creation: Write a Song with Suno",
+    "summaryEn": "No music theory or instruments needed. Enter a description or lyrics, and let Suno generate a complete song for you, while learning to control style and structure.",
+    "categoryEn": "Audio & Music",
+    "tagsEn": [
+      "Suno",
+      "Music",
+      "Creation"
+    ]
   },
   {
     "id": "ai-office",
@@ -77,6 +161,18 @@
     "emoji": "📊",
     "date": "2026-05-01",
     "readMinutes": 8,
-    "tags": ["办公", "PPT", "提效"]
+    "tags": [
+      "办公",
+      "PPT",
+      "提效"
+    ],
+    "titleEn": "AI for Office Efficiency: Creating PPTs and Writing Documents with AI",
+    "summaryEn": "Delegate repetitive documents, PPTs, and meeting minutes to AI, and master efficient usage of tools like Notion AI, WPS AI, and Gamma.",
+    "categoryEn": "Office Efficiency",
+    "tagsEn": [
+      "Office",
+      "PPT",
+      "Efficiency"
+    ]
   }
 ]
