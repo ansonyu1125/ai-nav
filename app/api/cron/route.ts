@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
 import { fetchFeedItems, generateArticles } from "@/lib/news-generate";
-import { getArticles, saveArticles } from "@/lib/news";
+import { getArticles, saveArticles, getRedis } from "@/lib/news";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -20,6 +20,8 @@ export async function GET(req: NextRequest) {
     );
   }
 
+  const redis = getRedis();
+
   const existing = await getArticles();
   const seen = new Set(existing.map((a) => a.sourceUrl));
 
@@ -29,12 +31,28 @@ export async function GET(req: NextRequest) {
   const generated = fresh.length > 0 ? await generateArticles(fresh, apiKey) : [];
   const merged = [...generated, ...existing].slice(0, 200);
 
-  await saveArticles(merged);
+  let saveError: string | null = null;
+  if (redis) {
+    try {
+      await saveArticles(merged);
+    } catch (e) {
+      saveError = e instanceof Error ? e.message : String(e);
+    }
+  }
 
   return Response.json({
     ok: true,
     added: generated.length,
     total: merged.length,
     skipped: items.length - fresh.length,
+    diag: {
+      version: "diag-1",
+      hasRedisUrl: !!process.env.UPSTASH_REDIS_REST_URL,
+      hasRedisToken: !!process.env.UPSTASH_REDIS_REST_TOKEN,
+      hasDeepseek: !!process.env.DEEPSEEK_API_KEY,
+      redisConnected: redis !== null,
+      existingCount: existing.length,
+      saveError,
+    },
   });
 }
