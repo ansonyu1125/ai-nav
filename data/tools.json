@@ -3017,7 +3017,8 @@
         "price": "$99/month",
         "note": "500 minutes of synthesis per month, priority support"
       }
-    ]
+    ],
+    "logo": "/logos/elevenlabs.svg"
   },
   {
     "id": "copilot",
@@ -7508,7 +7509,8 @@
         "price": "Custom",
         "note": "Custom models, SLA, technical support"
       }
-    ]
+    ],
+    "logo": "/logos/fish-audio.svg"
   },
   {
     "id": "lovable",
@@ -8039,7 +8041,8 @@
         "price": "$299.99 one-time",
         "note": "One-time purchase, permanent Pro access"
       }
-    ]
+    ],
+    "logo": "/logos/replika.ico"
   },
   {
     "id": "zhipu-qingying",
@@ -8246,7 +8249,8 @@
         "price": "Approx. ¥98/month",
         "note": "High generation quota, priority processing, commercial license"
       }
-    ]
+    ],
+    "logo": "/logos/vidu.svg"
   },
   {
     "id": "bcut",
@@ -8337,7 +8341,8 @@
         "price": "Free",
         "note": "All features free, no watermark"
       }
-    ]
+    ],
+    "logo": "/logos/bcut.ico"
   },
   {
     "id": "krea",
@@ -8995,7 +9000,8 @@
         "price": "$30/month",
         "note": "Multi-user collaboration, admin console, priority support"
       }
-    ]
+    ],
+    "logo": "/logos/aippt.ico"
   },
   {
     "id": "wanzhi",
@@ -9084,7 +9090,8 @@
         "price": "Free",
         "note": "Basic features, unlimited usage"
       }
-    ]
+    ],
+    "logo": "/logos/wanzhi.png"
   },
   {
     "id": "xunfei-zhiwen",
@@ -9183,7 +9190,8 @@
         "price": "Approx. ¥30/month",
         "note": "Unlock more templates, advanced layout, and more generation credits"
       }
-    ]
+    ],
+    "logo": "/logos/xunfei-zhiwen.png"
   },
   {
     "id": "marscode",
@@ -9274,7 +9282,8 @@
         "price": "Free",
         "note": "Includes core AI features and basic cloud IDE resources"
       }
-    ]
+    ],
+    "logo": "/logos/marscode.png"
   },
   {
     "id": "codegeex",
@@ -9362,7 +9371,8 @@
         "price": "Free",
         "note": "All features available for free"
       }
-    ]
+    ],
+    "logo": "/logos/codegeex.svg"
   },
   {
     "id": "cline",
@@ -9473,7 +9483,8 @@
         "price": "TBD",
         "note": "Advanced features and support for teams, see official site"
       }
-    ]
+    ],
+    "logo": "/logos/cline.png"
   },
   {
     "id": "aider",
@@ -9669,7 +9680,8 @@
         "price": "$99/year onwards",
         "note": "Unlimited polishing, advanced suggestions, journal formats, etc."
       }
-    ]
+    ],
+    "logo": "/logos/paperpal.png"
   },
   {
     "id": "devv",
@@ -9855,7 +9867,8 @@
         "price": "Free",
         "note": "Basic search, Q&A, and file processing features"
       }
-    ]
+    ],
+    "logo": "/logos/quark.png"
   },
   {
     "id": "baidu-translate",
@@ -10286,7 +10299,8 @@
         "price": "Usage-based",
         "note": "Charged by token usage, suitable for developers"
       }
-    ]
+    ],
+    "logo": "/logos/stepfun.svg"
   },
   {
     "id": "meta-ai",
@@ -10594,7 +10608,8 @@
         "price": "Usage-based",
         "note": "Charged by usage, refer to official website"
       }
-    ]
+    ],
+    "logo": "/logos/baichuan.svg"
   },
   {
     "id": "hunyuan",
@@ -10787,7 +10802,8 @@
         "price": "Custom quote",
         "note": "Advanced features, dedicated support, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/sensenova.svg"
   },
   {
     "id": "ai360",
@@ -10871,7 +10887,8 @@
         "price": "Free",
         "note": "Basic features free to use"
       }
-    ]
+    ],
+    "logo": "/logos/ai360.svg"
   },
   {
     "id": "civitai",
@@ -11080,7 +11097,8 @@
         "price": "Custom",
         "note": "Customized solutions for teams, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/magnific.ico"
   },
   {
     "id": "topaz-photo",
@@ -11179,7 +11197,8 @@
         "price": "About $19/month",
         "note": "Monthly subscription, includes all features, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/topaz-photo.png"
   },
   {
     "id": "lets-enhance",
@@ -11272,7 +11291,8 @@
         "price": "From $9/month",
         "note": "More credits and features, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/lets-enhance.png"
   },
   {
     "id": "pixverse",
@@ -11461,7 +11481,8 @@
         "price": "From ~$10/month",
         "note": "More generations and premium features, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/genmo.ico"
   },
   {
     "id": "filmora",
@@ -11573,7 +11594,8 @@
         "price": "~$69",
         "note": "Lifetime use, includes updates"
       }
-    ]
+    ],
+    "logo": "/logos/filmora.ico"
   },
   {
     "id": "did",
@@ -11682,7 +11704,8 @@
         "price": "Custom",
         "note": "Customized solutions and dedicated support"
       }
-    ]
+    ],
+    "logo": "/logos/did.png"
   },
   {
     "id": "boomy",
@@ -11776,7 +11799,8 @@
         "price": "Approx. $9.99/month",
         "note": "Unlimited creation, more advanced features, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/boomy.ico"
   },
   {
     "id": "tianyin",
@@ -11874,7 +11898,8 @@
         "price": "About ¥15/month",
         "note": "More generations and advanced features, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/tianyin.ico"
   },
   {
     "id": "murf",
@@ -11987,7 +12012,8 @@
         "price": "Custom",
         "note": "Advanced features, dedicated support"
       }
-    ]
+    ],
+    "logo": "/logos/murf.ico"
   },
   {
     "id": "playht",
@@ -12102,7 +12128,8 @@
         "price": "Custom",
         "note": "Custom plan, SLA guarantee"
       }
-    ]
+    ],
+    "logo": "/logos/playht.png"
   },
   {
     "id": "speechify",
@@ -12309,7 +12336,8 @@
         "price": "Custom",
         "note": "API access, dedicated support, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/moyin.ico"
   },
   {
     "id": "codeium",
@@ -12413,7 +12441,8 @@
         "price": "Custom",
         "note": "Advanced security, support, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/codeium.ico"
   },
   {
     "id": "tabnine",
@@ -12509,7 +12538,8 @@
         "price": "Approx. $12/month",
         "note": "Advanced features like team collaboration, code quality analysis, etc. Please refer to official website."
       }
-    ]
+    ],
+    "logo": "/logos/tabnine.ico"
   },
   {
     "id": "cody",
@@ -12607,7 +12637,8 @@
         "price": "$9/month (approx.)",
         "note": "More features and higher limits, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/cody.svg"
   },
   {
     "id": "otter",
@@ -12729,7 +12760,8 @@
         "price": "Custom",
         "note": "Unlimited transcription, advanced security and admin features, see official website"
       }
-    ]
+    ],
+    "logo": "/logos/otter.png"
   },
   {
     "id": "fireflies",
@@ -12849,7 +12881,8 @@
         "price": "Custom",
         "note": "Unlimited transcription, dedicated support, see official website"
       }
-    ]
+    ],
+    "logo": "/logos/fireflies.png"
   },
   {
     "id": "descript",
@@ -12967,7 +13000,8 @@
         "price": "Custom",
         "note": "Unlimited transcription, SSO, etc."
       }
-    ]
+    ],
+    "logo": "/logos/descript.ico"
   },
   {
     "id": "iflyrec",
@@ -13087,7 +13121,8 @@
         "price": "Custom",
         "note": "Dedicated services, API access, private deployment"
       }
-    ]
+    ],
+    "logo": "/logos/iflyrec.ico"
   },
   {
     "id": "wordtune",
@@ -13187,7 +13222,8 @@
         "price": "Approx. $9.99/month",
         "note": "Unlimited rewriting and advanced features, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/wordtune.png"
   },
   {
     "id": "rytr",
@@ -13294,7 +13330,8 @@
         "price": "from $29/month",
         "note": "For teams, priority support"
       }
-    ]
+    ],
+    "logo": "/logos/rytr.png"
   },
   {
     "id": "you",
@@ -13391,7 +13428,8 @@
         "price": "Approx. $14.99/month",
         "note": "More AI features and priority access, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/you.jpg"
   },
   {
     "id": "phind",
@@ -13483,7 +13521,8 @@
         "price": "$15/month (approx.)",
         "note": "Faster response and advanced features, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/phind.svg"
   },
   {
     "id": "caiyun",
@@ -13582,7 +13621,8 @@
         "price": "About ¥20/month",
         "note": "Unlimited translations and advanced features, subject to official website"
       }
-    ]
+    ],
+    "logo": "/logos/caiyun.png"
   },
   {
     "id": "reverso",
@@ -13809,7 +13849,8 @@
         "price": "~$30/month",
         "note": "Advanced features, team collaboration"
       }
-    ]
+    ],
+    "logo": "/logos/framer.png"
   },
   {
     "id": "spline",
@@ -13916,7 +13957,8 @@
         "price": "$40/month (approx.)",
         "note": "Team collaboration, advanced management"
       }
-    ]
+    ],
+    "logo": "/logos/spline.png"
   },
   {
     "id": "xingye",
