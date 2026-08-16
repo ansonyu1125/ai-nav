@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { scenarios } from "@/data/scenarios";
 import { countByCategory } from "@/lib/tools";
+import { site } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
 import { BilingualText } from "@/components/Bilingual";
 
 export const metadata: Metadata = {
@@ -10,6 +12,18 @@ export const metadata: Metadata = {
 };
 
 export default function ScenariosPage() {
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "AI 工具场景导航",
+    itemListElement: scenarios.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: s.intent,
+      url: `${site.url}/scenarios/${s.id}`,
+    })),
+  };
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="mb-8">
@@ -44,6 +58,8 @@ export default function ScenariosPage() {
           );
         })}
       </div>
+
+      <JsonLd data={itemListJsonLd} />
     </div>
   );
 }

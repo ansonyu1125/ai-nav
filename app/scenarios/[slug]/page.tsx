@@ -4,8 +4,10 @@ import { notFound } from "next/navigation";
 import { scenarios, scenarioMap } from "@/data/scenarios";
 import { getScenario, getScenarioTools } from "@/lib/scenarios";
 import { categoryMap } from "@/data/categories";
+import { site } from "@/lib/site";
 import CompareTable from "@/components/CompareTable";
 import ToolCard from "@/components/ToolCard";
+import JsonLd from "@/components/JsonLd";
 import { BilingualText } from "@/components/Bilingual";
 
 export function generateStaticParams() {
@@ -49,6 +51,28 @@ export default async function ScenarioPage({
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
+  };
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${year} 最佳 ${s.name} AI 工具`,
+    itemListElement: tools.map((t, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: t.name,
+      url: `${site.url}/tools/${t.id}`,
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "首页", item: `${site.url}/` },
+      { "@type": "ListItem", position: 2, name: "场景", item: `${site.url}/scenarios` },
+      { "@type": "ListItem", position: 3, name: s.name, item: `${site.url}/scenarios/${s.id}` },
+    ],
   };
 
   return (
@@ -157,10 +181,9 @@ export default async function ScenarioPage({
         </section>
       )}
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={itemListJsonLd} />
+      <JsonLd data={faqJsonLd} />
     </div>
   );
 }

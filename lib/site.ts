@@ -7,7 +7,7 @@ export const site = {
     "全网 AI 工具导航：收录 ChatGPT、Claude、Midjourney、DeepSeek 等主流 AI 软件，提供 AI 教程、AI 术语解析、排行榜、分类与费用信息，帮你快速找到合适的 AI 工具。",
   descriptionEn:
     "A curated directory of AI tools — ChatGPT, Claude, Midjourney, DeepSeek and more — with tutorials, an AI glossary, rankings, categories and pricing to help you find the right tool.",
-  url: "https://ainav.example.com",
+  url: "https://ai-nav-indol.vercel.app",
 };
 
 export const nav = [
