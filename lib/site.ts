@@ -14,6 +14,7 @@ export const nav = [
   { label: "首页", labelEn: "Home", href: "/" },
   { label: "工具库", labelEn: "Tools", href: "/tools" },
   { label: "排行榜", labelEn: "Ranking", href: "/ranking" },
+  { label: "深度指南", labelEn: "Guides", href: "/best" },
   { label: "AI 资讯", labelEn: "News", href: "/news" },
   { label: "AI 教程", labelEn: "Tutorials", href: "/tutorials" },
   { label: "术语词典", labelEn: "Glossary", href: "/glossary" },

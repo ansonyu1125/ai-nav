@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { scenarios, scenarioMap } from "@/data/scenarios";
 import { getScenario, getScenarioTools } from "@/lib/scenarios";
 import { categoryMap } from "@/data/categories";
+import { bestPages } from "@/data/best-pages";
 import { site } from "@/lib/site";
 import CompareTable from "@/components/CompareTable";
 import ToolCard from "@/components/ToolCard";
@@ -42,6 +43,7 @@ export default async function ScenarioPage({
   const tools = getScenarioTools(s, 8);
   const others = scenarios.filter((x) => x.id !== s.id);
   const category = categoryMap[s.category];
+  const guide = bestPages.find((p) => p.scenarioId === s.id);
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -112,6 +114,16 @@ export default async function ScenarioPage({
           <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-600">
             {category.emoji}{" "}
             <BilingualText zh={category.name} en={category.nameEn} />
+          </div>
+        )}
+        {guide && (
+          <div className="mt-3">
+            <Link
+              href={`/best/${guide.slug}`}
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:underline"
+            >
+              {guide.titleEn} →
+            </Link>
           </div>
         )}
       </header>
