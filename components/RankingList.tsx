@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import type { Tool } from "@/lib/types";
 import { categoryMap } from "@/data/categories";
 import { formatScore } from "@/lib/utils";
+import { useLanguage } from "./LanguageProvider";
 import ToolLogo from "./ToolLogo";
 
 interface RankingListProps {
@@ -10,12 +13,16 @@ interface RankingListProps {
 }
 
 export default function RankingList({ items, metric = "score" }: RankingListProps) {
+  const { lang } = useLanguage();
+
   return (
     <ol className="space-y-2.5">
       {items.map((tool, i) => {
         const rank = i + 1;
         const value =
           metric === "popularity" ? tool.popularity : formatScore(tool.score);
+        const cat = categoryMap[tool.category];
+        const catName = lang === "en" && cat?.nameEn ? cat.nameEn : cat?.name;
         return (
           <li key={tool.id}>
             <Link
@@ -40,9 +47,7 @@ export default function RankingList({ items, metric = "score" }: RankingListProp
                 <div className="truncate font-medium text-slate-900">
                   {tool.name}
                 </div>
-                <div className="text-xs text-slate-400">
-                  {categoryMap[tool.category]?.name}
-                </div>
+                <div className="text-xs text-slate-400">{catName}</div>
               </div>
               <span className="shrink-0 text-sm font-semibold text-amber-500">
                 {metric === "popularity" ? (

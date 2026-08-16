@@ -1,6 +1,7 @@
 import { tools } from "@/lib/tools";
 import { categories } from "@/data/categories";
 import ToolsExplorer from "@/components/ToolsExplorer";
+import { BilingualText } from "@/components/Bilingual";
 
 export const metadata = {
   title: "工具库",
@@ -25,10 +26,13 @@ export default async function ToolsPage({
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          工具库
+          <BilingualText zh="工具库" en="Tools" />
         </h1>
         <p className="mt-2 text-slate-600">
-          浏览全部 {tools.length} 款 AI 工具，按分类、费用与评分筛选。
+          <BilingualText
+            zh={`浏览全部 ${tools.length} 款 AI 工具，按分类、费用与评分筛选。`}
+            en={`Browse all ${tools.length} AI tools, filter by category, pricing and rating.`}
+          />
         </p>
       </div>
       <ToolsExplorer tools={tools} categories={categories} initial={initial} />

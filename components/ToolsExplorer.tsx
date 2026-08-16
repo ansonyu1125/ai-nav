@@ -1,10 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Category, Pricing, Tool } from "@/lib/types";
-import { PRICING_LABEL } from "@/lib/types";
+import type { Category, Pricing, Region, Tool } from "@/lib/types";
+import { PRICING_LABEL, REGION_LABEL } from "@/lib/types";
 import ToolCard from "./ToolCard";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "./LanguageProvider";
 
 interface ToolsExplorerProps {
   tools: Tool[];
@@ -18,36 +19,45 @@ interface ToolsExplorerProps {
   };
 }
 
-const PRICING_OPTIONS: Array<{ value: string; label: string }> = [
-  { value: "all", label: "全部费用" },
-  ...(Object.keys(PRICING_LABEL) as Pricing[]).map((p) => ({
-    value: p,
-    label: PRICING_LABEL[p],
-  })),
-];
-
-const SORT_OPTIONS = [
-  { value: "popularity", label: "热度" },
-  { value: "score", label: "评分" },
-  { value: "newest", label: "最新" },
-];
-
-const REGION_OPTIONS = [
-  { value: "all", label: "全部" },
-  { value: "domestic", label: "国内" },
-  { value: "overseas", label: "海外" },
-];
-
 export default function ToolsExplorer({
   tools,
   categories,
   initial,
 }: ToolsExplorerProps) {
+  const { lang } = useLanguage();
   const [q, setQ] = useState(initial.q);
   const [category, setCategory] = useState(initial.category);
   const [region, setRegion] = useState(initial.region);
   const [pricing, setPricing] = useState(initial.pricing);
   const [sort, setSort] = useState(initial.sort);
+
+  const pricingOptions = useMemo(
+    () => [
+      { value: "all", label: lang === "en" ? "All pricing" : "全部费用" },
+      ...(Object.keys(PRICING_LABEL) as Pricing[]).map((p) => ({
+        value: p,
+        label: PRICING_LABEL[p][lang],
+      })),
+    ],
+    [lang],
+  );
+
+  const sortOptions = [
+    { value: "popularity", label: lang === "en" ? "Popular" : "热度" },
+    { value: "score", label: lang === "en" ? "Rating" : "评分" },
+    { value: "newest", label: lang === "en" ? "Newest" : "最新" },
+  ];
+
+  const regionOptions = useMemo(
+    () => [
+      { value: "all", label: lang === "en" ? "All" : "全部" },
+      ...(Object.keys(REGION_LABEL) as Region[]).map((r) => ({
+        value: r,
+        label: REGION_LABEL[r][lang],
+      })),
+    ],
+    [lang],
+  );
 
   const filtered = useMemo(() => {
     let list = tools;
@@ -55,7 +65,14 @@ export default function ToolsExplorer({
     const query = q.trim().toLowerCase();
     if (query) {
       list = list.filter((t) =>
-        [t.name, t.nameZh, t.description, ...t.tags]
+        [
+          t.name,
+          t.nameZh,
+          t.description,
+          t.descriptionEn,
+          ...t.tags,
+          ...(t.tagsEn ?? []),
+        ]
           .join(" ")
           .toLowerCase()
           .includes(query),
@@ -73,6 +90,9 @@ export default function ToolsExplorer({
     return arr;
   }, [tools, q, category, region, pricing, sort]);
 
+  const catName = (c: Category) =>
+    lang === "en" && c.nameEn ? c.nameEn : c.name;
+
   return (
     <div>
       {/* 搜索框 */}
@@ -87,7 +107,11 @@ export default function ToolsExplorer({
             type="text"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="搜索工具名称、描述或标签…"
+            placeholder={
+              lang === "en"
+                ? "Search tools by name, description or tag…"
+                : "搜索工具名称、描述或标签…"
+            }
             className="h-10 w-full bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"
           />
         </div>
@@ -104,7 +128,7 @@ export default function ToolsExplorer({
               : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
           )}
         >
-          全部
+          {lang === "en" ? "All" : "全部"}
         </button>
         {categories.map((c) => (
           <button
@@ -117,15 +141,17 @@ export default function ToolsExplorer({
                 : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
             )}
           >
-            {c.emoji} {c.name}
+            {c.emoji} {catName(c)}
           </button>
         ))}
       </div>
 
       {/* 地区筛选 */}
       <div className="mt-4 flex flex-wrap items-center gap-2">
-        <span className="text-sm font-medium text-slate-400">地区</span>
-        {REGION_OPTIONS.map((r) => (
+        <span className="text-sm font-medium text-slate-400">
+          {lang === "en" ? "Region" : "地区"}
+        </span>
+        {regionOptions.map((r) => (
           <button
             key={r.value}
             onClick={() => setRegion(r.value)}
@@ -144,7 +170,7 @@ export default function ToolsExplorer({
       {/* 费用 + 排序 */}
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2">
-          {PRICING_OPTIONS.map((p) => (
+          {pricingOptions.map((p) => (
             <button
               key={p.value}
               onClick={() => setPricing(p.value)}
@@ -161,7 +187,7 @@ export default function ToolsExplorer({
         </div>
 
         <div className="flex items-center gap-1 rounded-lg bg-white p-1 ring-1 ring-slate-200">
-          {SORT_OPTIONS.map((s) => (
+          {sortOptions.map((s) => (
             <button
               key={s.value}
               onClick={() => setSort(s.value)}
@@ -179,7 +205,15 @@ export default function ToolsExplorer({
       </div>
 
       <p className="mt-6 text-sm text-slate-500">
-        共找到 <span className="font-semibold text-slate-900">{filtered.length}</span> 款工具
+        {lang === "en" ? (
+          <>
+            Found <span className="font-semibold text-slate-900">{filtered.length}</span> tools
+          </>
+        ) : (
+          <>
+            共找到 <span className="font-semibold text-slate-900">{filtered.length}</span> 款工具
+          </>
+        )}
       </p>
 
       {/* 结果 */}
@@ -192,9 +226,13 @@ export default function ToolsExplorer({
       ) : (
         <div className="mt-8 rounded-2xl border border-dashed border-slate-300 bg-slate-50 py-16 text-center">
           <div className="text-4xl">🔍</div>
-          <p className="mt-3 font-medium text-slate-700">没有找到匹配的工具</p>
+          <p className="mt-3 font-medium text-slate-700">
+            {lang === "en" ? "No matching tools found" : "没有找到匹配的工具"}
+          </p>
           <p className="mt-1 text-sm text-slate-500">
-            试试更换关键词，或清空筛选条件
+            {lang === "en"
+              ? "Try a different keyword or clear the filters"
+              : "试试更换关键词，或清空筛选条件"}
           </p>
           <button
             onClick={() => {
@@ -205,7 +243,7 @@ export default function ToolsExplorer({
             }}
             className="mt-4 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
           >
-            清空筛选
+            {lang === "en" ? "Clear filters" : "清空筛选"}
           </button>
         </div>
       )}

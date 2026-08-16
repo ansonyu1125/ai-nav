@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { GlossaryTerm } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "./LanguageProvider";
 
 interface GlossaryExplorerProps {
   terms: GlossaryTerm[];
@@ -14,15 +15,25 @@ export default function GlossaryExplorer({
   terms,
   categories,
 }: GlossaryExplorerProps) {
+  const { lang } = useLanguage();
   const [q, setQ] = useState("");
   const [category, setCategory] = useState("all");
+
+  const categoryEnMap = useMemo(() => {
+    const m: Record<string, string> = {};
+    for (const t of terms) if (t.categoryEn) m[t.category] = t.categoryEn;
+    return m;
+  }, [terms]);
+
+  const catLabel = (c: string) =>
+    lang === "en" && categoryEnMap[c] ? categoryEnMap[c] : c;
 
   const filtered = useMemo(() => {
     const query = q.trim().toLowerCase();
     return terms.filter((t) => {
       if (category !== "all" && t.category !== category) return false;
       if (!query) return true;
-      return [t.term, t.english, t.definition, t.category]
+      return [t.term, t.english, t.definition, t.definitionEn, t.category]
         .join(" ")
         .toLowerCase()
         .includes(query);
@@ -38,6 +49,13 @@ export default function GlossaryExplorer({
     return groups;
   }, [filtered, categories]);
 
+  const def = (t: GlossaryTerm) =>
+    lang === "en" && t.definitionEn ? t.definitionEn : t.definition;
+
+  // 术语主名：中文模式显示中文术语，英文模式显示英文术语（互相作为副标题参考）
+  const termTitle = (t: GlossaryTerm) => (lang === "en" ? t.english : t.term);
+  const termSub = (t: GlossaryTerm) => (lang === "en" ? t.term : t.english);
+
   return (
     <div>
       {/* 搜索框 */}
@@ -52,7 +70,11 @@ export default function GlossaryExplorer({
             type="text"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="搜索术语，如 RAG、Prompt、Transformer…"
+            placeholder={
+              lang === "en"
+                ? "Search terms, e.g. RAG, Prompt, Transformer…"
+                : "搜索术语，如 RAG、Prompt、Transformer…"
+            }
             className="h-10 w-full bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"
           />
         </div>
@@ -69,7 +91,7 @@ export default function GlossaryExplorer({
               : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
           )}
         >
-          全部
+          {lang === "en" ? "All" : "全部"}
         </button>
         {categories.map((c) => (
           <button
@@ -82,27 +104,39 @@ export default function GlossaryExplorer({
                 : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
             )}
           >
-            {c}
+            {catLabel(c)}
           </button>
         ))}
       </div>
 
       <p className="mt-6 text-sm text-slate-500">
-        共 <span className="font-semibold text-slate-900">{filtered.length}</span> 个词条
+        {lang === "en" ? (
+          <>
+            <span className="font-semibold text-slate-900">{filtered.length}</span> terms
+          </>
+        ) : (
+          <>
+            共 <span className="font-semibold text-slate-900">{filtered.length}</span> 个词条
+          </>
+        )}
       </p>
 
       {filtered.length === 0 ? (
         <div className="mt-6 rounded-2xl border border-dashed border-slate-300 bg-slate-50 py-16 text-center">
           <div className="text-4xl">📚</div>
-          <p className="mt-3 font-medium text-slate-700">没有找到相关术语</p>
-          <p className="mt-1 text-sm text-slate-500">换个关键词试试</p>
+          <p className="mt-3 font-medium text-slate-700">
+            {lang === "en" ? "No terms found" : "没有找到相关术语"}
+          </p>
+          <p className="mt-1 text-sm text-slate-500">
+            {lang === "en" ? "Try another keyword" : "换个关键词试试"}
+          </p>
         </div>
       ) : (
         <div className="mt-6 space-y-8">
           {grouped.map((group) => (
             <section key={group.category}>
               <h2 className="mb-3 text-lg font-bold text-slate-900">
-                {group.category}
+                {catLabel(group.category)}
                 <span className="ml-2 text-sm font-normal text-slate-400">
                   {group.items.length}
                 </span>
@@ -115,11 +149,11 @@ export default function GlossaryExplorer({
                     className="group flex flex-col rounded-xl border border-slate-200 bg-white p-4 transition hover:border-indigo-300 hover:shadow-sm"
                   >
                     <div className="font-semibold text-slate-900 group-hover:text-indigo-600">
-                      {term.term}
+                      {termTitle(term)}
                     </div>
-                    <div className="mt-0.5 text-xs text-slate-400">{term.english}</div>
+                    <div className="mt-0.5 text-xs text-slate-400">{termSub(term)}</div>
                     <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-500">
-                      {term.definition}
+                      {def(term)}
                     </p>
                   </Link>
                 ))}

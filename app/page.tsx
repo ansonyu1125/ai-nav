@@ -9,15 +9,16 @@ import CategoryCard from "@/components/CategoryCard";
 import ToolCard from "@/components/ToolCard";
 import RankingList from "@/components/RankingList";
 import SectionHeading from "@/components/SectionHeading";
+import { BilingualText } from "@/components/Bilingual";
 
 export default function HomePage() {
   const featured = getFeaturedTools();
   const hot = topTools("popularity", 8);
   const stats = [
-    { label: "收录工具", value: tools.length },
-    { label: "工具分类", value: categories.length },
-    { label: "AI 教程", value: tutorials.length },
-    { label: "术语词条", value: glossary.length },
+    { label: "收录工具", labelEn: "Tools", value: tools.length },
+    { label: "工具分类", labelEn: "Categories", value: categories.length },
+    { label: "AI 教程", labelEn: "Tutorials", value: tutorials.length },
+    { label: "术语词条", labelEn: "Glossary", value: glossary.length },
   ];
 
   return (
@@ -26,10 +27,13 @@ export default function HomePage() {
       <section className="bg-gradient-to-b from-indigo-50/70 to-white">
         <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6 sm:py-24">
           <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-            {site.tagline}
+            <BilingualText zh={site.tagline} en={site.taglineEn} />
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-            收录全网主流 AI 软件，提供 AI 教程、术语解析与排行榜，帮你快速找到合适的工具。
+            <BilingualText
+              zh="收录全网主流 AI 软件，提供 AI 教程、术语解析与排行榜，帮你快速找到合适的工具。"
+              en="Discover the best AI tools worldwide, with tutorials, a glossary and rankings to help you find the right one fast."
+            />
           </p>
           <SearchBar size="lg" className="mx-auto mt-8 max-w-xl" />
 
@@ -37,7 +41,9 @@ export default function HomePage() {
             {stats.map((s) => (
               <div key={s.label} className="rounded-2xl border border-slate-200 bg-white px-4 py-3">
                 <div className="text-2xl font-bold text-indigo-600">{s.value}</div>
-                <div className="mt-0.5 text-sm text-slate-500">{s.label}</div>
+                <div className="mt-0.5 text-sm text-slate-500">
+                  <BilingualText zh={s.label} en={s.labelEn} />
+                </div>
               </div>
             ))}
           </div>
@@ -48,7 +54,9 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <SectionHeading
           title="按分类浏览"
+          titleEn="Browse by category"
           subtitle="从你最需要的场景开始，快速定位合适工具"
+          subtitleEn="Start from the use case you need and find the right tool fast"
           href="/tools"
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -62,7 +70,9 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <SectionHeading
           title="精选推荐"
+          titleEn="Featured picks"
           subtitle="口碑与热度兼具的明星工具"
+          subtitleEn="Top tools by reputation and popularity"
           href="/tools"
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -78,7 +88,9 @@ export default function HomePage() {
           <div>
             <SectionHeading
               title="热门排行榜"
+              titleEn="Trending"
               subtitle="按热度排名的 TOP 8"
+              subtitleEn="Top 8 by popularity"
               href="/ranking"
             />
             <RankingList items={hot} metric="popularity" />
@@ -87,7 +99,9 @@ export default function HomePage() {
           <div>
             <SectionHeading
               title="最新教程"
+              titleEn="Latest tutorials"
               subtitle="从零开始，快速上手 AI 工具"
+              subtitleEn="Get started with AI tools from scratch"
               href="/tutorials"
             />
             <div className="space-y-3">
@@ -102,10 +116,10 @@ export default function HomePage() {
                   </span>
                   <div className="min-w-0">
                     <div className="truncate font-medium text-slate-900">
-                      {t.title}
+                      <BilingualText zh={t.title} en={t.titleEn} />
                     </div>
                     <div className="mt-0.5 line-clamp-1 text-sm text-slate-500">
-                      {t.summary}
+                      <BilingualText zh={t.summary} en={t.summaryEn} />
                     </div>
                   </div>
                 </Link>

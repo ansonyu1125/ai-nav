@@ -1,11 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import type { Tool } from "@/lib/types";
 import { formatScore } from "@/lib/utils";
+import { useLanguage } from "./LanguageProvider";
 import PricingBadge from "./PricingBadge";
 import RegionBadge from "./RegionBadge";
 import ToolLogo from "./ToolLogo";
 
 export default function ToolCard({ tool }: { tool: Tool }) {
+  const { lang } = useLanguage();
+  const desc =
+    lang === "en" && tool.descriptionEn ? tool.descriptionEn : tool.description;
+  const tags =
+    lang === "en" && tool.tagsEn && tool.tagsEn.length ? tool.tagsEn : tool.tags;
+
   return (
     <Link
       href={`/tools/${tool.id}`}
@@ -23,12 +32,12 @@ export default function ToolCard({ tool }: { tool: Tool }) {
         {tool.name}
       </h3>
       <p className="mt-1 line-clamp-2 flex-1 text-sm leading-relaxed text-slate-500">
-        {tool.description}
+        {desc}
       </p>
 
       <div className="mt-4 flex items-center justify-between">
         <div className="flex flex-wrap gap-1.5">
-          {tool.tags.slice(0, 2).map((tag) => (
+          {tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
               className="rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-500"

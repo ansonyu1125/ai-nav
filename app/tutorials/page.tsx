@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { tutorials } from "@/lib/tutorials";
+import { BilingualText } from "@/components/Bilingual";
 
 export const metadata = {
   title: "AI 教程",
@@ -9,9 +10,14 @@ export default function TutorialsPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">AI 教程</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+          <BilingualText zh="AI 教程" en="AI Tutorials" />
+        </h1>
         <p className="mt-2 text-slate-600">
-          从零开始，学会使用 ChatGPT、Midjourney、Cursor 等主流 AI 工具。
+          <BilingualText
+            zh="从零开始，学会使用 ChatGPT、Midjourney、Cursor 等主流 AI 工具。"
+            en="Learn to use ChatGPT, Midjourney, Cursor and other top AI tools from scratch."
+          />
         </p>
       </div>
 
@@ -27,17 +33,22 @@ export default function TutorialsPage() {
                 {t.emoji}
               </span>
               <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-500">
-                {t.category}
+                <BilingualText zh={t.category} en={t.categoryEn} />
               </span>
             </div>
             <h2 className="mt-4 font-semibold leading-snug text-slate-900 group-hover:text-indigo-600">
-              {t.title}
+              <BilingualText zh={t.title} en={t.titleEn} />
             </h2>
             <p className="mt-2 line-clamp-2 flex-1 text-sm leading-relaxed text-slate-500">
-              {t.summary}
+              <BilingualText zh={t.summary} en={t.summaryEn} />
             </p>
             <div className="mt-4 flex items-center gap-3 text-xs text-slate-400">
-              <span>{t.readMinutes} 分钟阅读</span>
+              <span>
+                <BilingualText
+                  zh={`${t.readMinutes} 分钟阅读`}
+                  en={`${t.readMinutes} min read`}
+                />
+              </span>
               <span>·</span>
               <span>{t.date}</span>
             </div>

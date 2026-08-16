@@ -10,7 +10,10 @@ export const tutorials = tutorialsData as TutorialMeta[];
 export function getTutorial(id: string): Tutorial | undefined {
   const meta = tutorials.find((t) => t.id === id);
   if (!meta) return undefined;
-  const file = path.join(process.cwd(), "data", "tutorials", `${id}.md`);
-  const content = fs.readFileSync(file, "utf-8");
-  return { ...meta, content };
+  const dir = path.join(process.cwd(), "data", "tutorials");
+  const content = fs.readFileSync(path.join(dir, `${id}.md`), "utf-8");
+  let contentEn: string | undefined;
+  const enFile = path.join(dir, `${id}.en.md`);
+  if (fs.existsSync(enFile)) contentEn = fs.readFileSync(enFile, "utf-8");
+  return { ...meta, content, contentEn };
 }

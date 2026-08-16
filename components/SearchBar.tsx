@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useLangText } from "./Bilingual";
 
 interface SearchBarProps {
   placeholder?: string;
@@ -10,12 +11,17 @@ interface SearchBarProps {
 }
 
 export default function SearchBar({
-  placeholder = "搜索 AI 工具，如 ChatGPT、Midjourney…",
+  placeholder,
   size = "md",
   className,
 }: SearchBarProps) {
   const [q, setQ] = useState("");
   const router = useRouter();
+  const defaultPh = useLangText(
+    "搜索 AI 工具，如 ChatGPT、Midjourney…",
+    "Search AI tools, e.g. ChatGPT, Midjourney…",
+  );
+  const submitLabel = useLangText("搜索", "Search");
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,14 +44,14 @@ export default function SearchBar({
           type="text"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder={placeholder}
+          placeholder={placeholder || defaultPh}
           className={`w-full bg-transparent text-slate-900 placeholder:text-slate-400 focus:outline-none ${inputClass}`}
         />
         <button
           type="submit"
           className="shrink-0 rounded-full bg-indigo-600 px-5 text-sm font-medium text-white transition hover:bg-indigo-700"
         >
-          搜索
+          {submitLabel}
         </button>
       </div>
     </form>

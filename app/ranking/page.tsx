@@ -3,6 +3,7 @@ import { tools, sortTools } from "@/lib/tools";
 import { categories } from "@/data/categories";
 import RankingList from "@/components/RankingList";
 import { cn } from "@/lib/utils";
+import { BilingualText } from "@/components/Bilingual";
 
 export const metadata = {
   title: "排行榜",
@@ -28,15 +29,22 @@ export default async function RankingPage({
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">排行榜</h1>
-        <p className="mt-2 text-slate-600">按评分或热度查看各分类的 AI 工具榜单。</p>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+          <BilingualText zh="排行榜" en="Rankings" />
+        </h1>
+        <p className="mt-2 text-slate-600">
+          <BilingualText
+            zh="按评分或热度查看各分类的 AI 工具榜单。"
+            en="Browse AI tool rankings by rating or popularity."
+          />
+        </p>
       </div>
 
       {/* 指标切换 */}
       <div className="flex gap-2">
         {[
-          { value: "score", label: "综合评分榜" },
-          { value: "popularity", label: "热度榜" },
+          { value: "score", label: "综合评分榜", labelEn: "Top rated" },
+          { value: "popularity", label: "热度榜", labelEn: "Most popular" },
         ].map((m) => (
           <Link
             key={m.value}
@@ -48,7 +56,7 @@ export default async function RankingPage({
                 : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
             )}
           >
-            {m.label}
+            <BilingualText zh={m.label} en={m.labelEn} />
           </Link>
         ))}
       </div>
@@ -64,7 +72,7 @@ export default async function RankingPage({
               : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
           )}
         >
-          全部
+          <BilingualText zh="全部" en="All" />
         </Link>
         {categories.map((c) => (
           <Link
@@ -77,7 +85,7 @@ export default async function RankingPage({
                 : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
             )}
           >
-            {c.emoji} {c.name}
+            {c.emoji} <BilingualText zh={c.name} en={c.nameEn} />
           </Link>
         ))}
       </div>
@@ -87,7 +95,7 @@ export default async function RankingPage({
           <RankingList items={ranked} metric={metric} />
         ) : (
           <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 py-16 text-center text-slate-500">
-            该分类下暂无工具
+            <BilingualText zh="该分类下暂无工具" en="No tools in this category yet" />
           </div>
         )}
       </div>

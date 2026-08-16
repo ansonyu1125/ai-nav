@@ -29,3 +29,9 @@ export function BilingualNode({
   const { lang } = useLanguage();
   return <>{lang === "en" && en ? en : zh}</>;
 }
+
+// 在客户端组件里按当前语言取字符串（英文缺失时回退中文）
+export function useLangText(zh: string, en?: string): string {
+  const { lang } = useLanguage();
+  return lang === "en" && en ? en : zh;
+}
