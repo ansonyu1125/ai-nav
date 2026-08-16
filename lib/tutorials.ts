@@ -5,7 +5,9 @@ import type { Tutorial } from "@/lib/types";
 
 export type TutorialMeta = Omit<Tutorial, "content">;
 
-export const tutorials = tutorialsData as TutorialMeta[];
+export const tutorials = ([...tutorialsData] as TutorialMeta[]).sort((a, b) =>
+  b.date.localeCompare(a.date),
+);
 
 export function getTutorial(id: string): Tutorial | undefined {
   const meta = tutorials.find((t) => t.id === id);
