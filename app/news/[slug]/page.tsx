@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticle, getArticles } from "@/lib/news";
-import Markdown from "@/components/Markdown";
 import LanguageToggle from "@/components/LanguageToggle";
-import { BilingualText, BilingualNode } from "@/components/Bilingual";
+import { BilingualText, BilingualMarkdown } from "@/components/Bilingual";
 
 export const dynamic = "force-dynamic";
 
@@ -67,14 +66,7 @@ export default async function NewsArticlePage({
       </header>
 
       <article className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
-        <BilingualNode
-          zh={<Markdown content={article.content} />}
-          en={
-            article.contentEn ? (
-              <Markdown content={article.contentEn} />
-            ) : undefined
-          }
-        />
+        <BilingualMarkdown zh={article.content} en={article.contentEn} />
       </article>
 
       <div className="mt-6 flex flex-wrap items-center gap-3">

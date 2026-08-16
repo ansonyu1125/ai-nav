@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { site, nav } from "@/lib/site";
 import { useLanguage } from "./LanguageProvider";
+import { localize } from "@/lib/i18n";
 
 export default function Footer() {
   const { lang } = useLanguage();
-  const pick = (zh: string, en?: string) => (lang === "en" && en ? en : zh);
+  const pick = (zh: string, en?: string) => localize(lang, zh, en);
 
   return (
     <footer className="mt-16 border-t border-slate-200 bg-slate-50">

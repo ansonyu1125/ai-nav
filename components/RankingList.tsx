@@ -5,6 +5,7 @@ import type { Tool } from "@/lib/types";
 import { categoryMap } from "@/data/categories";
 import { formatScore } from "@/lib/utils";
 import { useLanguage } from "./LanguageProvider";
+import { localize } from "@/lib/i18n";
 import ToolLogo from "./ToolLogo";
 
 interface RankingListProps {
@@ -22,7 +23,7 @@ export default function RankingList({ items, metric = "score" }: RankingListProp
         const value =
           metric === "popularity" ? tool.popularity : formatScore(tool.score);
         const cat = categoryMap[tool.category];
-        const catName = lang === "en" && cat?.nameEn ? cat.nameEn : cat?.name;
+        const catName = localize(lang, cat?.name ?? "", cat?.nameEn);
         return (
           <li key={tool.id}>
             <Link

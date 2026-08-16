@@ -4,16 +4,15 @@ import Link from "next/link";
 import type { Tool } from "@/lib/types";
 import { formatScore } from "@/lib/utils";
 import { useLanguage } from "./LanguageProvider";
+import { localize, localizeArray } from "@/lib/i18n";
 import PricingBadge from "./PricingBadge";
 import RegionBadge from "./RegionBadge";
 import ToolLogo from "./ToolLogo";
 
 export default function ToolCard({ tool }: { tool: Tool }) {
   const { lang } = useLanguage();
-  const desc =
-    lang === "en" && tool.descriptionEn ? tool.descriptionEn : tool.description;
-  const tags =
-    lang === "en" && tool.tagsEn && tool.tagsEn.length ? tool.tagsEn : tool.tags;
+  const desc = localize(lang, tool.description, tool.descriptionEn);
+  const tags = localizeArray(lang, tool.tags, tool.tagsEn);
 
   return (
     <Link

@@ -6,6 +6,7 @@ import { PRICING_LABEL, REGION_LABEL } from "@/lib/types";
 import ToolCard from "./ToolCard";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "./LanguageProvider";
+import { localize } from "@/lib/i18n";
 
 interface ToolsExplorerProps {
   tools: Tool[];
@@ -33,27 +34,27 @@ export default function ToolsExplorer({
 
   const pricingOptions = useMemo(
     () => [
-      { value: "all", label: lang === "en" ? "All pricing" : "全部费用" },
+      { value: "all", label: localize(lang, "全部费用", "All pricing") },
       ...(Object.keys(PRICING_LABEL) as Pricing[]).map((p) => ({
         value: p,
-        label: PRICING_LABEL[p][lang],
+        label: localize(lang, PRICING_LABEL[p].zh, PRICING_LABEL[p].en),
       })),
     ],
     [lang],
   );
 
   const sortOptions = [
-    { value: "popularity", label: lang === "en" ? "Popular" : "热度" },
-    { value: "score", label: lang === "en" ? "Rating" : "评分" },
-    { value: "newest", label: lang === "en" ? "Newest" : "最新" },
+    { value: "popularity", label: localize(lang, "热度", "Popular") },
+    { value: "score", label: localize(lang, "评分", "Rating") },
+    { value: "newest", label: localize(lang, "最新", "Newest") },
   ];
 
   const regionOptions = useMemo(
     () => [
-      { value: "all", label: lang === "en" ? "All" : "全部" },
+      { value: "all", label: localize(lang, "全部", "All") },
       ...(Object.keys(REGION_LABEL) as Region[]).map((r) => ({
         value: r,
-        label: REGION_LABEL[r][lang],
+        label: localize(lang, REGION_LABEL[r].zh, REGION_LABEL[r].en),
       })),
     ],
     [lang],
@@ -90,8 +91,7 @@ export default function ToolsExplorer({
     return arr;
   }, [tools, q, category, region, pricing, sort]);
 
-  const catName = (c: Category) =>
-    lang === "en" && c.nameEn ? c.nameEn : c.name;
+  const catName = (c: Category) => localize(lang, c.name, c.nameEn);
 
   return (
     <div>
@@ -107,11 +107,11 @@ export default function ToolsExplorer({
             type="text"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder={
-              lang === "en"
-                ? "Search tools by name, description or tag…"
-                : "搜索工具名称、描述或标签…"
-            }
+            placeholder={localize(
+              lang,
+              "搜索工具名称、描述或标签…",
+              "Search tools by name, description or tag…",
+            )}
             className="h-10 w-full bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"
           />
         </div>
@@ -128,7 +128,7 @@ export default function ToolsExplorer({
               : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
           )}
         >
-          {lang === "en" ? "All" : "全部"}
+          {localize(lang, "全部", "All")}
         </button>
         {categories.map((c) => (
           <button
@@ -149,7 +149,7 @@ export default function ToolsExplorer({
       {/* 地区筛选 */}
       <div className="mt-4 flex flex-wrap items-center gap-2">
         <span className="text-sm font-medium text-slate-400">
-          {lang === "en" ? "Region" : "地区"}
+          {localize(lang, "地区", "Region")}
         </span>
         {regionOptions.map((r) => (
           <button
@@ -207,11 +207,15 @@ export default function ToolsExplorer({
       <p className="mt-6 text-sm text-slate-500">
         {lang === "en" ? (
           <>
-            Found <span className="font-semibold text-slate-900">{filtered.length}</span> tools
+            Found{" "}
+            <span className="font-semibold text-slate-900">{filtered.length}</span>{" "}
+            tools
           </>
         ) : (
           <>
-            共找到 <span className="font-semibold text-slate-900">{filtered.length}</span> 款工具
+            {localize(lang, "共找到")}{" "}
+            <span className="font-semibold text-slate-900">{filtered.length}</span>{" "}
+            {localize(lang, "款工具")}
           </>
         )}
       </p>
@@ -227,12 +231,14 @@ export default function ToolsExplorer({
         <div className="mt-8 rounded-2xl border border-dashed border-slate-300 bg-slate-50 py-16 text-center">
           <div className="text-4xl">🔍</div>
           <p className="mt-3 font-medium text-slate-700">
-            {lang === "en" ? "No matching tools found" : "没有找到匹配的工具"}
+            {localize(lang, "没有找到匹配的工具", "No matching tools found")}
           </p>
           <p className="mt-1 text-sm text-slate-500">
-            {lang === "en"
-              ? "Try a different keyword or clear the filters"
-              : "试试更换关键词，或清空筛选条件"}
+            {localize(
+              lang,
+              "试试更换关键词，或清空筛选条件",
+              "Try a different keyword or clear the filters",
+            )}
           </p>
           <button
             onClick={() => {
@@ -243,7 +249,7 @@ export default function ToolsExplorer({
             }}
             className="mt-4 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
           >
-            {lang === "en" ? "Clear filters" : "清空筛选"}
+            {localize(lang, "清空筛选", "Clear filters")}
           </button>
         </div>
       )}

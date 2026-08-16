@@ -4,16 +4,17 @@ import Link from "next/link";
 import type { Category } from "@/lib/types";
 import { countByCategory } from "@/lib/tools";
 import { useLanguage } from "./LanguageProvider";
+import { localize } from "@/lib/i18n";
 
 export default function CategoryCard({ category }: { category: Category }) {
   const count = countByCategory(category.id);
   const { lang } = useLanguage();
-  const name =
-    lang === "en" && category.nameEn ? category.nameEn : category.name;
-  const desc =
-    lang === "en"
-      ? category.descriptionEn || `${count} tools`
-      : category.description || `${count} 款工具`;
+  const name = localize(lang, category.name, category.nameEn);
+  const desc = localize(
+    lang,
+    category.description || `${count} 款工具`,
+    category.descriptionEn || `${count} tools`,
+  );
 
   return (
     <Link

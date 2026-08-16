@@ -1,9 +1,10 @@
 "use client";
 
-import type { ReactNode } from "react";
 import { useLanguage } from "./LanguageProvider";
+import { localize } from "@/lib/i18n";
+import Markdown from "./Markdown";
 
-// 用于简单文本（标题、摘要、按钮文字等），按当前语言选中文或英文
+// 简单文本（标题、摘要、按钮等），按当前语言选简中/繁中/英文
 export function BilingualText({
   zh,
   en,
@@ -14,24 +15,30 @@ export function BilingualText({
   className?: string;
 }) {
   const { lang } = useLanguage();
-  const text = lang === "en" && en ? en : zh;
-  return <span className={className}>{text}</span>;
+  return <span className={className}>{localize(lang, zh, en)}</span>;
 }
 
-// 用于整段已渲染内容（比如 Markdown 正文），按语言选择渲染结果
-export function BilingualNode({
+// 整段 Markdown 正文，按语言选内容并即时做繁简转换
+export function BilingualMarkdown({ zh, en }: { zh: string; en?: string }) {
+  const { lang } = useLanguage();
+  return <Markdown content={localize(lang, zh, en)} />;
+}
+
+// 仅在中文（简/繁）下显示的文字，英文下隐藏（如中文名副标题）
+export function ZhOnlyText({
   zh,
-  en,
+  className,
 }: {
-  zh: ReactNode;
-  en?: ReactNode;
+  zh: string;
+  className?: string;
 }) {
   const { lang } = useLanguage();
-  return <>{lang === "en" && en ? en : zh}</>;
+  if (lang === "en") return null;
+  return <p className={className}>{localize(lang, zh)}</p>;
 }
 
-// 在客户端组件里按当前语言取字符串（英文缺失时回退中文）
+// 在客户端组件里按当前语言取字符串（英文缺失回退中文）
 export function useLangText(zh: string, en?: string): string {
   const { lang } = useLanguage();
-  return lang === "en" && en ? en : zh;
+  return localize(lang, zh, en);
 }

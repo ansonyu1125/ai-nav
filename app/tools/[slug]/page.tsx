@@ -9,7 +9,8 @@ import PricingBadge from "@/components/PricingBadge";
 import RegionBadge from "@/components/RegionBadge";
 import ToolCard from "@/components/ToolCard";
 import ToolLogo from "@/components/ToolLogo";
-import { BilingualText, BilingualNode } from "@/components/Bilingual";
+import { BilingualText, ZhOnlyText } from "@/components/Bilingual";
+import TagList from "@/components/TagList";
 
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.id }));
@@ -41,19 +42,6 @@ export default async function ToolPage({
   const category = categoryMap[tool.category];
   const related = getRelatedTools(tool);
 
-  const renderTags = (tags: string[]) => (
-    <>
-      {tags.map((tag) => (
-        <span
-          key={tag}
-          className="rounded-md bg-slate-100 px-2.5 py-1 text-sm text-slate-600"
-        >
-          {tag}
-        </span>
-      ))}
-    </>
-  );
-
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       {/* 面包屑 */}
@@ -82,26 +70,19 @@ export default async function ToolPage({
               <PricingBadge pricing={tool.pricing} />
             </div>
             {tool.nameZh && tool.nameZh !== tool.name && (
-              <BilingualNode
-                zh={<p className="mt-1 text-slate-500">{tool.nameZh}</p>}
-                en={<></>}
-              />
+              <ZhOnlyText zh={tool.nameZh} className="mt-1 text-slate-500" />
             )}
 
             <p className="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
               <BilingualText zh={tool.description} en={tool.descriptionEn} />
             </p>
 
-            <div className="mt-4 flex flex-wrap gap-2">
-              <BilingualNode
-                zh={renderTags(tool.tags)}
-                en={
-                  tool.tagsEn && tool.tagsEn.length
-                    ? renderTags(tool.tagsEn)
-                    : undefined
-                }
-              />
-            </div>
+            <TagList
+              zh={tool.tags}
+              en={tool.tagsEn}
+              className="mt-4 flex flex-wrap gap-2"
+              tagClassName="rounded-md bg-slate-100 px-2.5 py-1 text-sm text-slate-600"
+            />
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <a

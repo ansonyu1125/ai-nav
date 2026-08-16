@@ -2,6 +2,7 @@
 
 import { PRICING_LABEL, type Pricing } from "@/lib/types";
 import { useLanguage } from "./LanguageProvider";
+import { localize } from "@/lib/i18n";
 
 const styles: Record<Pricing, string> = {
   free: "bg-emerald-50 text-emerald-700 ring-emerald-600/20",
@@ -16,7 +17,7 @@ export default function PricingBadge({ pricing }: { pricing: Pricing }) {
     <span
       className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset ${styles[pricing]}`}
     >
-      {PRICING_LABEL[pricing][lang]}
+      {localize(lang, PRICING_LABEL[pricing].zh, PRICING_LABEL[pricing].en)}
     </span>
   );
 }

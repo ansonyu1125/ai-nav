@@ -2,6 +2,7 @@
 
 import { REGION_LABEL, type Region } from "@/lib/types";
 import { useLanguage } from "./LanguageProvider";
+import { localize } from "@/lib/i18n";
 
 const styles: Record<Region, string> = {
   domestic: "bg-teal-50 text-teal-700 ring-teal-600/20",
@@ -14,7 +15,7 @@ export default function RegionBadge({ region }: { region: Region }) {
     <span
       className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset ${styles[region]}`}
     >
-      {REGION_LABEL[region][lang]}
+      {localize(lang, REGION_LABEL[region].zh, REGION_LABEL[region].en)}
     </span>
   );
 }

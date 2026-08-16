@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { site, nav } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "./LanguageProvider";
+import { localize } from "@/lib/i18n";
 import LanguageToggle from "./LanguageToggle";
 
 export default function Navbar() {
@@ -24,7 +25,7 @@ export default function Navbar() {
             🧭
           </span>
           <span className="text-lg font-bold text-slate-900">
-            {lang === "en" ? site.nameEn : site.name}
+            {localize(lang, site.name, site.nameEn)}
           </span>
         </Link>
 
@@ -40,7 +41,7 @@ export default function Navbar() {
                   : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
               )}
             >
-              {lang === "en" ? item.labelEn : item.label}
+              {localize(lang, item.label, item.labelEn)}
             </Link>
           ))}
         </div>
@@ -84,7 +85,7 @@ export default function Navbar() {
                   : "text-slate-600 hover:bg-slate-100",
               )}
             >
-              {lang === "en" ? item.labelEn : item.label}
+              {localize(lang, item.label, item.labelEn)}
             </Link>
           ))}
         </div>

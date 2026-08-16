@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { GlossaryTerm } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "./LanguageProvider";
+import { localize } from "@/lib/i18n";
 
 interface GlossaryExplorerProps {
   terms: GlossaryTerm[];
@@ -25,8 +26,7 @@ export default function GlossaryExplorer({
     return m;
   }, [terms]);
 
-  const catLabel = (c: string) =>
-    lang === "en" && categoryEnMap[c] ? categoryEnMap[c] : c;
+  const catLabel = (c: string) => localize(lang, c, categoryEnMap[c]);
 
   const filtered = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -49,11 +49,10 @@ export default function GlossaryExplorer({
     return groups;
   }, [filtered, categories]);
 
-  const def = (t: GlossaryTerm) =>
-    lang === "en" && t.definitionEn ? t.definitionEn : t.definition;
+  const def = (t: GlossaryTerm) => localize(lang, t.definition, t.definitionEn);
 
   // 术语主名：中文模式显示中文术语，英文模式显示英文术语（互相作为副标题参考）
-  const termTitle = (t: GlossaryTerm) => (lang === "en" ? t.english : t.term);
+  const termTitle = (t: GlossaryTerm) => localize(lang, t.term, t.english);
   const termSub = (t: GlossaryTerm) => (lang === "en" ? t.term : t.english);
 
   return (
@@ -70,11 +69,11 @@ export default function GlossaryExplorer({
             type="text"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder={
-              lang === "en"
-                ? "Search terms, e.g. RAG, Prompt, Transformer…"
-                : "搜索术语，如 RAG、Prompt、Transformer…"
-            }
+            placeholder={localize(
+              lang,
+              "搜索术语，如 RAG、Prompt、Transformer…",
+              "Search terms, e.g. RAG, Prompt, Transformer…",
+            )}
             className="h-10 w-full bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"
           />
         </div>
@@ -91,7 +90,7 @@ export default function GlossaryExplorer({
               : "bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50",
           )}
         >
-          {lang === "en" ? "All" : "全部"}
+          {localize(lang, "全部", "All")}
         </button>
         {categories.map((c) => (
           <button
@@ -112,11 +111,14 @@ export default function GlossaryExplorer({
       <p className="mt-6 text-sm text-slate-500">
         {lang === "en" ? (
           <>
-            <span className="font-semibold text-slate-900">{filtered.length}</span> terms
+            <span className="font-semibold text-slate-900">{filtered.length}</span>{" "}
+            terms
           </>
         ) : (
           <>
-            共 <span className="font-semibold text-slate-900">{filtered.length}</span> 个词条
+            {localize(lang, "共")}{" "}
+            <span className="font-semibold text-slate-900">{filtered.length}</span>{" "}
+            {localize(lang, "个词条")}
           </>
         )}
       </p>
@@ -125,10 +127,10 @@ export default function GlossaryExplorer({
         <div className="mt-6 rounded-2xl border border-dashed border-slate-300 bg-slate-50 py-16 text-center">
           <div className="text-4xl">📚</div>
           <p className="mt-3 font-medium text-slate-700">
-            {lang === "en" ? "No terms found" : "没有找到相关术语"}
+            {localize(lang, "没有找到相关术语", "No terms found")}
           </p>
           <p className="mt-1 text-sm text-slate-500">
-            {lang === "en" ? "Try another keyword" : "换个关键词试试"}
+            {localize(lang, "换个关键词试试", "Try another keyword")}
           </p>
         </div>
       ) : (

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { tutorials, getTutorial } from "@/lib/tutorials";
-import Markdown from "@/components/Markdown";
-import { BilingualText, BilingualNode } from "@/components/Bilingual";
+import { BilingualText, BilingualMarkdown } from "@/components/Bilingual";
+import TagList from "@/components/TagList";
 
 export function generateStaticParams() {
   return tutorials.map((t) => ({ slug: t.id }));
@@ -33,19 +33,6 @@ export default async function TutorialPage({
   if (!tutorial) notFound();
 
   const others = tutorials.filter((t) => t.id !== tutorial.id).slice(0, 3);
-
-  const renderTags = (tags: string[]) => (
-    <>
-      {tags.map((tag) => (
-        <span
-          key={tag}
-          className="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-500"
-        >
-          {tag}
-        </span>
-      ))}
-    </>
-  );
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
@@ -87,24 +74,14 @@ export default async function TutorialPage({
       </header>
 
       <article className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
-        <BilingualNode
-          zh={<Markdown content={tutorial.content} />}
-          en={
-            tutorial.contentEn ? (
-              <Markdown content={tutorial.contentEn} />
-            ) : undefined
-          }
-        />
+        <BilingualMarkdown zh={tutorial.content} en={tutorial.contentEn} />
       </article>
 
       <div className="mt-8 flex flex-wrap gap-2">
-        <BilingualNode
-          zh={renderTags(tutorial.tags)}
-          en={
-            tutorial.tagsEn && tutorial.tagsEn.length
-              ? renderTags(tutorial.tagsEn)
-              : undefined
-          }
+        <TagList
+          zh={tutorial.tags}
+          en={tutorial.tagsEn}
+          tagClassName="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-500"
         />
       </div>
 
