@@ -106,6 +106,350 @@ export const bestPages: BestPage[] = [
       },
     ],
   },
+  {
+    slug: "ai-image-generators",
+    scenarioId: "image",
+    title: "2026 年最佳 AI 图像生成工具",
+    titleEn: "Best AI Image Generators in 2026",
+    description:
+      "对比 2026 年最佳 AI 图像生成工具：Midjourney、即梦、Stable Diffusion、文心一格等，含免费额度、价格与适用场景。",
+    descriptionEn:
+      "Compare the best AI image generators of 2026 — Midjourney, Jimeng, Stable Diffusion, ERNIE ViLG and more — with free tiers, pricing and use cases.",
+    intro: [
+      "AI 绘图已经能稳定产出可商用的插画、海报、产品图与概念设计。你只需描述画面，就能得到多张候选，再通过「图生图」「局部重绘」逐步打磨到满意。",
+      "选工具要看你的定位：Midjourney 的艺术感与光影公认第一，但需付费且海外访问；即梦、文心一格免费额度充足、中文提示词友好；Stable Diffusion 开源可自部署，适合追求可控性与二次开发。",
+      "下面按热度对比 8 款主流 AI 图像生成工具的免费额度、付费起点、平台与评分，并给出选购建议。",
+    ],
+    introEn: [
+      "AI image generation now reliably produces commercial-grade illustrations, posters, product shots and concept art. Describe a scene and get multiple candidates, then refine with image-to-image and inpainting until it's right.",
+      "Your choice depends on priorities: Midjourney is widely seen as the leader in artistry and lighting but is paid and overseas-only; Jimeng and ERNIE ViLG offer generous free quotas and handle Chinese prompts well; Stable Diffusion is open source and self-hostable for maximum control and customization.",
+      "Below we rank eight leading AI image generators by popularity and compare their free tier, starting price, platforms and rating, then explain how to choose.",
+    ],
+    sections: [
+      {
+        heading: "如何挑选 AI 绘图工具",
+        headingEn: "How to choose an AI image generator",
+        body: "先看画风与审美是否符合你的项目（写实、动漫、插画、产品图各有擅长）；再看免费额度、分辨率与商用授权；需要精细控制可选支持局部重绘与图生图的工具。",
+        bodyEn:
+          "Start with whether the style fits your project (realistic, anime, illustration and product shots favor different tools). Then check free quotas, resolution and commercial licensing. For fine control, pick a tool with inpainting and image-to-image.",
+      },
+      {
+        heading: "免费 vs 付费",
+        headingEn: "Free vs paid",
+        body: "即梦、文心一格提供免费额度，Stable Diffusion 自部署完全免费；Midjourney 需订阅但可试用。付费版解锁更高分辨率、商用授权与更多风格。",
+        bodyEn:
+          "Jimeng and ERNIE ViLG offer free quotas, and self-hosted Stable Diffusion is free. Midjourney requires a subscription but has a trial. Paid plans unlock higher resolution, commercial licensing and more styles.",
+      },
+      {
+        heading: "商用与版权",
+        headingEn: "Commercial use and copyright",
+        body: "各家授权不同：多数付费版把使用权授予用户，免费版常限个人用途。商用前务必阅读平台条款，尤其涉及人物肖像与商标时。",
+        bodyEn:
+          "Licensing varies: most paid plans grant usage rights to the user, while free tiers are usually personal-only. Read the platform's terms before commercial use — especially with faces and trademarks.",
+      },
+    ],
+  },
+  {
+    slug: "ai-coding-tools",
+    scenarioId: "code",
+    title: "2026 年最佳 AI 编程工具",
+    titleEn: "Best AI Coding Tools in 2026",
+    description:
+      "对比 2026 年最佳 AI 编程工具：Cursor、GitHub Copilot、Claude Code、通义灵码等，含免费额度、价格与适用场景。",
+    descriptionEn:
+      "The best AI coding tools of 2026 compared — Cursor, GitHub Copilot, Claude Code, Tongyi Lingma and more — with free tiers, pricing and use cases.",
+    intro: [
+      "AI 编程工具从「自动补全」进化到了「能读懂整个仓库、帮你重构与生成项目」。它们能补全代码、解释报错、写测试，甚至按一句话需求搭出完整功能。",
+      "选择取决于你的工作流：Cursor 是 AI 优先的编辑器，上下文理解与重构最强；GitHub Copilot 轻量集成在主流 IDE 里；Claude Code 在终端里以 Agent 方式干活；通义灵码、CodeGeeX 国内可直连且免费。",
+      "下面按热度对比 8 款主流 AI 编程工具的免费额度、付费起点、平台与评分，并给出选择建议。",
+    ],
+    introEn: [
+      "AI coding tools have evolved from autocomplete to assistants that read your whole repository, refactor code and scaffold projects. They complete code, explain errors, write tests and even build a full feature from a one-line prompt.",
+      "Your pick depends on workflow: Cursor is an AI-first editor with the strongest context and refactoring; GitHub Copilot integrates lightly into mainstream IDEs; Claude Code works as an agent in the terminal; Tongyi Lingma and CodeGeeX are free and China-accessible.",
+      "Below we rank eight leading AI coding tools by popularity and compare their free tier, starting price, platforms and rating, then explain how to pick.",
+    ],
+    sections: [
+      {
+        heading: "如何挑选 AI 编程工具",
+        headingEn: "How to choose an AI coding tool",
+        body: "看你的 IDE 习惯：已用 VS Code 或 JetBrains 可选 Copilot 插件；想要更深度的 AI 原生体验选 Cursor 或 Claude Code。再确认免费额度与支持的模型是否够用。",
+        bodyEn:
+          "Consider your IDE habits: if you already use VS Code or JetBrains, a Copilot plugin is easiest; for a deeper AI-native experience choose Cursor or Claude Code. Then check whether the free tier and supported models cover your needs.",
+      },
+      {
+        heading: "免费 vs 付费",
+        headingEn: "Free vs paid",
+        body: "Codeium、通义灵码、CodeGeeX 完全免费；Cursor、Copilot 有试用后订阅，Claude Code 按 API 用量计费。高频或团队使用通常值得付费。",
+        bodyEn:
+          "Codeium, Tongyi Lingma and CodeGeeX are free; Cursor and Copilot offer trials then subscriptions, and Claude Code bills by API usage. Paid plans are usually worth it for heavy or team use.",
+      },
+      {
+        heading: "国内开发者怎么选",
+        headingEn: "Which suits developers in China",
+        body: "通义灵码、CodeGeeX、MarsCode 国内可直连且免费；Cursor、Copilot、Claude Code 通常需科学上网，且注册与支付门槛更高。",
+        bodyEn:
+          "Tongyi Lingma, CodeGeeX and MarsCode are China-accessible and free; Cursor, Copilot and Claude Code usually require a VPN and have higher signup and payment friction.",
+      },
+    ],
+  },
+  {
+    slug: "ai-office-tools",
+    scenarioId: "office",
+    title: "2026 年最佳 AI 办公工具",
+    titleEn: "Best AI Office Tools in 2026",
+    description:
+      "对比 2026 年最佳 AI 办公工具：WPS AI、Notion AI、Gamma、讯飞智文等，含免费额度、价格与适用场景。",
+    descriptionEn:
+      "The best AI office tools of 2026 compared — WPS AI, Notion AI, Gamma, iFlytek Docs and more — with free tiers, pricing and use cases.",
+    intro: [
+      "办公是 AI 落地最快的场景之一：写文档、做 PPT、整理会议纪要、生成周报，AI 都能代劳大半，把时间省出来做真正需要判断的事。",
+      "国内用户首选 WPS AI、讯飞智文，中文支持好且直接可用；跨团队协作与知识库选 Notion AI；想要一键生成精美幻灯片选 Gamma 或 AiPPT。",
+      "下面按热度对比 8 款主流 AI 办公工具的免费额度、付费起点、平台与评分，并给出选购建议。",
+    ],
+    introEn: [
+      "Office work is where AI lands fastest: drafting documents, building slides, summarizing meetings and generating reports can all be largely automated, freeing time for work that needs judgment.",
+      "China users should start with WPS AI and iFlytek Docs for best-in-class Chinese support and direct access; choose Notion AI for team collaboration and knowledge bases; pick Gamma or AiPPT for one-click polished slides.",
+      "Below we rank eight leading AI office tools by popularity and compare their free tier, starting price, platforms and rating, then explain how to choose.",
+    ],
+    sections: [
+      {
+        heading: "如何挑选办公工具",
+        headingEn: "How to choose an office tool",
+        body: "先明确高频场景：做 PPT 选 Gamma/AiPPT，写文档选 WPS AI/Notion AI，会议纪要选讯飞听见。再看是否与现有协作工具（飞书/钉钉/Notion）打通。",
+        bodyEn:
+          "Identify your highest-frequency task: pick Gamma/AiPPT for slides, WPS AI/Notion AI for docs, and iFlytek Rec for meeting notes. Then check integration with your existing collaboration stack (Feishu, DingTalk, Notion).",
+      },
+      {
+        heading: "免费 vs 付费",
+        headingEn: "Free vs paid",
+        body: "多数提供免费版：WPS AI、Gamma 有免费额度，AiPPT 有免费模板；付费版解锁高级 AI 生成、更长文档与团队协作。",
+        bodyEn:
+          "Most have free tiers: WPS AI and Gamma offer free quotas and AiPPT has free templates; paid plans unlock advanced generation, longer documents and team features.",
+      },
+      {
+        heading: "数据安全",
+        headingEn: "Data privacy",
+        body: "办公文档常含敏感信息，企业使用建议关注数据的存储与训练政策，必要时选择企业版或私有化部署方案。",
+        bodyEn:
+          "Office docs often contain sensitive information — for enterprise use, review data-storage and training policies, and consider enterprise or self-hosted plans where needed.",
+      },
+    ],
+  },
+  {
+    slug: "ai-writing-tools",
+    scenarioId: "writing",
+    title: "2026 年最佳 AI 写作工具",
+    titleEn: "Best AI Writing Tools in 2026",
+    description:
+      "对比 2026 年最佳 AI 写作工具：讯飞智文、秘塔写作猫、万知、Wordtune 等，含免费额度、价格与适用场景。",
+    descriptionEn:
+      "The best AI writing tools of 2026 compared — iFlytek Docs, Metaso Write, Wanzhi, Wordtune and more — with free tiers, pricing and use cases.",
+    intro: [
+      "AI 写作已经从「给个大纲」进化到能直接产出公众号文章、营销文案、邮件与报告。配合润色与校对，初稿到成稿的时间被大幅压缩。",
+      "中文内容优先选讯飞智文、秘塔写作猫、万知，更懂中文语境与网络用语；英文润色与改写选 Wordtune、Grammarly；多语言通用可用 ChatGPT、Claude。",
+      "下面按热度对比 8 款主流 AI 写作工具的免费额度、付费起点、平台与评分，并给出选择建议。",
+    ],
+    introEn: [
+      "AI writing has moved from generating outlines to producing full articles, marketing copy, emails and reports. With polishing and proofreading, the path from draft to finished piece is dramatically shorter.",
+      "For Chinese content, start with iFlytek Docs, Metaso Write and Wanzhi, which understand Chinese context and internet slang best; for English editing and rewriting pick Wordtune or Grammarly; ChatGPT and Claude work well across languages.",
+      "Below we rank eight leading AI writing tools by popularity and compare their free tier, starting price, platforms and rating, then explain how to pick.",
+    ],
+    sections: [
+      {
+        heading: "如何挑选写作工具",
+        headingEn: "How to choose a writing tool",
+        body: "按语言与用途选：中文自媒体选中文原生工具；英文商务/学术选 Wordtune、Grammarly。再确认是否支持长文、风格定制与多语言。",
+        bodyEn:
+          "Choose by language and purpose: China-native tools for Chinese content marketing, Wordtune or Grammarly for English business and academic writing. Then check long-form support, style controls and multilingual ability.",
+      },
+      {
+        heading: "AI 写的能直接用吗",
+        headingEn: "Can I use AI-written copy directly?",
+        body: "建议润色后使用：AI 可能产生事实错误或过于模板化的表达，人名、数据、引用务必人工核对。",
+        bodyEn:
+          "Polish before publishing — AI can produce factual errors or formulaic phrasing, so always verify names, figures and citations by hand.",
+      },
+      {
+        heading: "免费 vs 付费",
+        headingEn: "Free vs paid",
+        body: "Wordtune、Rytr 提供免费额度，万知、讯飞智文等国内产品也有免费版；付费版解锁更长文本、更多改写模式与团队协作。",
+        bodyEn:
+          "Wordtune and Rytr offer free quotas, and China tools like Wanzhi and iFlytek Docs have free plans; paid tiers unlock longer text, more rewrite modes and collaboration.",
+      },
+    ],
+  },
+  {
+    slug: "ai-translation-tools",
+    scenarioId: "translate",
+    title: "2026 年最佳 AI 翻译工具",
+    titleEn: "Best AI Translation Tools in 2026",
+    description:
+      "对比 2026 年最佳 AI 翻译工具：DeepL、Google 翻译、沉浸式翻译、彩云小译等，含免费额度、价格与适用场景。",
+    descriptionEn:
+      "The best AI translation tools of 2026 compared — DeepL, Google Translate, Immersive Translate, Caiyun Xiaoyi and more — with free tiers, pricing and use cases.",
+    intro: [
+      "AI 翻译已经不止「词对词」，而是能结合上下文，把整段话翻得自然流畅。从网页、文档到实时对话，翻译工具覆盖了你几乎所有的跨语言场景。",
+      "通用多语言选 Google 翻译，覆盖面最广；欧洲语种与文学性文本 DeepL 更自然；需要浏览外文网页的选沉浸式翻译、彩云小译的浏览器插件，双语对照即点即译。",
+      "下面按热度对比 8 款主流 AI 翻译工具的免费额度、付费起点、平台与评分，并给出选购建议。",
+    ],
+    introEn: [
+      "AI translation has moved past word-for-word to context-aware, natural-sounding output. From web pages and documents to real-time conversation, translation tools now cover almost every cross-language scenario.",
+      "For general multilingual use, Google Translate has the widest coverage; DeepL reads more naturally for European languages and literary text; Immersive Translate and Caiyun Xiaoyi offer browser extensions for bilingual, click-to-translate web reading.",
+      "Below we rank eight leading AI translation tools by popularity and compare their free tier, starting price, platforms and rating, then explain how to choose.",
+    ],
+    sections: [
+      {
+        heading: "如何挑选翻译工具",
+        headingEn: "How to choose a translation tool",
+        body: "按语种与场景选：多语种通用选 Google 翻译；欧洲语种与正式文本选 DeepL；浏览网页选沉浸式翻译/彩云小译；文档翻译看是否支持格式保留。",
+        bodyEn:
+          "Choose by language and scenario: Google Translate for broad multilingual use, DeepL for European languages and formal text, Immersive Translate and Caiyun Xiaoyi for web reading, and check format retention for documents.",
+      },
+      {
+        heading: "免费 vs 付费",
+        headingEn: "Free vs paid",
+        body: "Google 翻译免费；DeepL 有免费额度与 Pro 订阅；沉浸式翻译、彩云小译有免费版，高级功能需订阅。",
+        bodyEn:
+          "Google Translate is free; DeepL has a free tier plus Pro; Immersive Translate and Caiyun Xiaoyi have free plans with premium features on subscription.",
+      },
+      {
+        heading: "翻译质量与隐私",
+        headingEn: "Quality and privacy",
+        body: "免费版可能把内容用于训练，敏感或保密内容建议使用付费/企业版，或选择可本地部署的翻译模型。",
+        bodyEn:
+          "Free tiers may use your content for training — for sensitive or confidential material, choose paid or enterprise plans, or a self-hostable translation model.",
+      },
+    ],
+  },
+  {
+    slug: "ai-search-engines",
+    scenarioId: "search",
+    title: "2026 年最佳 AI 搜索工具",
+    titleEn: "Best AI Search Engines in 2026",
+    description:
+      "对比 2026 年最佳 AI 搜索工具：Perplexity、秘塔、Devv、夸克 AI 等，含免费额度、价格与适用场景。",
+    descriptionEn:
+      "The best AI search engines of 2026 compared — Perplexity, Metaso, Devv, Quark AI and more — with free tiers, pricing and use cases.",
+    intro: [
+      "AI 搜索用自然语言提问，直接给你带来源引用的答案，省去逐个点开网页的麻烦。它对复杂问题、对比调研和资料整理尤其高效。",
+      "海外综合能力最强的是 Perplexity；国内可直连且体验好的是秘塔、夸克 AI；面向开发者的 Devv 擅长技术问答。",
+      "下面按热度对比 8 款主流 AI 搜索工具的免费额度、付费起点、平台与评分，并给出选择建议。",
+    ],
+    introEn: [
+      "AI search answers questions in natural language with cited sources, saving you from opening links one by one. It's especially efficient for complex questions, comparison research and gathering material.",
+      "Perplexity is the strongest all-rounder overseas; Metaso and Quark AI offer a great China-accessible experience; Devv is tuned for developer-focused technical Q&A.",
+      "Below we rank eight leading AI search engines by popularity and compare their free tier, starting price, platforms and rating, then explain how to pick.",
+    ],
+    sections: [
+      {
+        heading: "AI 搜索和普通搜索区别",
+        headingEn: "How AI search differs from regular search",
+        body: "普通搜索返回链接列表，AI 搜索直接汇总答案并标注来源，适合复杂问题、对比与资料整理；但需留意引用是否准确。",
+        bodyEn:
+          "Regular search returns a list of links; AI search synthesizes an answer with citations — great for complex questions, comparisons and research — but verify the citations yourself.",
+      },
+      {
+        heading: "如何挑选 AI 搜索",
+        headingEn: "How to choose an AI search engine",
+        body: "看重答案深度与来源可信选 Perplexity；国内直连选秘塔、夸克 AI；开发者技术问答选 Devv；学术研究可关注能否检索论文。",
+        bodyEn:
+          "Pick Perplexity for depth and source credibility, Metaso or Quark AI for China access, Devv for technical and developer queries, and check whether it can search papers for academic work.",
+      },
+      {
+        heading: "答案可靠吗",
+        headingEn: "Are the answers reliable?",
+        body: "多数工具会标注来源可核验，但 AI 仍可能出错或引用过期信息，重要结论建议点开原文二次确认。",
+        bodyEn:
+          "Most tools cite verifiable sources, but AI can still err or cite outdated info — confirm important conclusions against the original source.",
+      },
+    ],
+  },
+  {
+    slug: "ai-voice-generators",
+    scenarioId: "voice",
+    title: "2026 年最佳 AI 配音工具",
+    titleEn: "Best AI Voice Generators in 2026",
+    description:
+      "对比 2026 年最佳 AI 配音工具：ElevenLabs、魔音工坊、Fish Audio、讯飞听见等，含免费额度、价格与适用场景。",
+    descriptionEn:
+      "The best AI voice generators of 2026 compared — ElevenLabs, Moyin, Fish Audio, iFlytek Rec and more — with free tiers, pricing and use cases.",
+    intro: [
+      "AI 配音已经能生成几乎以假乱真的声音，甚至用几十秒样本克隆你自己的声线。从短视频旁白、有声书到企业宣传片，文字变声音只需一键。",
+      "英文配音 ElevenLabs 最自然；中文配音魔音工坊、讯飞听见更贴近语境、情感表现好；Fish Audio 的音色克隆社区活跃，开源可玩性强。",
+      "下面按热度对比 8 款主流 AI 配音工具的免费额度、付费起点、平台与评分，并给出选购建议。",
+    ],
+    introEn: [
+      "AI voice generation now produces near-indistinguishable speech and can even clone your own voice from seconds of audio. From short-video narration and audiobooks to corporate promos, text-to-speech is one click away.",
+      "ElevenLabs is the most natural for English; Moyin and iFlytek Rec suit Chinese with better emotion; Fish Audio has an active voice-cloning community and is open and hackable.",
+      "Below we rank eight leading AI voice generators by popularity and compare their free tier, starting price, platforms and rating, then explain how to choose.",
+    ],
+    sections: [
+      {
+        heading: "如何挑选配音工具",
+        headingEn: "How to choose a voice generator",
+        body: "按语言与用途选：英文旁白选 ElevenLabs；中文短视频选魔音工坊、讯飞听见；需要克隆声线确认是否支持、以及商用授权范围。",
+        bodyEn:
+          "Choose by language and use case: ElevenLabs for English narration, Moyin or iFlytek Rec for Chinese short-video, and confirm voice-cloning support and commercial licensing if you need it.",
+      },
+      {
+        heading: "可以克隆声音吗",
+        headingEn: "Can I clone my own voice?",
+        body: "可以，ElevenLabs、魔音工坊、Fish Audio 都支持上传样本克隆，通常需付费版。请确保拥有声音的授权再克隆他人声线。",
+        bodyEn:
+          "Yes — ElevenLabs, Moyin and Fish Audio support cloning from samples, usually on paid plans. Make sure you have permission before cloning someone else's voice.",
+      },
+      {
+        heading: "免费 vs 付费",
+        headingEn: "Free vs paid",
+        body: "多数免费增值：有免费字符额度，商用或高级音色需订阅；按用量计费的工具需留意时长消耗。",
+        bodyEn:
+          "Mostly freemium: free character quotas, with subscriptions for commercial use or premium voices; watch usage on metered plans.",
+      },
+    ],
+  },
+  {
+    slug: "ai-design-tools",
+    scenarioId: "design",
+    title: "2026 年最佳 AI 设计工具",
+    titleEn: "Best AI Design Tools in 2026",
+    description:
+      "对比 2026 年最佳 AI 设计工具：Canva、Framer、Figma、Spline 等，含免费额度、价格与适用场景。",
+    descriptionEn:
+      "The best AI design tools of 2026 compared — Canva, Framer, Figma, Spline and more — with free tiers, pricing and use cases.",
+    intro: [
+      "AI 设计让「不会用 Photoshop 的人」也能做出像样的海报、UI 与 3D 视觉。模板拖拽、文字生成页面、一句话出 3D 模型，门槛被降到极低。",
+      "做海报与社交媒体素材选 Canva，模板海量；做网站落地页选 Framer，AI 直接生成可上线页面；专业 UI 协作选 Figma；3D 视觉选 Spline。",
+      "下面按热度对比 8 款主流 AI 设计工具的免费额度、付费起点、平台与评分，并给出选购建议。",
+    ],
+    introEn: [
+      "AI design lets people with no Photoshop skills produce decent posters, UI and 3D visuals. Drag-and-drop templates, text-to-page generation and one-line 3D models have lowered the barrier dramatically.",
+      "Choose Canva for posters and social assets with a huge template library; Framer for landing pages that ship directly; Figma for professional UI collaboration; Spline for 3D visuals.",
+      "Below we rank eight leading AI design tools by popularity and compare their free tier, starting price, platforms and rating, then explain how to choose.",
+    ],
+    sections: [
+      {
+        heading: "不会设计能用吗",
+        headingEn: "Can I use these without design skills?",
+        body: "能。Canva 提供海量模板拖拽即用，Framer 用 AI 生成页面，Spline 用文字生成 3D，都无需专业基础。",
+        bodyEn:
+          "Yes — Canva offers drag-and-drop templates, Framer generates pages with AI, and Spline builds 3D from text, none requiring a design background.",
+      },
+      {
+        heading: "如何挑选设计工具",
+        headingEn: "How to choose a design tool",
+        body: "按产出类型选：海报/社媒素材选 Canva；落地页选 Framer；专业 UI 协作选 Figma；3D 选 Spline。再看团队协作与导出格式。",
+        bodyEn:
+          "Choose by output type: Canva for posters and social, Framer for landing pages, Figma for professional UI collaboration, Spline for 3D. Then check team collaboration and export formats.",
+      },
+      {
+        heading: "免费 vs 付费",
+        headingEn: "Free vs paid",
+        body: "Canva、Figma 有免费版（含大量模板），Framer、Spline 有免费额度；付费解锁高级 AI、品牌工具与团队协作。",
+        bodyEn:
+          "Canva and Figma have free plans with many templates, and Framer and Spline offer free quotas; paid tiers unlock advanced AI, brand tools and team collaboration.",
+      },
+    ],
+  },
 ];
 
 export const bestPageMap: Record<string, BestPage> = Object.fromEntries(
