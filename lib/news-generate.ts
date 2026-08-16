@@ -13,11 +13,36 @@ export interface RawItem {
   title: string;
   link: string;
   summary: string;
+  content: string;
   pubDate: string;
   source: string;
 }
 
 const parser = new Parser({ timeout: 15000 });
+
+// 从多个候选里挑出最长的一段（通常是全文，而不是截断的摘要）
+function pickLongest(...vals: (string | undefined)[]): string {
+  return vals
+    .filter((v): v is string => typeof v === "string" && v.trim().length > 0)
+    .sort((a, b) => b.length - a.length)[0] || "";
+}
+
+// 去掉 HTML 标签、解码常见实体、压缩空白，得到干净纯文本
+function stripHtml(html: string): string {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
 // 抓取所有源的最近条目（单个源失败不影响整体）
 export async function fetchFeedItems(): Promise<RawItem[]> {
@@ -25,13 +50,25 @@ export async function fetchFeedItems(): Promise<RawItem[]> {
     newsSources.map(async (src): Promise<RawItem[]> => {
       try {
         const feed = await parser.parseURL(src.url);
-        return (feed.items || []).slice(0, 6).map((item) => ({
-          title: (item.title || "").trim(),
-          link: (item.link || "").trim(),
-          summary: (item.contentSnippet || item.summary || "").trim().slice(0, 600),
-          pubDate: item.isoDate || item.pubDate || "",
-          source: src.name,
-        }));
+        return (feed.items || []).slice(0, 6).map((item) => {
+          const anyItem = item as unknown as Record<string, unknown>;
+          // 优先取全文：content:encoded（RSS）/ content（Atom）/ summary，再退回 snippet
+          const fullHtml = pickLongest(
+            item.content,
+            anyItem["content:encoded"] as string | undefined,
+            anyItem["content"] as string | undefined,
+            item.summary,
+            item.contentSnippet,
+          );
+          return {
+            title: (item.title || "").trim(),
+            link: (item.link || "").trim(),
+            summary: stripHtml(item.contentSnippet || item.summary || "").slice(0, 300),
+            content: stripHtml(fullHtml).slice(0, 4000),
+            pubDate: item.isoDate || item.pubDate || "",
+            source: src.name,
+          };
+        });
       } catch (e) {
         console.error(`[news] 抓取失败 ${src.name}:`, e);
         return [];
@@ -84,21 +121,28 @@ function extractJson(s: string): string {
 }
 
 async function buildArticle(item: RawItem, apiKey: string): Promise<Article> {
-  const prompt = `你是一名专业的 AI 资讯编辑，负责把海外英文 AI 新闻改写成中文短讯，发布到 AI 导航网站。
+  const prompt = `你是一名资深 AI 科技编辑，负责把海外英文 AI 新闻改写成一篇信息量充足的中文资讯文章，发布到 AI 导航网站。
 
-请把下面这条英文资讯改写成一篇中文短讯，只输出一个 JSON 对象（不要输出任何其他文字、不要用 Markdown 代码块包裹），字段如下：
+请把下面这条英文资讯改写成一篇中文文章，只输出一个 JSON 对象（不要输出任何其他文字，不要用 Markdown 代码块包裹整个 JSON），字段如下：
 {
   "title": "简洁有力的中文标题",
-  "summary": "2-3 句中文摘要",
-  "content": "中文正文（Markdown 格式，3-5 段，用自己的话概括新闻要点，保留关键数据、产品名、日期与数字，不要逐字直译）",
+  "summary": "2-3 句中文摘要，点出核心信息",
+  "content": "中文正文（Markdown 格式，用 ## 分小节）",
   "tags": ["2到4个中文标签"]
 }
 
-要求：内容准确，不要臆造原文没有的信息；语言自然流畅、面向中文读者。
+正文 content 必须满足以下要求（否则视为不合格）：
+1. 篇幅 600~1000 字，分 4~6 个小节，每节用 ## 标题开头。
+2. 必须大量摘录原文里的具体事实，让文章有信息量：关键数字、百分比、金额、价格、参数、版本号、发布日期、人名、公司名、产品名、引用的原话，都要保留并写进正文，禁止删掉或一笔带过。
+3. 严禁空话、套话，例如「本文介绍了」「具有重要意义」「值得关注」这类没有信息量的句子。
+4. 结构建议：开头直接说发生了什么（含具体数据）→ 列出原文的关键数据/细节（可用列表）→ 背景或影响 → 一句话总结。
+5. 语言面向中文读者、自然流畅；是改写概括，不是逐字直译，但数字和专有名词要准确无误。
+
+只写原文确实出现的信息，不要臆造原文没有的数字或结论。
 
 原始标题：${item.title}
 来源：${item.source}
-原始内容：${item.summary}`;
+原文内容：${item.content || item.summary}`;
 
   const text = await callDeepSeek(prompt, apiKey);
 
