@@ -7,6 +7,7 @@ import { BilingualText } from "@/components/Bilingual";
 export const metadata: Metadata = {
   title: "AI 资讯",
   description: "每日自动汇总全球 AI 前沿动态，AI 翻译整理成中文资讯。",
+  alternates: { canonical: "/news" },
 };
 
 export const dynamic = "force-dynamic";

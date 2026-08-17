@@ -8,15 +8,10 @@ import { BilingualText } from "@/components/Bilingual";
 import { cn } from "@/lib/utils";
 
 export const metadata = {
-  title: "排行榜",
+  title: "AI Tool Rankings by Traffic and Category",
+  description: "Explore AI tool rankings by monthly traffic movement, category, region, and acquisition source.",
+  alternates: { canonical: "/ranking" },
 };
-
-interface SearchParams {
-  tab?: string;
-  cat?: string;
-  region?: string;
-  source?: string;
-}
 
 // 统计 top 地区/来源，用于下拉选项（按出现频次降序）
 function topRegions(): DimensionOption[] {
@@ -184,3 +179,4 @@ export default async function RankingPage({
     </div>
   );
 }
+

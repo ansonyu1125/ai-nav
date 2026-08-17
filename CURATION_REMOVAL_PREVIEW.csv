@@ -1,0 +1,157 @@
+id,name,category,region,popularity,score,quality_score,reason
+baichuan,百川智能,chat,domestic,62,8,76.04,Lower combined quality and demand score after category coverage
+sensenova,商汤日日新,chat,domestic,55,7.8,72.50,Lower combined quality and demand score after category coverage
+ai360,360 智脑,chat,domestic,60,7.5,73.70,Lower combined quality and demand score after category coverage
+lets-enhance,Let's Enhance,image-edit,overseas,48,7.6,72.96,Lower combined quality and demand score after category coverage
+genmo,Genmo,video,overseas,50,7.7,74.10,Lower combined quality and demand score after category coverage
+moyin,魔音工坊,voice,domestic,46,7.6,68.12,Lower combined quality and demand score after category coverage
+rytr,Rytr,writing,overseas,50,7.5,73.50,Lower combined quality and demand score after category coverage
+caiyun,彩云小译,translate,domestic,48,7.6,68.96,Lower combined quality and demand score after category coverage
+reverso,Reverso,translate,overseas,62,8,73.04,Lower combined quality and demand score after category coverage
+xingye,星野,companion,domestic,55,7.8,65.50,Lower combined quality and demand score after category coverage
+research-rabbit,Research Rabbit,research,overseas,44,7.4,52.68,Lower combined quality and demand score after category coverage
+scite,Scite,research,overseas,50,7.6,55.80,Lower combined quality and demand score after category coverage
+connected-papers,Connected Papers,research,overseas,52,7.5,56.34,Lower combined quality and demand score after category coverage
+vizard,Vizard,video-edit,overseas,58,7.8,59.76,Lower combined quality and demand score after category coverage
+pictory,Pictory,video-edit,overseas,54,7.5,57.18,Lower combined quality and demand score after category coverage
+wisecut,Wisecut,video-edit,overseas,42,7.2,51.24,Lower combined quality and demand score after category coverage
+clipchamp,Clipchamp,video-edit,overseas,48,7.4,54.36,Lower combined quality and demand score after category coverage
+photomath,Photomath,education,overseas,60,7.9,60.90,Lower combined quality and demand score after category coverage
+socratic,Socratic,education,overseas,46,7.3,53.22,Lower combined quality and demand score after category coverage
+predis-ai,Predis.ai,marketing,overseas,49,7.5,55.08,Lower combined quality and demand score after category coverage
+feedhive,FeedHive,marketing,overseas,38,7.2,49.56,Lower combined quality and demand score after category coverage
+numerous-ai,Numerous.ai,data,overseas,42,7.4,51.84,Lower combined quality and demand score after category coverage
+formula-bot,Formula Bot,data,overseas,40,7.3,50.70,Lower combined quality and demand score after category coverage
+rose-ai,Rose AI,data,overseas,32,7.1,46.74,Lower combined quality and demand score after category coverage
+yizhen,一帧秒创,avatar,domestic,44,7.4,48.68,Lower combined quality and demand score after category coverage
+kreado-ai,Kreado AI,avatar,overseas,40,7.3,50.70,Lower combined quality and demand score after category coverage
+colossyan,Colossyan,avatar,overseas,46,7.6,54.12,Lower combined quality and demand score after category coverage
+deepbrain,DeepBrain AI,avatar,overseas,44,7.5,52.98,Lower combined quality and demand score after category coverage
+rask-ai,Rask AI,avatar,overseas,52,7.7,56.94,Lower combined quality and demand score after category coverage
+dupdub,DupDub,avatar,overseas,33,7,46.86,Lower combined quality and demand score after category coverage
+hour-one,Hour One,avatar,overseas,36,7.2,48.72,Lower combined quality and demand score after category coverage
+stable-audio,Stable Audio,music,overseas,54,7.8,58.08,Lower combined quality and demand score after category coverage
+aiva,AIVA,music,overseas,50,7.6,55.80,Lower combined quality and demand score after category coverage
+soundraw,Soundraw,music,overseas,46,7.4,53.52,Lower combined quality and demand score after category coverage
+mubert,Mubert,music,overseas,44,7.3,52.38,Lower combined quality and demand score after category coverage
+tiangong-music,天工音乐,music,domestic,58,7.9,56.06,Lower combined quality and demand score after category coverage
+beatoven,Beatoven.ai,music,overseas,38,7.2,49.56,Lower combined quality and demand score after category coverage
+azure-speech,Azure AI Speech,voice,overseas,62,8.4,75.24,Lower combined quality and demand score after category coverage
+volcengine-tts,火山引擎语音,voice,domestic,60,8.2,57.80,Lower combined quality and demand score after category coverage
+deepgram,Deepgram,voice,overseas,52,7.9,57.54,Lower combined quality and demand score after category coverage
+candy-ai,Candy.ai,companion,overseas,60,7.6,60.00,Lower combined quality and demand score after category coverage
+spicychat,SpicyChat,companion,overseas,58,7.5,58.86,Lower combined quality and demand score after category coverage
+nomi-ai,Nomi AI,companion,overseas,50,7.4,55.20,Lower combined quality and demand score after category coverage
+sudowrite,Sudowrite,writing,overseas,50,7.7,56.10,Lower combined quality and demand score after category coverage
+hemingway,Hemingway Editor,writing,overseas,56,7.6,58.32,Lower combined quality and demand score after category coverage
+jenni-ai,Jenni AI,writing,overseas,48,7.5,54.66,Lower combined quality and demand score after category coverage
+komo,Komo,search,overseas,40,7.2,50.40,Lower combined quality and demand score after category coverage
+felo,Felo,search,overseas,54,7.8,58.08,Lower combined quality and demand score after category coverage
+pixelcut,Pixelcut,image-edit,overseas,52,7.8,57.24,Lower combined quality and demand score after category coverage
+clipdrop,Clipdrop,image-edit,overseas,56,7.9,59.22,Lower combined quality and demand score after category coverage
+amazon-q,Amazon Q Developer,code,overseas,54,7.8,58.08,Lower combined quality and demand score after category coverage
+zed,Zed,code,overseas,52,8,57.84,Lower combined quality and demand score after category coverage
+tldv,tl;dv,meeting,overseas,50,7.7,56.10,Lower combined quality and demand score after category coverage
+granola,Granola,meeting,overseas,52,7.8,57.24,Lower combined quality and demand score after category coverage
+pi,Pi,chat,overseas,44,7.4,52.68,Lower combined quality and demand score after category coverage
+auphonic,Auphonic,audio,overseas,44,7.4,57.68,Lower combined quality and demand score after category coverage
+moises,Moises,audio,overseas,52,7.6,61.64,Lower combined quality and demand score after category coverage
+podcastle,Podcastle,audio,overseas,48,7.5,59.66,Lower combined quality and demand score after category coverage
+wondercraft,Wondercraft,audio,overseas,40,7.3,55.70,Lower combined quality and demand score after category coverage
+tidio-lyro,Tidio Lyro,customer,overseas,54,7.7,62.78,Lower combined quality and demand score after category coverage
+botpress,Botpress,customer,overseas,50,7.6,60.80,Lower combined quality and demand score after category coverage
+artbreeder,Artbreeder,image,overseas,52,7.5,61.34,Lower combined quality and demand score after category coverage
+lexica,Lexica,image,overseas,54,7.6,62.48,Lower combined quality and demand score after category coverage
+deepai,DeepAI,image,overseas,44,7.2,57.08,Lower combined quality and demand score after category coverage
+haiper,Haiper,video,overseas,58,7.9,65.06,Lower combined quality and demand score after category coverage
+ltx-studio,LTX Studio,video,overseas,52,7.7,61.94,Lower combined quality and demand score after category coverage
+higgsfield,Higgsfield,video,overseas,50,7.6,60.80,Lower combined quality and demand score after category coverage
+continue,Continue,code,overseas,50,7.7,61.10,Lower combined quality and demand score after category coverage
+motion,Motion,office,overseas,54,7.8,63.08,Lower combined quality and demand score after category coverage
+reclaim-ai,Reclaim AI,office,overseas,52,7.7,61.94,Lower combined quality and demand score after category coverage
+anyword,Anyword,writing,overseas,48,7.5,59.66,Lower combined quality and demand score after category coverage
+hix-ai,Hix AI,writing,overseas,46,7.4,58.52,Lower combined quality and demand score after category coverage
+coqui,Coqui,voice,overseas,42,7.3,56.54,Lower combined quality and demand score after category coverage
+ada-health,Ada,health,overseas,56,7.8,63.92,Lower combined quality and demand score after category coverage
+buoy,Buoy Health,health,overseas,52,7.6,61.64,Lower combined quality and demand score after category coverage
+woebot,Woebot,health,overseas,50,7.5,60.50,Lower combined quality and demand score after category coverage
+wysa,Wysa,health,overseas,48,7.4,59.36,Lower combined quality and demand score after category coverage
+corti,Corti,health,overseas,46,7.7,59.42,Lower combined quality and demand score after category coverage
+magnifi,Magnifi,finance,overseas,42,7.5,57.14,Lower combined quality and demand score after category coverage
+kavout,Kavout,finance,overseas,38,7.3,54.86,Lower combined quality and demand score after category coverage
+vue-ai,Vue.ai,ecommerce,overseas,40,7.4,56.00,Lower combined quality and demand score after category coverage
+syte,Syte,ecommerce,overseas,38,7.3,54.86,Lower combined quality and demand score after category coverage
+ludo-ai,Ludo.ai,gaming,overseas,40,7.3,55.70,Lower combined quality and demand score after category coverage
+relume,Relume,design,overseas,52,7.8,62.24,Lower combined quality and demand score after category coverage
+frase,Frase,seo,overseas,52,7.8,62.24,Lower combined quality and demand score after category coverage
+neuronwriter,NeuronWriter,seo,overseas,48,7.7,60.26,Lower combined quality and demand score after category coverage
+publer,Publer,social,overseas,46,7.6,59.12,Lower combined quality and demand score after category coverage
+sanebox,SaneBox,email,overseas,44,7.5,57.98,Lower combined quality and demand score after category coverage
+vectra,Vectra AI,security,overseas,46,7.8,59.72,Lower combined quality and demand score after category coverage
+submagic,Submagic,video-edit,overseas,52,7.8,62.24,Lower combined quality and demand score after category coverage
+kaedim,Kaedim,3d,overseas,40,7.4,56.00,Lower combined quality and demand score after category coverage
+remini,Remini,image-edit,overseas,62,8.1,76.34,Lower combined quality and demand score after category coverage
+topaz,Topaz Labs,image-edit,overseas,54,8.2,76.28,Lower combined quality and demand score after category coverage
+upscayl,Upscayl,image-edit,overseas,50,7.8,61.40,Lower combined quality and demand score after category coverage
+avoma,Avoma,meeting,overseas,46,7.7,59.42,Lower combined quality and demand score after category coverage
+sembly,Sembly AI,meeting,overseas,44,7.6,58.28,Lower combined quality and demand score after category coverage
+slidesai,SlidesAI,slides,overseas,46,7.6,59.12,Lower combined quality and demand score after category coverage
+decktopus,Decktopus,slides,overseas,42,7.5,57.14,Lower combined quality and demand score after category coverage
+plus-ai,Plus AI,slides,overseas,44,7.6,58.28,Lower combined quality and demand score after category coverage
+capacities,Capacities,knowledge,overseas,44,7.6,58.28,Lower combined quality and demand score after category coverage
+wandb,Weights & Biases,mlops,overseas,54,8,63.68,Lower combined quality and demand score after category coverage
+runpod,RunPod,mlops,overseas,50,7.8,61.40,Lower combined quality and demand score after category coverage
+modal,Modal,mlops,overseas,48,7.9,60.86,Lower combined quality and demand score after category coverage
+numerade,Numerade,education,overseas,44,7.6,58.28,Lower combined quality and demand score after category coverage
+persado,Persado,marketing,overseas,42,7.5,57.14,Lower combined quality and demand score after category coverage
+mutiny,Mutiny,marketing,overseas,40,7.4,56.00,Lower combined quality and demand score after category coverage
+chatbot-app,Chatbot App,chat,overseas,62,7.5,60.54,Lower combined quality and demand score after category coverage
+poyo-ai,PoYo.AI,mlops,overseas,58,7.6,59.16,Lower combined quality and demand score after category coverage
+apimaster,APIMaster,mlops,overseas,55,7.4,57.30,Lower combined quality and demand score after category coverage
+magiclight,MagicLight,video-edit,overseas,60,7.7,60.30,Lower combined quality and demand score after category coverage
+zyka-ai,Zyka.ai,video,overseas,63,7.8,61.86,Lower combined quality and demand score after category coverage
+chathero,Chathero,customer,overseas,50,7.3,54.90,Lower combined quality and demand score after category coverage
+cronbot,Cronbot,customer,overseas,48,7.2,53.76,Lower combined quality and demand score after category coverage
+youcam-perfect,YouCam Perfect,image-edit,overseas,60,7.6,69.00,Lower combined quality and demand score after category coverage
+talkpal,TalkPal,education,overseas,55,7.6,66.90,Lower combined quality and demand score after category coverage
+kindroid,Kindroid,companion,overseas,62,8,71.04,Lower combined quality and demand score after category coverage
+toonme,ToonMe,image,overseas,58,7.5,67.86,Lower combined quality and demand score after category coverage
+dream-wombo,Dream by WOMBO,image,overseas,60,7.6,69.00,Lower combined quality and demand score after category coverage
+starryai,StarryAI,image,overseas,55,7.4,66.30,Lower combined quality and demand score after category coverage
+prisma,Prisma,image-edit,overseas,58,7.5,67.86,Lower combined quality and demand score after category coverage
+facetune,Facetune,image-edit,overseas,62,7.7,70.14,Lower combined quality and demand score after category coverage
+photoleap,Photoleap,image-edit,overseas,59,7.6,68.58,Lower combined quality and demand score after category coverage
+aragon-ai,Aragon AI,image-edit,overseas,52,7.8,66.24,Lower combined quality and demand score after category coverage
+pixelmator,Pixelmator,image-edit,overseas,50,8.2,66.60,Lower combined quality and demand score after category coverage
+vsco,VSCO,image-edit,overseas,60,7.9,69.90,Lower combined quality and demand score after category coverage
+vllo,VLLO,video-edit,overseas,48,7.5,63.66,Lower combined quality and demand score after category coverage
+whisper-memos,Whisper Memos,audio,overseas,45,7.4,62.10,Lower combined quality and demand score after category coverage
+audiopen,AudioPen,audio,overseas,42,7.3,60.54,Lower combined quality and demand score after category coverage
+dolby-on,Dolby On,audio,overseas,46,7.5,62.82,Lower combined quality and demand score after category coverage
+yandex-translate,Yandex Translate,translate,overseas,55,7.8,67.50,Lower combined quality and demand score after category coverage
+brainly,Brainly,education,overseas,62,7.7,70.14,Lower combined quality and demand score after category coverage
+memrise,Memrise,education,overseas,55,7.6,66.90,Lower combined quality and demand score after category coverage
+falou,Falou,education,overseas,44,7.4,61.68,Lower combined quality and demand score after category coverage
+busuu,Busuu,education,overseas,54,7.7,66.78,Lower combined quality and demand score after category coverage
+lingq,LingQ,education,overseas,40,7.3,59.70,Lower combined quality and demand score after category coverage
+cymath,Cymath,education,overseas,48,7.5,63.66,Lower combined quality and demand score after category coverage
+quizizz,Quizizz,education,overseas,52,7.6,65.64,Lower combined quality and demand score after category coverage
+chegg,Chegg,education,overseas,58,7.4,67.56,Lower combined quality and demand score after category coverage
+course-hero,Course Hero,education,overseas,50,7.3,63.90,Lower combined quality and demand score after category coverage
+evernote,Evernote,office,overseas,62,7.7,70.14,Lower combined quality and demand score after category coverage
+swiftkey,Microsoft SwiftKey,office,overseas,58,8.1,69.66,Lower combined quality and demand score after category coverage
+skinvision,SkinVision,health,overseas,42,7.4,60.84,Lower combined quality and demand score after category coverage
+freeletics,Freeletics,health,overseas,48,7.5,63.66,Lower combined quality and demand score after category coverage
+khealth,K Health,health,overseas,44,7.3,61.38,Lower combined quality and demand score after category coverage
+kagi,Kagi,search,overseas,48,8.2,65.76,Lower combined quality and demand score after category coverage
+andi,Andi,search,overseas,40,7.2,59.40,Lower combined quality and demand score after category coverage
+seek,Seek by iNaturalist,education,overseas,40,7.8,61.20,Lower combined quality and demand score after category coverage
+maxai,MaxAI.me,chat,overseas,62,7.8,70.44,Lower combined quality and demand score after category coverage
+harpa-ai,Harpa AI,chat,overseas,60,7.7,69.30,Lower combined quality and demand score after category coverage
+chatgpt-for-google,ChatGPT for Google,chat,overseas,58,7.6,68.16,Lower combined quality and demand score after category coverage
+compose-ai,Compose AI,writing,overseas,55,7.5,66.60,Lower combined quality and demand score after category coverage
+hyperwrite,HyperWrite,writing,overseas,52,7.6,65.64,Lower combined quality and demand score after category coverage
+mate-translate,Mate Translate,translate,overseas,62,7.9,70.74,Lower combined quality and demand score after category coverage
+readwise,Readwise,research,overseas,50,7.8,65.40,Lower combined quality and demand score after category coverage
+scribe,Scribe,office,overseas,48,7.6,63.96,Lower combined quality and demand score after category coverage
+voice-control-chatgpt,Voice Control for ChatGPT,chat,overseas,48,7.4,63.36,Lower combined quality and demand score after category coverage

@@ -1,60 +1,24 @@
 import Link from "next/link";
 import { tutorials } from "@/lib/tutorials";
 import { BilingualText } from "@/components/Bilingual";
+import TutorialIcon from "@/components/TutorialIcon";
+import { getTutorialRelation, tutorialTrackLabels, type TutorialTrack } from "@/data/tutorial-relations";
 
-export const metadata = {
-  title: "AI 教程",
-};
+export const metadata = { title: "AI Tutorials & Practical Guides", description: "Practical, beginner-friendly AI tutorials with clear next steps, tool comparisons and verified product details.", alternates: { canonical: "/tutorials" } };
+const tracks = Object.keys(tutorialTrackLabels) as TutorialTrack[];
+const featuredIds = ["chatgpt-guide", "ai-video", "ai-coding"];
+const Arrow = ({ className = "h-4 w-4" }: { className?: string }) => <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M5 12h14M14 7l5 5-5 5" /></svg>;
+const Check = () => <svg viewBox="0 0 24 24" aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-[#d9f99d]" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M20 6 9 17l-5-5" /></svg>;
 
 export default function TutorialsPage() {
-  return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-          <BilingualText zh="AI 教程" en="AI Tutorials" />
-        </h1>
-        <p className="mt-2 text-slate-600">
-          <BilingualText
-            zh="从零开始，学会使用 ChatGPT、Midjourney、Cursor 等主流 AI 工具。"
-            en="Learn to use ChatGPT, Midjourney, Cursor and other top AI tools from scratch."
-          />
-        </p>
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {tutorials.map((t) => (
-          <Link
-            key={t.id}
-            href={`/tutorials/${t.id}`}
-            className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-md"
-          >
-            <div className="flex items-center justify-between">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-2xl">
-                {t.emoji}
-              </span>
-              <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-500">
-                <BilingualText zh={t.category} en={t.categoryEn} />
-              </span>
-            </div>
-            <h2 className="mt-4 font-semibold leading-snug text-slate-900 group-hover:text-indigo-600">
-              <BilingualText zh={t.title} en={t.titleEn} />
-            </h2>
-            <p className="mt-2 line-clamp-2 flex-1 text-sm leading-relaxed text-slate-500">
-              <BilingualText zh={t.summary} en={t.summaryEn} />
-            </p>
-            <div className="mt-4 flex items-center gap-3 text-xs text-slate-400">
-              <span>
-                <BilingualText
-                  zh={`${t.readMinutes} 分钟阅读`}
-                  en={`${t.readMinutes} min read`}
-                />
-              </span>
-              <span>·</span>
-              <span>{t.date}</span>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
+  const featured = featuredIds.map((id) => tutorials.find((tutorial) => tutorial.id === id)).filter(Boolean);
+  return <main className="min-h-screen bg-[#f2f4ef] text-[#0b1b17]">
+    <section className="border-b border-[#27443b] bg-[#07110f] text-[#eef4ef]"><div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:py-20">
+      <div className="max-w-3xl"><h1 className="text-4xl leading-[1.05] sm:text-6xl"><BilingualText zh="从第一次尝试，到做出可靠成果" en="Learn AI by making something useful" /></h1><p className="mt-6 max-w-2xl text-base leading-7 text-[#b9c9c2] sm:text-lg"><BilingualText zh="按任务学习主流 AI 工具。每篇指南都提供清晰步骤、相关工具和继续比较的入口。" en="Task-led guides for leading AI tools. Each tutorial gives you clear steps, relevant products and a direct path to compare what works best." /></p><div className="mt-8 flex flex-wrap gap-3"><a href="#learning-paths" className="inline-flex min-h-11 items-center gap-2 bg-[#d9f99d] px-5 py-3 text-sm font-semibold text-[#07110f] transition hover:bg-white"><BilingualText zh="选择学习路径" en="Choose a learning path" /><Arrow /></a><Link href="/choose" className="inline-flex min-h-11 items-center border border-[#527268] px-5 py-3 text-sm font-semibold text-white transition hover:border-[#7dd3fc] hover:text-[#7dd3fc]"><BilingualText zh="帮我选择工具" en="Help me choose a tool" /></Link></div></div>
+      <div className="self-end border-t border-[#315148] pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0"><div className="grid grid-cols-3 gap-4"><div><div className="font-mono text-2xl text-[#d9f99d]">{tutorials.length}</div><div className="mt-1 text-xs uppercase text-[#8fa39b]"><BilingualText zh="实用指南" en="Practical guides" /></div></div><div><div className="font-mono text-2xl text-[#7dd3fc]">7</div><div className="mt-1 text-xs uppercase text-[#8fa39b]"><BilingualText zh="学习类型" en="Learning tracks" /></div></div><div><div className="font-mono text-2xl text-white">3</div><div className="mt-1 text-xs uppercase text-[#8fa39b]"><BilingualText zh="精选路径" en="Curated paths" /></div></div></div><div className="mt-8 space-y-3 text-sm text-[#c9d5d0]"><p className="flex gap-3"><Check /><BilingualText zh="先完成任务，再了解功能" en="Complete a task before studying features" /></p><p className="flex gap-3"><Check /><BilingualText zh="阅读后直接比较相关工具" en="Compare relevant tools after every guide" /></p></div></div>
+    </div></section>
+    <section id="learning-paths" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8"><div className="border-b border-[#aebbb4] pb-5"><h2 className="text-2xl sm:text-3xl"><BilingualText zh="从你想完成的任务开始" en="Start with the outcome you want" /></h2><p className="mt-2 text-sm text-[#596761]"><BilingualText zh="三条路径覆盖最常见、购买意图最明确的 AI 工作。" en="Three paths cover the most common, high-intent AI workflows." /></p></div><div className="grid border-b border-[#aebbb4] md:grid-cols-3">{featured.map((tutorial, index) => tutorial && <Link key={tutorial.id} href={`/tutorials/${tutorial.id}`} className={`group py-7 md:px-6 ${index > 0 ? "border-t border-[#aebbb4] md:border-l md:border-t-0" : ""}`}><div className="flex items-center justify-between"><span className="font-mono text-xs text-[#68766f]">PATH {String(index + 1).padStart(2, "0")}</span><Arrow className="h-4 w-4 transition group-hover:translate-x-1" /></div><h3 className="mt-8 text-xl leading-snug group-hover:text-[#285c4c]"><BilingualText zh={tutorial.title} en={tutorial.titleEn} /></h3><p className="mt-3 line-clamp-3 text-sm leading-6 text-[#596761]"><BilingualText zh={tutorial.summary} en={tutorial.summaryEn} /></p><div className="mt-6 font-mono text-xs text-[#68766f]">{tutorial.readMinutes} MIN</div></Link>)}</div></section>
+    <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8"><h2 className="text-2xl"><BilingualText zh="按指南类型浏览" en="Browse by guide type" /></h2><div className="mt-6 grid gap-px border border-[#aebbb4] bg-[#aebbb4] sm:grid-cols-2 lg:grid-cols-4">{tracks.map((track) => { const label = tutorialTrackLabels[track]; const count = tutorials.filter((t) => getTutorialRelation(t.id).track === track).length; return <a key={track} href={`#${track}`} className="group min-h-40 bg-[#f2f4ef] p-5 transition hover:bg-white"><TutorialIcon track={track} className="h-6 w-6 text-[#285c4c]" /><h3 className="mt-6 font-semibold"><BilingualText zh={label.zh} en={label.en} /></h3><p className="mt-2 text-sm leading-5 text-[#68766f]"><BilingualText zh={label.descriptionZh} en={label.descriptionEn} /></p><div className="mt-4 font-mono text-xs text-[#285c4c]">{count} GUIDE{count === 1 ? "" : "S"}</div></a>; })}</div></section>
+    <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">{tracks.map((track) => { const items = tutorials.filter((t) => getTutorialRelation(t.id).track === track); if (!items.length) return null; const label = tutorialTrackLabels[track]; return <div id={track} key={track} className="scroll-mt-24 border-t border-[#87988f] py-8"><div className="grid gap-6 lg:grid-cols-[240px_1fr]"><div><div className="flex items-center gap-3"><TutorialIcon track={track} className="h-5 w-5 text-[#285c4c]" /><h2 className="text-xl"><BilingualText zh={label.zh} en={label.en} /></h2></div><p className="mt-3 text-sm leading-6 text-[#68766f]"><BilingualText zh={label.descriptionZh} en={label.descriptionEn} /></p></div><div className="divide-y divide-[#c2cbc5] border-y border-[#c2cbc5]">{items.map((tutorial) => <Link key={tutorial.id} href={`/tutorials/${tutorial.id}`} className="group grid gap-3 py-5 sm:grid-cols-[1fr_auto] sm:items-center"><div><h3 className="font-semibold group-hover:text-[#285c4c]"><BilingualText zh={tutorial.title} en={tutorial.titleEn} /></h3><p className="mt-1 line-clamp-2 text-sm text-[#68766f]"><BilingualText zh={tutorial.summary} en={tutorial.summaryEn} /></p></div><div className="flex items-center gap-3 text-xs text-[#68766f]"><span>{getTutorialRelation(tutorial.id).level === "beginner" ? <BilingualText zh="入门" en="Beginner" /> : <BilingualText zh="进阶" en="Intermediate" />}</span><span>{tutorial.readMinutes} MIN</span><Arrow className="h-4 w-4 text-[#285c4c] transition group-hover:translate-x-1" /></div></Link>)}</div></div></div>; })}</section>
+  </main>;
 }

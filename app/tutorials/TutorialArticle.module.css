@@ -1,0 +1,41 @@
+.article :global(.prose) {
+  max-width: 72ch;
+  color: #40514a;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.article :global(.prose h2) {
+  margin-top: 3rem;
+  padding-bottom: 0.75rem;
+  border-bottom-color: #aebbb4;
+  color: #0b1b17;
+  font-size: 1.65rem;
+}
+
+.article :global(.prose h3),
+.article :global(.prose strong) {
+  color: #0b1b17;
+}
+
+.article :global(.prose a) {
+  color: #174638;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.article :global(.prose a:hover) {
+  color: #0b6b53;
+}
+
+.article :global(.prose blockquote) {
+  border-color: #87988f;
+  background: #e7ebe6;
+  color: #40514a;
+}
+
+.article :global(.prose code) {
+  border: 1px solid #c2cbc5;
+  background: #e7ebe6;
+  color: #174638;
+}

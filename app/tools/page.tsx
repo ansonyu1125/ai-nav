@@ -3,9 +3,12 @@ import { tools } from "@/lib/tools";
 import { categories } from "@/data/categories";
 import ToolsExplorer from "@/components/ToolsExplorer";
 import { BilingualText } from "@/components/Bilingual";
+import { ArrowRightIcon } from "@/components/SignalIcon";
 
 export const metadata = {
-  title: "工具库",
+  title: "AI Tools Directory: Compare 300+ Products",
+  description: "Browse and compare 300+ AI tools by use case, pricing, platform, rating, and verified product data.",
+  alternates: { canonical: "/tools" },
 };
 
 export default async function ToolsPage({
@@ -40,18 +43,18 @@ export default async function ToolsPage({
 
       <Link
         href="/ranking"
-        className="mb-6 flex items-center justify-between gap-3 rounded-xl border border-violet-200 bg-violet-50 px-4 py-3 transition hover:border-violet-300 hover:bg-violet-100"
+        className="mb-6 flex items-center justify-between gap-3 border border-[#315148] bg-[#0a1815] px-4 py-3 transition hover:bg-[#11231e]"
       >
-        <span className="text-sm font-medium text-violet-700">
-          📈 <BilingualText zh="AI 月度增长榜" en="AI Monthly Growth Ranking" />
-          <span className="ml-2 hidden font-normal text-violet-500 sm:inline">
+        <span className="text-sm font-medium text-[#eef4f1]">
+          <BilingualText zh="AI 30 天流量变化榜" en="AI 30-day traffic movement" />
+          <span className="ml-2 hidden font-normal text-[#9fb3ac] sm:inline">
             <BilingualText
-              zh="上月流量增长最快的 AI 工具"
-              en="Fastest-growing AI tools last month"
+              zh="查看近期流量变化较快的 AI 工具"
+              en="Inspect AI tools with notable recent traffic movement"
             />
           </span>
         </span>
-        <span className="text-violet-400">→</span>
+        <ArrowRightIcon className="h-4 w-4 text-[#7dd3fc]" />
       </Link>
 
       <ToolsExplorer tools={tools} categories={categories} initial={initial} />

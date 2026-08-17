@@ -1,0 +1,20 @@
+import Link from "next/link";
+import { getPricingRecord } from "@/lib/pricing-database";
+import type { ProductVariant } from "@/lib/product-variants";
+import { BilingualText } from "./Bilingual";
+
+const statusCopy = {
+  verified: { zh: "已核验", en: "Verified", color: "bg-[#d9f99d] text-[#153b30]" },
+  source_pending: { zh: "已有官方来源，等待核验", en: "Official source linked; verification pending", color: "bg-[#d8edf5] text-[#17445a]" },
+  legacy_unverified: { zh: "历史数据，尚未核验", en: "Legacy import; not yet verified", color: "bg-[#eee4d3] text-[#704d1f]" },
+};
+
+export default function PricingDatabasePanel({ toolId, variant }: { toolId: string; variant: ProductVariant }) {
+  const record = getPricingRecord(toolId); if (!record) return null;
+  const status = statusCopy[record.status];
+  return <div className="mt-10 border-t border-[#9eaaa4] pt-8">
+    <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"><div><div className="flex flex-wrap items-center gap-3"><h3 className="text-2xl font-semibold"><BilingualText zh={`${variant === "api" ? "API " : ""}价格档位`} en={`${variant === "api" ? "API " : ""}Pricing tiers`} /></h3><span className={`px-2 py-1 text-xs font-semibold ${status.color}`}><BilingualText zh={status.zh} en={status.en} /></span></div><p className="mt-2 text-sm text-[#596761]"><BilingualText zh="金额、币种和周期来自独立价格记录；未核验数据不会标记为最新价格。" en="Amounts, currencies and intervals come from the independent pricing record. Unverified imports are never presented as current pricing." /></p></div><div className="flex flex-wrap gap-4 text-sm font-semibold"><Link href="/pricing" className="text-[#285c4c] underline decoration-[#7dd3fc] underline-offset-4"><BilingualText zh="价格数据库" en="Pricing database" /></Link>{record.sourceUrl && <a href={record.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-[#285c4c] underline decoration-[#7dd3fc] underline-offset-4"><BilingualText zh="官方价格来源" en={record.sourceLabel ?? "Official pricing"} /></a>}</div></div>
+    {record.plans.length ? <div className="mt-6 overflow-x-auto"><table className="w-full min-w-[680px] border-collapse bg-white text-left text-sm"><thead className="bg-[#07110f] text-white"><tr><th className="p-4"><BilingualText zh="方案" en="Plan" /></th><th className="p-4"><BilingualText zh="原始价格" en="Recorded price" /></th><th className="p-4"><BilingualText zh="结构化数据" en="Structured value" /></th><th className="p-4"><BilingualText zh="说明" en="Notes" /></th></tr></thead><tbody>{record.plans.map((plan) => <tr key={plan.id} className="border-t border-[#c2cbc5]"><td className="p-4 font-semibold">{plan.name}</td><td className="p-4 font-mono tabular-nums">{plan.price.raw}</td><td className="p-4 font-mono text-xs tabular-nums text-[#40514a]">{plan.price.amount == null ? plan.price.interval : `${plan.price.currency ?? "currency pending"} ${plan.price.amount} / ${plan.price.interval}`}{plan.price.perSeat ? " / seat" : ""}{plan.price.approximate ? " · approximate" : ""}</td><td className="p-4 leading-6 text-[#596761]">{(plan.note ?? plan.features.slice(0, 2).join("; ")) || "—"}</td></tr>)}</tbody></table></div> : <div className="mt-6 border-y border-[#c2cbc5] py-8 text-[#68766f]"><BilingualText zh="这款产品还没有可解析的套餐记录。官方来源存在时，请从官方价格页核对。" en="No parseable plan records exist for this product yet. When an official source is linked, verify pricing there." /></div>}
+    <dl className="mt-5 grid gap-px bg-[#c2cbc5] sm:grid-cols-3"><div className="bg-[#e7ebe6] p-4"><dt className="text-xs uppercase text-[#68766f]"><BilingualText zh="核验日期" en="Verified at" /></dt><dd className="mt-2 font-mono text-sm">{record.verifiedAt ?? <BilingualText zh="尚未核验" en="Not yet verified" />}</dd></div><div className="bg-[#e7ebe6] p-4"><dt className="text-xs uppercase text-[#68766f]"><BilingualText zh="导入日期" en="Imported at" /></dt><dd className="mt-2 font-mono text-sm">{record.importedAt}</dd></div><div className="bg-[#e7ebe6] p-4"><dt className="text-xs uppercase text-[#68766f]"><BilingualText zh="价格模型" en="Pricing model" /></dt><dd className="mt-2 font-mono text-sm">{record.pricingModel}</dd></div></dl>
+  </div>;
+}

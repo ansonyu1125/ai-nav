@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { tools, getTool, getAlternatives } from "@/lib/tools";
 import { site } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { categoryMap } from "@/data/categories";
-import { PRICING_LABEL, getToolCategories, PLATFORM_LABEL, PLATFORM_GROUPS } from "@/lib/types";
+import { PRICING_LABEL, getToolCategories } from "@/lib/types";
 import { formatScore } from "@/lib/utils";
 import PricingBadge from "@/components/PricingBadge";
 import RegionBadge from "@/components/RegionBadge";
@@ -15,6 +15,12 @@ import ToolDetail from "@/components/ToolDetail";
 import { BilingualText, ZhOnlyText } from "@/components/Bilingual";
 import TagList from "@/components/TagList";
 import { getPricingScreenshot } from "@/lib/pricing";
+import ProductTypeIcon from "@/components/ProductTypeIcon";
+import ProductVersionNav from "@/components/ProductVersionNav";
+import TrustDataPanel from "@/components/TrustDataPanel";
+import DataFeedback from "@/components/DataFeedback";
+import ScoreBreakdown from "@/components/ScoreBreakdown";
+import { getPreferredVariant, variantRoutes } from "@/lib/product-variants";
 
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.id }));
@@ -28,14 +34,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const tool = getTool(slug);
   if (!tool) return {};
+  const preferred = getPreferredVariant(tool);
+  const canonical = preferred ? `/${variantRoutes[preferred]}/${slug}` : `/tools/${slug}`;
   return {
     title: tool.name,
     description: tool.description,
-    alternates: { canonical: `/tools/${slug}` },
+    alternates: { canonical },
     openGraph: {
       title: tool.name,
       description: tool.description,
-      url: `${site.url}/tools/${slug}`,
+      url: `${site.url}${canonical}`,
       type: "website",
     },
   };
@@ -49,18 +57,14 @@ export default async function ToolPage({
   const { slug } = await params;
   const tool = getTool(slug);
   if (!tool) notFound();
+  const preferred = getPreferredVariant(tool);
+  if (preferred) redirect(`/${variantRoutes[preferred]}/${tool.id}`);
 
   const cats = getToolCategories(tool)
     .map((id) => categoryMap[id])
     .filter(Boolean);
   const related = getAlternatives(tool);
   const screenshot = getPricingScreenshot(tool.id);
-
-  const platforms = tool.platforms ?? [];
-  const platformLinks = tool.platformLinks ?? [];
-  const platformGroups = PLATFORM_GROUPS.filter((g) =>
-    g.keys.some((k) => platforms.includes(k))
-  );
 
   // SoftwareApplication 结构化数据：利于 Google 富结果与 AI 引擎（GEO）识别
   const jsonLd = {
@@ -108,10 +112,14 @@ export default async function ToolPage({
               <h1 className="text-3xl font-bold tracking-tight text-slate-900">
                 {tool.name}
               </h1>
+              <span className="inline-flex h-7 items-center gap-1.5 border border-[#315148] bg-[#e7ebe6] px-2 font-mono text-xs font-semibold uppercase text-[#285c4c]">
+                <ProductTypeIcon type="web" className="h-3.5 w-3.5" />
+                <BilingualText zh="网页工具" en="Web tool" />
+              </span>
               <RegionBadge region={tool.region} />
               <PricingBadge pricing={tool.pricing} />
               {tool.verified && (
-                <span className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-600">
+                <span className="inline-flex items-center gap-1 border border-[#1d8f5a]/30 bg-[#e5f4e9] px-2.5 py-1 text-xs font-medium text-[#146640]">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5">
                     <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
                   </svg>
@@ -119,19 +127,6 @@ export default async function ToolPage({
                 </span>
               )}
             </div>
-            {platformGroups.length > 0 && (
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {platformGroups.map((g) => (
-                  <span
-                    key={g.id}
-                    className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-600"
-                  >
-                    <span aria-hidden>{g.icon}</span>
-                    <BilingualText zh={g.zh} en={g.en} />
-                  </span>
-                ))}
-              </div>
-            )}
             {tool.nameZh && tool.nameZh !== tool.name && (
               <ZhOnlyText zh={tool.nameZh} className="mt-1 text-slate-500" />
             )}
@@ -148,39 +143,13 @@ export default async function ToolPage({
             />
 
             <div className="mt-6 flex flex-col gap-3">
-              {platforms.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {platforms.map((p) => {
-                    const label = PLATFORM_LABEL[p];
-                    if (!label) return null;
-                    const link = platformLinks.find((l) => l.platform === p);
-                    const href = link?.url ?? tool.officialUrl;
-                    return (
-                      <a
-                        key={p}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700"
-                      >
-                        <span aria-hidden>{label.icon}</span>
-                        <BilingualText zh={label.zh} en={label.en} />
-                        {link && (
-                          <span className="text-slate-400">
-                            · <BilingualText zh={link.name ?? ""} en={link.nameEn ?? ""} />
-                          </span>
-                        )}
-                      </a>
-                    );
-                  })}
-                </div>
-              )}
+              <ProductVersionNav tool={tool} current="web" />
               <div className="flex flex-wrap items-center gap-3">
                 <a
                   href={tool.officialUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-medium text-white transition hover:bg-indigo-700"
+                  className="inline-flex min-h-12 items-center gap-2 bg-[#d9f99d] px-6 py-3 font-semibold text-[#07110f] transition hover:bg-[#c8ef78]"
                 >
                   <BilingualText zh="访问官网" en="Visit website" />
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -292,8 +261,20 @@ export default async function ToolPage({
         </div>
       </div>
 
+      <div className="mt-10">
+        <TrustDataPanel tool={tool} />
+      </div>
+
+      <div className="mt-10">
+        <ScoreBreakdown tool={tool} />
+      </div>
+
       {/* 详情扩展：主要功能 / 如何使用 / 核心优势 / 使用环境 / 费用详情 / 收费标准截图 */}
       <ToolDetail tool={tool} screenshot={screenshot} />
+
+      <div className="mt-10">
+        <DataFeedback toolId={tool.id} />
+      </div>
 
       {/* 代替品 */}
       {related.length > 0 && (
@@ -311,3 +292,6 @@ export default async function ToolPage({
     </div>
   );
 }
+
+
+

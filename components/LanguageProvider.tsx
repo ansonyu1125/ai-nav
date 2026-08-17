@@ -1,47 +1,43 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useSyncExternalStore, type ReactNode } from "react";
 import type { Lang } from "@/lib/i18n";
 
-const LanguageContext = createContext<{ lang: Lang; setLang: (l: Lang) => void }>({
-  lang: "zh",
-  setLang: () => {},
-});
+const LANGUAGE_EVENT = "ainav-language-change";
+
+function getLanguage(): Lang {
+  if (typeof window === "undefined") return "en";
+  const saved = window.localStorage.getItem("lang");
+  return saved === "zh" || saved === "zhTW" || saved === "en" ? saved : "en";
+}
+
+function subscribe(callback: () => void) {
+  window.addEventListener(LANGUAGE_EVENT, callback);
+  window.addEventListener("storage", callback);
+  return () => {
+    window.removeEventListener(LANGUAGE_EVENT, callback);
+    window.removeEventListener("storage", callback);
+  };
+}
+
+const LanguageContext = createContext<{ lang: Lang; setLang: (language: Lang) => void }>({ lang: "en", setLang: () => {} });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("zh");
+  const lang = useSyncExternalStore(subscribe, getLanguage, (): Lang => "en");
 
   useEffect(() => {
-    // 手动选过 → 用上次的选择；否则按浏览器语言判断（简中/繁中/英文）
-    const saved = localStorage.getItem("lang");
-    if (saved === "zh" || saved === "zhTW" || saved === "en") {
-      setLang(saved);
-      return;
-    }
-    if (typeof navigator !== "undefined" && navigator.language) {
-      const l = navigator.language.toLowerCase();
-      if (/^zh-(tw|hk|mo|hant)/.test(l)) {
-        setLang("zhTW");
-      } else if (!l.startsWith("zh")) {
-        setLang("en");
-      }
-    }
-  }, []);
+    document.documentElement.lang = lang === "en" ? "en" : lang === "zhTW" ? "zh-Hant" : "zh-CN";
+  }, [lang]);
 
-  function changeLang(l: Lang) {
-    setLang(l);
+  function changeLang(language: Lang) {
     try {
-      localStorage.setItem("lang", l);
-    } catch {
-      // 忽略隐私模式下 localStorage 不可用的情况
+      window.localStorage.setItem("lang", language);
+    } finally {
+      window.dispatchEvent(new Event(LANGUAGE_EVENT));
     }
   }
 
-  return (
-    <LanguageContext.Provider value={{ lang, setLang: changeLang }}>
-      {children}
-    </LanguageContext.Provider>
-  );
+  return <LanguageContext.Provider value={{ lang, setLang: changeLang }}>{children}</LanguageContext.Provider>;
 }
 
 export function useLanguage() {

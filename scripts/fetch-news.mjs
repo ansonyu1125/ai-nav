@@ -89,7 +89,7 @@ for (const src of sources) {
       });
     }
     console.log(`✓ ${src.name}`);
-  } catch (e) {
+  } catch {
     console.log(`✗ ${src.name} 抓取失败`);
   }
 }
@@ -102,7 +102,7 @@ for (const item of fresh) {
   try {
     generated.push(await buildArticle(item));
     console.log(`✓ 生成：${item.title.slice(0, 40)}`);
-  } catch (e) {
+  } catch {
     console.log(`✗ 生成失败：${item.title.slice(0, 40)}`);
   }
 }

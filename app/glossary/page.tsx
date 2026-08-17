@@ -4,6 +4,7 @@ import { BilingualText } from "@/components/Bilingual";
 
 export const metadata = {
   title: "术语词典",
+  alternates: { canonical: "/glossary" },
 };
 
 export default function GlossaryPage() {

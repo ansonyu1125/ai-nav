@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRightIcon } from "@/components/SignalIcon";
 import { notFound } from "next/navigation";
 import { scenarios, scenarioMap } from "@/data/scenarios";
 import { getScenario, getScenarioTools } from "@/lib/scenarios";
@@ -122,7 +123,7 @@ export default async function ScenarioPage({
               href={`/best/${guide.slug}`}
               className="inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:underline"
             >
-              {guide.titleEn} →
+              {guide.titleEn} <ArrowRightIcon />
             </Link>
           </div>
         )}

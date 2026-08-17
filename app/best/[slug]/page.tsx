@@ -7,6 +7,8 @@ import CompareTable from "@/components/CompareTable";
 import ToolCard from "@/components/ToolCard";
 import JsonLd from "@/components/JsonLd";
 import { BilingualText } from "@/components/Bilingual";
+import VideoDecisionDesk from "@/components/VideoDecisionDesk";
+import FocusedVerticalDesk from "@/components/FocusedVerticalDesk";
 
 export function generateStaticParams() {
   return getAllBestPages().map((p) => ({ slug: p.slug }));
@@ -129,6 +131,10 @@ export default async function BestPage({
           </p>
         ))}
       </section>
+
+      {page.slug === "ai-video-generators" && <VideoDecisionDesk />}
+      {page.slug === "ai-writing-tools" && <FocusedVerticalDesk slug="ai-writing-tools" />}
+      {page.slug === "ai-website-builders" && <FocusedVerticalDesk slug="ai-website-builders" />}
 
       {/* 对比表 */}
       <section className="mt-10">

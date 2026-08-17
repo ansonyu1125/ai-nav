@@ -9,6 +9,7 @@ import { BilingualText } from "@/components/Bilingual";
 export const metadata: Metadata = {
   title: "AI 工具场景导航",
   description: "按使用场景快速找到合适的 AI 工具：做视频、写代码、做 PPT、写文案、翻译等。",
+  alternates: { canonical: "/scenarios" },
 };
 
 export default function ScenariosPage() {

@@ -1,0 +1,313 @@
+id,name,region,platforms,missing_dedicated_destinations,model,score_breakdown,official_url,english_description,english_features,last_verified,pricing_source,pricing_last_checked,latest_major_update,available_countries,free_trial_requirements,affiliate_disclosure,logo,missing_count,action
+chatgpt,ChatGPT,overseas,web;ios;android;api;desktop,,false,false,false,false,false,false,false,true,true,true,true,true,false,5,REVIEW
+claude,Claude,overseas,web;api;desktop,,false,false,false,false,false,false,false,true,true,true,true,true,false,5,REVIEW
+gemini,Gemini,overseas,web;android;ios;api,,false,false,false,false,false,false,false,true,true,true,true,true,false,5,REVIEW
+deepseek,DeepSeek,domestic,web;ios;android;api,,false,false,false,false,false,false,false,true,true,true,true,true,false,5,REVIEW
+kimi,Kimi,domestic,web;ios;android;desktop,app;desktop,false,false,false,false,false,false,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+doubao,豆包,domestic,web;ios;android;desktop;extension,app;plugin;desktop,false,false,false,false,false,false,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+wenxin,文心一言,domestic,web;ios;android;desktop,app;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+tongyi,通义千问,domestic,web;ios;android;api,app;api,false,false,false,false,false,false,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+chatglm,智谱清言,domestic,web;ios;android;api,app;api,false,false,false,false,false,false,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+yuanbao,腾讯元宝,domestic,web;ios;android,app,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+midjourney,Midjourney,overseas,web,,false,false,false,false,false,false,false,true,true,true,true,true,false,5,REVIEW
+dalle,DALL·E 3,overseas,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+stable-diffusion,Stable Diffusion,overseas,web;windows;macos;linux;api,desktop,false,false,false,false,false,true,false,true,true,true,true,true,false,7,REVIEW_PRIORITY
+flux,Flux,overseas,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+jimeng,即梦 AI,domestic,web;desktop;ios;android,app;desktop,false,false,false,false,false,false,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+leonardo,Leonardo AI,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+yige,文心一格,domestic,web;ios;android,app,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+sora,Sora,overseas,web,,false,false,false,false,false,false,true,true,true,true,true,true,false,6,REVIEW
+runway,Runway,overseas,web;api,,false,false,false,false,false,false,false,true,true,true,true,true,false,5,REVIEW
+pika,Pika,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+kling,可灵 AI,domestic,web,,false,false,false,false,false,false,true,true,true,true,true,true,false,6,REVIEW
+hailuo,海螺 AI,domestic,web,,false,false,false,false,false,false,true,true,true,true,true,true,false,6,REVIEW
+luma,Luma AI,overseas,web,,false,false,false,false,false,false,true,true,true,true,true,true,false,6,REVIEW
+heygen,HeyGen,overseas,web;api,api,false,false,false,false,false,true,false,true,true,true,true,true,false,7,REVIEW_PRIORITY
+suno,Suno,overseas,web,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+udio,Udio,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+elevenlabs,ElevenLabs,overseas,web;api;extension,plugin,false,false,false,false,false,true,false,true,true,true,true,true,false,7,REVIEW_PRIORITY
+copilot,GitHub Copilot,overseas,web;desktop;extension,plugin;desktop,false,false,false,false,false,true,false,true,true,true,true,true,false,8,REVIEW_PRIORITY
+cursor,Cursor,overseas,macos;windows;linux,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+windsurf,Windsurf,overseas,macos;windows;linux,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+claude-code,Claude Code,overseas,macos;windows;linux;api,api;desktop,false,false,false,false,false,true,false,true,true,true,true,true,false,8,REVIEW_PRIORITY
+lingma,通义灵码,domestic,web;desktop;extension,plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+replit,Replit,overseas,web;desktop;extension,plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+v0,v0,overseas,web,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+bolt,Bolt.new,overseas,web,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+notion-ai,Notion AI,overseas,web;desktop;ios;android;macos;windows,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+wps-ai,WPS AI,domestic,web;windows;macos;linux;ios;android,app;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+feishu,飞书智能伙伴,domestic,web;windows;macos;ios;android,app;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+dingtalk,钉钉 AI,domestic,web;windows;macos;ios;android;api,app;api;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,10,REVIEW_PRIORITY
+gamma,Gamma,overseas,web,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+xinghuo,讯飞星火,domestic,web;api;extension;wechat,plugin;api,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+grammarly,Grammarly,overseas,web;macos;windows;ios;android;extension;desktop,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+xiezuocat,秘塔写作猫,domestic,web;wechat,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+jasper,Jasper,overseas,web;extension;desktop,plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+copyai,Copy.ai,overseas,web;extension;api,plugin;api,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+perplexity,Perplexity,overseas,web;ios;android;extension;api,plugin,false,false,false,false,false,true,false,true,true,true,true,true,false,7,REVIEW_PRIORITY
+metaso,秘塔 AI 搜索,domestic,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+copilot-microsoft,Microsoft Copilot,overseas,web;windows;ios;android;extension,plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+tiangong,天工 AI 搜索,domestic,web;wechat,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+deepl,DeepL,overseas,web;desktop;ios;android;extension;api,api;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+immersive,沉浸式翻译,domestic,web;extension,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+youdao,有道翻译,domestic,web;windows;macos;ios;android;extension,app;plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,10,REVIEW_PRIORITY
+google-translate,Google 翻译,overseas,web;ios;android;api;extension,app;api,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+canva,Canva,overseas,web;macos;windows;ios;android;extension,plugin,false,false,false,false,false,true,false,true,true,true,true,true,false,7,REVIEW_PRIORITY
+figma,Figma,overseas,web;macos;windows;ios;android;desktop,app;desktop,false,false,false,false,false,true,false,true,true,true,true,true,false,8,REVIEW_PRIORITY
+gaoding,稿定设计,domestic,web;desktop;wechat,desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+recraft,Recraft,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+grok,Grok,overseas,web;ios;android,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+mistral,Mistral Le Chat,overseas,web;api,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+poe,Poe,overseas,web;ios;android,app,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+ideogram,Ideogram,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+nano-banana,Nano Banana,overseas,web;android;ios,app,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+remove-bg,Remove.bg,overseas,web;desktop;api;extension,plugin;api;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,10,REVIEW_PRIORITY
+photoroom,Photoroom,overseas,web;ios;android;api,app;api,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+veo,Veo,overseas,web;api,api,false,false,false,false,false,false,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+synthesia,Synthesia,overseas,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+fish-audio,Fish Audio,domestic,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+lovable,Lovable,overseas,web,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+notebooklm,NotebookLM,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+character-ai,Character.AI,overseas,web;ios;android,,false,false,false,false,false,true,false,true,true,true,true,true,false,6,REVIEW
+talkie,Talkie,domestic,web;ios;android,app,false,false,false,false,false,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+replika,Replika,overseas,web;ios;android;desktop,app;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+zhipu-qingying,智谱清影,domestic,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+vidu,Vidu,domestic,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+bcut,必剪 Studio,domestic,web;windows;macos,desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+krea,Krea,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+wanxiang,通义万相,domestic,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+firefly,Adobe Firefly,overseas,web;desktop,desktop,false,false,false,false,false,true,false,true,true,true,true,true,false,7,REVIEW_PRIORITY
+playground,Playground,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+seaart,SeaArt,domestic,web,,false,false,false,false,false,true,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+aippt,AiPPT,domestic,web;windows;macos,desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+wanzhi,万知,domestic,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+xunfei-zhiwen,讯飞智文,domestic,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+marscode,MarsCode,domestic,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+codegeex,CodeGeeX,domestic,web;extension,plugin,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+cline,Cline,overseas,extension,plugin,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+aider,Aider,overseas,macos;windows;linux,desktop,false,false,false,false,false,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+paperpal,Paperpal,overseas,web;extension;desktop,plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+devv,Devv,domestic,web;extension,plugin,false,false,false,false,false,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+quark,夸克 AI,domestic,web;ios;android;desktop,app;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+baidu-translate,百度翻译,domestic,web;ios;android;extension,app;plugin,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+figjam,FigJam AI,overseas,web;desktop;macos;windows,desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+ms-designer,Microsoft Designer,overseas,web;windows;ios;android,app;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+stepfun,阶跃星辰,domestic,web;ios;android;api,app;api,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+meta-ai,Meta AI,overseas,web;ios;android;desktop;api,app;api;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,10,REVIEW_PRIORITY
+cohere,Cohere,overseas,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+hunyuan,腾讯混元,domestic,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+civitai,Civitai,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+magnific,Magnific AI,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+pixverse,PixVerse,domestic,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+filmora,万兴喵影,domestic,web;macos;windows;ios;android,app;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+did,D-ID,overseas,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+boomy,Boomy,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+tianyin,网易天音,domestic,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+murf,Murf AI,overseas,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+playht,PlayHT,overseas,web;api,api,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+speechify,Speechify,overseas,web;ios;android;extension;desktop,app;plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,true,11,REVIEW_PRIORITY
+codeium,Codeium,overseas,web;extension;desktop,plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+tabnine,Tabnine,overseas,web;macos;windows;linux;extension,plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+cody,Sourcegraph Cody,overseas,web;macos;windows;linux;extension,plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+otter,Otter.ai,overseas,web;ios;android,app,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+fireflies,Fireflies.ai,overseas,web;extension;api,plugin;api,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+descript,Descript,overseas,web;macos;windows,desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+iflyrec,讯飞听见,domestic,web;android;ios;api;wechat,app;api,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+wordtune,Wordtune,overseas,web;extension;desktop;ios;android,app;plugin;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,10,REVIEW_PRIORITY
+you,You.com,overseas,web;extension,plugin,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+phind,Phind,overseas,web,,false,false,false,false,false,true,true,true,true,true,true,true,false,7,REVIEW_PRIORITY
+framer,Framer,overseas,web;macos;windows;linux;ios;android,app;desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,9,REVIEW_PRIORITY
+spline,Spline,overseas,web;macos;windows;linux,desktop,false,false,false,false,false,true,true,true,true,true,true,true,false,8,REVIEW_PRIORITY
+manus,Manus,domestic,web;macos;windows,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+devin,Devin,overseas,web;api,api,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+openai-operator,Operator,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+autogpt,AutoGPT,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+consensus,Consensus,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+elicit,Elicit,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+scispace,SciSpace,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+semantic-scholar,Semantic Scholar,overseas,web;api,api,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+capcut,剪映 / CapCut,domestic,web;ios;android;windows;macos,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+opus-clip,Opus Clip,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+fliki,Fliki,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+invideo,InVideo,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+zapier,Zapier,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+make,Make,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+n8n,n8n,overseas,web;api,api,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+relay-app,Relay.app,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+latenode,Latenode,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+chatpdf,ChatPDF,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+pdf-ai,PDF.ai,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+humata,Humata,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+adobe-acrobat-ai,Adobe Acrobat AI,overseas,web;windows;macos,desktop,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+filegpt,FileGPT,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+khanmigo,Khanmigo,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+quizlet,Quizlet,overseas,web;ios;android,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+meshy,Meshy,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+tripo,Tripo,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+rodin,Rodin,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+luma-genie,Luma Genie,overseas,web;ios,app,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+adcreative,AdCreative.ai,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+hubspot-breeze,HubSpot Breeze,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+zhipin-video,腾讯智影,domestic,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+minimax-audio,MiniMax Audio,domestic,web;api,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+assemblyai,AssemblyAI,overseas,web;api,api,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+janitor-ai,Janitor.ai,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+quillbot,QuillBot,overseas,web;extension,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+writesonic,Writesonic,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+exa,Exa,overseas,web;api,api,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+brave-search,Brave Search,overseas,web;ios;android,app,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+picsart,Picsart,overseas,web;ios;android,app,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+freepik,Freepik,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+niji-journey,Niji Journey,overseas,web,,false,false,false,false,true,true,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+comfyui,ComfyUI,overseas,web;desktop,desktop,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+warp,Warp,overseas,macos;linux,desktop,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+fathom,Fathom,overseas,web;macos;windows,desktop,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+read-ai,Read.ai,overseas,web;extension,plugin,false,false,false,false,true,true,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+krisp,Krisp,overseas,web;windows;macos,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+adobe-podcast,Adobe Podcast,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+lalal-ai,LALAL.AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+intercom-fin,Intercom Fin,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+zendesk-ai,Zendesk AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+ada,Ada,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+chatbase,Chatbase,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+harvey-ai,Harvey AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+donotpay,DoNotPay,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+robin-ai,Robin AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+spellbook,Spellbook,overseas,web;windows,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+casetext,Casetext CoCounsel,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+arc,Arc,overseas,macos;windows;ios,app;desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+opera-aria,Opera Aria,overseas,windows;macos;ios;android,app;desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+microsoft-edge,Microsoft Edge Copilot,overseas,windows;macos;ios;android,app;desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+sigmaos,SigmaOS,overseas,macos,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+promptbase,PromptBase,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+flowgpt,FlowGPT,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+snack-prompt,Snack Prompt,overseas,web;extension,plugin,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+public-prompts,Public Prompts,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+imagefx,Google ImageFX,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+meta-imagine,Meta Imagine,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+google-vids,Google Vids,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+gemini-code-assist,Gemini Code Assist,overseas,web;extension,plugin,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+jetbrains-ai,JetBrains AI Assistant,overseas,desktop,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+clickup-ai,ClickUp AI,overseas,web;windows;macos,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+openai-whisper,OpenAI Whisper,overseas,api;desktop,api;desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+abridge,Abridge,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+finchat,FinChat.io,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+wealthfront,Wealthfront,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+betterment,Betterment,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+alpaca,Alpaca,overseas,web;api,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+hirevue,HireVue,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+eightfold,Eightfold AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+seekout,SeekOut,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+textio,Textio,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+fetcher,Fetcher,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+shopify-magic,Shopify Magic,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+pebblely,Pebblely,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+flair,Flair AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+heyday,Heyday,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+unity-muse,Unity Muse,overseas,web;desktop,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+inworld,Inworld AI,overseas,web;api,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+scenario,Scenario,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+ai-dungeon,AI Dungeon,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+nvidia-ace,Nvidia ACE,overseas,api,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+guidegeek,GuideGeek,overseas,web;wechat,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+layla,Layla,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+wanderboat,Wanderboat,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+tripplanner,TripPlanner AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+hopper,Hopper,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+semrush,Semrush,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+surfer-seo,Surfer SEO,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+ahrefs,Ahrefs,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+buffer,Buffer,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+sprout-social,Sprout Social,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+hootsuite,Hootsuite,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+typefully,Typefully,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+later,Later,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+superhuman,Superhuman,overseas,web;macos;ios,app;desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+shortwave,Shortwave,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+klaviyo,Klaviyo,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+mailchimp,Mailchimp,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+mixmax,Mixmax,overseas,web;extension,plugin,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+crowdstrike,CrowdStrike Falcon,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+darktrace,Darktrace,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+sentinelone,SentinelOne,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+abnormal,Abnormal Security,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+snyk,Snyk,overseas,web;extension;api,plugin;api,false,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+chaingpt,ChainGPT,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+nansen,Nansen,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+moralis,Moralis,overseas,web;api,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+kaito,Kaito AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+cookie3,Cookie3,overseas,web;api,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+kapwing,Kapwing,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+veed,VEED.IO,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+julius,Julius AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+rows,Rows,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+akkio,Akkio,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+polymer,Polymer,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+obviously-ai,Obviously AI,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+sloyd,Sloyd,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+tome,Tome,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+beautiful,Beautiful.ai,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+pitch,Pitch,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+mem,Mem,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+reflect,Reflect,overseas,web;macos;ios,app;desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+rewind,Rewind,overseas,macos,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+tana,Tana,overseas,web;macos,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+heptabase,Heptabase,overseas,web;macos;windows,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+huggingface,Hugging Face,overseas,web;api,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+replicate,Replicate,overseas,web;api,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+langchain,LangChain,overseas,api;web,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+llamaindex,LlamaIndex,overseas,api;web,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+pinecone,Pinecone,overseas,web;api,api,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+rabbit,Rabbit R1,overseas,desktop,desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+limitless,Limitless,overseas,ios;macos;windows,app;desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+friend,Friend,overseas,ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+plaud,PLAUD Note,overseas,ios;android;desktop,app;desktop,false,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+meta-rayban,Ray-Ban Meta,overseas,ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+duolingo,Duolingo,overseas,web;ios;android,app,false,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+creatify,Creatify,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+optimizely,Optimizely,overseas,web,,false,false,false,false,true,false,true,true,true,true,true,true,true,8,REVIEW_PRIORITY
+openrouter,OpenRouter,overseas,api;web,api,true,false,false,false,true,false,false,true,true,true,true,true,true,9,REVIEW_PRIORITY
+openai-codex,Codex,overseas,web;desktop,desktop,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+triple-whale,Triple Whale,overseas,web,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+teammates-ai,Teammates.ai,overseas,web,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+easy-peasy-ai,Easy-Peasy.AI,overseas,web,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+get-simple-chat,Get Simple Chat,overseas,web,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+lensa,Lensa,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+epik,Epik,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+faceapp,FaceApp,overseas,ios;android,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+fotor,Fotor,overseas,web;ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+elsa-speak,ELSA Speak,overseas,ios;android,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+speak,Speak,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+papago,Papago,overseas,web;ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+itranslate,iTranslate,overseas,web;ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+youper,Youper,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+flo-health,Flo Health,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+shazam,Shazam,overseas,web;ios;android,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+chai,Chai,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+poly-ai,Poly.AI,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+arc-search,Arc Search,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+lightroom-mobile,Adobe Lightroom,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+videoleap,Videoleap,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+inshot,InShot,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+kinemaster,KineMaster,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+voicemod,Voicemod,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+bandlab,BandLab,overseas,web;ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+microsoft-translator,Microsoft Translator,overseas,web;ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+goodnotes,Goodnotes,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+noom,Noom,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+whoop,Whoop,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+cleo,Cleo,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+google-lens,Google Lens,overseas,ios;android,app,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+monica,Monica,overseas,extension;web,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+sider,Sider,overseas,extension,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+merlin,Merlin,overseas,extension,plugin,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+aiprm,AIPRM,overseas,extension,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+webchatgpt,WebChatGPT,overseas,extension,plugin,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+languagetool,LanguageTool,overseas,extension;web,,true,false,false,false,true,false,true,true,true,true,true,true,true,9,REVIEW_PRIORITY
+prowritingaid,ProWritingAid,overseas,extension;web,plugin,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+glasp,Glasp,overseas,extension,plugin,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+glarity,Glarity,overseas,extension,plugin,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+eightify,Eightify,overseas,extension,plugin,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+vidiq,vidIQ,overseas,extension,plugin,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+tubebuddy,TubeBuddy,overseas,extension,plugin,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY
+tactiq,Tactiq,overseas,extension,plugin,true,false,false,false,true,false,true,true,true,true,true,true,true,10,REVIEW_PRIORITY

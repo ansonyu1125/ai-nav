@@ -1,7 +1,23 @@
 import toolsData from "@/data/tools.json";
 import { getToolCategories, type Tool } from "@/lib/types";
+import { platformLinkOverrides } from "@/data/platform-links";
+import { toolScoreOverrides } from "@/data/tool-scores";
+import { productDestinationOverrides } from "@/data/product-destinations";
 
-export const tools = toolsData as Tool[];
+export const tools = (toolsData as Tool[]).map((tool) => {
+  const overrides = platformLinkOverrides[tool.id];
+  const destinations = productDestinationOverrides[tool.id];
+  const scoreBreakdown = toolScoreOverrides[tool.id];
+  if (!overrides && !destinations && !scoreBreakdown) return tool;
+  const links = new Map(
+    [...(tool.platformLinks ?? []), ...(overrides ?? []), ...(destinations ?? [])].map((link) => [link.platform, link]),
+  );
+  return {
+    ...tool,
+    ...(overrides || destinations ? { platformLinks: [...links.values()] } : {}),
+    ...(scoreBreakdown ? { scoreBreakdown } : {}),
+  };
+});
 
 export type SortKey = "popularity" | "score" | "newest";
 
@@ -107,3 +123,5 @@ export function sortTools(list: Tool[], sort: SortKey): Tool[] {
 export function topTools(sort: SortKey = "popularity", limit = 10): Tool[] {
   return sortTools(tools, sort).slice(0, limit);
 }
+
+

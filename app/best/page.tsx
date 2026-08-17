@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Best AI Tools Guides 2026",
   description:
     "In-depth guides to the best AI tools of 2026 — video generators, chat assistants and more, with pricing and comparisons.",
+  alternates: { canonical: "/best" },
 };
 
 export default function BestIndexPage() {

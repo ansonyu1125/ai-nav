@@ -15,7 +15,7 @@ export default function ToolLogo({ tool, size = "md" }: ToolLogoProps) {
   const s = SIZE[size];
   return (
     <div
-      className={`flex shrink-0 items-center justify-center rounded-xl bg-slate-50 p-1.5 ${s.box}`}
+      className={`flex shrink-0 items-center justify-center border border-[#c6d0ca] bg-white p-1.5 ${s.box}`}
     >
       {tool.logo ? (
         // eslint-disable-next-line @next/next/no-img-element

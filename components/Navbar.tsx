@@ -28,21 +28,21 @@ export default function Navbar() {
               href={item.href}
               onClick={() => setOpen(false)}
               className={cn(
-                "block rounded-lg px-3 py-2.5 text-sm font-medium",
+                "block px-3 py-2.5 text-sm font-medium",
                 isActive(item.href)
-                  ? "bg-indigo-50 text-indigo-600"
-                  : "text-slate-600 hover:bg-slate-100",
+                  ? "bg-[#d9f99d] text-[#07110f]"
+                  : "text-[#9fb3ac] hover:bg-[#11231e] hover:text-white",
               )}
             >
               {label}
             </Link>
-            <div className="ml-3 border-l border-slate-200 pl-3">
+            <div className="ml-3 border-l border-[#315148] pl-3">
               {item.children.map((c) => (
                 <Link
                   key={c.href}
                   href={c.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-2 text-sm text-slate-500 hover:bg-slate-100 hover:text-slate-900"
+                  className="block px-3 py-2 text-sm text-[#8fa69e] hover:bg-[#11231e] hover:text-white"
                 >
                   {localize(lang, c.label, c.labelEn)}
                 </Link>
@@ -57,10 +57,10 @@ export default function Navbar() {
           <Link
             href={item.href}
             className={cn(
-              "inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition",
+              "inline-flex items-center gap-1 px-3 py-2 text-sm font-medium transition",
               isActive(item.href)
-                ? "bg-indigo-50 text-indigo-600"
-                : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
+                ? "bg-[#d9f99d] text-[#07110f]"
+                : "text-[#9fb3ac] hover:bg-[#11231e] hover:text-white",
             )}
           >
             {label}
@@ -75,12 +75,12 @@ export default function Navbar() {
             </svg>
           </Link>
           <div className="invisible absolute left-0 top-full z-50 pt-1 opacity-0 transition group-hover:visible group-hover:opacity-100">
-            <div className="w-48 rounded-xl border border-slate-200 bg-white p-1.5 shadow-lg">
+            <div className="w-52 border border-[#315148] bg-[#0a1815] p-1.5 shadow-[0_18px_45px_rgba(0,0,0,.32)]">
               {item.children.map((c) => (
                 <Link
                   key={c.href}
                   href={c.href}
-                  className="block rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-indigo-50 hover:text-indigo-600"
+                  className="block px-3 py-2 text-sm text-[#9fb3ac] transition hover:bg-[#d9f99d] hover:text-[#07110f]"
                 >
                   {localize(lang, c.label, c.labelEn)}
                 </Link>
@@ -97,12 +97,12 @@ export default function Navbar() {
         href={item.href}
         onClick={mobile ? () => setOpen(false) : undefined}
         className={cn(
-          mobile ? "block rounded-lg px-3 py-2.5 text-sm font-medium" : "rounded-lg px-3 py-2 text-sm font-medium transition",
+          mobile ? "block px-3 py-2.5 text-sm font-medium" : "px-3 py-2 text-sm font-medium transition",
           isActive(item.href)
-            ? "bg-indigo-50 text-indigo-600"
+            ? "bg-[#d9f99d] text-[#07110f]"
             : mobile
-              ? "text-slate-600 hover:bg-slate-100"
-              : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
+              ? "text-[#9fb3ac] hover:bg-[#11231e] hover:text-white"
+              : "text-[#9fb3ac] hover:bg-[#11231e] hover:text-white",
         )}
       >
         {label}
@@ -111,13 +111,11 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-lg text-white">
-            🧭
-          </span>
-          <span className="text-lg font-bold text-slate-900">
+    <header className="sticky top-0 z-50 border-b border-[#29473e] bg-[#07110f] text-white">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
+        <Link href="/" className="flex items-center gap-3">
+          <span className="grid h-9 w-9 place-items-center border border-[#d9f99d] font-mono text-sm font-bold text-[#d9f99d]" aria-hidden="true">A/</span>
+          <span className="display-brand text-lg font-semibold tracking-normal text-white">
             {localize(lang, site.name, site.nameEn)}
           </span>
         </Link>
@@ -131,7 +129,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-slate-600 hover:bg-slate-100 md:hidden"
+            className="inline-flex min-h-10 min-w-10 items-center justify-center p-2 text-[#a9beb7] hover:bg-[#11231e] hover:text-white md:hidden"
             aria-label="切换菜单"
           >
             <svg
@@ -152,7 +150,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-slate-200 bg-white px-4 py-2 md:hidden">
+        <div className="border-t border-[#29473e] bg-[#07110f] px-5 py-3 md:hidden">
           {nav.map((item) => renderItem(item, true))}
         </div>
       )}

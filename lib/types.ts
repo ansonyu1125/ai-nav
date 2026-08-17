@@ -141,6 +141,23 @@ export interface Tool {
   verified?: boolean; // 官方认证（官网/官方出品，可信度标识）
   trending?: boolean; // 正在爆火（趋势榜）
   lastChecked?: string; // 最近核验日期（如 "2026-08"，用于展示新鲜度）
+  pricingLastChecked?: string;
+  latestMajorUpdate?: { date: string; title: string; titleEn?: string };
+  affiliateDisclosure?: "affiliate" | "none" | "unknown";
+  availableCountries?: string[];
+  availableCountriesEn?: string[];
+  freeTrialRequirements?: string;
+  freeTrialRequirementsEn?: string;
+  scoreBreakdown?: {
+    easeOfUse: number;
+    outputQuality: number;
+    valueForMoney: number;
+    features: number;
+    support: number;
+    overall: number;
+    methodologyVersion: string;
+    reviewedAt: string;
+  };
   emoji: string;
   logo?: string;
   releaseYear?: number;

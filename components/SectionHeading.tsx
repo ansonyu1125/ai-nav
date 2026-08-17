@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useLangText } from "./Bilingual";
+import { ArrowRightIcon } from "./SignalIcon";
 
 interface SectionHeadingProps {
   title: string;
@@ -39,7 +40,7 @@ export default function SectionHeading({
           href={href}
           className="shrink-0 text-sm font-medium text-indigo-600 transition hover:text-indigo-700"
         >
-          {link} →
+          <span className="inline-flex items-center gap-2">{link}<ArrowRightIcon /></span>
         </Link>
       )}
     </div>

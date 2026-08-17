@@ -4,55 +4,29 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useLangText } from "./Bilingual";
 
-interface SearchBarProps {
-  placeholder?: string;
-  size?: "lg" | "md";
-  className?: string;
-}
+interface SearchBarProps { placeholder?: string; size?: "lg" | "md"; className?: string; }
 
-export default function SearchBar({
-  placeholder,
-  size = "md",
-  className,
-}: SearchBarProps) {
+export default function SearchBar({ placeholder, size = "md", className }: SearchBarProps) {
   const [q, setQ] = useState("");
   const router = useRouter();
-  const defaultPh = useLangText(
-    "搜索 AI 工具，如 ChatGPT、Midjourney…",
-    "Search AI tools, e.g. ChatGPT, Midjourney…",
-  );
-  const submitLabel = useLangText("搜索", "Search");
+  const defaultPh = useLangText("描述你的任务或输入工具名称", "Describe a task or enter a tool name");
+  const submitLabel = useLangText("搜索工具", "Search tools");
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  function onSubmit(event: React.FormEvent) {
+    event.preventDefault();
     const query = q.trim();
     router.push(query ? `/tools?q=${encodeURIComponent(query)}` : "/tools");
-  };
-
-  const inputClass =
-    size === "lg" ? "h-14 px-5 text-base" : "h-11 px-4 text-sm";
+  }
 
   return (
-    <form onSubmit={onSubmit} className={className}>
-      <div className="flex w-full items-center gap-2 rounded-full border border-slate-200 bg-white p-1.5 shadow-sm transition focus-within:border-indigo-400 focus-within:ring-2 focus-within:ring-indigo-100">
-        <span className="pl-3 text-slate-400" aria-hidden>
-          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
-          </svg>
-        </span>
-        <input
-          type="text"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder={placeholder || defaultPh}
-          className={`w-full bg-transparent text-slate-900 placeholder:text-slate-400 focus:outline-none ${inputClass}`}
-        />
-        <button
-          type="submit"
-          className="shrink-0 rounded-full bg-indigo-600 px-5 text-sm font-medium text-white transition hover:bg-indigo-700"
-        >
-          {submitLabel}
-        </button>
+    <form onSubmit={onSubmit} className={className} role="search">
+      <div className={`grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-stretch bg-[#f4f4ef] p-1.5 shadow-[0_18px_45px_rgba(0,0,0,.2)] ${size === "lg" ? "min-h-16" : "min-h-12"}`}>
+        <label className="flex min-w-0 items-center gap-3 px-3 sm:px-4">
+          <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 shrink-0 fill-none stroke-[#496159]" strokeWidth="1.8"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+          <span className="sr-only">{submitLabel}</span>
+          <input value={q} onChange={(event) => setQ(event.target.value)} placeholder={placeholder || defaultPh} className="min-w-0 flex-1 bg-transparent text-sm text-[#0b1b17] caret-[#285c4c] placeholder:text-[#63736c] focus:outline-none sm:text-base" />
+        </label>
+        <button type="submit" className="min-h-11 bg-[#d9f99d] px-4 text-sm font-semibold text-[#07110f] transition hover:bg-[#c8ef78] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7dd3fc] sm:px-6">{submitLabel}</button>
       </div>
     </form>
   );

@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { localize, localizeArray, toTraditional } from "@/lib/i18n";
 import { useLanguage } from "./LanguageProvider";
 import PricingSummary from "./PricingSummary";
+import { ArrowRightIcon } from "./SignalIcon";
 
 interface ToolDetailProps {
   tool: Tool;
@@ -36,6 +37,14 @@ function formatVisits(n?: number, unit?: string): string {
   return `${n}`;
 }
 
+function DetailHeading({ lang, zh, en }: { lang: "zh" | "zhTW" | "en"; zh: string; en: string }) {
+  return (
+    <h2 className="mb-4 text-xl font-bold text-slate-900">
+      {localize(lang, zh, en)}
+    </h2>
+  );
+}
+
 export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
   const { lang } = useLanguage();
 
@@ -56,12 +65,6 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
     a: lang === "zhTW" ? toTraditional(f.a) : f.a,
   }));
 
-  const Heading = ({ zh, en }: { zh: string; en: string }) => (
-    <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">
-      {localize(lang, zh, en)}
-    </h2>
-  );
-
   return (
     <div>
       {/* 费用速览 */}
@@ -71,7 +74,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
         {features.length > 0 && (
           <section className="rounded-2xl border border-slate-200 bg-white p-6">
-            <Heading zh="主要功能" en="Key features" />
+            <DetailHeading lang={lang} zh="主要功能" en="Key features" />
             <ul className="space-y-2.5">
               {features.map((f) => (
                 <li key={f} className="flex items-start gap-2.5 text-slate-700">
@@ -87,7 +90,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
 
         {advantages.length > 0 && (
           <section className="rounded-2xl border border-slate-200 bg-white p-6">
-            <Heading zh="核心优势" en="Why choose it" />
+            <DetailHeading lang={lang} zh="核心优势" en="Why choose it" />
             <ul className="space-y-2.5">
               {advantages.map((a) => (
                 <li key={a} className="flex items-start gap-2.5 text-slate-700">
@@ -103,7 +106,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
       {/* 使用案例 */}
       {useCases.length > 0 && (
         <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
-          <Heading zh="使用案例" en="Use cases" />
+          <DetailHeading lang={lang} zh="使用案例" en="Use cases" />
           <ul className="space-y-2.5">
             {useCases.map((c) => (
               <li key={c} className="flex items-start gap-2.5 text-slate-700">
@@ -118,7 +121,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
       {/* 如何使用 */}
       {steps.length > 0 && (
         <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
-          <Heading zh="如何使用" en="How to use" />
+          <DetailHeading lang={lang} zh="如何使用" en="How to use" />
           <ol className="space-y-3">
             {steps.map((s, i) => (
               <li key={s} className="flex items-start gap-3">
@@ -135,7 +138,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
       {/* 常见问题 */}
       {faqs.length > 0 && (
         <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
-          <Heading zh="常见问题" en="FAQ" />
+          <DetailHeading lang={lang} zh="常见问题" en="FAQ" />
           <div className="space-y-2">
             {faqs.map((f) => (
               <details
@@ -156,7 +159,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
       {/* 使用环境 + API 接口 */}
       {(platforms.length > 0 || apiName) && (
         <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
-          <Heading zh="使用环境与接口" en="Platforms & API" />
+          <DetailHeading lang={lang} zh="使用环境与接口" en="Platforms & API" />
           {platforms.length > 0 && (
             <div className="grid gap-2 sm:grid-cols-2">
               {platforms.map((p) => {
@@ -183,9 +186,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
                           <span className="truncate text-slate-400">· {storeName}</span>
                         )}
                       </span>
-                      <span className="shrink-0 text-indigo-500 transition group-hover:translate-x-0.5">
-                        →
-                      </span>
+                      <ArrowRightIcon className="h-4 w-4 shrink-0 text-indigo-500 transition group-hover:translate-x-0.5" />
                     </a>
                   );
                 }
@@ -215,7 +216,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
       {/* 费用详情 */}
       {tiers.length > 0 && (
         <section className="mt-6">
-          <Heading zh="费用详情" en="Pricing" />
+          <DetailHeading lang={lang} zh="费用详情" en="Pricing" />
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
             {tiers.map((tier, i) => (
               <div
@@ -259,7 +260,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
 
       {/* 官网收费标准截图 */}
       <section className="mt-6">
-        <Heading zh="官网收费标准" en="Official pricing" />
+        <DetailHeading lang={lang} zh="官网收费标准" en="Official pricing" />
         {screenshot ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -295,7 +296,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
 
       {/* 数据分析 */}
       <section className="mt-6">
-        <Heading zh="数据分析" en="Traffic & analytics" />
+        <DetailHeading lang={lang} zh="数据分析" en="Traffic & analytics" />
         {traffic &&
         (traffic.monthlyVisits != null ||
           traffic.sources?.length ||
@@ -442,7 +443,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
       {/* 公司信息 */}
       {company && (
         <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
-          <Heading zh="公司信息" en="Company" />
+          <DetailHeading lang={lang} zh="公司信息" en="Company" />
           <dl className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
             <div>
               <dt className="text-sm text-slate-500">
@@ -502,3 +503,4 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
     </div>
   );
 }
+

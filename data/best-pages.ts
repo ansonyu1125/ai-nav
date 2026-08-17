@@ -574,6 +574,45 @@ export const bestPages: BestPage[] = [
       },
     ],
   },
+  {
+    slug: "ai-website-builders",
+    scenarioId: "code",
+    toolIds: ["framer", "lovable", "v0", "bolt", "replit"],
+    title: "2026 年最佳 AI 网站建设工具",
+    titleEn: "Best AI Website Builders in 2026",
+    description: "对比 Framer、Lovable、v0、Bolt.new 和 Replit，按新手建站、产品原型、代码控制和发布方式选择。",
+    descriptionEn: "Compare Framer, Lovable, v0, Bolt.new and Replit for beginner websites, product prototypes, code control and publishing workflows.",
+    intro: [
+      "AI 建站工具大致分为两类：直接生成并托管网页的可视化平台，以及生成真实代码、适合继续开发的产品构建工具。",
+      "选择时不要只看第一次生成效果，还要检查域名、导出、代码所有权、数据库、团队协作和长期维护成本。",
+      "下面的工具集合聚焦海外用户能够实际用于发布网站或产品原型的平台。",
+    ],
+    introEn: [
+      "AI website builders fall into two broad groups: visual platforms that generate and host pages, and product builders that create real code for continued development.",
+      "Do not judge only the first generated screen. Check domains, exports, code ownership, databases, collaboration, and long-term maintenance cost.",
+      "This shortlist focuses on tools international users can actually use to publish websites or working product prototypes.",
+    ],
+    sections: [
+      {
+        heading: "新手应该选哪一种",
+        headingEn: "Which type is best for beginners?",
+        body: "只需要营销网站或作品集，优先选择 Framer。需要生成可继续开发的应用原型，可以考虑 Lovable、Bolt.new 或 Replit。",
+        bodyEn: "For a marketing site or portfolio, start with Framer. For a working app prototype you can continue developing, consider Lovable, Bolt.new, or Replit.",
+      },
+      {
+        heading: "代码所有权与导出",
+        headingEn: "Code ownership and export",
+        body: "购买前确认是否可以导出代码、连接自己的 Git 仓库、迁移数据库，以及停止订阅后网站是否继续运行。",
+        bodyEn: "Before paying, verify code export, Git integration, database portability, and whether the site continues running after a subscription ends.",
+      },
+      {
+        heading: "发布成本",
+        headingEn: "Publishing cost",
+        body: "除了订阅价格，还要计算自定义域名、托管、数据库、团队席位和 AI 生成额度。",
+        bodyEn: "Beyond the subscription, account for custom domains, hosting, databases, team seats, and AI generation credits.",
+      },
+    ],
+  },
 ];
 
 export const bestPageMap: Record<string, BestPage> = Object.fromEntries(

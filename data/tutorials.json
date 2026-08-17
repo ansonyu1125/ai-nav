@@ -240,5 +240,77 @@
       "Make Money",
       "Monetization"
     ]
+  },
+  {
+    "id": "chatgpt-alternatives",
+    "title": "ChatGPT 替代方案：Claude、Gemini、Perplexity 与 DeepSeek 怎么选",
+    "summary": "从长文档、Google 生态、带来源研究和推理需求出发，找到真正适合你的 ChatGPT 替代方案。",
+    "category": "替代方案",
+    "emoji": "",
+    "date": "2026-08-17",
+    "readMinutes": 8,
+    "tags": [
+      "ChatGPT",
+      "Claude",
+      "Gemini",
+      "替代方案"
+    ],
+    "titleEn": "Best ChatGPT Alternatives: Claude, Gemini, Perplexity or DeepSeek?",
+    "summaryEn": "Choose a ChatGPT alternative based on long-document work, Google integration, cited research, reasoning needs and real workflow fit.",
+    "categoryEn": "Alternatives",
+    "tagsEn": [
+      "ChatGPT",
+      "Claude",
+      "Gemini",
+      "Alternatives"
+    ]
+  },
+  {
+    "id": "midjourney-alternatives",
+    "title": "Midjourney 替代方案：DALL·E、Stable Diffusion、Firefly 怎么选",
+    "summary": "比较对话创作、参数控制、Adobe 工作流和素材生产能力，选择更适合你的图像生成器。",
+    "category": "替代方案",
+    "emoji": "",
+    "date": "2026-08-17",
+    "readMinutes": 7,
+    "tags": [
+      "Midjourney",
+      "DALL·E",
+      "Stable Diffusion",
+      "替代方案"
+    ],
+    "titleEn": "Best Midjourney Alternatives: DALL·E, Stable Diffusion, Firefly and More",
+    "summaryEn": "Compare conversational creation, control, Adobe workflows and production needs to find the right image generator.",
+    "categoryEn": "Alternatives",
+    "tagsEn": [
+      "Midjourney",
+      "DALL·E",
+      "Stable Diffusion",
+      "Alternatives"
+    ]
+  },
+  {
+    "id": "cursor-alternatives",
+    "title": "Cursor 替代方案：Copilot、Claude Code、Windsurf 怎么选",
+    "summary": "从编辑器习惯、Agent 工作流、代码审查和成本出发，比较主流 AI 编程工具。",
+    "category": "替代方案",
+    "emoji": "",
+    "date": "2026-08-17",
+    "readMinutes": 7,
+    "tags": [
+      "Cursor",
+      "GitHub Copilot",
+      "Claude Code",
+      "替代方案"
+    ],
+    "titleEn": "Best Cursor Alternatives: GitHub Copilot, Claude Code, Windsurf and More",
+    "summaryEn": "Compare AI coding tools by editor workflow, agent autonomy, code review control and total cost.",
+    "categoryEn": "Alternatives",
+    "tagsEn": [
+      "Cursor",
+      "GitHub Copilot",
+      "Claude Code",
+      "Alternatives"
+    ]
   }
 ]

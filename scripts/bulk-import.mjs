@@ -164,7 +164,6 @@ JSON 必须包含以下字段（值需真实、准确、保守，不要编造）
 }
 
 function coerce(obj, name, url) {
-  const c = (o) => o || {};
   const category = CATEGORIES.includes(obj.category) ? obj.category : "chat";
   const categories = Array.isArray(obj.categories) && obj.categories.length
     ? obj.categories.filter((x) => CATEGORIES.includes(x))
