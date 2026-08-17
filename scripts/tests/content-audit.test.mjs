@@ -221,6 +221,35 @@ test("publication-ready CLI note checks reject a missing research note", () => {
   assert.ok(errors.includes("article alpha-review: alpha lacks fresh writing hands-on evidence"));
 });
 
+test("rejects percent-encoded traversal in research note paths", () => {
+  const errors = audit({
+    evidence: [evidenceRecord({
+      level: "hands-on",
+      handsOn: [{ protocolId: "writing-core", testedAt: "2026-05-17", accountTier: "Free", notesPath: "research/alpha/%2e%2e/README.md" }],
+    })],
+    articles: [article({ requiredEvidenceLevel: "hands-on" })],
+    requirePublicationReady: true,
+    researchNoteExists: () => true,
+  });
+  assert.ok(errors.includes("alpha: hands-on run notesPath must be a safe path under research/alpha/"));
+  assert.ok(errors.includes("article alpha-review: alpha lacks fresh writing hands-on evidence"));
+});
+
+test("rejects hands-on protocols without executable tasks", () => {
+  const errors = audit({
+    protocols: [{ id: "empty-writing", cluster: "writing", tasks: [] }],
+    evidence: [evidenceRecord({
+      level: "hands-on",
+      handsOn: [{ protocolId: "empty-writing", testedAt: "2026-05-17", accountTier: "Free", notesPath: "research/alpha/empty.md" }],
+    })],
+    articles: [article({ requiredEvidenceLevel: "hands-on" })],
+    requirePublicationReady: true,
+    researchNoteExists: () => true,
+  });
+  assert.ok(errors.includes("alpha: protocol empty-writing must contain at least one task"));
+  assert.ok(errors.includes("article alpha-review: alpha lacks fresh writing hands-on evidence"));
+});
+
 test("rejects duplicate slugs and unknown article tools", () => {
   const errors = audit({
     articles: [article({ slug: "same" }), article({ slug: "same", toolIds: ["missing"] })],

@@ -33,7 +33,7 @@ function ageInDays(date, today) {
 
 function safeResearchNotePath(toolId, value) {
   if (typeof value !== "string" || !value.trim()) return false;
-  if (value.includes("\\") || value.startsWith("/") || value.includes(":") || !value.startsWith(`research/${toolId}/`)) return false;
+  if (value.includes("%") || value.includes("\\") || value.startsWith("/") || value.includes(":") || !value.startsWith(`research/${toolId}/`)) return false;
   const relativeParts = value.slice(`research/${toolId}/`.length).split("/");
   return relativeParts.every((part) => part && part !== "." && part !== "..");
 }
@@ -116,9 +116,11 @@ export function auditEvidenceRecords({
     const validRuns = [];
     for (const run of runs ?? []) {
       const protocol = protocolsById.get(run.protocolId);
+      const protocolHasTasks = Array.isArray(protocol?.tasks) && protocol.tasks.length > 0;
       const testedAt = parseIsoDate(run.testedAt);
       const notesPathIsSafe = safeResearchNotePath(record.toolId, run.notesPath);
       if (!protocol) errors.push(`${record.toolId}: unknown protocol ${run.protocolId}`);
+      else if (!protocolHasTasks) errors.push(`${record.toolId}: protocol ${run.protocolId} must contain at least one task`);
       if (!testedAt) errors.push(`${record.toolId}: invalid testedAt ${run.testedAt}`);
       if (!run.accountTier?.trim()) errors.push(`${record.toolId}: hands-on run accountTier is required`);
       if (!run.notesPath?.trim()) errors.push(`${record.toolId}: hands-on run notesPath is required`);
@@ -138,7 +140,7 @@ export function auditEvidenceRecords({
         if (!noteExists) errors.push(`${record.toolId}: research note does not exist: ${run.notesPath}`);
       }
 
-      if (protocol && testedAt && run.accountTier?.trim() && notesPathIsSafe && isFresh && noteExists) {
+      if (protocolHasTasks && testedAt && run.accountTier?.trim() && notesPathIsSafe && isFresh && noteExists) {
         validRuns.push({ ...run, cluster: protocol.cluster });
       }
     }
