@@ -404,6 +404,37 @@ test("removes unsupported ranking and first-hand claims from upgraded legacy gui
   }
 });
 
+test("upgrades the visual and website guide batch to sourced shortlists", () => {
+  const expectedTools = {
+    "ai-video-generators": ["sora", "runway", "kling", "hailuo"],
+    "ai-image-generators": ["midjourney", "firefly", "stable-diffusion"],
+    "ai-design-tools": ["canva", "figma", "framer", "spline"],
+    "ai-website-builders": ["framer", "lovable", "v0", "bolt", "replit"],
+  };
+
+  for (const [slug, toolIds] of Object.entries(expectedTools)) {
+    const page = bestPages.find((candidate) => candidate.slug === slug);
+    assert.ok(page, `${slug} is missing`);
+    assert.deepEqual(page.toolIds, toolIds, `${slug} must use the reviewed shortlist`);
+    assert.deepEqual(page.comparisonRows?.map((row) => row.toolId), toolIds);
+    for (const toolId of toolIds) {
+      assert.ok(
+        page.sources?.some((source) => source.toolId === toolId && source.kind === "official"),
+        `${slug}: ${toolId} has no official source`,
+      );
+    }
+  }
+});
+
+test("gives every second-batch guide a distinct decision-led title", () => {
+  const pages = ["ai-video-generators", "ai-image-generators", "ai-design-tools", "ai-website-builders"]
+    .map((slug) => bestPages.find((page) => page.slug === slug));
+  const titles = pages.map((page) => page?.titleEn);
+
+  assert.equal(new Set(titles).size, 4);
+  assert.ok(titles.every((title) => title && !/^Best AI .* in 2026$/i.test(title)));
+});
+
 test("rejects an article in an unexpected cluster beyond the approved 30", () => {
   const canonicalTools = JSON.parse(fs.readFileSync(new URL("../../data/tools.json", import.meta.url), "utf8"));
   const articles = [...batchOneArticles, article({ slug: "unexpected-extra", cluster: "unexpected", toolIds: ["chatgpt"] })];
