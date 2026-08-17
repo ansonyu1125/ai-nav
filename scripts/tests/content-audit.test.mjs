@@ -406,23 +406,71 @@ test("removes unsupported ranking and first-hand claims from upgraded legacy gui
 
 test("upgrades the visual and website guide batch to sourced shortlists", () => {
   const expectedTools = {
-    "ai-video-generators": ["sora", "runway", "kling", "hailuo"],
-    "ai-image-generators": ["midjourney", "firefly", "stable-diffusion"],
-    "ai-design-tools": ["canva", "figma", "framer", "spline"],
-    "ai-website-builders": ["framer", "lovable", "v0", "bolt", "replit"],
+    "ai-video-generators": {
+      toolIds: ["sora", "runway", "kling", "hailuo"],
+      domains: { sora: "openai.com", runway: "runwayml.com", kling: "klingai.com", hailuo: "hailuoai.video" },
+      excludedNames: /Veo|Pika/i,
+    },
+    "ai-image-generators": {
+      toolIds: ["midjourney", "firefly", "stable-diffusion"],
+      domains: { midjourney: "midjourney.com", firefly: "adobe.com", "stable-diffusion": "stability.ai" },
+      excludedNames: /Jimeng|ERNIE ViLG|即梦|文心一格/i,
+    },
+    "ai-design-tools": {
+      toolIds: ["canva", "figma", "framer", "spline"],
+      domains: { canva: "canva.com", figma: "figma.com", framer: "framer.com", spline: "spline.design" },
+      excludedNames: /$^/,
+    },
+    "ai-website-builders": {
+      toolIds: ["framer", "lovable", "v0", "bolt", "replit"],
+      domains: { framer: "framer.com", lovable: "lovable.dev", v0: "v0.dev", bolt: "bolt.new", replit: "replit.com" },
+      excludedNames: /$^/,
+    },
   };
 
-  for (const [slug, toolIds] of Object.entries(expectedTools)) {
+  for (const [slug, { toolIds, domains, excludedNames }] of Object.entries(expectedTools)) {
     const page = bestPages.find((candidate) => candidate.slug === slug);
     assert.ok(page, `${slug} is missing`);
     assert.deepEqual(page.toolIds, toolIds, `${slug} must use the reviewed shortlist`);
     assert.deepEqual(page.comparisonRows?.map((row) => row.toolId), toolIds);
     for (const toolId of toolIds) {
+      const officialSources = page.sources?.filter(
+        (source) => source.toolId === toolId && source.kind === "official",
+      ) ?? [];
+      assert.ok(officialSources.length > 0, `${slug}: ${toolId} has no official source`);
       assert.ok(
-        page.sources?.some((source) => source.toolId === toolId && source.kind === "official"),
-        `${slug}: ${toolId} has no official source`,
+        officialSources.some((source) => {
+          const hostname = new URL(source.url).hostname;
+          return source.url.startsWith("https://")
+            && source.checkedAt === "2026-08-18"
+            && (hostname === domains[toolId] || hostname.endsWith(`.${domains[toolId]}`));
+        }),
+        `${slug}: ${toolId} needs a current HTTPS source from its official domain`,
       );
     }
+
+    const copy = [
+      page.title,
+      page.titleEn,
+      page.description,
+      page.descriptionEn,
+      ...(page.intro ?? []),
+      ...(page.introEn ?? []),
+      ...(page.sections ?? []).flatMap((section) => [section.heading, section.headingEn, section.body, section.bodyEn]),
+      ...(page.comparisonRows ?? []).flatMap((row) => [
+        row.toolName,
+        row.bestFor,
+        row.bestForEn,
+        row.planAccess,
+        row.planAccessEn,
+        row.evidence,
+        row.evidenceEn,
+      ]),
+    ].join(" ");
+    assert.doesNotMatch(copy, excludedNames, `${slug} must not name tools outside its shortlist`);
+    assert.doesNotMatch(copy, /[$€£]\s?\d|free (?:quota|tier|generations)|starting price|免费额度|免费版|付费起点/i);
+    assert.doesNotMatch(copy, /rank(?:ed|ing)? by popularity|hands-on|we tested|our test/i);
+    assert.doesNotMatch(copy, /—|–|--/);
   }
 });
 
@@ -433,6 +481,7 @@ test("gives every second-batch guide a distinct decision-led title", () => {
 
   assert.equal(new Set(titles).size, 4);
   assert.ok(titles.every((title) => title && !/^Best AI .* in 2026$/i.test(title)));
+  assert.ok(titles.every((title) => title && !/^Choosing an AI [^:]+:/i.test(title)));
 });
 
 test("rejects an article in an unexpected cluster beyond the approved 30", () => {

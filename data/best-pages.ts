@@ -46,9 +46,9 @@ export const bestPages: BestPage[] = [
     slug: "ai-video-generators",
     scenarioId: "video",
     title: "选择 AI 视频生成器：控制、速度与访问",
-    titleEn: "Choosing an AI Video Generator: Control, Speed, and Access",
+    titleEn: "Video Generation Workflows: Control, Production, and Access",
     description:
-      "对比 2026 年最佳 AI 视频生成工具：Sora、Runway、可灵、海螺、Veo 等，含免费额度、价格与适用场景。",
+      "按创作流程、方案访问、地区可用性和官方产品资料比较 Sora、Runway、可灵与海螺。",
     descriptionEn:
       "Compare Sora, Runway, Kling, and Hailuo by creation workflow, plan access, regional availability, and the official product evidence behind each pick.",
     toolIds: ["sora", "runway", "kling", "hailuo"],
@@ -161,7 +161,7 @@ export const bestPages: BestPage[] = [
     slug: "ai-image-generators",
     scenarioId: "image",
     title: "选择 AI 图像生成器：风格、集成与控制",
-    titleEn: "Choosing an AI Image Generator: Style, Integration, and Control",
+    titleEn: "Image Generation Paths: Workspace, Adobe, or Deployment",
     description:
       "按创作方式、Adobe 工作流与本地控制比较 Midjourney、Adobe Firefly 和 Stable Diffusion。",
     descriptionEn:
@@ -734,7 +734,7 @@ export const bestPages: BestPage[] = [
     scenarioId: "code",
     toolIds: ["framer", "lovable", "v0", "bolt", "replit"],
     title: "选择 AI 建站工具：发布页面还是开发应用",
-    titleEn: "Choosing an AI Website Builder: Publish a Page or Develop an App",
+    titleEn: "When a Prompt Becomes a Site: Selecting an AI Builder",
     description: "按页面发布、应用原型、代码工作区和部署流程比较 Framer、Lovable、v0、Bolt 和 Replit。",
     descriptionEn: "Compare Framer, Lovable, v0, Bolt, and Replit for page publishing, app prototyping, code workspaces, and deployment workflows.",
     comparisonRows: [
