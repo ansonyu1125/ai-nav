@@ -7,6 +7,25 @@ export interface BestPageSection {
   bodyEn: string;
 }
 
+export interface BestPageSource {
+  toolId: string;
+  label: string;
+  url: string;
+  checkedAt: string;
+  kind: "official" | "independent-review" | "research";
+}
+
+export interface BestPageComparisonRow {
+  toolId: string;
+  toolName: string;
+  bestFor: string;
+  bestForEn: string;
+  planAccess: string;
+  planAccessEn: string;
+  evidence: string;
+  evidenceEn: string;
+}
+
 export interface BestPage {
   slug: string;
   scenarioId: string;
@@ -17,6 +36,9 @@ export interface BestPage {
   intro: string[];
   introEn: string[];
   sections: BestPageSection[];
+  toolIds?: string[];
+  sources?: BestPageSource[];
+  comparisonRows?: BestPageComparisonRow[];
 }
 
 export const bestPages: BestPage[] = [
@@ -232,6 +254,108 @@ export const bestPages: BestPage[] = [
         body: "办公文档常含敏感信息，企业使用建议关注数据的存储与训练政策，必要时选择企业版或私有化部署方案。",
         bodyEn:
           "Office docs often contain sensitive information — for enterprise use, review data-storage and training policies, and consider enterprise or self-hosted plans where needed.",
+      },
+    ],
+  },
+  {
+    slug: "best-ai-writing-tools",
+    scenarioId: "writing",
+    title: "工作场景最佳 AI 写作工具",
+    titleEn: "Best AI Writing Tools for Work",
+    description:
+      "对比 Grammarly、Jasper、Copy.ai、Wordtune 与 ChatGPT，按编辑、营销写作、长文起草和团队使用场景选择。",
+    descriptionEn:
+      "Compare Grammarly, Jasper, Copy.ai, Wordtune, and ChatGPT for editing, marketing copy, long-form drafting, and team writing workflows.",
+    toolIds: ["grammarly", "jasper", "copyai", "wordtune", "chatgpt"],
+    comparisonRows: [
+      { toolId: "grammarly", toolName: "Grammarly", bestFor: "日常英文编辑", bestForEn: "Everyday English editing", planAccess: "免费版每月 100 次 AI 提示；Pro 每位成员 2,000 次", planAccessEn: "Free includes 100 AI prompts monthly; Pro lists 2,000 per member", evidence: "官方资料 + G2 编辑评测", evidenceEn: "Official sources + G2 editorial review" },
+      { toolId: "jasper", toolName: "Jasper", bestFor: "品牌营销团队", bestForEn: "Brand-led marketing teams", planAccess: "Pro 提供 7 天试用；Business 询价", planAccessEn: "Seven-day Pro trial; Business by quote", evidence: "官方资料 + G2 编辑评测", evidenceEn: "Official sources + G2 editorial review" },
+      { toolId: "copyai", toolName: "Copy.ai", bestFor: "可重复的营销流程", bestForEn: "Repeatable go-to-market workflows", planAccess: "付费方案；Workflow Credits 按层级变化", planAccessEn: "Paid plans; Workflow Credits vary by tier", evidence: "官方资料；可靠第三方评测不足", evidenceEn: "Official sources; limited independent evidence" },
+      { toolId: "wordtune", toolName: "Wordtune", bestFor: "改写与压缩已有草稿", bestForEn: "Rewriting and tightening drafts", planAccess: "提供免费版；个人付费层可试用", planAccessEn: "Free option; trials on paid individual tiers", evidence: "官方资料 + G2 编辑评测", evidenceEn: "Official sources + G2 editorial review" },
+      { toolId: "chatgpt", toolName: "ChatGPT", bestFor: "通用长文与文件工作", bestForEn: "General long-form and file-based work", planAccess: "提供免费、个人付费与商业方案", planAccessEn: "Free, paid personal, and business plans", evidence: "官方资料 + 长文事实研究", evidenceEn: "Official sources + long-form factuality research" },
+    ],
+    sources: [
+      { toolId: "grammarly", label: "Grammarly plans", url: "https://www.grammarly.com/plans", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "grammarly", label: "Grammarly privacy", url: "https://www.grammarly.com/privacy", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "grammarly", label: "G2 editorial test: AI writing generators", url: "https://learn.g2.com/best-ai-writing-generators", checkedAt: "2026-08-18", kind: "independent-review" },
+      { toolId: "jasper", label: "Jasper plans and pricing", url: "https://www.jasper.ai/pricing", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "jasper", label: "Jasper privacy policy", url: "https://www.jasper.ai/legal/privacy", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "jasper", label: "G2 editorial test: AI content platforms", url: "https://learn.g2.com/best-ai-content-creation-platforms", checkedAt: "2026-08-18", kind: "independent-review" },
+      { toolId: "copyai", label: "Copy.ai plans and pricing", url: "https://www.copy.ai/prices", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "copyai", label: "Copy.ai privacy notice", url: "https://www.copy.ai/privacy-notice", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "wordtune", label: "Wordtune plans", url: "https://www.wordtune.com/plans", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "wordtune", label: "Wordtune product overview", url: "https://www.wordtune.com/", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "wordtune", label: "G2 editorial test: AI writing generators", url: "https://learn.g2.com/best-ai-writing-generators", checkedAt: "2026-08-18", kind: "independent-review" },
+      { toolId: "chatgpt", label: "ChatGPT plans", url: "https://openai.com/chatgpt/pricing/", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "chatgpt", label: "OpenAI data controls", url: "https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/", checkedAt: "2026-08-18", kind: "official" },
+      { toolId: "chatgpt", label: "Can LLMs Automate Fact-Checking Article Writing?", url: "https://arxiv.org/abs/2503.17684", checkedAt: "2026-08-18", kind: "research" },
+    ],
+    intro: [
+      "AI 写作工具的差别不在于谁能生成一段通顺文字，而在于它是否适合你的工作流程。编辑现有文字、维护品牌语气、批量制作营销内容和从空白开始起草，需要的产品并不相同。",
+      "这份指南聚焦五款面向海外职场用户的主流工具。功能和方案以官方页面为准；存在可靠来源时，再补充公开编辑评测、可追溯的用户反馈和相关研究。每条体验判断都会标明来源。",
+      "如果只想快速选择：Grammarly 和 Wordtune 更适合修改已有文字；Jasper 与 Copy.ai 面向营销团队；ChatGPT 更适合需要研究、文件处理和多轮修改的通用写作流程。",
+    ],
+    introEn: [
+      "Most AI writing tools can produce a readable paragraph. The harder question is whether a product fits the work around that paragraph. Editing an existing draft and enforcing a brand voice call for different products. So do producing campaign variants and starting a report from a blank page.",
+      "This guide focuses on five tools used by professionals outside China. Product capabilities and plan details come from first-party pages. Published editorial tests, traceable user feedback, and relevant research provide a second view where credible sources exist. Each experience-based observation is attributed to its source.",
+      "For a quick shortlist, Grammarly and Wordtune are built around revising text you already have. Jasper and Copy.ai target marketing workflows. ChatGPT is the broader choice when writing also involves files, research, or several rounds of instruction.",
+    ],
+    sections: [
+      {
+        heading: "先按工作流程选择",
+        headingEn: "Choose by workflow first",
+        body: "如果大部分时间在邮件、文档和浏览器文本框中修改句子，优先看 Grammarly 或 Wordtune。需要管理品牌语气、营销活动和团队内容流程时，再比较 Jasper 与 Copy.ai。工作横跨分析资料、搭结构、写初稿和反复修改时，ChatGPT 的通用对话与文件工作流更合适。",
+        bodyEn:
+          "Start with where the work happens. If most of your time goes into revising emails, documents, and browser text fields, look at Grammarly or Wordtune first. Compare Jasper and Copy.ai when the job includes brand rules, campaigns, and repeatable team processes. ChatGPT is the more general option when one assignment moves through source analysis, outlining, drafting, and several rounds of revision.",
+      },
+      {
+        heading: "Grammarly：适合日常英文编辑",
+        headingEn: "Grammarly: best for everyday English editing",
+        body: "Grammarly 的核心价值是把语法、语气和整句改写放进日常写作界面。官方方案页列出免费版每月 100 次 AI 提示，Pro 版每位成员每月 2,000 次，并把整句改写、语气调整和抄袭检测放在付费层。它更像持续工作的编辑层，而不是营销内容管理系统。",
+        bodyEn:
+          "Grammarly puts grammar, tone feedback, and sentence rewriting inside everyday writing surfaces. Its official plans page lists 100 AI prompts per month on Free and 2,000 per member on Pro. Full-sentence rewrites, tone adjustment, and plagiarism detection sit on the paid tier. It makes the most sense as an editing layer that stays with you throughout the day, not as a marketing content system.",
+      },
+      {
+        heading: "Jasper：适合品牌营销团队",
+        headingEn: "Jasper: best for brand-led marketing teams",
+        body: "Jasper 的产品与价格页围绕品牌语气、知识资产、受众和营销活动组织功能。Pro 方案支持两套 Brand Voices、五项 Knowledge assets 和三个 Audiences；Business 提供更多定制、安全和团队支持。个人只想润色邮件时会显得过重，但需要统一品牌表达的营销团队更容易发挥它的价值。",
+        bodyEn:
+          "Jasper organizes its product around brand voice, knowledge assets, audiences, and campaigns. Its Pro plan lists two Brand Voices, five Knowledge assets, and three Audiences, while Business adds deeper customization, security, and team support. That is more machinery than a person needs for polishing email, but it maps well to a marketing team that must keep many outputs on brand.",
+      },
+      {
+        heading: "Copy.ai：适合可重复的营销流程",
+        headingEn: "Copy.ai: best for repeatable go-to-market workflows",
+        body: "Copy.ai 将产品定位为 GTM AI 平台，价格页用席位、聊天字数和 Workflow Credits 区分方案。它适合把一套输入反复转成邮件、销售或营销产物的团队。若需求只是偶尔写一篇文章，流程与额度体系可能比简单对话工具更复杂。",
+        bodyEn:
+          "Copy.ai positions itself as a go-to-market AI platform. Its plans are organized around seats, unlimited words in Chat on listed paid tiers, and monthly Workflow Credits. It is aimed at teams that repeatedly turn the same kinds of inputs into sales and marketing outputs. For an occasional article, the workflow and credit model may feel heavier than a straightforward editor or chat tool.",
+      },
+      {
+        heading: "Wordtune：适合句子改写与压缩",
+        headingEn: "Wordtune: best for rewriting and tightening drafts",
+        body: "Wordtune 围绕改写、语气调整和总结已有文字构建体验。官方方案分为免费、Advanced、Unlimited 和 Business，并为两个个人付费层提供试用。它的使用边界清楚：先有一段文字，再让工具提供更简洁、正式或自然的版本。需要从资料到完整长文的工作流时，应与通用助手搭配。",
+        bodyEn:
+          "Wordtune is built around rewriting, tone changes, and summaries of text you already have. Its official plans page lists Free, Advanced, Unlimited, and Business options, with trials for the two paid individual tiers. The workflow is easy to understand: bring a draft, then ask for a tighter, more formal, or more natural version. Pair it with a broader assistant when the assignment starts with source material and ends with a full document.",
+      },
+      {
+        heading: "ChatGPT：适合通用长文工作",
+        headingEn: "ChatGPT: best for general long-form work",
+        body: "ChatGPT 的官方产品页覆盖写作、文件上传与分析、研究和自定义工作流。免费版可开始使用，Plus 提供更高限额和更广的模型与工具访问；Business 明确说明业务数据不会用于训练模型。它的优势是任务范围广，代价是用户需要自己设计提示、核对事实并维持文档结构。",
+        bodyEn:
+          "ChatGPT covers writing, file analysis, research, and custom workflows in one product. A free plan is available, while Plus provides higher limits and broader model and tool access. OpenAI states that Business data is not used to train its models. The breadth is useful, but the user still has to design the instructions, verify facts, and keep a long document structurally consistent.",
+      },
+      {
+        heading: "我们如何评估",
+        headingEn: "How we evaluate writing tools",
+        body: "功能、方案和数据政策以产品方页面为准。体验判断只采用说明测试过程或可追溯到具体用户反馈的公开评测，并标明来源。联盟营销汇总、竞品软文和没有测试方法的榜单不作为依据。若找不到可靠的第三方评测，就明确保留证据空缺。",
+        bodyEn:
+          "Product capabilities, plans, and data policies come from first-party pages. Experience-based observations require a published test with a stated method or feedback that can be traced to a specific user review. We attribute those observations instead of presenting them as our own tests. Affiliate roundups, competitor-written reviews, and lists without a test method are excluded. When reliable independent evidence is missing, the gap stays visible.",
+      },
+      {
+        heading: "隐私与采购检查",
+        headingEn: "Privacy and purchasing checks",
+        body: "不要把消费者方案与企业数据政策混为一谈。上传客户资料、合同或内部文档前，应阅读对应方案的数据使用、保留和训练政策，并确认管理员控制与合规要求。价格和额度会变化，采购前应重新查看官方方案页。",
+        bodyEn:
+          "Do not assume that a consumer plan and a business plan have the same data policy. Before uploading client material, contracts, or internal documents, check the data use, retention, and training terms for the exact plan you intend to buy. Confirm the required admin and compliance controls as well. Prices and allowances change, so revisit the official plan page before purchasing.",
       },
     ],
   },

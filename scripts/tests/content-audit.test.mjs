@@ -4,6 +4,7 @@ import fs from "node:fs";
 import { batchOneArticles } from "../../data/batch-one-content.mjs";
 import { contentEvidence } from "../../data/content-evidence.mjs";
 import { contentTestProtocols } from "../../data/content-test-protocols.mjs";
+import { bestPages } from "../../data/best-pages.ts";
 import { auditEvidenceRecords } from "../lib/content-audit.mjs";
 
 const TODAY = "2026-08-17";
@@ -298,6 +299,46 @@ test("accepts the unchanged 30-article Batch 1 manifest and approved cluster cou
   });
   assert.equal(batchOneArticles.length, 30);
   assert.deepEqual(errors, []);
+});
+
+test("publishes the Batch 1 writing-tools guide with the approved tool set", () => {
+  const manifestArticle = batchOneArticles.find((article) => article.slug === "best-ai-writing-tools");
+  const publishedPage = bestPages.find((page) => page.slug === manifestArticle?.slug);
+
+  assert.ok(manifestArticle, "Batch 1 writing-tools article is missing");
+  assert.ok(publishedPage, "Best AI writing tools page is missing");
+  assert.deepEqual(publishedPage.toolIds, manifestArticle.toolIds);
+});
+
+test("links every writing-tools pick to a first-party source", () => {
+  const publishedPage = bestPages.find((page) => page.slug === "best-ai-writing-tools");
+
+  assert.ok(publishedPage);
+  for (const toolId of publishedPage.toolIds ?? []) {
+    const toolSources = publishedPage.sources?.filter(
+      (source) => source.toolId === toolId && source.kind === "official",
+    ) ?? [];
+    assert.ok(toolSources.length > 0, `${toolId} has no article source`);
+    assert.ok(toolSources.every((source) => source.url.startsWith("https://")));
+  }
+});
+
+test("uses evidence-safe comparison rows instead of stale catalog prices", () => {
+  const publishedPage = bestPages.find((page) => page.slug === "best-ai-writing-tools");
+
+  assert.ok(publishedPage);
+  assert.deepEqual(publishedPage.comparisonRows?.map((row) => row.toolId), publishedPage.toolIds);
+  assert.ok(publishedPage.comparisonRows?.every((row) => !/[$€£]\s?\d/.test(row.planAccessEn)));
+});
+
+test("labels sourced evaluation without implying first-hand testing", () => {
+  const manifestArticle = batchOneArticles.find((article) => article.slug === "best-ai-writing-tools");
+  const publishedPage = bestPages.find((page) => page.slug === "best-ai-writing-tools");
+
+  assert.equal(manifestArticle?.requiredEvidenceLevel, "official-sources");
+  assert.ok(publishedPage?.sources?.some((source) => source.kind === "independent-review"));
+  assert.ok(publishedPage?.sources?.some((source) => source.kind === "research"));
+  assert.ok(publishedPage?.comparisonRows?.every((row) => !row.evidenceEn.includes("hands-on")));
 });
 
 test("rejects an article in an unexpected cluster beyond the approved 30", () => {

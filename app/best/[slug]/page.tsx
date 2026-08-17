@@ -135,20 +135,51 @@ export default async function BestPage({
         <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">
           <BilingualText zh="工具对比一览" en="At-a-glance comparison" />
         </h2>
-        <CompareTable tools={tools} />
+        {page.comparisonRows ? (
+          <div className="overflow-x-auto border-y border-slate-200 bg-white">
+            <table className="w-full min-w-[760px] text-left text-sm">
+              <thead>
+                <tr className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+                  <th className="px-4 py-3 font-medium"><BilingualText zh="工具" en="Tool" /></th>
+                  <th className="px-4 py-3 font-medium"><BilingualText zh="最适合" en="Best for" /></th>
+                  <th className="px-4 py-3 font-medium"><BilingualText zh="方案入口" en="Plan access" /></th>
+                  <th className="px-4 py-3 font-medium"><BilingualText zh="证据状态" en="Evidence status" /></th>
+                </tr>
+              </thead>
+              <tbody>
+                {page.comparisonRows.map((row) => (
+                  <tr key={row.toolId} className="border-b border-slate-100 last:border-0">
+                    <td className="px-4 py-4 font-semibold text-slate-900">
+                      <Link href={`/tools/${row.toolId}`} className="hover:text-indigo-700 hover:underline">
+                        {row.toolName}
+                      </Link>
+                    </td>
+                    <td className="px-4 py-4 text-slate-700"><BilingualText zh={row.bestFor} en={row.bestForEn} /></td>
+                    <td className="px-4 py-4 text-slate-700"><BilingualText zh={row.planAccess} en={row.planAccessEn} /></td>
+                    <td className="px-4 py-4 text-slate-600"><BilingualText zh={row.evidence} en={row.evidenceEn} /></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <CompareTable tools={tools} />
+        )}
       </section>
 
       {/* 工具卡片 */}
-      <section className="mt-10">
-        <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">
-          <BilingualText zh="推荐工具" en="The top picks" />
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {tools.map((t) => (
-            <ToolCard key={t.id} tool={t} />
-          ))}
-        </div>
-      </section>
+      {!page.comparisonRows && (
+        <section className="mt-10">
+          <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">
+            <BilingualText zh="推荐工具" en="The top picks" />
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {tools.map((t) => (
+              <ToolCard key={t.id} tool={t} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* 选购指南 */}
       <section className="mt-12 max-w-3xl space-y-6">
@@ -166,6 +197,37 @@ export default async function BestPage({
           </div>
         ))}
       </section>
+
+      {page.sources && page.sources.length > 0 && (
+        <section className="mt-12 max-w-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900">
+            <BilingualText zh="来源与证据" en="Sources and evidence" />
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-slate-600">
+            <BilingualText
+              zh="产品事实以官方页面为准；体验判断和研究结论单独标注来源类型。价格与额度可能变化，请在购买前重新核对。"
+              en="Product facts come from first-party pages. Experience-based observations and research findings are labeled separately. Prices and allowances can change, so check the source again before purchasing."
+            />
+          </p>
+          <ul className="mt-4 divide-y divide-slate-200 border-y border-slate-200">
+            {page.sources.map((source) => (
+              <li key={`${source.toolId}-${source.url}`} className="flex flex-wrap items-baseline justify-between gap-2 py-3 text-sm">
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-indigo-700 hover:underline"
+                >
+                  {source.label}
+                </a>
+                <span className="text-slate-500">
+                  {source.kind} · {source.toolId} · {source.checkedAt}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {/* FAQ */}
       {scenario && scenario.faqs.length > 0 && (

@@ -1,5 +1,5 @@
 export const batchOneArticles = [
-  { slug: "best-ai-writing-tools", title: "Best AI Writing Tools for Work", cluster: "writing", type: "best", primaryIntent: "Choose an AI writing tool for professional work", toolIds: ["grammarly", "jasper", "copyai", "wordtune", "chatgpt"], requiredEvidenceLevel: "hands-on" },
+  { slug: "best-ai-writing-tools", title: "Best AI Writing Tools for Work", cluster: "writing", type: "best", primaryIntent: "Choose an AI writing tool for professional work", toolIds: ["grammarly", "jasper", "copyai", "wordtune", "chatgpt"], requiredEvidenceLevel: "official-sources" },
   { slug: "best-free-ai-writing-tools", title: "Best Free AI Writing Tools", cluster: "writing", type: "best", primaryIntent: "Choose a useful free AI writing plan", toolIds: ["grammarly", "wordtune", "quillbot", "chatgpt"], requiredEvidenceLevel: "official-sources" },
   { slug: "grammarly-vs-wordtune", title: "Grammarly vs Wordtune", cluster: "writing", type: "comparison", primaryIntent: "Compare editing workflow and value", toolIds: ["grammarly", "wordtune"], requiredEvidenceLevel: "hands-on" },
   { slug: "jasper-vs-copy-ai", title: "Jasper vs Copy.ai", cluster: "writing", type: "comparison", primaryIntent: "Compare marketing writing platforms", toolIds: ["jasper", "copyai"], requiredEvidenceLevel: "hands-on" },
