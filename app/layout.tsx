@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import JsonLd from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/next";
 
 const signalDisplay = localFont({
   src: "./fonts/signal-display.woff2",
@@ -60,6 +61,7 @@ export default function RootLayout({
           <NewsletterSignup />
           <Footer />
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
