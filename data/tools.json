@@ -341,7 +341,21 @@
       "updatedAt": "July 2026",
       "trend": 1.3,
       "growth": 68089871
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "ios",
+        "url": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+        "name": "App Store",
+        "nameEn": "App Store"
+      },
+      {
+        "platform": "android",
+        "url": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
+        "name": "Google Play",
+        "nameEn": "Google Play"
+      }
+    ]
   },
   {
     "id": "claude",
@@ -734,7 +748,21 @@
       "updatedAt": "July 2026",
       "trend": -6,
       "growth": -172418842
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "ios",
+        "url": "https://apps.apple.com/us/app/google-gemini/id6477489726",
+        "name": "App Store",
+        "nameEn": "App Store"
+      },
+      {
+        "platform": "android",
+        "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.bard",
+        "name": "Google Play",
+        "nameEn": "Google Play"
+      }
+    ]
   },
   {
     "id": "deepseek",
@@ -917,7 +945,21 @@
       "updatedAt": "July 2026",
       "trend": -6,
       "growth": -20202924
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "ios",
+        "url": "https://apps.apple.com/us/app/deepseek/id6737597349",
+        "name": "App Store",
+        "nameEn": "App Store"
+      },
+      {
+        "platform": "android",
+        "url": "https://play.google.com/store/apps/details?id=com.deepseek.chat",
+        "name": "Google Play",
+        "nameEn": "Google Play"
+      }
+    ]
   },
   {
     "id": "kimi",
@@ -6830,7 +6872,21 @@
       "updatedAt": "July 2026",
       "trend": -49.7,
       "growth": -11779539
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "ios",
+        "url": "https://apps.apple.com/us/app/notion/id1232780281",
+        "name": "App Store",
+        "nameEn": "App Store"
+      },
+      {
+        "platform": "android",
+        "url": "https://play.google.com/store/apps/details?id=notion.id",
+        "name": "Google Play",
+        "nameEn": "Google Play"
+      }
+    ]
   },
   {
     "id": "wps-ai",
@@ -7969,7 +8025,15 @@
       "updatedAt": "July 2026",
       "trend": -3,
       "growth": -1354820
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "extension",
+        "url": "https://chromewebstore.google.com/detail/grammarly-grammar-checker/kbfnbcaeplbcioakkpcpgfkobkghlhen",
+        "name": "Chrome 网上应用店",
+        "nameEn": "Chrome Web Store"
+      }
+    ]
   },
   {
     "id": "xiezuocat",
@@ -8723,7 +8787,21 @@
       "updatedAt": "July 2026",
       "trend": -10.4,
       "growth": -12020645
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "ios",
+        "url": "https://apps.apple.com/us/app/perplexity-ask-anything/id1668000334",
+        "name": "App Store",
+        "nameEn": "App Store"
+      },
+      {
+        "platform": "android",
+        "url": "https://play.google.com/store/apps/details?id=ai.perplexity.app.android",
+        "name": "Google Play",
+        "nameEn": "Google Play"
+      }
+    ]
   },
   {
     "id": "metaso",
@@ -9071,7 +9149,21 @@
       "updatedAt": "July 2026",
       "trend": -31.3,
       "growth": -37374193
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "ios",
+        "url": "https://apps.apple.com/us/app/microsoft-copilot/id6472538445",
+        "name": "App Store",
+        "nameEn": "App Store"
+      },
+      {
+        "platform": "android",
+        "url": "https://play.google.com/store/apps/details?id=com.microsoft.copilot",
+        "name": "Google Play",
+        "nameEn": "Google Play"
+      }
+    ]
   },
   {
     "id": "tiangong",
@@ -9442,7 +9534,15 @@
       "updatedAt": "July 2026",
       "trend": -3.3,
       "growth": -3650460
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "extension",
+        "url": "https://chromewebstore.google.com/detail/deepl-translate-beta-versi/cofdbpoegempjloogbagkncekinflcnj",
+        "name": "Chrome 网上应用店",
+        "nameEn": "Chrome Web Store"
+      }
+    ]
   },
   {
     "id": "immersive",
@@ -10001,7 +10101,15 @@
       "updatedAt": "July 2026",
       "trend": 1,
       "growth": 5364169
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "extension",
+        "url": "https://chromewebstore.google.com/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb",
+        "name": "Chrome 网上应用店",
+        "nameEn": "Chrome Web Store"
+      }
+    ]
   },
   {
     "id": "canva",
@@ -10199,7 +10307,21 @@
       "updatedAt": "July 2026",
       "trend": -5.5,
       "growth": -47825607
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "ios",
+        "url": "https://apps.apple.com/us/app/canva-design-photo-video/id897446215",
+        "name": "App Store",
+        "nameEn": "App Store"
+      },
+      {
+        "platform": "android",
+        "url": "https://play.google.com/store/apps/details?id=com.canva.editor",
+        "name": "Google Play",
+        "nameEn": "Google Play"
+      }
+    ]
   },
   {
     "id": "figma",
@@ -10964,7 +11086,15 @@
       "updatedAt": "July 2026",
       "trend": -0.9,
       "growth": -1906285
-    }
+    },
+    "platformLinks": [
+      {
+        "platform": "ios",
+        "url": "https://apps.apple.com/us/app/grok/id6741262930",
+        "name": "App Store",
+        "nameEn": "App Store"
+      }
+    ]
   },
   {
     "id": "mistral",

@@ -44,6 +44,7 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
   const steps = localizeArray(lang, tool.howToUse ?? [], tool.howToUseEn);
   const useCases = localizeArray(lang, tool.useCases ?? [], tool.useCasesEn);
   const platforms = tool.platforms ?? [];
+  const platformLinks = tool.platformLinks ?? [];
   const apiName = localize(lang, tool.apiName ?? "", tool.apiNameEn);
   const tiers = localizeTiers(lang, tool.pricingTiers, tool.pricingTiersEn);
   const company = tool.company;
@@ -157,10 +158,37 @@ export default function ToolDetail({ tool, screenshot }: ToolDetailProps) {
         <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
           <Heading zh="使用环境与接口" en="Platforms & API" />
           {platforms.length > 0 && (
-            <div className="flex flex-wrap gap-2">
+            <div className="grid gap-2 sm:grid-cols-2">
               {platforms.map((p) => {
                 const label = PLATFORM_LABEL[p];
                 if (!label) return null;
+                const link = platformLinks.find((l) => l.platform === p);
+                if (link) {
+                  const storeName =
+                    lang === "en" && link.nameEn ? link.nameEn : link.name ?? "";
+                  return (
+                    <a
+                      key={p}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-indigo-300 hover:bg-indigo-50"
+                    >
+                      <span className="flex min-w-0 items-center gap-2 text-sm text-slate-700">
+                        <span aria-hidden>{label.icon}</span>
+                        <span className="font-medium">
+                          {localize(lang, label.zh, label.en)}
+                        </span>
+                        {storeName && (
+                          <span className="truncate text-slate-400">· {storeName}</span>
+                        )}
+                      </span>
+                      <span className="shrink-0 text-indigo-500 transition group-hover:translate-x-0.5">
+                        →
+                      </span>
+                    </a>
+                  );
+                }
                 return (
                   <span
                     key={p}

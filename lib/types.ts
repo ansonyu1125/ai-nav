@@ -58,6 +58,14 @@ export const PLATFORM_GROUPS: PlatformGroup[] = [
   { id: "wechat", zh: "微信小程序", en: "Mini Program", icon: "💬", keys: ["wechat"] },
 ];
 
+// 平台专属链接：同一产品在不同平台有各自独立的官网/商店地址（如 App Store、Chrome 商店）
+export interface PlatformLink {
+  platform: PlatformKey;
+  url: string;
+  name?: string; // 平台专属名称，如 "App Store"、"Google Play"、"Chrome 网上应用店"
+  nameEn?: string;
+}
+
 // 费用档位（pricingTiers 为中文数组，pricingTiersEn 为英文数组，逐项对应）
 export interface PricingTier {
   name: string;
@@ -147,6 +155,7 @@ export interface Tool {
   advantages?: string[];
   advantagesEn?: string[];
   platforms?: PlatformKey[];
+  platformLinks?: PlatformLink[]; // 各平台独立官网/商店链接（网页版、App、插件各自指向对应地址）
   apiName?: string;
   apiNameEn?: string;
   pricingTiers?: PricingTier[];

@@ -5,7 +5,7 @@ import { tools, getTool, getAlternatives } from "@/lib/tools";
 import { site } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { categoryMap } from "@/data/categories";
-import { PRICING_LABEL, getToolCategories } from "@/lib/types";
+import { PRICING_LABEL, getToolCategories, PLATFORM_LABEL, PLATFORM_GROUPS } from "@/lib/types";
 import { formatScore } from "@/lib/utils";
 import PricingBadge from "@/components/PricingBadge";
 import RegionBadge from "@/components/RegionBadge";
@@ -55,6 +55,12 @@ export default async function ToolPage({
     .filter(Boolean);
   const related = getAlternatives(tool);
   const screenshot = getPricingScreenshot(tool.id);
+
+  const platforms = tool.platforms ?? [];
+  const platformLinks = tool.platformLinks ?? [];
+  const platformGroups = PLATFORM_GROUPS.filter((g) =>
+    g.keys.some((k) => platforms.includes(k))
+  );
 
   // SoftwareApplication 结构化数据：利于 Google 富结果与 AI 引擎（GEO）识别
   const jsonLd = {
@@ -113,6 +119,19 @@ export default async function ToolPage({
                 </span>
               )}
             </div>
+            {platformGroups.length > 0 && (
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {platformGroups.map((g) => (
+                  <span
+                    key={g.id}
+                    className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-600"
+                  >
+                    <span aria-hidden>{g.icon}</span>
+                    <BilingualText zh={g.zh} en={g.en} />
+                  </span>
+                ))}
+              </div>
+            )}
             {tool.nameZh && tool.nameZh !== tool.name && (
               <ZhOnlyText zh={tool.nameZh} className="mt-1 text-slate-500" />
             )}
@@ -128,19 +147,48 @@ export default async function ToolPage({
               tagClassName="rounded-md bg-slate-100 px-2.5 py-1 text-sm text-slate-600"
             />
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a
-                href={tool.officialUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-medium text-white transition hover:bg-indigo-700"
-              >
-                <BilingualText zh="访问官网" en="Visit website" />
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-              <span className="text-sm text-slate-500">{tool.officialUrl}</span>
+            <div className="mt-6 flex flex-col gap-3">
+              {platforms.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {platforms.map((p) => {
+                    const label = PLATFORM_LABEL[p];
+                    if (!label) return null;
+                    const link = platformLinks.find((l) => l.platform === p);
+                    const href = link?.url ?? tool.officialUrl;
+                    return (
+                      <a
+                        key={p}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700"
+                      >
+                        <span aria-hidden>{label.icon}</span>
+                        <BilingualText zh={label.zh} en={label.en} />
+                        {link && (
+                          <span className="text-slate-400">
+                            · <BilingualText zh={link.name ?? ""} en={link.nameEn ?? ""} />
+                          </span>
+                        )}
+                      </a>
+                    );
+                  })}
+                </div>
+              )}
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={tool.officialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-medium text-white transition hover:bg-indigo-700"
+                >
+                  <BilingualText zh="访问官网" en="Visit website" />
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+                <span className="text-sm text-slate-500">{tool.officialUrl}</span>
+              </div>
             </div>
           </div>
 
