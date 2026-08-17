@@ -106,6 +106,23 @@ test("accepts the 30-article Batch 1 manifest and approved cluster counts", () =
   assert.deepEqual(errors, []);
 });
 
+test("rejects an article in an unexpected cluster beyond the approved 30", () => {
+  const canonicalTools = JSON.parse(fs.readFileSync(new URL("../../data/tools.json", import.meta.url), "utf8"));
+  const articles = [
+    ...batchOneArticles,
+    { slug: "unexpected-extra", cluster: "unexpected", toolIds: ["chatgpt"], requiredEvidenceLevel: "official-sources" },
+  ];
+  const errors = auditEvidenceRecords({
+    tools: canonicalTools,
+    protocols: contentTestProtocols,
+    evidence: Object.values(contentEvidence),
+    articles,
+    expectedClusterCounts: { writing: 7, presentations: 6, meetings: 6, research: 6, "image-editing": 5 },
+    requirePublicationReady: false,
+  });
+  assert.ok(errors.includes("cluster unexpected: expected 0, received 1"));
+});
+
 test("rejects a hands-on article without hands-on evidence", () => {
   const articles = [{ slug: "alpha-review", cluster: "writing", toolIds: ["alpha"], requiredEvidenceLevel: "hands-on" }];
   const errors = auditEvidenceRecords({

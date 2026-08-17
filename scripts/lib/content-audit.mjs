@@ -68,6 +68,11 @@ export function auditEvidenceRecords({ tools, evidence, protocols, articles, exp
     const actual = clusterCounts.get(cluster) ?? 0;
     if (actual !== expected) errors.push(`cluster ${cluster}: expected ${expected}, received ${actual}`);
   }
+  for (const [cluster, actual] of clusterCounts) {
+    if (expectedClusterCounts && !Object.hasOwn(expectedClusterCounts, cluster)) {
+      errors.push(`cluster ${cluster}: expected 0, received ${actual}`);
+    }
+  }
 
   return errors;
 }
