@@ -15,7 +15,8 @@
     "add:tools": "node scripts/add-tools.mjs",
     "bulk:import": "node scripts/bulk-import.mjs",
     "fetch:new-logos": "node scripts/fetch-new-logos.mjs",
-    "vision": "node scripts/vision.mjs"
+    "vision": "node scripts/vision.mjs",
+    "test:content": "node --test scripts/tests/content-audit.test.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.38.2",
