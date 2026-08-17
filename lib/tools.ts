@@ -29,6 +29,20 @@ export function getExtensionTools(limit = 8): Tool[] {
     .slice(0, limit);
 }
 
+// 全部手机应用（ios/android），按热度排序
+export function getMobileToolList(): Tool[] {
+  return tools
+    .filter((t) => t.platforms?.some((p) => p === "ios" || p === "android"))
+    .sort((a, b) => b.popularity - a.popularity);
+}
+
+// 全部浏览器插件（extension），按热度排序
+export function getExtensionToolList(): Tool[] {
+  return tools
+    .filter((t) => t.platforms?.includes("extension"))
+    .sort((a, b) => b.popularity - a.popularity);
+}
+
 export function getToolsByCategory(categoryId: string): Tool[] {
   return tools.filter((t) => getToolCategories(t).includes(categoryId));
 }

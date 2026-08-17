@@ -13,6 +13,8 @@ export const site = {
 export const nav = [
   { label: "首页", labelEn: "Home", href: "/" },
   { label: "工具库", labelEn: "Tools", href: "/tools" },
+  { label: "手机应用", labelEn: "Mobile", href: "/mobile" },
+  { label: "浏览器插件", labelEn: "Extensions", href: "/extensions" },
   { label: "排行榜", labelEn: "Ranking", href: "/ranking" },
   { label: "深度指南", labelEn: "Guides", href: "/best" },
   { label: "AI 资讯", labelEn: "News", href: "/news" },
