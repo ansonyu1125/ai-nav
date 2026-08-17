@@ -16,7 +16,9 @@
     "bulk:import": "node scripts/bulk-import.mjs",
     "fetch:new-logos": "node scripts/fetch-new-logos.mjs",
     "vision": "node scripts/vision.mjs",
-    "test:content": "node --test scripts/tests/content-audit.test.mjs"
+    "test:content": "node --test scripts/tests/content-audit.test.mjs",
+    "content:audit": "node scripts/audit-content-evidence.mjs",
+    "content:audit:ready": "node scripts/audit-content-evidence.mjs --ready"
   },
   "dependencies": {
     "@upstash/redis": "^1.38.2",

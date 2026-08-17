@@ -16,6 +16,7 @@ export function auditEvidenceRecords({ tools, evidence, protocols, articles, exp
   const errors = [];
   const toolIds = new Set(tools.map((tool) => tool.id));
   const protocolIds = new Set(protocols.map((protocol) => protocol.id));
+  const evidenceByToolId = new Map(evidence.map((record) => [record.toolId, record]));
 
   for (const record of evidence) {
     if (!toolIds.has(record.toolId)) errors.push(`${record.toolId}: unknown tool ${record.toolId}`);
@@ -36,6 +37,36 @@ export function auditEvidenceRecords({ tools, evidence, protocols, articles, exp
         if (!validDate(record.handsOn.testedAt)) errors.push(`${record.toolId}: invalid testedAt ${record.handsOn.testedAt}`);
       }
     }
+  }
+
+  const articleSlugs = new Set();
+  const clusterCounts = new Map();
+
+  for (const article of articles) {
+    if (articleSlugs.has(article.slug)) errors.push(`article ${article.slug}: duplicate slug`);
+    articleSlugs.add(article.slug);
+    clusterCounts.set(article.cluster, (clusterCounts.get(article.cluster) ?? 0) + 1);
+
+    for (const toolId of article.toolIds) {
+      if (!toolIds.has(toolId)) {
+        errors.push(`article ${article.slug}: unknown tool ${toolId}`);
+        continue;
+      }
+      if (!requirePublicationReady) continue;
+
+      const evidenceRecord = evidenceByToolId.get(toolId);
+      const hasRequiredEvidence = article.requiredEvidenceLevel === "hands-on"
+        ? evidenceRecord?.level === "hands-on"
+        : evidenceRecord?.level === "official-sources" || evidenceRecord?.level === "hands-on";
+      if (!hasRequiredEvidence) {
+        errors.push(`article ${article.slug}: ${toolId} lacks ${article.requiredEvidenceLevel} evidence`);
+      }
+    }
+  }
+
+  for (const [cluster, expected] of Object.entries(expectedClusterCounts ?? {})) {
+    const actual = clusterCounts.get(cluster) ?? 0;
+    if (actual !== expected) errors.push(`cluster ${cluster}: expected ${expected}, received ${actual}`);
   }
 
   return errors;
