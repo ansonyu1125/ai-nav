@@ -341,6 +341,69 @@ test("labels sourced evaluation without implying first-hand testing", () => {
   assert.ok(publishedPage?.comparisonRows?.every((row) => !row.evidenceEn.includes("hands-on")));
 });
 
+test("publishes the free writing-tools guide with the manifest tool set", () => {
+  const manifestArticle = batchOneArticles.find((article) => article.slug === "best-free-ai-writing-tools");
+  const publishedPage = bestPages.find((page) => page.slug === manifestArticle?.slug);
+
+  assert.ok(manifestArticle, "Free writing-tools manifest entry is missing");
+  assert.ok(publishedPage, "Best free AI writing tools page is missing");
+  assert.deepEqual(publishedPage.toolIds, ["grammarly", "wordtune", "quillbot", "chatgpt"]);
+});
+
+test("gives every free writing-tool pick an official source and evidence row", () => {
+  const publishedPage = bestPages.find((page) => page.slug === "best-free-ai-writing-tools");
+
+  assert.ok(publishedPage);
+  assert.deepEqual(publishedPage.comparisonRows?.map((row) => row.toolId), publishedPage.toolIds);
+  for (const toolId of publishedPage.toolIds ?? []) {
+    assert.ok(
+      publishedPage.sources?.some((source) => source.toolId === toolId && source.kind === "official"),
+      `${toolId} has no first-party source`,
+    );
+  }
+});
+
+test("describes free-plan limits without stale prices or first-hand claims", () => {
+  const publishedPage = bestPages.find((page) => page.slug === "best-free-ai-writing-tools");
+
+  assert.ok(publishedPage?.comparisonRows?.every((row) => !/[$€£]\s?\d/.test(row.planAccessEn)));
+  assert.ok(publishedPage?.comparisonRows?.every((row) => !/hands-on|we tested|our test/i.test(row.evidenceEn)));
+});
+
+test("upgrades the first legacy guide batch to sourced shortlists", () => {
+  const expectedTools = {
+    "ai-chat-assistants": ["chatgpt", "claude", "gemini", "deepseek"],
+    "ai-search-engines": ["perplexity", "metaso", "devv"],
+    "ai-office-tools": ["notion-ai", "wps-ai", "gamma"],
+  };
+
+  for (const [slug, toolIds] of Object.entries(expectedTools)) {
+    const page = bestPages.find((candidate) => candidate.slug === slug);
+    assert.ok(page, `${slug} is missing`);
+    assert.deepEqual(page.toolIds, toolIds, `${slug} must use the reviewed shortlist`);
+    assert.deepEqual(page.comparisonRows?.map((row) => row.toolId), toolIds);
+    for (const toolId of toolIds) {
+      assert.ok(
+        page.sources?.some((source) => source.toolId === toolId && source.kind === "official"),
+        `${slug}: ${toolId} has no official source`,
+      );
+    }
+  }
+});
+
+test("removes unsupported ranking and first-hand claims from upgraded legacy guides", () => {
+  for (const slug of ["ai-chat-assistants", "ai-search-engines", "ai-office-tools"]) {
+    const page = bestPages.find((candidate) => candidate.slug === slug);
+    const englishCopy = [
+      ...(page?.introEn ?? []),
+      ...(page?.sections.map((section) => section.bodyEn) ?? []),
+      ...(page?.comparisonRows?.map((row) => `${row.planAccessEn} ${row.evidenceEn}`) ?? []),
+    ].join(" ");
+    assert.doesNotMatch(englishCopy, /rank(?:ed|ing)? by popularity|hands-on|we tested|our test/i);
+    assert.ok(page?.comparisonRows?.every((row) => !/[$€£]\s?\d/.test(row.planAccessEn)));
+  }
+});
+
 test("rejects an article in an unexpected cluster beyond the approved 30", () => {
   const canonicalTools = JSON.parse(fs.readFileSync(new URL("../../data/tools.json", import.meta.url), "utf8"));
   const articles = [...batchOneArticles, article({ slug: "unexpected-extra", cluster: "unexpected", toolIds: ["chatgpt"] })];

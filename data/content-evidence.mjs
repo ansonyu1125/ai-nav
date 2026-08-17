@@ -77,6 +77,22 @@ export const contentEvidence = {
       { type: "updates", url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes", label: "ChatGPT release notes", checkedAt: "2026-08-18" },
     ],
   },
+  quillbot: {
+    toolId: "quillbot",
+    level: "official-sources",
+    allowedSourceHosts: ["help.quillbot.com"],
+    audienceFit: "Writers who need short-form paraphrasing, grammar checks, and citation utilities without a subscription.",
+    limitations: ["The free Paraphraser limits each input to 125 words and exposes fewer modes than Premium; product limits can change."],
+    alternatives: ["grammarly", "wordtune", "chatgpt"],
+    sources: [
+      { type: "pricing", url: "https://quillbot.com/upgrade", label: "QuillBot plans", checkedAt: "2026-08-18" },
+      { type: "licensing", url: "https://quillbot.com/terms", label: "QuillBot terms of service", checkedAt: "2026-08-18" },
+      { type: "platforms", url: "https://quillbot.com/apps", label: "QuillBot apps and extensions", checkedAt: "2026-08-18" },
+      { type: "regions", url: "https://quillbot.com/terms", label: "QuillBot regional eligibility terms", checkedAt: "2026-08-18" },
+      { type: "features", url: "https://quillbot.com/paraphrasing-tool", label: "QuillBot Paraphraser", checkedAt: "2026-08-18" },
+      { type: "updates", url: "https://quillbot.com/blog", label: "QuillBot product news", checkedAt: "2026-08-18" },
+    ],
+  },
   gamma: {
     toolId: "gamma",
     level: "watchlist",
