@@ -2,7 +2,13 @@
 
 import { useMemo, useState } from "react";
 import type { Category, Pricing, Region, Tool } from "@/lib/types";
-import { PRICING_LABEL, REGION_LABEL, getToolCategories } from "@/lib/types";
+import {
+  PRICING_LABEL,
+  REGION_LABEL,
+  PLATFORM_GROUPS,
+  getToolCategories,
+  matchesPlatformGroup,
+} from "@/lib/types";
 import ToolCard from "./ToolCard";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "./LanguageProvider";
@@ -17,6 +23,7 @@ interface ToolsExplorerProps {
     region: string;
     pricing: string;
     sort: string;
+    platform: string;
   };
 }
 
@@ -28,6 +35,7 @@ export default function ToolsExplorer({
   const { lang } = useLanguage();
   const [q, setQ] = useState(initial.q);
   const [category, setCategory] = useState(initial.category);
+  const [platform, setPlatform] = useState(initial.platform);
   const [region, setRegion] = useState(initial.region);
   const [pricing, setPricing] = useState(initial.pricing);
   const [sort, setSort] = useState(initial.sort);
@@ -81,6 +89,8 @@ export default function ToolsExplorer({
     }
     if (category !== "all")
       list = list.filter((t) => getToolCategories(t).includes(category));
+    if (platform !== "all")
+      list = list.filter((t) => matchesPlatformGroup(t, platform));
     if (region !== "all") list = list.filter((t) => t.region === region);
     if (pricing !== "all") list = list.filter((t) => t.pricing === pricing);
 
@@ -90,7 +100,7 @@ export default function ToolsExplorer({
       arr.sort((a, b) => (b.releaseYear ?? 0) - (a.releaseYear ?? 0));
     else arr.sort((a, b) => b.popularity - a.popularity);
     return arr;
-  }, [tools, q, category, region, pricing, sort]);
+  }, [tools, q, category, platform, region, pricing, sort]);
 
   const catName = (c: Category) => localize(lang, c.name, c.nameEn);
 
@@ -143,6 +153,38 @@ export default function ToolsExplorer({
             )}
           >
             {c.emoji} {catName(c)}
+          </button>
+        ))}
+      </div>
+
+      {/* 平台二级筛选 */}
+      <div className="mt-4 flex flex-wrap items-center gap-2">
+        <span className="text-sm font-medium text-slate-400">
+          {localize(lang, "平台", "Platform")}
+        </span>
+        <button
+          onClick={() => setPlatform("all")}
+          className={cn(
+            "rounded-lg px-3 py-1.5 text-xs font-medium transition",
+            platform === "all"
+              ? "bg-slate-900 text-white"
+              : "bg-white text-slate-500 ring-1 ring-slate-200 hover:bg-slate-50",
+          )}
+        >
+          {localize(lang, "全部", "All")}
+        </button>
+        {PLATFORM_GROUPS.map((g) => (
+          <button
+            key={g.id}
+            onClick={() => setPlatform(g.id)}
+            className={cn(
+              "rounded-lg px-3 py-1.5 text-xs font-medium transition",
+              platform === g.id
+                ? "bg-slate-900 text-white"
+                : "bg-white text-slate-500 ring-1 ring-slate-200 hover:bg-slate-50",
+            )}
+          >
+            {g.icon} {localize(lang, g.zh, g.en)}
           </button>
         ))}
       </div>
@@ -245,6 +287,7 @@ export default function ToolsExplorer({
             onClick={() => {
               setQ("");
               setCategory("all");
+              setPlatform("all");
               setRegion("all");
               setPricing("all");
             }}

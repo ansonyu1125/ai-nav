@@ -10,11 +10,29 @@ export const site = {
   url: "https://ai-nav-indol.vercel.app",
 };
 
-export const nav = [
+export type NavChild = { label: string; labelEn: string; href: string };
+export type NavItem = {
+  label: string;
+  labelEn: string;
+  href: string;
+  children?: NavChild[];
+};
+
+export const nav: NavItem[] = [
   { label: "首页", labelEn: "Home", href: "/" },
-  { label: "工具库", labelEn: "Tools", href: "/tools" },
-  { label: "手机应用", labelEn: "Mobile", href: "/mobile" },
-  { label: "浏览器插件", labelEn: "Extensions", href: "/extensions" },
+  {
+    label: "AI 产品",
+    labelEn: "Products",
+    href: "/tools",
+    children: [
+      { label: "全部产品", labelEn: "All tools", href: "/tools" },
+      { label: "手机应用", labelEn: "Mobile apps", href: "/tools?platform=mobile" },
+      { label: "浏览器插件", labelEn: "Browser extensions", href: "/tools?platform=extension" },
+      { label: "桌面客户端", labelEn: "Desktop apps", href: "/tools?platform=desktop" },
+      { label: "API 接口", labelEn: "API", href: "/tools?platform=api" },
+      { label: "网页版", labelEn: "Web apps", href: "/tools?platform=web" },
+    ],
+  },
   { label: "排行榜", labelEn: "Ranking", href: "/ranking" },
   { label: "深度指南", labelEn: "Guides", href: "/best" },
   { label: "AI 资讯", labelEn: "News", href: "/news" },

@@ -18,6 +18,7 @@ export default async function ToolsPage({
   const initial = {
     q: typeof sp.q === "string" ? sp.q : "",
     category: typeof sp.category === "string" ? sp.category : "all",
+    platform: typeof sp.platform === "string" ? sp.platform : "all",
     region: typeof sp.region === "string" ? sp.region : "all",
     pricing: typeof sp.pricing === "string" ? sp.pricing : "all",
     sort: typeof sp.sort === "string" ? sp.sort : "popularity",

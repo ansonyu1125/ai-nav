@@ -118,7 +118,7 @@ export default function HomePage() {
             titleEn="AI mobile apps"
             subtitle="随时随地，装在手机里的 AI 神器"
             subtitleEn="The best AI apps in your pocket"
-            href="/mobile"
+            href="/tools?platform=mobile"
           />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {mobile.map((t) => (
@@ -136,7 +136,7 @@ export default function HomePage() {
             titleEn="AI browser extensions"
             subtitle="装进浏览器，划词、总结、翻译一步到位"
             subtitleEn="AI extensions that supercharge your browser"
-            href="/extensions"
+            href="/tools?platform=extension"
           />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {extensions.map((t) => (

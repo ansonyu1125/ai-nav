@@ -40,6 +40,24 @@ export const PLATFORM_LABEL: Record<PlatformKey, { zh: string; en: string; icon:
   wechat: { zh: "微信小程序", en: "WeChat Mini Program", icon: "💬" },
 };
 
+// 平台分组（用于二级筛选与导航下拉）：把多个平台键归为一个「专区」
+export interface PlatformGroup {
+  id: string;
+  zh: string;
+  en: string;
+  icon: string;
+  keys: PlatformKey[];
+}
+
+export const PLATFORM_GROUPS: PlatformGroup[] = [
+  { id: "mobile", zh: "手机应用", en: "Mobile", icon: "📱", keys: ["ios", "android"] },
+  { id: "extension", zh: "浏览器插件", en: "Extensions", icon: "🧩", keys: ["extension"] },
+  { id: "desktop", zh: "桌面客户端", en: "Desktop", icon: "🖥️", keys: ["macos", "windows", "linux", "desktop"] },
+  { id: "api", zh: "API 接口", en: "API", icon: "🔌", keys: ["api"] },
+  { id: "web", zh: "网页版", en: "Web", icon: "🌐", keys: ["web"] },
+  { id: "wechat", zh: "微信小程序", en: "Mini Program", icon: "💬", keys: ["wechat"] },
+];
+
 // 费用档位（pricingTiers 为中文数组，pricingTiersEn 为英文数组，逐项对应）
 export interface PricingTier {
   name: string;
@@ -211,4 +229,11 @@ export function getToolCategories(tool: Tool): string[] {
   return tool.categories && tool.categories.length > 0
     ? tool.categories
     : [tool.category];
+}
+
+// 判断工具是否属于某个平台分组（二级筛选用）
+export function matchesPlatformGroup(tool: Tool, groupId: string): boolean {
+  const g = PLATFORM_GROUPS.find((x) => x.id === groupId);
+  if (!g) return true;
+  return g.keys.some((k) => tool.platforms?.includes(k));
 }
