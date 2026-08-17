@@ -409,26 +409,26 @@ test("upgrades the visual and website guide batch to sourced shortlists", () => 
     "ai-video-generators": {
       toolIds: ["sora", "runway", "kling", "hailuo"],
       domains: { sora: "openai.com", runway: "runwayml.com", kling: "klingai.com", hailuo: "hailuoai.video" },
-      excludedNames: /Veo|Pika/i,
     },
     "ai-image-generators": {
       toolIds: ["midjourney", "firefly", "stable-diffusion"],
       domains: { midjourney: "midjourney.com", firefly: "adobe.com", "stable-diffusion": "stability.ai" },
-      excludedNames: /Jimeng|ERNIE ViLG|即梦|文心一格/i,
     },
     "ai-design-tools": {
       toolIds: ["canva", "figma", "framer", "spline"],
       domains: { canva: "canva.com", figma: "figma.com", framer: "framer.com", spline: "spline.design" },
-      excludedNames: /$^/,
     },
     "ai-website-builders": {
       toolIds: ["framer", "lovable", "v0", "bolt", "replit"],
       domains: { framer: "framer.com", lovable: "lovable.dev", v0: "v0.dev", bolt: "bolt.new", replit: "replit.com" },
-      excludedNames: /$^/,
     },
   };
+  const excludedNames = {
+    "ai-video-generators": /Veo|Pika/i,
+    "ai-image-generators": /Jimeng|ERNIE ViLG|即梦|文心一格/i,
+  };
 
-  for (const [slug, { toolIds, domains, excludedNames }] of Object.entries(expectedTools)) {
+  for (const [slug, { toolIds, domains }] of Object.entries(expectedTools)) {
     const page = bestPages.find((candidate) => candidate.slug === slug);
     assert.ok(page, `${slug} is missing`);
     assert.deepEqual(page.toolIds, toolIds, `${slug} must use the reviewed shortlist`);
@@ -467,11 +467,42 @@ test("upgrades the visual and website guide batch to sourced shortlists", () => 
         row.evidenceEn,
       ]),
     ].join(" ");
-    assert.doesNotMatch(copy, excludedNames, `${slug} must not name tools outside its shortlist`);
+    if (slug in excludedNames) {
+      assert.doesNotMatch(copy, excludedNames[slug], `${slug} must not name tools outside its shortlist`);
+    }
     assert.doesNotMatch(copy, /[$€£]\s?\d|free (?:quota|tier|generations)|starting price|免费额度|免费版|付费起点/i);
     assert.doesNotMatch(copy, /rank(?:ed|ing)? by popularity|hands-on|we tested|our test/i);
+    assert.doesNotMatch(copy, /\b\d(?:\.\d)?\s*\/\s*(?:5|10)\b|评分\s*\d|rating\s*(?:of\s*)?\d/i);
     assert.doesNotMatch(copy, /—|–|--/);
   }
+});
+
+test("keeps Sora as a retired reference instead of an active video recommendation", () => {
+  const page = bestPages.find((candidate) => candidate.slug === "ai-video-generators");
+  const soraRow = page?.comparisonRows?.find((row) => row.toolId === "sora");
+  const soraSource = page?.sources?.find((source) => source.toolId === "sora" && source.kind === "official");
+  const soraCopy = [
+    page?.description,
+    page?.descriptionEn,
+    ...(page?.intro ?? []),
+    ...(page?.introEn ?? []),
+    ...(page?.sections ?? []).flatMap((section) => [section.body, section.bodyEn]),
+    soraRow?.bestFor,
+    soraRow?.bestForEn,
+    soraRow?.planAccess,
+    soraRow?.planAccessEn,
+  ].join(" ");
+
+  assert.ok(page);
+  assert.equal(soraSource?.url, "https://openai.com/index/sora-2/");
+  assert.equal(soraSource?.checkedAt, "2026-08-18");
+  assert.match(soraRow?.bestForEn ?? "", /retired product/i);
+  assert.match(soraRow?.planAccessEn ?? "", /web and app discontinued on 2026-04-26/i);
+  assert.doesNotMatch(soraRow?.planAccessEn ?? "", /plan|access/i);
+  assert.match(page?.intro?.join(" ") ?? "", /2026 年 4 月 26 日/);
+  assert.match(page?.introEn?.join(" ") ?? "", /2026-04-26/);
+  assert.match(page?.introEn?.join(" ") ?? "", /active alternatives.*Runway, Kling, and Hailuo/i);
+  assert.doesNotMatch(soraCopy, /ChatGPT|Sora fits|Consider Sora|OpenAI workflow/i);
 });
 
 test("gives every second-batch guide a distinct decision-led title", () => {
