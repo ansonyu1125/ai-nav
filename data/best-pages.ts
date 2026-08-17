@@ -48,12 +48,12 @@ export const bestPages: BestPage[] = [
     title: "视频生成工作流：控制、制作与访问",
     titleEn: "Video Generation Workflows: Control, Production, and Access",
     description:
-      "按创作流程和官方产品资料比较 Runway、可灵与海螺，并将 Sora 保留为已停止服务的参考信息。",
+      "按创作流程和官方产品资料比较 Runway、可灵与海螺，并保留 Sora 网页与应用停止服务及 API 计划停止服务的参考信息。",
     descriptionEn:
-      "Compare Runway, Kling, and Hailuo by creation workflow and official product information. Sora remains as a discontinued product reference.",
+      "Compare Runway, Kling, and Hailuo by creation workflow and official product information. The Sora web and app discontinuation is included as a reference, with the API scheduled to discontinue on 2026-09-24.",
     toolIds: ["sora", "runway", "kling", "hailuo"],
     comparisonRows: [
-      { toolId: "sora", toolName: "Sora", bestFor: "已停止服务产品的参考信息", bestForEn: "Reference to a retired product", planAccess: "网页与应用已于 2026 年 4 月 26 日停止服务", planAccessEn: "Web and app discontinued on 2026-04-26", evidence: "OpenAI Sora 2 与停止服务公告", evidenceEn: "OpenAI Sora 2 and discontinuation notice" },
+      { toolId: "sora", toolName: "Sora", bestFor: "Sora 网页与应用停止服务信息", bestForEn: "Reference to the discontinued Sora web and app products", planAccess: "网页与应用已于 2026 年 4 月 26 日停止服务；API 计划于 2026 年 9 月 24 日停止服务", planAccessEn: "Web and app discontinued on 2026-04-26; API scheduled to discontinue on 2026-09-24", evidence: "OpenAI Sora 2 与停止服务公告", evidenceEn: "OpenAI Sora 2 and discontinuation notice" },
       { toolId: "runway", toolName: "Runway", bestFor: "生成与编辑结合的制作流程", bestForEn: "Combined generation and editing workflows", planAccess: "提供试用入口；额度和导出按方案变化", planAccessEn: "Trial access with credits and exports varying by plan", evidence: "Runway 官方产品资料", evidenceEn: "Runway official product sources" },
       { toolId: "kling", toolName: "Kling", bestFor: "视频与图像生成", bestForEn: "Combined video and image generation", planAccess: "请在官方页面核对当前访问方式", planAccessEn: "Check the official page for current access options", evidence: "Kling 官方产品资料", evidenceEn: "Kling official product sources" },
       { toolId: "hailuo", toolName: "Hailuo", bestFor: "网页视频创作", bestForEn: "Web-based video creation", planAccess: "请在官方页面核对当前访问方式", planAccessEn: "Check the official page for current access options", evidence: "Hailuo 官方产品资料", evidenceEn: "Hailuo official product sources" },
@@ -67,21 +67,21 @@ export const bestPages: BestPage[] = [
     ],
     intro: [
       "选择视频生成工具时，先在仍可用的替代产品之间比较创作流程。这个区别比单一的效果排名更适合用来筛选产品。",
-      "Sora 的网页与应用产品已于 2026 年 4 月 26 日停止服务，本页仅将它保留为参考。当前可用的替代选择为 Runway、Kling 和 Hailuo，应通过各自的官方页面比较工作流程。",
+      "Sora 的网页与应用产品已于 2026 年 4 月 26 日停止服务，本页仅将它们保留为参考。Sora API 计划于 2026 年 9 月 24 日停止服务。当前可用的替代选择为 Runway、Kling 和 Hailuo，应通过各自的官方页面比较工作流程。",
       "本页依据官方产品页面整理。开始正式制作或付费前，请核对链接中的当前产品选项和访问方式。",
     ],
     introEn: [
       "Choose a video product by comparing the creation workflow among active alternatives. That distinction is more useful than a single quality score.",
-      "The Sora web and app product was discontinued on 2026-04-26, so it remains here only as a reference. The active alternatives are Runway, Kling, and Hailuo. Compare their workflows through the linked official pages.",
+      "The Sora web and app products were discontinued on 2026-04-26, so they remain here only as a reference. The Sora API is scheduled to discontinue on 2026-09-24. The active alternatives are Runway, Kling, and Hailuo. Compare their workflows through the linked official pages.",
       "This guide draws on official product pages. Check the linked source for current product options and access before starting a paid or production workflow.",
     ],
     sections: [
       {
         heading: "如何挑选 AI 视频生成工具",
         headingEn: "How to choose an AI video generator",
-        body: "先从当前可用的产品中选择。Runway 适合生成与编辑结合的制作流程。Kling 将视频和图像生成功能放在同一产品中，Hailuo 提供网页视频创作。Sora 已停止服务，仅保留为参考信息。",
+        body: "先从当前可用的产品中选择。Runway 适合生成与编辑结合的制作流程。Kling 将视频和图像生成功能放在同一产品中，Hailuo 提供网页视频创作。Sora 网页与应用已经停止服务，API 计划于 2026 年 9 月 24 日停止服务，因此网页与应用信息仅保留为参考。",
         bodyEn:
-          "Start with the active products. Runway combines generation and editing workflows. Kling combines video and image generation, and Hailuo provides web-based video creation. Sora is discontinued and remains only as a reference.",
+          "Start with the active products. Runway combines generation and editing workflows. Kling combines video and image generation, and Hailuo provides web-based video creation. The Sora web and app products are discontinued, and the API is scheduled to discontinue on 2026-09-24, so the web and app information remains only as a reference.",
       },
       {
         heading: "免费 vs 付费",

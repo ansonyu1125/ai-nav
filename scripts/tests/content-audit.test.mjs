@@ -426,6 +426,8 @@ test("upgrades the visual and website guide batch to sourced shortlists", () => 
   const excludedNames = {
     "ai-video-generators": /Veo|Pika/i,
     "ai-image-generators": /Jimeng|ERNIE ViLG|即梦|文心一格/i,
+    "ai-design-tools": /Sora|Runway|Kling|Hailuo|Midjourney|Firefly|Stable Diffusion|Lovable|v0|Bolt|Replit|Photoshop/i,
+    "ai-website-builders": /Sora|Runway|Kling|Hailuo|Midjourney|Firefly|Stable Diffusion|Canva|Figma|Spline|Photoshop/i,
   };
 
   for (const [slug, { toolIds, domains }] of Object.entries(expectedTools)) {
@@ -467,9 +469,7 @@ test("upgrades the visual and website guide batch to sourced shortlists", () => 
         row.evidenceEn,
       ]),
     ].join(" ");
-    if (slug in excludedNames) {
-      assert.doesNotMatch(copy, excludedNames[slug], `${slug} must not name tools outside its shortlist`);
-    }
+    assert.doesNotMatch(copy, excludedNames[slug], `${slug} must not name tools outside its shortlist`);
     assert.doesNotMatch(copy, /[$€£]\s?\d|free (?:quota|tier|generations)|starting price|免费额度|免费版|付费起点/i);
     assert.doesNotMatch(copy, /rank(?:ed|ing)? by popularity|hands-on|we tested|our test/i);
     assert.doesNotMatch(copy, /\b\d(?:\.\d)?\s*\/\s*(?:5|10)\b|评分\s*\d|rating\s*(?:of\s*)?\d/i);
@@ -477,7 +477,7 @@ test("upgrades the visual and website guide batch to sourced shortlists", () => 
   }
 });
 
-test("keeps Sora as a retired reference instead of an active video recommendation", () => {
+test("scopes Sora retirement to the web and app products", () => {
   const page = bestPages.find((candidate) => candidate.slug === "ai-video-generators");
   const soraRow = page?.comparisonRows?.find((row) => row.toolId === "sora");
   const soraSource = page?.sources?.find((source) => source.toolId === "sora" && source.kind === "official");
@@ -496,13 +496,14 @@ test("keeps Sora as a retired reference instead of an active video recommendatio
   assert.ok(page);
   assert.equal(soraSource?.url, "https://openai.com/index/sora-2/");
   assert.equal(soraSource?.checkedAt, "2026-08-18");
-  assert.match(soraRow?.bestForEn ?? "", /retired product/i);
+  assert.match(soraRow?.bestForEn ?? "", /web and app/i);
   assert.match(soraRow?.planAccessEn ?? "", /web and app discontinued on 2026-04-26/i);
+  assert.match(soraRow?.planAccessEn ?? "", /API scheduled to discontinue on 2026-09-24/i);
   assert.doesNotMatch(soraRow?.planAccessEn ?? "", /plan|access/i);
   assert.match(page?.intro?.join(" ") ?? "", /2026 年 4 月 26 日/);
   assert.match(page?.introEn?.join(" ") ?? "", /2026-04-26/);
   assert.match(page?.introEn?.join(" ") ?? "", /active alternatives.*Runway, Kling, and Hailuo/i);
-  assert.doesNotMatch(soraCopy, /ChatGPT|Sora fits|Consider Sora|OpenAI workflow/i);
+  assert.doesNotMatch(soraCopy, /ChatGPT|Sora fits|Consider Sora|OpenAI workflow|Sora is discontinued|retired product|已停止服务产品/i);
 });
 
 test("gives every second-batch guide a distinct decision-led title", () => {
