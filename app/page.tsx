@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { categories } from "@/data/categories";
-import { tools, getFeaturedTools, countByCategory } from "@/lib/tools";
+import {
+  tools,
+  getFeaturedTools,
+  getMobileTools,
+  getExtensionTools,
+  countByCategory,
+} from "@/lib/tools";
 import { scenarios } from "@/data/scenarios";
 import { tutorials } from "@/lib/tutorials";
 import { glossary } from "@/lib/glossary";
@@ -15,6 +21,8 @@ import { BilingualText } from "@/components/Bilingual";
 
 export default function HomePage() {
   const featured = getFeaturedTools();
+  const mobile = getMobileTools(8);
+  const extensions = getExtensionTools(8);
   const trending = tools.filter((t) => t.trending).slice(0, 8);
   const growing = tools
     .filter((t) => t.traffic?.growth != null)
@@ -96,6 +104,42 @@ export default function HomePage() {
           />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {trending.map((t) => (
+              <ToolCard key={t.id} tool={t} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* AI 手机应用 */}
+      {mobile.length > 0 && (
+        <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <SectionHeading
+            title="AI 手机应用"
+            titleEn="AI mobile apps"
+            subtitle="随时随地，装在手机里的 AI 神器"
+            subtitleEn="The best AI apps in your pocket"
+            href="/tools"
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {mobile.map((t) => (
+              <ToolCard key={t.id} tool={t} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* AI 浏览器插件 */}
+      {extensions.length > 0 && (
+        <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <SectionHeading
+            title="AI 浏览器插件"
+            titleEn="AI browser extensions"
+            subtitle="装进浏览器，划词、总结、翻译一步到位"
+            subtitleEn="AI extensions that supercharge your browser"
+            href="/tools"
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {extensions.map((t) => (
               <ToolCard key={t.id} tool={t} />
             ))}
           </div>

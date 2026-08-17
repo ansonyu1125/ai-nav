@@ -13,6 +13,22 @@ export function getFeaturedTools(): Tool[] {
   return tools.filter((t) => t.featured);
 }
 
+// 手机应用：含 iOS / Android 平台的工具，按热度排序
+export function getMobileTools(limit = 8): Tool[] {
+  return tools
+    .filter((t) => t.platforms?.some((p) => p === "ios" || p === "android"))
+    .sort((a, b) => b.popularity - a.popularity)
+    .slice(0, limit);
+}
+
+// 浏览器插件：含 extension 平台的工具，按热度排序
+export function getExtensionTools(limit = 8): Tool[] {
+  return tools
+    .filter((t) => t.platforms?.includes("extension"))
+    .sort((a, b) => b.popularity - a.popularity)
+    .slice(0, limit);
+}
+
 export function getToolsByCategory(categoryId: string): Tool[] {
   return tools.filter((t) => getToolCategories(t).includes(categoryId));
 }
