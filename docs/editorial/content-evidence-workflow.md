@@ -80,4 +80,3 @@ Use `npm run content:audit:ready` when checking publication readiness. The manif
 - [ ] Stale records are labeled `Update required` and are excluded from authoritative claims.
 - [ ] `npm run test:content`, `npm run content:audit`, `npm run lint`, and `npm run build` pass.
 - [ ] Release is blocked if any article claims `Hands-on tested` without a completed protocol note and matching hands-on evidence record.
-
