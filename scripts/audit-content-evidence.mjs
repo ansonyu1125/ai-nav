@@ -14,6 +14,8 @@ const errors = auditEvidenceRecords({
   articles: batchOneArticles,
   expectedClusterCounts: BATCH_ONE_COUNTS,
   requirePublicationReady: process.argv.includes("--ready"),
+  today: new Date().toISOString().slice(0, 10),
+  researchNoteExists: (notesPath) => fs.existsSync(new URL(`../${notesPath}`, import.meta.url)),
 });
 
 if (errors.length) {

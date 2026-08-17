@@ -30,7 +30,8 @@ export interface ContentEvidenceRecord {
   alternatives: string[];
   latestUpdate?: { date: string; label: string; url: string };
   sources: EvidenceSource[];
-  handsOn?: HandsOnTestRun;
+  allowedSourceHosts?: string[];
+  handsOn?: HandsOnTestRun[];
 }
 
 export interface ProtocolTask {
@@ -66,7 +67,13 @@ export const EVIDENCE_LABELS: Record<EvidenceLevel, string> = {
 };
 
 export function isIsoDate(value: string): boolean {
-  return /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(`${value}T00:00:00Z`));
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) return false;
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
 }
 
 export function isOfficialHttpsUrl(value: string): boolean {

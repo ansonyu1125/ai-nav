@@ -6,93 +6,257 @@ import { contentEvidence } from "../../data/content-evidence.mjs";
 import { contentTestProtocols } from "../../data/content-test-protocols.mjs";
 import { auditEvidenceRecords } from "../lib/content-audit.mjs";
 
-const tools = [{ id: "alpha" }, { id: "beta" }];
-const protocols = [{ id: "writing-core", cluster: "writing", tasks: ["Rewrite source copy", "Draft long-form copy"] }];
+const TODAY = "2026-08-17";
+const tools = [
+  { id: "alpha", officialUrl: "https://alpha.example" },
+  { id: "beta", officialUrl: "https://beta.example" },
+];
+const protocols = [
+  { id: "writing-core", cluster: "writing", tasks: ["Rewrite source copy"] },
+  { id: "research-core", cluster: "research", tasks: ["Research a topic"] },
+];
+const requiredSourceTypes = ["pricing", "licensing", "platforms", "regions", "features", "updates"];
 
-test("accepts a complete hands-on record", () => {
-  const errors = auditEvidenceRecords({
+function completeSources(overrides = {}) {
+  return requiredSourceTypes.map((type) => ({
+    type,
+    url: `https://alpha.example/${type}`,
+    label: type,
+    checkedAt: type === "pricing" ? "2026-07-17" : "2026-02-15",
+    ...overrides,
+  }));
+}
+
+function evidenceRecord(overrides = {}) {
+  return {
+    toolId: "alpha",
+    level: "official-sources",
+    audienceFit: "Independent marketers",
+    limitations: ["No offline mode"],
+    alternatives: ["beta"],
+    sources: completeSources(),
+    ...overrides,
+  };
+}
+
+function article(overrides = {}) {
+  return {
+    slug: "alpha-review",
+    title: "Alpha review",
+    cluster: "writing",
+    type: "review",
+    primaryIntent: "Evaluate Alpha",
+    toolIds: ["alpha"],
+    requiredEvidenceLevel: "official-sources",
+    ...overrides,
+  };
+}
+
+function audit(overrides = {}) {
+  return auditEvidenceRecords({
     tools,
     protocols,
-    evidence: [{
-      toolId: "alpha",
+    evidence: [],
+    articles: [],
+    expectedClusterCounts: null,
+    requirePublicationReady: false,
+    today: TODAY,
+    ...overrides,
+  });
+}
+
+test("accepts a complete category-specific hands-on record", () => {
+  const errors = audit({
+    evidence: [evidenceRecord({
       level: "hands-on",
-      audienceFit: "Independent marketers",
-      limitations: ["No offline mode"],
-      alternatives: ["beta"],
-      sources: [
-        { type: "pricing", url: "https://alpha.example/pricing", label: "Pricing", checkedAt: "2026-08-17" },
-        { type: "licensing", url: "https://alpha.example/terms", label: "Terms", checkedAt: "2026-08-17" },
-      ],
-      handsOn: { protocolId: "writing-core", testedAt: "2026-08-17", accountTier: "Free", notesPath: "research/alpha.md" },
-    }],
-    articles: [], requirePublicationReady: false,
+      handsOn: [{
+        protocolId: "writing-core",
+        testedAt: "2026-05-17",
+        accountTier: "Free",
+        notesPath: "research/alpha/2026-05-17.md",
+      }],
+    })],
   });
   assert.deepEqual(errors, []);
 });
 
-test("rejects a hands-on label without a test run", () => {
-  const errors = auditEvidenceRecords({
-    tools,
-    protocols,
-    evidence: [{ toolId: "alpha", level: "hands-on", audienceFit: "Writers", limitations: ["Unknown export limits"], alternatives: ["beta"], sources: [] }],
-    articles: [], requirePublicationReady: false,
-  });
-  assert.ok(errors.includes("alpha: hands-on evidence requires handsOn test metadata"));
+test("rejects a hands-on label without test runs", () => {
+  const errors = audit({ evidence: [evidenceRecord({ level: "hands-on", handsOn: [] })] });
+  assert.ok(errors.includes("alpha: hands-on evidence requires at least one handsOn test run"));
 });
 
 test("rejects unknown tools, invalid dates, and non-HTTPS sources", () => {
-  const errors = auditEvidenceRecords({
-    tools,
-    protocols,
-    evidence: [{
+  const errors = audit({
+    evidence: [evidenceRecord({
       toolId: "missing",
-      level: "official-sources",
-      audienceFit: "Teams",
-      limitations: ["No mobile app"],
       alternatives: ["alpha"],
       sources: [{ type: "pricing", url: "http://example.com", label: "Pricing", checkedAt: "17-08-2026" }],
-    }],
-    articles: [], requirePublicationReady: false,
+    })],
   });
   assert.ok(errors.some((error) => error.includes("unknown tool missing")));
   assert.ok(errors.some((error) => error.includes("must use HTTPS")));
   assert.ok(errors.some((error) => error.includes("invalid checkedAt")));
 });
 
-test("rejects duplicate slugs and unknown article tools", () => {
-  const articles = [
-    { slug: "same", cluster: "writing", toolIds: ["alpha"], requiredEvidenceLevel: "official-sources" },
-    { slug: "same", cluster: "writing", toolIds: ["missing"], requiredEvidenceLevel: "official-sources" },
+test("rejects impossible calendar dates", () => {
+  const errors = audit({
+    evidence: [evidenceRecord({ sources: completeSources({ checkedAt: "2026-02-31" }) })],
+  });
+  assert.ok(errors.includes("alpha: invalid checkedAt 2026-02-31"));
+});
+
+test("requires every official claim type in publication-ready mode", () => {
+  for (const missingType of requiredSourceTypes) {
+    const errors = audit({
+      evidence: [evidenceRecord({ sources: completeSources().filter(({ type }) => type !== missingType) })],
+      articles: [article()],
+      requirePublicationReady: true,
+    });
+    assert.ok(errors.includes(`alpha: official evidence is missing ${missingType} source`), missingType);
+  }
+
+  const sourceFreeErrors = audit({
+    evidence: [evidenceRecord({ sources: [] })],
+    articles: [article()],
+    requirePublicationReady: true,
+  });
+  assert.ok(sourceFreeErrors.includes("alpha: official evidence is missing pricing source"));
+});
+
+test("rejects third-party evidence hosts unless explicitly allowed", () => {
+  const thirdPartySource = { type: "pricing", url: "https://billing.example/pricing", label: "Pricing", checkedAt: "2026-07-17" };
+  const rejected = audit({
+    evidence: [evidenceRecord({ sources: [thirdPartySource, ...completeSources().slice(1)] })],
+    articles: [article()],
+    requirePublicationReady: true,
+  });
+  assert.ok(rejected.includes("alpha: source Pricing host billing.example is not an allowed first-party host"));
+
+  const allowed = audit({
+    evidence: [evidenceRecord({
+      allowedSourceHosts: ["billing.example"],
+      sources: [thirdPartySource, ...completeSources().slice(1)],
+    })],
+    articles: [article()],
+    requirePublicationReady: true,
+  });
+  assert.deepEqual(allowed, []);
+});
+
+test("enforces source freshness at the pricing and official-source thresholds", () => {
+  const boundaryErrors = audit({
+    evidence: [evidenceRecord()],
+    articles: [article()],
+    requirePublicationReady: true,
+  });
+  assert.deepEqual(boundaryErrors, []);
+
+  const stalePricing = audit({
+    evidence: [evidenceRecord({ sources: completeSources().map((source) => source.type === "pricing" ? { ...source, checkedAt: "2026-07-16" } : source) })],
+    articles: [article()],
+    requirePublicationReady: true,
+  });
+  assert.ok(stalePricing.includes("alpha: pricing source pricing is stale (32 days old; maximum 31)"));
+
+  const staleOfficial = audit({
+    evidence: [evidenceRecord({ sources: completeSources().map((source) => source.type === "features" ? { ...source, checkedAt: "2026-02-14" } : source) })],
+    articles: [article()],
+    requirePublicationReady: true,
+  });
+  assert.ok(staleOfficial.includes("alpha: features source features is stale (184 days old; maximum 183)"));
+});
+
+test("validates every hands-on run field and freshness", () => {
+  const invalidRuns = [
+    { protocolId: "writing-core", testedAt: "2026-05-17", accountTier: "", notesPath: "research/alpha/empty-tier.md" },
+    { protocolId: "writing-core", testedAt: "2026-05-17", accountTier: "Free", notesPath: "" },
+    { protocolId: "writing-core", testedAt: "2026-05-17", accountTier: "Free", notesPath: "research/beta/wrong-tool.md" },
   ];
-  const errors = auditEvidenceRecords({
-    tools,
-    protocols,
-    evidence: [],
-    articles,
-    expectedClusterCounts: null,
-    requirePublicationReady: false,
+  const invalidErrors = audit({ evidence: [evidenceRecord({ level: "hands-on", handsOn: invalidRuns })] });
+  assert.ok(invalidErrors.includes("alpha: hands-on run accountTier is required"));
+  assert.ok(invalidErrors.includes("alpha: hands-on run notesPath is required"));
+  assert.ok(invalidErrors.includes("alpha: hands-on run notesPath must be a safe path under research/alpha/"));
+
+  const boundary = audit({
+    evidence: [evidenceRecord({ level: "hands-on", handsOn: [{ protocolId: "writing-core", testedAt: "2026-05-17", accountTier: "Free", notesPath: "research/alpha/2026-05-17.md" }] })],
+    articles: [article({ requiredEvidenceLevel: "hands-on" })],
+    requirePublicationReady: true,
+    researchNoteExists: () => true,
+  });
+  assert.deepEqual(boundary, []);
+
+  const stale = audit({
+    evidence: [evidenceRecord({ level: "hands-on", handsOn: [{ protocolId: "writing-core", testedAt: "2026-05-16", accountTier: "Free", notesPath: "research/alpha/2026-05-16.md" }] })],
+    articles: [article({ requiredEvidenceLevel: "hands-on" })],
+    requirePublicationReady: true,
+    researchNoteExists: () => true,
+  });
+  assert.ok(stale.includes("alpha: hands-on run writing-core is stale (93 days old; maximum 92)"));
+});
+
+test("requires a matching-cluster run to unlock a hands-on article", () => {
+  const errors = audit({
+    evidence: [evidenceRecord({
+      level: "hands-on",
+      handsOn: [{ protocolId: "research-core", testedAt: "2026-05-17", accountTier: "Free", notesPath: "research/alpha/research.md" }],
+    })],
+    articles: [article({ requiredEvidenceLevel: "hands-on" })],
+    requirePublicationReady: true,
+    researchNoteExists: () => true,
+  });
+  assert.ok(errors.includes("article alpha-review: alpha lacks fresh writing hands-on evidence"));
+});
+
+test("publication-ready CLI note checks reject a missing research note", () => {
+  const errors = audit({
+    evidence: [evidenceRecord({
+      level: "hands-on",
+      handsOn: [{ protocolId: "writing-core", testedAt: "2026-05-17", accountTier: "Free", notesPath: "research/alpha/missing.md" }],
+    })],
+    articles: [article({ requiredEvidenceLevel: "hands-on" })],
+    requirePublicationReady: true,
+    researchNoteExists: () => false,
+  });
+  assert.ok(errors.includes("alpha: research note does not exist: research/alpha/missing.md"));
+  assert.ok(errors.includes("article alpha-review: alpha lacks fresh writing hands-on evidence"));
+});
+
+test("rejects duplicate slugs and unknown article tools", () => {
+  const errors = audit({
+    articles: [article({ slug: "same" }), article({ slug: "same", toolIds: ["missing"] })],
   });
   assert.ok(errors.includes("article same: duplicate slug"));
   assert.ok(errors.includes("article same: unknown tool missing"));
 });
 
-test("rejects incorrect article cluster counts", () => {
-  const articles = [
-    { slug: "alpha-review", cluster: "writing", toolIds: ["alpha"], requiredEvidenceLevel: "official-sources" },
+test("rejects invalid manifest schema values instead of weakening requirements", () => {
+  const invalidArticles = [
+    article({ slug: "" }),
+    article({ slug: "empty-title", title: "" }),
+    article({ slug: "empty-intent", primaryIntent: "" }),
+    article({ slug: "empty-tools", toolIds: [] }),
+    article({ slug: "bad-cluster", cluster: "unexpected" }),
+    article({ slug: "bad-type", type: "profile" }),
+    article({ slug: "bad-level", requiredEvidenceLevel: "watchlist" }),
   ];
-  const errors = auditEvidenceRecords({
-    tools,
-    protocols,
-    evidence: [],
-    articles,
-    expectedClusterCounts: { writing: 2, presentations: 1 },
-    requirePublicationReady: false,
-  });
+  const errors = audit({ evidence: [evidenceRecord()], articles: invalidArticles, requirePublicationReady: true });
+  assert.ok(errors.includes("article at index 0: slug is required"));
+  assert.ok(errors.includes("article empty-title: title is required"));
+  assert.ok(errors.includes("article empty-intent: primaryIntent is required"));
+  assert.ok(errors.includes("article empty-tools: at least one toolId is required"));
+  assert.ok(errors.includes("article bad-cluster: invalid cluster unexpected"));
+  assert.ok(errors.includes("article bad-type: invalid type profile"));
+  assert.ok(errors.includes("article bad-level: invalid requiredEvidenceLevel watchlist"));
+  assert.ok(!errors.some((error) => error.includes("article bad-level: alpha lacks watchlist evidence")));
+});
+
+test("rejects incorrect article cluster counts", () => {
+  const errors = audit({ articles: [article()], expectedClusterCounts: { writing: 2, presentations: 1 } });
   assert.ok(errors.includes("cluster writing: expected 2, received 1"));
   assert.ok(errors.includes("cluster presentations: expected 1, received 0"));
 });
 
-test("accepts the 30-article Batch 1 manifest and approved cluster counts", () => {
+test("accepts the unchanged 30-article Batch 1 manifest and approved cluster counts", () => {
   const canonicalTools = JSON.parse(fs.readFileSync(new URL("../../data/tools.json", import.meta.url), "utf8"));
   const errors = auditEvidenceRecords({
     tools: canonicalTools,
@@ -101,6 +265,7 @@ test("accepts the 30-article Batch 1 manifest and approved cluster counts", () =
     articles: batchOneArticles,
     expectedClusterCounts: { writing: 7, presentations: 6, meetings: 6, research: 6, "image-editing": 5 },
     requirePublicationReady: false,
+    today: TODAY,
   });
   assert.equal(batchOneArticles.length, 30);
   assert.deepEqual(errors, []);
@@ -108,10 +273,7 @@ test("accepts the 30-article Batch 1 manifest and approved cluster counts", () =
 
 test("rejects an article in an unexpected cluster beyond the approved 30", () => {
   const canonicalTools = JSON.parse(fs.readFileSync(new URL("../../data/tools.json", import.meta.url), "utf8"));
-  const articles = [
-    ...batchOneArticles,
-    { slug: "unexpected-extra", cluster: "unexpected", toolIds: ["chatgpt"], requiredEvidenceLevel: "official-sources" },
-  ];
+  const articles = [...batchOneArticles, article({ slug: "unexpected-extra", cluster: "unexpected", toolIds: ["chatgpt"] })];
   const errors = auditEvidenceRecords({
     tools: canonicalTools,
     protocols: contentTestProtocols,
@@ -119,32 +281,16 @@ test("rejects an article in an unexpected cluster beyond the approved 30", () =>
     articles,
     expectedClusterCounts: { writing: 7, presentations: 6, meetings: 6, research: 6, "image-editing": 5 },
     requirePublicationReady: false,
+    today: TODAY,
   });
+  assert.ok(errors.includes("article unexpected-extra: invalid cluster unexpected"));
   assert.ok(errors.includes("cluster unexpected: expected 0, received 1"));
 });
 
-test("rejects a hands-on article without hands-on evidence", () => {
-  const articles = [{ slug: "alpha-review", cluster: "writing", toolIds: ["alpha"], requiredEvidenceLevel: "hands-on" }];
-  const errors = auditEvidenceRecords({
-    tools,
-    protocols,
-    evidence: [],
-    articles,
-    expectedClusterCounts: null,
-    requirePublicationReady: true,
-  });
-  assert.ok(errors.includes("article alpha-review: alpha lacks hands-on evidence"));
-});
+test("rejects articles without their required publication evidence", () => {
+  const handsOnErrors = audit({ articles: [article({ requiredEvidenceLevel: "hands-on" })], requirePublicationReady: true });
+  assert.ok(handsOnErrors.includes("article alpha-review: alpha lacks fresh writing hands-on evidence"));
 
-test("rejects an official-sources article without evidence", () => {
-  const articles = [{ slug: "alpha-profile", cluster: "writing", toolIds: ["alpha"], requiredEvidenceLevel: "official-sources" }];
-  const errors = auditEvidenceRecords({
-    tools,
-    protocols,
-    evidence: [],
-    articles,
-    expectedClusterCounts: null,
-    requirePublicationReady: true,
-  });
-  assert.ok(errors.includes("article alpha-profile: alpha lacks official-sources evidence"));
+  const officialErrors = audit({ articles: [article()], requirePublicationReady: true });
+  assert.ok(officialErrors.includes("article alpha-review: alpha lacks complete current official-sources evidence"));
 });

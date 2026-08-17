@@ -1,7 +1,7 @@
 export const contentEvidence = {
   grammarly: {
     toolId: "grammarly",
-    level: "official-sources",
+    level: "watchlist",
     audienceFit: "Professionals who need inline rewriting and proofreading across everyday apps.",
     limitations: ["Hands-on category protocol has not yet been completed."],
     alternatives: ["wordtune", "jasper", "chatgpt"],
@@ -11,7 +11,7 @@ export const contentEvidence = {
   },
   gamma: {
     toolId: "gamma",
-    level: "official-sources",
+    level: "watchlist",
     audienceFit: "Professionals who need a fast first draft of a web-native presentation.",
     limitations: ["Hands-on export and layout tests are still required."],
     alternatives: ["canva", "beautiful", "tome"],
